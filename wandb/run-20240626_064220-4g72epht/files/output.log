@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 39, in <module>
+    utils.single_observer(prj, run, "0")
+  File "/working_dir/src/utils.py", line 444, in single_observer
+    mo = train_model(name_run)
+  File "/working_dir/src/utils.py", line 271, in train_model
+    losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
+  File "/working_dir/src/utils.py", line 278, in train_and_save_model
+    losshistory, train_state = model.train(
+AttributeError: 'NoneType' object has no attribute 'train'

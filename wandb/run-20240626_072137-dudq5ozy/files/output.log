@@ -1,0 +1,16 @@
+Warning: 100 points required, but 125 points sampled.
+Warning: 10000 points required, but 12500 points sampled.
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 39, in <module>
+    utils.single_observer(prj, run, "0")
+  File "/working_dir/src/utils.py", line 503, in single_observer
+    mo = train_model(name_run)
+  File "/working_dir/src/utils.py", line 293, in train_model
+    mm = create_nbho(name)
+  File "/working_dir/src/utils.py", line 276, in create_nbho
+    net = dde.nn.FNN(layer_size, activation, initialization)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/nn/pytorch/fnn.py", line 21, in __init__
+    self.activation = activations.get(activation)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/nn/activations.py", line 52, in get
+    return {
+KeyError: 'softplus'

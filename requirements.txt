@@ -1,0 +1,13 @@
+numpy
+matplotlib
+scikit-optimize
+deepxde
+torch
+seaborn
+wandb
+tqdm
+scipy
+tensorboard
+pykan
+datetime
+#os
