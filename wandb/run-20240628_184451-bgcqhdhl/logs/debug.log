@@ -25,3 +25,4 @@ config: {'activation': 'SELU', 'initial_weights_regularizer': True, 'initializat
 2024-06-28 18:45:09,614 INFO    MainThread:1932 [wandb_run.py:_redirect():2300] Wrapping output streams.
 2024-06-28 18:45:09,614 INFO    MainThread:1932 [wandb_run.py:_redirect():2325] Redirects installed.
 2024-06-28 18:45:09,621 INFO    MainThread:1932 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-28 20:10:14,798 WARNING MsgRouterThr:1932 [router.py:message_loop():77] message_loop has been closed
