@@ -12,12 +12,14 @@ import numpy as np
 import train
 import os
 import torch
-
+from scipy.interpolate import interp1d
+from mpl_toolkits.mplot3d import Axes3D
 
 # device = torch.device("cpu")
 device = torch.device("cuda")
 
 figures_dir = "./imgs"
+os.makedirs(figures_dir, exist_ok=True) 
 current_file = os.path.abspath(__file__)
 src_dir = os.path.dirname(current_file)
 project_dir = os.path.dirname(src_dir)
