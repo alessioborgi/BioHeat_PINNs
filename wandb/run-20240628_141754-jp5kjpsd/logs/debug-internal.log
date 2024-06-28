@@ -6195,3 +6195,5 @@ subprocess.TimeoutExpired: Command '['conda', 'env', 'export']' timed out after 
 2024-06-28 15:33:50,593 DEBUG   HandlerThread:525 [handler.py:handle_request():158] handle_request: internal_messages
 2024-06-28 15:33:51,594 DEBUG   HandlerThread:525 [handler.py:handle_request():158] handle_request: internal_messages
 2024-06-28 15:33:52,595 DEBUG   HandlerThread:525 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-28 15:33:53,152 DEBUG   HandlerThread:525 [handler.py:handle_request():158] handle_request: status_report
+2024-06-28 15:33:53,599 DEBUG   HandlerThread:525 [handler.py:handle_request():158] handle_request: internal_messages
