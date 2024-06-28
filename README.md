@@ -14,7 +14,7 @@
 - To run the Container without re-building it every time. It saves the changes instantaneously.
     docker run --platform linux/arm64 -it --name bio_heat_pinns -v $(pwd):/working_dir bio_heat_pinns
     
-- To Run Container again:
+- To Re-Start the Container (when closing and opening the pc, for example):
     docker run -it --name bio_heat_pinns 
 
 
