@@ -1,0 +1,13 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 46, in main
+    train.single_observer(prj, run, "0", cfg.network)
+  File "/working_dir/src/train.py", line 110, in single_observer
+    mo = train_model(name_run, cfg)
+  File "/working_dir/src/train.py", line 49, in train_model
+    mm = pde.create_nbho(name, cfg)
+  File "/working_dir/src/pde.py", line 100, in create_nbho
+    dT = Tmax - Tmin
+NameError: name 'Tmax' is not defined
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+net is: {'activation': 'SELU', 'initial_weights_regularizer': True, 'initialization': 'Glorot normal', 'iterations': 3000, 'LBFGS': False, 'learning_rate': 0.001, 'num_dense_layers': 2, 'num_dense_nodes': 50, 'output_injection_gain': 50, 'resampling': True, 'resampler_period': 100}

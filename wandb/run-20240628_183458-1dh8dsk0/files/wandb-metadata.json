@@ -1,0 +1,27 @@
+{
+    "os": "Linux-6.5.11-linuxkit-x86_64-with-glibc2.35",
+    "python": "3.10.13",
+    "heartbeatAt": "2024-06-28T18:35:01.199458",
+    "startedAt": "2024-06-28T18:34:58.941912",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/working_dir/./src/main.py",
+    "codePathLocal": "src/main.py",
+    "codePath": "src/main.py",
+    "host": "c05bc9f5bb7d",
+    "username": "root",
+    "executable": "/opt/conda/bin/python3",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "disk": {
+        "/": {
+            "total": 58.367008209228516,
+            "used": 22.21133804321289
+        }
+    },
+    "memory": {
+        "total": 7.662525177001953
+    }
+}

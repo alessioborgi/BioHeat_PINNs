@@ -25,3 +25,10 @@ config: {'activation': 'SELU', 'initial_weights_regularizer': True, 'initializat
 2024-06-28 14:18:12,570 INFO    MainThread:500 [wandb_run.py:_redirect():2300] Wrapping output streams.
 2024-06-28 14:18:12,571 INFO    MainThread:500 [wandb_run.py:_redirect():2325] Redirects installed.
 2024-06-28 14:18:12,579 INFO    MainThread:500 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-28 15:43:40,310 INFO    MainThread:500 [wandb_run.py:_finish():2109] finishing run adavit/BioHeat_PINNs/jp5kjpsd
+2024-06-28 15:43:40,311 INFO    MainThread:500 [wandb_run.py:_atexit_cleanup():2349] got exitcode: 0
+2024-06-28 15:43:40,312 INFO    MainThread:500 [wandb_run.py:_restore():2332] restore
+2024-06-28 15:43:40,313 INFO    MainThread:500 [wandb_run.py:_restore():2338] restore done
+2024-06-28 15:43:46,314 INFO    MainThread:500 [wandb_run.py:_footer_history_summary_info():3991] rendering history
+2024-06-28 15:43:46,318 INFO    MainThread:500 [wandb_run.py:_footer_history_summary_info():4023] rendering summary
+2024-06-28 15:43:46,373 INFO    MainThread:500 [wandb_run.py:_footer_sync_info():3950] logging synced files

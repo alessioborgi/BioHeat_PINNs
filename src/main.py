@@ -1,8 +1,17 @@
+# main.py
+
+# This is the main entry point of the BioHeat_PINNs project. It sets up the environment,
+# initializes configurations, creates necessary directories, and starts the training
+# process. It also includes the main function decorated with Hydra for configuration
+# management. This script orchestrates the overall workflow of the project.
+
 import datetime
 import os
 import hydra
 from omegaconf import DictConfig
+import configurations
 import utils
+import train
 
 @hydra.main(version_base=None, config_path="configs", config_name="config")
 def main(cfg: DictConfig):
@@ -30,11 +39,11 @@ def main(cfg: DictConfig):
     name, general_figures, model_dir, figures_dir = utils.set_name(prj, run)
 
     # Create NBHO with some config.json
-    config = utils.read_config(run, cfg.network)
-    utils.write_config(config, run)
+    config = configurations.read_config(run, cfg.network)
+    configurations.write_config(config, run)
 
     # Use a default filename instead of a timestamp-based one
-    utils.single_observer(prj, run, "0", cfg.network)
+    train.single_observer(prj, run, "0", cfg.network)
 
 if __name__ == "__main__":
     main()
