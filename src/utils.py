@@ -6,7 +6,6 @@ import torch
 import seaborn as sns
 import wandb
 import glob
-# import rff
 import json
 from tqdm import tqdm
 from torch import autograd
@@ -14,6 +13,122 @@ from torch.utils.tensorboard import SummaryWriter
 from kan import KAN, LBFGS
 from scipy.interpolate import interp1d
 from mpl_toolkits.mplot3d import Axes3D
+from omegaconf import DictConfig
+
+def create_default_config(cfg: DictConfig):
+    # Define default configuration parameters from the Hydra config
+    network = {
+        "activation": cfg.activation,
+        "initial_weights_regularizer": cfg.initial_weights_regularizer,
+        "initialization": cfg.initialization,
+        "iterations": cfg.iterations,
+        "LBFGS": cfg.LBFGS,
+        "learning_rate": cfg.learning_rate,
+        "num_dense_layers": cfg.num_dense_layers,
+        "num_dense_nodes": cfg.num_dense_nodes,
+        "output_injection_gain": cfg.output_injection_gain,
+        "resampling": cfg.resampling,
+        "resampler_period": cfg.resampler_period
+    }
+    return network
+
+def read_config(run, cfg):
+    filename = f"{model_dir}/config.json"
+    if os.path.exists(filename):
+        with open(filename, 'r') as file:
+            config = json.load(file)
+    else:
+        # Create default config if file doesn't exist
+        config = create_default_config(cfg)
+        write_config(config, run)
+    return config
+
+def train_model(name, cfg):
+    conf = read_config(name, cfg)
+    mm = create_nbho(name, cfg)
+
+    LBFGS = conf["LBFGS"]
+    epochs = conf["iterations"]
+    ini_w = conf["initial_weights_regularizer"]
+    resampler = conf["resampling"]
+    resampler_period = conf["resampler_period"]
+
+    optim = "lbfgs" if LBFGS else "adam"
+    iters = "*" if LBFGS else epochs
+
+    # Check if a trained model with the exact configuration already exists
+    trained_models = sorted(glob.glob(f"{model_dir}/{optim}-{iters}.pt"))
+    if trained_models:
+        mm.compile("L-BFGS") if LBFGS else None
+        mm.restore(trained_models[0], verbose=0)
+        return mm
+
+    callbacks = [dde.callbacks.PDEPointResampler(period=resampler_period)] if resampler else []
+
+    if LBFGS:
+        # Attempt to restore from a previously trained Adam model if exists
+        adam_models = sorted(glob.glob(f"{model_dir}/adam-{epochs}.pt"))
+        if adam_models:
+            mm.restore(adam_models[0], verbose=0)
+        else:
+            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
+        
+        if ini_w:
+            initial_losses = get_initial_loss(mm)
+            loss_weights = len(initial_losses) / initial_losses
+            mm.compile("L-BFGS", loss_weights=loss_weights)
+        else:
+            mm.compile("L-BFGS")
+        
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs")
+    else:
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
+
+    plot_loss_components(losshistory)
+    return mm
+
+def single_observer(name_prj, name_run, n_test, cfg):
+    get_properties(n_test)
+    wandb.init(
+        project=name_prj, name=name_run,
+        config=read_config(name_run, cfg)
+    )
+    mo = train_model(name_run, cfg)
+    metrics = plot_and_metrics(mo, n_test)
+
+    wandb.log(metrics)
+    wandb.finish()
+    return mo, metrics
+
+
+def seed_all(seed):
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)  # if you are using multi-GPU.
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+def set_name(prj, run):
+    global model_dir, figures_dir
+    name = f"{prj}_{run}"
+
+    general_model = os.path.join(tests_dir, "models")
+    os.makedirs(general_model, exist_ok=True)
+
+    general_figures = os.path.join(tests_dir, "figures")
+    os.makedirs(general_figures, exist_ok=True)
+
+    model_dir = os.path.join(general_model, name)
+    os.makedirs(model_dir, exist_ok=True)
+
+    figures_dir = os.path.join(general_figures, name)
+    os.makedirs(figures_dir, exist_ok=True)
+
+    return name, general_figures, model_dir, figures_dir
+
+
 
 # device = torch.device("cpu")
 device = torch.device("cuda")
@@ -35,33 +150,7 @@ properties = {
 
 f1, f2, f3 = [None]*3
 
-def seed_all(seed):
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed(seed)
-        torch.cuda.manual_seed_all(seed)  # if you are using multi-GPU.
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
 
-def set_name(prj, run):
-    
-    global model_dir, figures_dir
-    name = f"{prj}_{run}"
-
-    general_model = os.path.join(tests_dir, "models")
-    os.makedirs(general_model, exist_ok=True)
-
-    general_figures = os.path.join(tests_dir, "figures")
-    os.makedirs(general_figures, exist_ok=True)
-
-    model_dir = os.path.join(general_model, name)
-    os.makedirs(model_dir, exist_ok=True)
-
-    figures_dir = os.path.join(general_figures, name)
-    os.makedirs(figures_dir, exist_ok=True)
-
-    return name, general_figures, model_dir, figures_dir
 
 
 def get_properties(n):
@@ -84,37 +173,6 @@ def get_properties(n):
         par["cb"], par["h"], par["Tmin"], par["Tmax"], par["alpha"], par["W"], par["steep"], par["tchange"]
     )
 
-
-def read_config(run):
-    filename = f"{model_dir}/config.json"
-    if os.path.exists(filename):
-        with open(filename, 'r') as file:
-            config = json.load(file)
-    else:
-        # Create default config if file doesn't exist
-        config = create_default_config()
-        write_config(config, run)
-    return config
-
-
-def create_default_config():
-    # Define default configuration parameters
-    network = {
-        # "activation": "tanh", 
-        "activation": "SELU",
-        "initial_weights_regularizer": True, 
-        "initialization": "Glorot normal",
-        # "iterations": 30000,
-        "iterations":3000,
-        "LBFGS": False,
-        "learning_rate": 0.001,
-        "num_dense_layers": 2,
-        "num_dense_nodes": 50,
-        "output_injection_gain": 50,
-        "resampling": True,
-        "resampler_period": 100
-    }
-    return network
 
 def write_config(config, run):
     def convert_to_serializable(obj):
@@ -205,8 +263,8 @@ def bc0_obs(x, theta, X):
 def output_transform(x, y):
     return x[:, 0:1] * y
 
-def create_nbho(name):
-    net = read_config(name)
+def create_nbho(name, cfg):
+    net = read_config(name, cfg)
 
     activation = net["activation"]
     initial_weights_regularizer = net["initial_weights_regularizer"]
@@ -218,11 +276,11 @@ def create_nbho(name):
 
     dT = Tmax - Tmin
 
-    D = d/L0
-    alpha = k/rhoc
+    D = d / L0
+    alpha = k / rhoc
 
-    C1, C2 = tauf/L0**2, dT*tauf/rhoc
-    C3 = C2*dT*cb
+    C1, C2 = tauf / L0**2, dT * tauf / rhoc
+    C3 = C2 * dT * cb
 
     def pde(x, y):
         # dy_t = dde.grad.jacobian(y, x, i=0, j=4)
@@ -296,50 +354,6 @@ def create_nbho(name):
         model.compile("adam", lr=learning_rate)
     return model
 
-
-def train_model(name):
-    conf = read_config(name)
-    mm = create_nbho(name)
-
-    LBFGS = conf["LBFGS"]
-    epochs = conf["iterations"]
-    ini_w = conf["initial_weights_regularizer"]
-    resampler = conf["resampling"]
-    resampler_period = conf["resampler_period"]
-
-    optim = "lbfgs" if LBFGS else "adam"
-    iters = "*" if LBFGS else epochs
-
-    # Check if a trained model with the exact configuration already exists
-    trained_models = sorted(glob.glob(f"{model_dir}/{optim}-{iters}.pt"))
-    if trained_models:
-        mm.compile("L-BFGS") if LBFGS else None
-        mm.restore(trained_models[0], verbose=0)
-        return mm
-
-    callbacks = [dde.callbacks.PDEPointResampler(period=resampler_period)] if resampler else []
-
-    if LBFGS:
-        # Attempt to restore from a previously trained Adam model if exists
-        adam_models = sorted(glob.glob(f"{model_dir}/adam-{epochs}.pt"))
-        if adam_models:
-            mm.restore(adam_models[0], verbose=0)
-        else:
-            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
-        
-        if ini_w:
-            initial_losses = get_initial_loss(mm)
-            loss_weights = len(initial_losses) / initial_losses
-            mm.compile("L-BFGS", loss_weights=loss_weights)
-        else:
-            mm.compile("L-BFGS")
-        
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs")
-    else:
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
-
-    plot_loss_components(losshistory)
-    return mm
 
 def train_and_save_model(model, iterations, callbacks, optimizer_name):
     display_every = 1000
@@ -502,16 +516,3 @@ def configure_subplot(ax, XS, surface):
     ax.set_ylabel('Time', fontsize=7, labelpad=-1)
     ax.set_zlabel('Theta', fontsize=7, labelpad=-4)
 
-
-def single_observer(name_prj, name_run, n_test):
-    get_properties(n_test)
-    wandb.init(
-        project=name_prj, name=name_run,
-        config=read_config(name_run)
-    )
-    mo = train_model(name_run)
-    metrics = plot_and_metrics(mo, n_test)
-
-    wandb.log(metrics)
-    wandb.finish()
-    return mo, metrics

@@ -1,0 +1,4 @@
+
+defaults:
+  - network: PINN
+  - _self_
