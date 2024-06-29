@@ -14,6 +14,8 @@ import os
 import torch
 from scipy.interpolate import interp1d
 from mpl_toolkits.mplot3d import Axes3D
+import deepxde as dde
+
 
 # device = torch.device("cpu")
 device = torch.device("cuda")
@@ -25,6 +27,8 @@ src_dir = os.path.dirname(current_file)
 project_dir = os.path.dirname(src_dir)
 tests_dir = os.path.join(project_dir, "tests")
 os.makedirs(tests_dir, exist_ok=True)
+f1, f2, f3 = [None]*3
+
 
 
 
@@ -81,7 +85,7 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
     plt.clf()
 
 
-def plot_loss_components(losshistory, figures_dir):
+def plot_loss_components(losshistory):
     """
     Plots the components of the loss function during training.
     

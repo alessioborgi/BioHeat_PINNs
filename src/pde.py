@@ -156,6 +156,7 @@ def create_nbho(name, cfg):
     # layer_size = [5] + [num_dense_nodes] * num_dense_layers + [1]
     layer_size = [4] + [num_dense_nodes] * num_dense_layers + [1]
     net = dde.nn.FNN(layer_size, activation, initialization)
+    # net = dde.maps.FNN(layer_size, activation, initialization)
 
     net.apply_output_transform(output_transform)
 

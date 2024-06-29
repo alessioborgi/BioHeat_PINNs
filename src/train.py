@@ -11,6 +11,7 @@ import pde
 import os
 import torch
 
+wandb.require("core")
 # device = torch.device("cpu")
 device = torch.device("cuda")
 
@@ -29,7 +30,6 @@ properties = {
     "W": None, "steep": None, "tchange": None
 }
 
-f1, f2, f3 = [None]*3
 
 def train_model(name, cfg):
     """
@@ -81,11 +81,11 @@ def train_model(name, cfg):
         else:
             mm.compile("L-BFGS")
         
-        losshistory, train_state = mm.train(callbacks=callbacks)
-        mm.save(f"{model_dir}/lbfgs-{iters}.pt")
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs")
     else:
         losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
 
+    plots.plot_loss_components(losshistory)
     return mm
 
 def single_observer(name_prj, name_run, n_test, cfg):
@@ -171,9 +171,9 @@ def compute_metrics(true, pred):
     true_nonzero = np.where(true != 0, true, small_number)
     
     MSE = dde.metrics.mean_squared_error(true, pred)
-    MAE = np.mean(np.abs((true - pred) / true_nonzero))
+    MAE = np.mean(np.abs((true - pred) / true_nonzero)) 
     L2RE = dde.metrics.l2_relative_error(true, pred)
-    max_APE = np.max(np.abs((true - pred) / true_nonzero))
+    max_APE = np.max(np.abs((true - pred) / true_nonzero)) 
     
     metrics = {
         "MSE": MSE,
