@@ -16,10 +16,15 @@ from scipy.interpolate import interp1d
 from mpl_toolkits.mplot3d import Axes3D
 import deepxde as dde
 import main
+from configurations import HydraConfigStore
+
 
 
 
 def plot_l2_tf(e, theta_true, theta_pred, model):
+    
+    cfg = HydraConfigStore.get_config()
+    print(f"Saving the image: {main.figures_dir}/{cfg.run}/l2_tf.png")
     t = np.unique(e[:, 1])
     l2 = []
     t_filtered = t[t > 0.02]
@@ -67,7 +72,7 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
 
     plt.grid()
     ax2.set_box_aspect(1)
-    plt.savefig(f"{main.figures_dir}/l2_tf.png")
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/l2_tf.png")
     plt.show()
     plt.clf()
 
@@ -86,6 +91,8 @@ def plot_loss_components(losshistory):
     Returns:
         None
     """
+    cfg = HydraConfigStore.get_config()
+    
     loss_train = losshistory.loss_train
     loss_test = losshistory.loss_test
     matrix = np.array(loss_train)
@@ -114,7 +121,7 @@ def plot_loss_components(losshistory):
         plt.xlabel('iterations')
         plt.legend(ncol=2)
         plt.tight_layout()
-        plt.savefig(f"{main.figures_dir}/losses.png")
+        plt.savefig(f"{main.figures_dir}/{cfg.run}/losses.png")
         plt.close()
 
 def gen_testdata(n):
@@ -191,6 +198,8 @@ def plot_comparison(e, theta_true, theta_pred):
     Returns:
         None
     """
+    cfg = HydraConfigStore.get_config()
+    
     la = len(np.unique(e[:, 0]))
     le = len(np.unique(e[:, 1]))
 
@@ -218,7 +227,7 @@ def plot_comparison(e, theta_true, theta_pred):
     plt.subplots_adjust(wspace=0.15)
 
     plt.tight_layout()
-    plt.savefig(f"{main.figures_dir}/comparison.png")
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/comparison.png")
     plt.show()
     plt.close()
     plt.clf()
@@ -238,6 +247,7 @@ def plot_L2_norm(error, theta_true, figures_dir):
     Returns:
         None
     """
+    cfg = HydraConfigStore.get_config()
     fig = plt.figure(figsize=(12, 5))
     ax1 = fig.add_subplot(121)
     
@@ -257,14 +267,14 @@ def plot_L2_norm(error, theta_true, figures_dir):
     ax2.grid(True)
     
     plt.tight_layout()
-    plt.savefig(f"{figures_dir}/L2_norm.png")
+    plt.savefig(f"{figures_dir}/{cfg.run}/L2_norm.png")
     plt.close()
 
 def configure_subplot(ax, XS, surface):
     """
     Configures a subplot for visualizing multiple plots in a single figure.
     
-    This function sets up the layout, titles, labels, and other settings to
+    This function sets up the layoput, titles, labels, and other settings to
     create a coherent and informative subplot for comparison or detailed analysis.
     
     Args:

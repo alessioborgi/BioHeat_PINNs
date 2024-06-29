@@ -1,0 +1,54 @@
+Warning: 100 points required, but 125 points sampled.
+Warning: 10000 points required, but 12500 points sampled.
+Compiling model...
+'compile' took 2.739344 s
+
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+0         [2.72e-01, 6.40e+02, 7.43e-02]    [3.02e-01, 6.40e+02, 7.43e-02]    []
+
+Best model at step 0:
+  train loss: 6.40e+02
+  test loss: 6.41e+02
+  test metric: []
+
+'train' took 2.911877 s
+
+Compiling model...
+'compile' took 0.001664 s
+
+The main.run is: BioHeat_PINNs_date_time_20240629_181459
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+0         [3.00e+00, 3.00e+00, 3.00e+00]    [3.33e+00, 3.00e+00, 3.00e+00]    []
+10        [5.28e-01, 6.07e-01, 9.12e-01]    [5.16e-01, 6.07e-01, 9.12e-01]    []
+
+Best model at step 10:
+  train loss: 2.05e+00
+  test loss: 2.03e+00
+  test metric: []
+
+Epoch 10: saving model to ./tests/models/BioHeat_PINNs_date_time_20240629_181459/adam-10.pt ...
+
+'train' took 26.407787 s
+
+[2024-06-29 18:15:38,548][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 18:15:38,577][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 18:15:38,600][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 59, in main
+    train.single_observer(prj, run, "0", cfg.network)
+  File "/working_dir/src/train.py", line 105, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 83, in train_model
+    plots.plot_loss_components(losshistory, cfg)
+  File "/working_dir/src/plots.py", line 117, in plot_loss_components
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/losses.png")
+omegaconf.errors.ConfigAttributeError: Key 'run' is not in struct
+    full_key: network.run
+    object_type=dict
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

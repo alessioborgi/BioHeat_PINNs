@@ -63,16 +63,18 @@ def set_name(prj, run):
                model directory, and figures directory.
     """
     global model_dir, figures_dir
-    name = f"{prj}_{run}"
+    # name = f"{prj}_{run}"
+    name = f"{run}"
+
 
     general_model = os.path.join(main.tests_dir, "models")
     os.makedirs(general_model, exist_ok=True)
 
     general_figures = os.path.join(main.tests_dir, "figures")
-    os.makedirs(general_figures, exist_ok=True)
+    # os.makedirs(general_figures, exist_ok=True)
 
     model_dir = os.path.join(general_model, name)
-    os.makedirs(model_dir, exist_ok=True)
+    # os.makedirs(model_dir, exist_ok=True)
 
     figures_dir = os.path.join(general_figures, name)
     os.makedirs(figures_dir, exist_ok=True)

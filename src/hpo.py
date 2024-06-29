@@ -10,6 +10,9 @@ import os
 import deepxde as dde
 import train
 import configurations
+import main
+from configurations import HydraConfigStore
+
 
 # Function 'gp_minimize' of package 'skopt(scikit-optimize)' is used in this example.
 # However 'np.int' used in skopt 0.9.0(the latest version) was deprecated since NumPy 1.20.
@@ -95,9 +98,10 @@ search_result = gp_minimize(
 )
 
 print(search_result.x)
-
+print("the figures_dir is:", main.figures_dir)
+cfg = HydraConfigStore.get_config()
 convergence_fig = plot_convergence(search_result)
-convergence_fig.figure.savefig(f"{figures}/convergence_plot_{prj}.png")
+convergence_fig.figure.savefig(f"{main.figures_dir}/{cfg.run}/convergence_plot_{prj}.png")
 
 objective_fig = plot_objective(search_result, show_points=True, size=3.8)
-objective_fig.figure.savefig(f"{figures}/objective_plot_{prj}.png")
+objective_fig.figure.savefig(f"{main.figures_dir}/{cfg.run}/objective_plot_{prj}.png")

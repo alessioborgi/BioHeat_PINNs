@@ -1,0 +1,67 @@
+Warning: 100 points required, but 125 points sampled.
+Warning: 10000 points required, but 12500 points sampled.
+Compiling model...
+'compile' took 3.143653 s
+
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+0         [2.72e-01, 6.40e+02, 7.43e-02]    [3.02e-01, 6.40e+02, 7.43e-02]    []
+
+Best model at step 0:
+  train loss: 6.40e+02
+  test loss: 6.41e+02
+  test metric: []
+
+'train' took 2.897668 s
+
+Compiling model...
+'compile' took 0.001651 s
+
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+0         [3.00e+00, 3.00e+00, 3.00e+00]    [3.33e+00, 3.00e+00, 3.00e+00]    []
+10        [5.28e-01, 6.07e-01, 9.12e-01]    [5.16e-01, 6.07e-01, 9.12e-01]    []
+
+Best model at step 10:
+  train loss: 2.05e+00
+  test loss: 2.03e+00
+  test metric: []
+
+Epoch 10: saving model to ./tests/models/BioHeat_PINNs_date_time_20240629_192010/adam-10.pt ...
+
+'train' took 21.961546 s
+
+[2024-06-29 19:20:44,180][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 19:20:44,211][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 19:20:44,236][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 63, in main
+    train.single_observer(prj, run, "0", cfg.network)
+  File "/working_dir/src/train.py", line 105, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 83, in train_model
+    plots.plot_loss_components(losshistory)
+  File "/working_dir/src/plots.py", line 124, in plot_loss_components
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/losses.png")
+  File "/opt/conda/lib/python3.10/site-packages/matplotlib/pyplot.py", line 1223, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/opt/conda/lib/python3.10/site-packages/matplotlib/figure.py", line 3388, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/matplotlib/backend_bases.py", line 2218, in print_figure
+    result = print_method(
+  File "/opt/conda/lib/python3.10/site-packages/matplotlib/backend_bases.py", line 2068, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/opt/conda/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py", line 496, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/opt/conda/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py", line 445, in _print_pil
+    mpl.image.imsave(
+  File "/opt/conda/lib/python3.10/site-packages/matplotlib/image.py", line 1676, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/PIL/Image.py", line 2436, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: './imgs/BioHeat_PINNs_date_time_20240629_192010/losses.png'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

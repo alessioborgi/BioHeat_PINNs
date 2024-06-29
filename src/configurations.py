@@ -9,8 +9,23 @@ import numpy as np
 from omegaconf import DictConfig
 import json
 import os
-import train
 
+# Adding Singleton for Hydra Config Storage
+class HydraConfigStore:
+    _config = None
+
+    @staticmethod
+    def set_config(cfg: DictConfig):
+        HydraConfigStore._config = cfg
+
+    @staticmethod
+    def get_config() -> DictConfig:
+        if HydraConfigStore._config is None:
+            raise ValueError("Hydra config not set!")
+        return HydraConfigStore._config
+    
+    
+    
 def create_Network(cfg: DictConfig):
     """
     Creates the network architecture used in the BioHeat_PINNs project.
@@ -35,7 +50,7 @@ def create_Network(cfg: DictConfig):
         "num_dense_nodes": cfg.num_dense_nodes,
         "output_injection_gain": cfg.output_injection_gain,
         "resampling": cfg.resampling,
-        "resampler_period": cfg.resampler_period
+        "resampler_period": cfg.resampler_period,
     }
     return network
 

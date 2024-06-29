@@ -13,13 +13,14 @@ import configurations
 import utils
 import train
 import torch
+from configurations import HydraConfigStore
 
-run = ""
+
 
 # device = torch.device("cpu")
 device = torch.device("cuda")
-
-figures_dir = "./imgs"
+run = ""
+figures_dir = "./tests/figures"
 current_file = os.path.abspath(__file__)
 src_dir = os.path.dirname(current_file)
 project_dir = os.path.dirname(src_dir)
@@ -29,12 +30,14 @@ os.makedirs(tests_dir, exist_ok=True)
 @hydra.main(version_base=None, config_path="configs", config_name="config")
 def main(cfg: DictConfig):
     # Set seed for reproducibility
+    HydraConfigStore.set_config(cfg)  # Store the configuration
     utils.seed_all(31)
 
     prj = "BioHeat_PINNs"
-    n_test = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")  # Current timestamp in the format YYYYMMDD_HHMMSS
+    # n_test = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")  # Current timestamp in the format YYYYMMDD_HHMMSS
     global run  # Declare that we want to use the global variable
-    run = f"BioHeat_PINNs_date_time_{n_test}"
+    # run = f"BioHeat_PINNs_date_time_{n_test}"
+    run = cfg.run
     
     # Define the folder path with absolute path
     base_dir = os.getcwd()
@@ -57,7 +60,7 @@ def main(cfg: DictConfig):
     configurations.write_config(config, run)
 
     # Use a default filename instead of a timestamp-based one
-    train.single_observer(prj, run, "0", cfg.network, run)
+    train.single_observer(prj, run, "0", cfg.network)
 
 if __name__ == "__main__":
     main()
