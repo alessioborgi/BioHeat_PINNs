@@ -5,7 +5,6 @@ import pde
 import plots
 import glob
 import utils
-import main
 import wandb
 import numpy as np
 import pde
@@ -27,7 +26,7 @@ properties = {
 }
 
 
-def train_model(name, cfg):
+def train_model(name, cfg, run):
     """
     This function handles the training process of the neural network model.
     
@@ -54,7 +53,7 @@ def train_model(name, cfg):
     iters = "*" if LBFGS else epochs
 
     # Check if a trained model with the exact configuration already exists
-    trained_models = sorted(glob.glob(f"{model_dir}/{main.run}/{optim}-{iters}.pt"))
+    trained_models = sorted(glob.glob(f"{model_dir}/{run}/{optim}-{iters}.pt"))
     if trained_models:
         mm.compile("L-BFGS") if LBFGS else None
         mm.restore(trained_models[0], verbose=0)
@@ -68,7 +67,7 @@ def train_model(name, cfg):
         if adam_models:
             mm.restore(adam_models[0], verbose=0)
         else:
-            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
+            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", run)
         
         if ini_w:
             initial_losses = get_initial_loss(mm)
@@ -77,14 +76,14 @@ def train_model(name, cfg):
         else:
             mm.compile("L-BFGS")
         
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs")
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs", run)
     else:
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam")
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", run)
 
     plots.plot_loss_components(losshistory)
     return mm
 
-def single_observer(name_prj, name_run, n_test, cfg):
+def single_observer(name_prj, name_run, n_test, cfg, run):
     """
     Trains a single observer model using the provided configuration.
     
@@ -103,14 +102,14 @@ def single_observer(name_prj, name_run, n_test, cfg):
         project=name_prj, name=name_run,
         config=configurations.read_config(name_run, cfg)
     )
-    mo = train_model(name_run, cfg)
+    mo = train_model(name_run, cfg, run)
     metrics = plots.plot_and_metrics(mo, n_test)
 
     wandb.log(metrics)
     wandb.finish()
     return mo, metrics
 
-def train_and_save_model(model, iterations, callbacks, optimizer_name):
+def train_and_save_model(model, iterations, callbacks, optimizer_name, run):
     """
     Combines the training and saving process of the model.
     
@@ -125,11 +124,11 @@ def train_and_save_model(model, iterations, callbacks, optimizer_name):
         train_state: Final state of the training process.
     """
     display_every = 100
-    print("The main.run is: " + main.run)
+    print("The main.run is: " + run)
     losshistory, train_state = model.train(
         iterations=iterations,
         callbacks=callbacks,
-        model_save_path=f"{model_dir}/{main.run}/{optimizer_name}",
+        model_save_path=f"{model_dir}/{run}/{optimizer_name}",
         display_every=display_every
     )
     return losshistory, train_state

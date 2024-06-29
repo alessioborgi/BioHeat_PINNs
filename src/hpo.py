@@ -73,7 +73,7 @@ def fitness(learning_rate, num_dense_layers, num_dense_nodes, activation):
     print()
 
     # Create the neural network with these hyper-parameters.
-    _, metrics = train.single_observer(prj, run, n)
+    _, metrics = train.single_observer(prj, run, n, run)
     error = metrics['L2RE']
 
     if np.isnan(error):

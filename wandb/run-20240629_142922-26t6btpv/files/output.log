@@ -1,0 +1,9 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 60, in main
+    train.single_observer(prj, run, "0", cfg.network)
+  File "/working_dir/src/train.py", line 105, in single_observer
+    mo = train_model(name_run, cfg)
+TypeError: train_model() missing 1 required positional argument: 'run'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
