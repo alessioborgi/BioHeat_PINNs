@@ -22,3 +22,19 @@ Training model...
 
 Step      Train loss                        Test loss                         Test metric
 0         [3.00e+00, 3.00e+00, 3.00e+00]    [3.33e+00, 3.00e+00, 3.00e+00]    []
+1000      [4.86e-02, 6.23e-03, 7.93e-02]    [3.96e-02, 6.23e-03, 7.93e-02]    []
+2000      [1.80e-02, 3.02e-03, 1.38e-02]    [1.08e-02, 3.02e-03, 1.38e-02]    []
+3000      [8.70e-03, 6.39e-04, 2.98e-03]    [5.12e-03, 6.39e-04, 2.98e-03]    []
+
+Best model at step 3000:
+  train loss: 1.23e-02
+  test loss: 8.74e-03
+  test metric: []
+
+Epoch 3000: saving model to ./tests/models/adam-3000.pt ...
+
+'train' took 5171.277132 s
+
+[2024-06-29 08:12:40,403][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 08:12:40,433][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 08:12:40,455][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
