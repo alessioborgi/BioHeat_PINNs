@@ -15,20 +15,7 @@ import torch
 from scipy.interpolate import interp1d
 from mpl_toolkits.mplot3d import Axes3D
 import deepxde as dde
-
-
-# device = torch.device("cpu")
-device = torch.device("cuda")
-
-figures_dir = "./imgs"
-os.makedirs(figures_dir, exist_ok=True) 
-current_file = os.path.abspath(__file__)
-src_dir = os.path.dirname(current_file)
-project_dir = os.path.dirname(src_dir)
-tests_dir = os.path.join(project_dir, "tests")
-os.makedirs(tests_dir, exist_ok=True)
-f1, f2, f3 = [None]*3
-
+import main
 
 
 
@@ -80,7 +67,7 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
 
     plt.grid()
     ax2.set_box_aspect(1)
-    plt.savefig(f"{figures_dir}/l2_tf.png")
+    plt.savefig(f"{main.figures_dir}/l2_tf.png")
     plt.show()
     plt.clf()
 
@@ -127,11 +114,11 @@ def plot_loss_components(losshistory):
         plt.xlabel('iterations')
         plt.legend(ncol=2)
         plt.tight_layout()
-        plt.savefig(f"{figures_dir}/losses.png")
+        plt.savefig(f"{main.figures_dir}/losses.png")
         plt.close()
 
 def gen_testdata(n):
-    data = np.loadtxt(f"{src_dir}/simulations/file{n}.txt")
+    data = np.loadtxt(f"{main.src_dir}/simulations/file{n}.txt")
     x, t, exact = data[:, 0:1].T, data[:, 1:2].T, data[:, 2:].T
     X = np.vstack((x, t)).T
     y = exact.flatten()[:, None]
@@ -231,7 +218,7 @@ def plot_comparison(e, theta_true, theta_pred):
     plt.subplots_adjust(wspace=0.15)
 
     plt.tight_layout()
-    plt.savefig(f"{figures_dir}/comparison.png")
+    plt.savefig(f"{main.figures_dir}/comparison.png")
     plt.show()
     plt.close()
     plt.clf()

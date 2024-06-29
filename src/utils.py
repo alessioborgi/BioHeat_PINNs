@@ -10,17 +10,10 @@ import numpy as np
 import torch
 import os
 import json
+import main
 
 
-# device = torch.device("cpu")
-device = torch.device("cuda")
 
-figures_dir = "./imgs"
-current_file = os.path.abspath(__file__)
-src_dir = os.path.dirname(current_file)
-project_dir = os.path.dirname(src_dir)
-tests_dir = os.path.join(project_dir, "tests")
-os.makedirs(tests_dir, exist_ok=True)
 
 # Initialize global variables
 # L0 = tauf = k = p0 = d = rhoc = cb = h = Tmin = Tmax = alpha = W = steep = tchange = None
@@ -72,10 +65,10 @@ def set_name(prj, run):
     global model_dir, figures_dir
     name = f"{prj}_{run}"
 
-    general_model = os.path.join(tests_dir, "models")
+    general_model = os.path.join(main.tests_dir, "models")
     os.makedirs(general_model, exist_ok=True)
 
-    general_figures = os.path.join(tests_dir, "figures")
+    general_figures = os.path.join(main.tests_dir, "figures")
     os.makedirs(general_figures, exist_ok=True)
 
     model_dir = os.path.join(general_model, name)
@@ -100,7 +93,7 @@ def get_properties(n):
         None
     """
     global L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange
-    file_path = os.path.join(src_dir, 'simulations', f'data{n}.json')
+    file_path = os.path.join(main.src_dir, 'simulations', f'data{n}.json')
 
     # Open the file and load the JSON data
     with open(file_path, 'r') as f:

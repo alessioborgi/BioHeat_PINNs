@@ -1,0 +1,17 @@
+{"time":"2024-06-29T13:24:39.956301419Z","level":"INFO","msg":"using version","core version":"0.17.3"}
+{"time":"2024-06-29T13:24:39.956657544Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240629_132439-brhpg5dl/logs/debug-core.log"}
+{"time":"2024-06-29T13:24:39.967757294Z","level":"INFO","msg":"created new stream","id":"brhpg5dl"}
+{"time":"2024-06-29T13:24:39.968616127Z","level":"INFO","msg":"sender: started","stream_id":{"value":"brhpg5dl"}}
+{"time":"2024-06-29T13:24:39.968350919Z","level":"INFO","msg":"handler: started","stream_id":{"value":"brhpg5dl"}}
+{"time":"2024-06-29T13:24:39.968413086Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"brhpg5dl"}}
+{"time":"2024-06-29T13:24:40.780226378Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-06-29T13:24:40.824277336Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-06-29T13:25:27.811195011Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-06-29T13:25:27.812048803Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-06-29T13:25:28.003686344Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-06-29T13:25:28.003909844Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-06-29T13:25:28.004028178Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-06-29T13:25:29.060653845Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"brhpg5dl"}}
+{"time":"2024-06-29T13:25:29.060622886Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"brhpg5dl"}}
+{"time":"2024-06-29T13:25:29.06268047Z","level":"INFO","msg":"closed stream","id":"brhpg5dl"}
+{"time":"2024-06-29T13:25:29.063147053Z","level":"ERROR","msg":"context done, not handling record","record":{"RecordType":{"Request":{"RequestType":{"InternalMessages":{}}}},"control":{"local":true,"mailbox_slot":"w48wecadoxmx","connection_id":"127.0.0.1:56644"},"_info":{"stream_id":"brhpg5dl"}}}

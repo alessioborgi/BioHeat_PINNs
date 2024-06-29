@@ -1,0 +1,16 @@
+{"time":"2024-06-29T13:46:56.953227969Z","level":"INFO","msg":"using version","core version":"0.17.3"}
+{"time":"2024-06-29T13:46:56.953761302Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240629_134656-m638o95y/logs/debug-core.log"}
+{"time":"2024-06-29T13:46:56.965724719Z","level":"INFO","msg":"created new stream","id":"m638o95y"}
+{"time":"2024-06-29T13:46:56.966608552Z","level":"INFO","msg":"handler: started","stream_id":{"value":"m638o95y"}}
+{"time":"2024-06-29T13:46:56.966546219Z","level":"INFO","msg":"sender: started","stream_id":{"value":"m638o95y"}}
+{"time":"2024-06-29T13:46:56.966720052Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"m638o95y"}}
+{"time":"2024-06-29T13:46:57.747379552Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-06-29T13:46:57.793399011Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-06-29T13:47:34.903546208Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.2","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-06-29T13:47:34.921701125Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-06-29T13:47:34.923939041Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-06-29T13:47:35.258712125Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-06-29T13:47:35.259256167Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-06-29T13:47:35.259513125Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-06-29T13:47:37.905869835Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"m638o95y"}}
+{"time":"2024-06-29T13:47:37.905713168Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"m638o95y"}}

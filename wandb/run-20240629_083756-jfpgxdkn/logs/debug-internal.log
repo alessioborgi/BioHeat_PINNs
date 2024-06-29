@@ -1,0 +1,16 @@
+{"time":"2024-06-29T08:37:56.417788345Z","level":"INFO","msg":"using version","core version":"0.17.3"}
+{"time":"2024-06-29T08:37:56.418227095Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240629_083756-jfpgxdkn/logs/debug-core.log"}
+{"time":"2024-06-29T08:37:56.471423554Z","level":"INFO","msg":"created new stream","id":"jfpgxdkn"}
+{"time":"2024-06-29T08:37:56.471964554Z","level":"INFO","msg":"handler: started","stream_id":{"value":"jfpgxdkn"}}
+{"time":"2024-06-29T08:37:56.47267497Z","level":"INFO","msg":"sender: started","stream_id":{"value":"jfpgxdkn"}}
+{"time":"2024-06-29T08:37:56.472523595Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jfpgxdkn"}}
+{"time":"2024-06-29T08:37:57.301177096Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-06-29T08:37:57.342277596Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-06-29T08:38:09.579037296Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.2","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-06-29T08:38:09.596783504Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-06-29T08:38:09.598846296Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-06-29T08:38:09.983528004Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-06-29T08:38:09.984089754Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-06-29T08:38:09.984446754Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-06-29T08:38:12.498728714Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"jfpgxdkn"}}
+{"time":"2024-06-29T08:38:12.498663297Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jfpgxdkn"}}

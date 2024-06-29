@@ -5,16 +5,8 @@ import torch
 import os
 import utils
 import train
-# device = torch.device("cpu")
-device = torch.device("cuda")
 
-model_dir = "./tests/models"
-figures_dir = "./imgs"
-current_file = os.path.abspath(__file__)
-src_dir = os.path.dirname(current_file)
-project_dir = os.path.dirname(src_dir)
-tests_dir = os.path.join(project_dir, "tests")
-os.makedirs(tests_dir, exist_ok=True)
+
 f1, f2, f3 = [None]*3
 
 def boundary_0(x, on_boundary):

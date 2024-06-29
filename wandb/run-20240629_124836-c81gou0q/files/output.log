@@ -1,0 +1,38 @@
+Warning: 100 points required, but 125 points sampled.
+Warning: 10000 points required, but 12500 points sampled.
+Compiling model...
+'compile' took 2.649844 s
+
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+0         [2.72e-01, 6.40e+02, 7.43e-02]    [3.02e-01, 6.40e+02, 7.43e-02]    []
+
+Best model at step 0:
+  train loss: 6.40e+02
+  test loss: 6.41e+02
+  test metric: []
+
+'train' took 4.304243 s
+
+Compiling model...
+'compile' took 0.005464 s
+
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+0         [3.00e+00, 3.00e+00, 3.00e+00]    [3.33e+00, 3.00e+00, 3.00e+00]    []
+100       [1.63e-01, 3.87e-02, 1.49e-01]    [1.37e-01, 3.87e-02, 1.49e-01]    []
+
+Best model at step 100:
+  train loss: 3.50e-01
+  test loss: 3.24e-01
+  test metric: []
+
+Epoch 100: saving model to ./tests/models/adam-100.pt ...
+
+'train' took 168.837722 s
+
+[2024-06-29 12:51:35,973][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 12:51:36,007][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-06-29 12:51:36,031][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode

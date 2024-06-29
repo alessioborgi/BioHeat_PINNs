@@ -5,6 +5,7 @@ import pde
 import plots
 import glob
 import utils
+import main
 import wandb
 import numpy as np
 import pde
@@ -17,11 +18,6 @@ device = torch.device("cuda")
 
 model_dir = "./tests/models"
 figures_dir = "./imgs"
-current_file = os.path.abspath(__file__)
-src_dir = os.path.dirname(current_file)
-project_dir = os.path.dirname(src_dir)
-tests_dir = os.path.join(project_dir, "tests")
-os.makedirs(tests_dir, exist_ok=True)
 
 
 properties = {
@@ -58,7 +54,7 @@ def train_model(name, cfg):
     iters = "*" if LBFGS else epochs
 
     # Check if a trained model with the exact configuration already exists
-    trained_models = sorted(glob.glob(f"{model_dir}/{optim}-{iters}.pt"))
+    trained_models = sorted(glob.glob(f"{model_dir}/{main.run}/{optim}-{iters}.pt"))
     if trained_models:
         mm.compile("L-BFGS") if LBFGS else None
         mm.restore(trained_models[0], verbose=0)
@@ -129,10 +125,11 @@ def train_and_save_model(model, iterations, callbacks, optimizer_name):
         train_state: Final state of the training process.
     """
     display_every = 100
+    print("The main.run is: " + main.run)
     losshistory, train_state = model.train(
         iterations=iterations,
         callbacks=callbacks,
-        model_save_path=f"{model_dir}/{optimizer_name}",
+        model_save_path=f"{model_dir}/{main.run}/{optimizer_name}",
         display_every=display_every
     )
     return losshistory, train_state
