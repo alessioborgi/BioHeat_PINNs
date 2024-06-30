@@ -1,0 +1,17 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 54, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 109, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 45, in train_model
+    conf = configurations.read_config(name, cfg)
+  File "/working_dir/src/configurations.py", line 76, in read_config
+    config = create_Network(cfg)
+  File "/working_dir/src/configurations.py", line 43, in create_Network
+    "activation": cfg.activation,
+omegaconf.errors.ConfigAttributeError: Key 'activation' is not in struct
+    full_key: activation
+    object_type=dict
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

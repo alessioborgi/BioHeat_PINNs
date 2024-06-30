@@ -8,7 +8,7 @@
 import datetime
 import os
 import hydra
-from omegaconf import DictConfig
+from omegaconf import OmegaConf, DictConfig
 import configurations
 import utils
 import train
@@ -16,9 +16,9 @@ import torch
 from configurations import HydraConfigStore
 
 
+# Setting the device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# device = torch.device("cpu")
-device = torch.device("cuda")
 run = ""
 figures_dir = "./tests/figures"
 current_file = os.path.abspath(__file__)
@@ -32,35 +32,26 @@ def main(cfg: DictConfig):
     # Set seed for reproducibility
     HydraConfigStore.set_config(cfg)  # Store the configuration
     utils.seed_all(31)
-
+    # OmegaConf.to_yaml(cfg)
     prj = "BioHeat_PINNs"
-    # n_test = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")  # Current timestamp in the format YYYYMMDD_HHMMSS
-    global run  # Declare that we want to use the global variable
-    # run = f"BioHeat_PINNs_date_time_{n_test}"
-    run = cfg.run
-    
+        
     # Define the folder path with absolute path
     base_dir = os.getcwd()
-    folder_path = os.path.join(base_dir, "tests", "models", run)
-
-    # Ensure parent directories exist and are writable
-    parent_dir = os.path.dirname(folder_path)
-
+    folder_path = os.path.join(base_dir, "tests", "models", cfg.run)
+    
     try:
         os.makedirs(folder_path, exist_ok=True)
         print(f"Successfully created directory: {folder_path}")
     except Exception as e:
         print(f"Error creating directory: {e}")
 
-    print("We are running the run: {}".format(run))
-    name, general_figures, model_dir, figures_dir = utils.set_name(prj, run)
+    name, general_figures, model_dir, figures_dir = utils.set_name(prj, cfg.run)
 
     # Create NBHO with some config.json
-    config = configurations.read_config(run, cfg.network)
-    configurations.write_config(config, run)
+    configurations.write_config(cfg, cfg.run)
 
     # Use a default filename instead of a timestamp-based one
-    train.single_observer(prj, run, "0", cfg.network)
+    train.single_observer(prj, cfg.run, "0", cfg)
 
 if __name__ == "__main__":
     main()

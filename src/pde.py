@@ -3,8 +3,9 @@ import deepxde as dde
 import configurations
 import torch
 import os
-import utils
 import train
+from configurations import HydraConfigStore
+
 
 
 f1, f2, f3 = [None]*3
@@ -73,21 +74,21 @@ def create_nbho(name, cfg):
     Returns:
         dde.Model: The created neural network model.
     """
-    net = configurations.read_config(name, cfg)
-    activation = net["activation"]
-    initial_weights_regularizer = net["initial_weights_regularizer"]
-    initialization = net["initialization"]
-    learning_rate = net["learning_rate"]
-    num_dense_layers = net["num_dense_layers"]
-    num_dense_nodes = net["num_dense_nodes"]
-    K = net["output_injection_gain"]
-    dT = utils.properties['Tmax'] - utils.properties['Tmin']
+    cfg = HydraConfigStore.get_config()
+    activation = cfg.network.activation
+    initial_weights_regularizer = cfg.network.initial_weights_regularizer
+    initialization = cfg.network.initialization
+    learning_rate = cfg.network.learning_rate
+    num_dense_layers = cfg.network.num_dense_layers
+    num_dense_nodes = cfg.network.num_dense_nodes
+    K = cfg.network.output_injection_gain
+    dT = cfg.data.Tmax - cfg.data.Tmin
 
-    D = utils.properties['d'] / utils.properties['L0']
-    alpha = utils.properties['k'] / utils.properties['rhoc']
+    D = cfg.data.d / cfg.data.L0
+    alpha = cfg.data.k / cfg.data.rhoc
 
-    C1, C2 = utils.properties['tauf'] / utils.properties['L0']**2, dT * utils.properties['tauf'] / utils.properties['rhoc']
-    C3 = C2 * dT * utils.properties['cb']
+    C1, C2 = cfg.data.tauf / cfg.data.L0**2, dT * cfg.data.tauf / cfg.data.rhoc
+    C3 = C2 * dT * cfg.data.cb
 
     def pde(x, y):
         # dy_t = dde.grad.jacobian(y, x, i=0, j=4)
@@ -96,13 +97,13 @@ def create_nbho(name, cfg):
 
         return (
             dy_t
-            - alpha * C1 * dy_xx - C2 * utils.properties['p0']*torch.exp(-x[:, 0:1]/D) + C3 * utils.properties['W'] *y
+            - alpha * C1 * dy_xx - C2 * cfg.data.p0*torch.exp(-x[:, 0:1]/D) + C3 * cfg.data.W *y
         )
     
     def bc1_obs(x, theta, X):
         dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
         # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)
-        return dtheta_x - (utils.properties['h']/utils.properties['k'])*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
+        return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
 
 
     def ic_obs(x):
@@ -114,10 +115,10 @@ def create_nbho(name, cfg):
         y2 = x[:, 1:2]
         y3 = x[:, 2:3]
         y1 = 0
-        beta = utils.properties['h'] * (y3 - y2) + K * (y2 -y1)
+        beta = cfg.data.h * (y3 - y2) + K * (y2 -y1)
         a2 = 0.7
 
-        e = y1 + ((beta - ((2/utils.properties['L0'])+K)*a2)/((1/utils.properties['L0'])+K))*z + a2*z**2
+        e = y1 + ((beta - ((2/cfg.data.L0)+K)*a2)/((1/cfg.data.L0)+K))*z + a2*z**2
         return e
 
     # xmin = [0, 0, 0, 0]

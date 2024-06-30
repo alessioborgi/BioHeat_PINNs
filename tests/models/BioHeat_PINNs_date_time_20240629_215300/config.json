@@ -1,4 +1,5 @@
 {
+    "backend": "pytorch",
     "activation": "SELU",
     "initial_weights_regularizer": true,
     "initialization": "Glorot normal",

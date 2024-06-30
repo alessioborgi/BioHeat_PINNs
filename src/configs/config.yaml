@@ -1,5 +1,7 @@
 defaults:
   - network: PINN
+  - data: PDE
   - _self_
+  
 
 run: "BioHeat_PINNs_date_time_${now:%Y%m%d_%H%M%S}"

@@ -6,6 +6,8 @@ import plots
 import glob
 import utils
 import wandb
+from omegaconf import OmegaConf
+
 import numpy as np
 import pde
 import os
@@ -86,22 +88,24 @@ def train_model(name, cfg):
 def single_observer(name_prj, run, n_test, cfg):
     """
     Trains a single observer model using the provided configuration.
-    
-    This function configures the model for a specific task, trains it using
-    provided data, and returns the trained observer model.
-    
+
     Args:
-        None
-    
+        name_prj (str): The project name.
+        run (str): The run identifier.
+        n_test (str): Test identifier.
+        cfg (DictConfig): The configuration object from Hydra.
+
     Returns:
         model: The trained observer model.
         dict: Training metrics.
     """
-    utils.get_properties(n_test)
-    wandb.init(
-        project=name_prj, name=run,
-        config=configurations.read_config(run, cfg)
-    )
+    # Convert DictConfig to a serializable dictionary
+    config_dict = OmegaConf.to_container(cfg, resolve=True)
+
+    # Initialize wandb with the serializable dictionary
+    wandb.init(project=name_prj, name=run, config=config_dict)
+
+    # Rest of the function continues as before
     mo = train_model(run, cfg)
     metrics = plots.plot_and_metrics(mo, n_test)
 
