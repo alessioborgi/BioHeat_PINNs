@@ -18,6 +18,9 @@ def mish(x):
 def softplus(x):
     return F.softplus(x)
 
+def aptx(x):
+    return (1 + torch.tanh(x)) * (x / 2)
+
 def boundary_0(x, on_boundary):
     """
     Boundary condition function for x = 0.
@@ -89,6 +92,8 @@ def create_nbho(name, cfg):
         activation = mish
     elif cfg.network.activation in {"softplus", "Softplus", "SOFTPLUS"}:
         activation = softplus
+    elif cfg.network.activation in {"aptx", "Aptx", "APTX"}:
+        activation = aptx
     else:
         activation = cfg.network.activation
         
