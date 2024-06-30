@@ -1,0 +1,3 @@
+- See whetehr we can apply custom activation functions. 
+- See other parameters  to use in the PINN.
+- See other metrics we could apply

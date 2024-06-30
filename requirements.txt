@@ -10,4 +10,5 @@ scipy
 tensorboard
 pykan
 datetime
+hydra-core
 #os

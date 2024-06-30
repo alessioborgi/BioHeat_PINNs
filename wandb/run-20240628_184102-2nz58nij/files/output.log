@@ -1,0 +1,37 @@
+Warning: 100 points required, but 125 points sampled.
+Warning: 10000 points required, but 12500 points sampled.
+Compiling model...
+'compile' took 3.301423 s
+Training model...
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 46, in main
+    train.single_observer(prj, run, "0", cfg.network)
+  File "/working_dir/src/train.py", line 110, in single_observer
+    mo = train_model(name_run, cfg)
+  File "/working_dir/src/train.py", line 49, in train_model
+    mm = pde.create_nbho(name, cfg)
+  File "/working_dir/src/pde.py", line 165, in create_nbho
+    initial_losses = train.get_initial_loss(model)
+  File "/working_dir/src/train.py", line 154, in get_initial_loss
+    losshistory, _ = model.train(0)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 22, in wrapper
+    result = f(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 636, in train
+    self._test()
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 825, in _test
+    ) = self._outputs_losses(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 546, in _outputs_losses
+    outs = outputs_losses(inputs, targets, auxiliary_vars)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 320, in outputs_losses_train
+    return outputs_losses(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 308, in outputs_losses
+    losses = losses_fn(targets, outputs_, loss_fn, inputs, self, aux=aux)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/data.py", line 13, in losses_train
+    return self.losses(targets, outputs, loss_fn, inputs, model, aux=aux)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 146, in losses
+    f = self.pde(inputs, outputs_pde)
+  File "/working_dir/src/pde.py", line 107, in pde
+    - alpha * C1 * dy_xx - C2 * utils.properties['p0']*torch.exp(-x[:, 0:1]/D) + C3 * W *y
+NameError: name 'W' is not defined
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

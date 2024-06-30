@@ -8,6 +8,11 @@ from skopt.space import Real, Categorical, Integer
 from skopt.utils import use_named_args
 import os
 import deepxde as dde
+import train
+import configurations
+import main
+from configurations import HydraConfigStore
+
 
 # Function 'gp_minimize' of package 'skopt(scikit-optimize)' is used in this example.
 # However 'np.int' used in skopt 0.9.0(the latest version) was deprecated since NumPy 1.20.
@@ -55,12 +60,12 @@ def fitness(learning_rate, num_dense_layers, num_dense_nodes, activation):
     run = f"{ITERATION}"
     utils.set_name(prj, run)
 
-    config = utils.read_config(run)
+    config = configurations.read_config(run)
     config["activation"] = activation
     config["learning_rate"] = learning_rate
     config["num_dense_layers"] = num_dense_layers
     config["num_dense_nodes"] = num_dense_nodes
-    utils.write_config(config)
+    configurations.write_config(config)
 
     print(ITERATION, "it number")
     # Print the hyper-parameters.
@@ -71,7 +76,7 @@ def fitness(learning_rate, num_dense_layers, num_dense_nodes, activation):
     print()
 
     # Create the neural network with these hyper-parameters.
-    _, metrics = utils.single_observer(prj, run, n)
+    _, metrics = train.single_observer(prj, run, n, run)
     error = metrics['L2RE']
 
     if np.isnan(error):
@@ -93,9 +98,10 @@ search_result = gp_minimize(
 )
 
 print(search_result.x)
-
+print("the figures_dir is:", main.figures_dir)
+cfg = HydraConfigStore.get_config()
 convergence_fig = plot_convergence(search_result)
-convergence_fig.figure.savefig(f"{figures}/convergence_plot_{prj}.png")
+convergence_fig.figure.savefig(f"{main.figures_dir}/{cfg.run}/convergence_plot_{prj}.png")
 
 objective_fig = plot_objective(search_result, show_points=True, size=3.8)
-objective_fig.figure.savefig(f"{figures}/objective_plot_{prj}.png")
+objective_fig.figure.savefig(f"{main.figures_dir}/{cfg.run}/objective_plot_{prj}.png")
