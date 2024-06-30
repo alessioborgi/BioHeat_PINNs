@@ -2,13 +2,21 @@ import numpy as np
 import deepxde as dde
 import configurations
 import torch
+import torch.nn.functional as F
 import os
 import train
 from configurations import HydraConfigStore
+# import tensorflow as tf
 
 
 
 f1, f2, f3 = [None]*3
+
+def mish(x):
+    return x * torch.tanh(F.softplus(x))
+
+def softplus(x):
+    return F.softplus(x)
 
 def boundary_0(x, on_boundary):
     """
@@ -75,7 +83,15 @@ def create_nbho(name, cfg):
         dde.Model: The created neural network model.
     """
     cfg = HydraConfigStore.get_config()
-    activation = cfg.network.activation
+    
+    # Handling the Customized Activation Functions Case.
+    if cfg.network.activation in {"mish", "Mish", "MISH"}:
+        activation = mish
+    elif cfg.network.activation in {"softplus", "Softplus", "SOFTPLUS"}:
+        activation = softplus
+    else:
+        activation = cfg.network.activation
+        
     initial_weights_regularizer = cfg.network.initial_weights_regularizer
     initialization = cfg.network.initialization
     learning_rate = cfg.network.learning_rate
@@ -148,6 +164,7 @@ def create_nbho(name, cfg):
 
     # layer_size = [5] + [num_dense_nodes] * num_dense_layers + [1]
     layer_size = [4] + [num_dense_nodes] * num_dense_layers + [1]
+    # net = dde.nn.FNN(layer_size, activation, initialization)
     net = dde.nn.FNN(layer_size, activation, initialization)
     # net = dde.maps.FNN(layer_size, activation, initialization)
 
