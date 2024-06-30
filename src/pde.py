@@ -74,6 +74,7 @@ def output_transform(x, y):
     """
     return x[:, 0:1] * y
 
+# Neural Bio-Heat Observer.
 def create_nbho(name, cfg):
     """
     Creates the neural network based on the given configuration.
@@ -92,7 +93,7 @@ def create_nbho(name, cfg):
         activation = mish
     elif cfg.network.activation in {"softplus", "Softplus", "SOFTPLUS"}:
         activation = softplus
-    elif cfg.network.activation in {"aptx", "Aptx", "APTX"}:
+    elif cfg.network.activation in {"aptx", "Aptx", "APTX", "APTx"}:
         activation = aptx
     else:
         activation = cfg.network.activation
