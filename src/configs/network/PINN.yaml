@@ -1,7 +1,7 @@
 # PINN Configurations
 backend: pytorch
-# "activation": "tanh"
-activation: SELU
+#ELU, GELU, ReLU, SELU, Sigmoid, SiLU, sin, Swish, tanh, Mish, Softplus, APTx
+activation: Softplus     
 initial_weights_regularizer: true
 initialization: Glorot normal
 iterations: 3000

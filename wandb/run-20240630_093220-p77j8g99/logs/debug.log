@@ -1,0 +1,28 @@
+2024-06-30 09:32:21,008 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-06-30 09:32:21,009 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Configure stats pid to 1046
+2024-06-30 09:32:21,010 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2024-06-30 09:32:21,010 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Loading settings from /working_dir/wandb/settings
+2024-06-30 09:32:21,010 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'_require_core': 'true'}
+2024-06-30 09:32:21,011 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-30 09:32:21,011 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src/main.py', 'program_abspath': '/working_dir/src/main.py', 'program': '/working_dir/./src/main.py'}
+2024-06-30 09:32:21,012 INFO    MainThread:1046 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-30 09:32:21,013 INFO    MainThread:1046 [wandb_init.py:_log_setup():520] Logging user logs to /working_dir/wandb/run-20240630_093220-p77j8g99/logs/debug.log
+2024-06-30 09:32:21,014 INFO    MainThread:1046 [wandb_init.py:_log_setup():521] Logging internal logs to /working_dir/wandb/run-20240630_093220-p77j8g99/logs/debug-internal.log
+2024-06-30 09:32:21,014 INFO    MainThread:1046 [wandb_init.py:init():560] calling init triggers
+2024-06-30 09:32:21,015 INFO    MainThread:1046 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'network': {'backend': 'pytorch', 'activation': 'LAAF-10 relu', 'initial_weights_regularizer': True, 'initialization': 'Glorot normal', 'iterations': 10, 'LBFGS': False, 'learning_rate': 0.001, 'num_dense_layers': 2, 'num_dense_nodes': 50, 'output_injection_gain': 50, 'resampling': True, 'resampler_period': 100}, 'data': {'L0': 1.0, 'tauf': 1.0, 'k': 1.0, 'p0': 0.0, 'd': 0.03, 'rhoc': 1.0, 'cb': 1.0, 'h': 100.0, 'Tmin': 22, 'Tmax': 30, 'alpha': 1.0, 'W': 0.0, 'steep': 20.0, 'tchange': 0.25}, 'run': 'BioHeat_PINNs_date_time_20240630_093219'}
+2024-06-30 09:32:21,016 INFO    MainThread:1046 [wandb_init.py:init():610] starting backend
+2024-06-30 09:32:21,016 INFO    MainThread:1046 [wandb_init.py:init():614] setting up manager
+2024-06-30 09:32:21,026 INFO    MainThread:1046 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-30 09:32:21,031 INFO    MainThread:1046 [wandb_init.py:init():622] backend started and connected
+2024-06-30 09:32:21,046 INFO    MainThread:1046 [wandb_init.py:init():711] updated telemetry
+2024-06-30 09:32:21,047 INFO    MainThread:1046 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-30 09:32:21,757 INFO    MainThread:1046 [wandb_run.py:_on_init():2402] communicating current version
+2024-06-30 09:32:21,762 INFO    MainThread:1046 [wandb_run.py:_on_init():2411] got version response 
+2024-06-30 09:32:21,763 INFO    MainThread:1046 [wandb_init.py:init():795] starting run threads in backend
+2024-06-30 09:32:22,531 INFO    MainThread:1046 [wandb_run.py:_console_start():2380] atexit reg
+2024-06-30 09:32:22,532 INFO    MainThread:1046 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-06-30 09:32:22,533 INFO    MainThread:1046 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-06-30 09:32:22,533 INFO    MainThread:1046 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-06-30 09:32:22,538 INFO    MainThread:1046 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-30 09:32:23,715 WARNING MsgRouterThr:1046 [router.py:message_loop():77] message_loop has been closed

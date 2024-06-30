@@ -1,3 +1,4 @@
-- See whetehr we can apply custom activation functions. 
+- Implement multi-Observer network.
+- Foourier Thing 
 - See other parameters  to use in the PINN.
 - See other metrics we could apply
