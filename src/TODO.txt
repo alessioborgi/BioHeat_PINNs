@@ -1,4 +1,4 @@
 - Implement multi-Observer network.
-- Foourier Thing 
+- Fourier Thing 
 - See other parameters  to use in the PINN.
 - See other metrics we could apply
