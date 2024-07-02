@@ -1,4 +1,5 @@
 - Implement multi-Observer network.
-- Foourier Thing 
-- See other parameters  to use in the PINN.
-- See other metrics we could apply
+- Fourier Thing 
+
+
+- Ablation Study over: Activation Function, #Nodes in the network, Initialization. 
