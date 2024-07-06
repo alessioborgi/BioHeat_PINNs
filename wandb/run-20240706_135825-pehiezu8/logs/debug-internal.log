@@ -6,3 +6,11 @@
 {"time":"2024-07-06T13:58:25.771372926Z","level":"INFO","msg":"sender: started","stream_id":{"value":"pehiezu8"}}
 {"time":"2024-07-06T13:58:26.359549968Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
 {"time":"2024-07-06T13:58:26.403857301Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-07-06T14:48:51.930551632Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.2","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-07-06T14:48:51.949257757Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-07-06T14:48:51.951743882Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-07-06T14:48:52.289338424Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-07-06T14:48:52.290048799Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-07-06T14:48:52.290395882Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-07-06T14:48:54.397175341Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"pehiezu8"}}
+{"time":"2024-07-06T14:48:54.397138425Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"pehiezu8"}}

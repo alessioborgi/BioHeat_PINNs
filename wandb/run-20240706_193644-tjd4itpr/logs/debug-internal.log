@@ -1,0 +1,8 @@
+{"time":"2024-07-06T19:36:44.569990335Z","level":"INFO","msg":"using version","core version":"0.17.3"}
+{"time":"2024-07-06T19:36:44.570281793Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240706_193644-tjd4itpr/logs/debug-core.log"}
+{"time":"2024-07-06T19:36:44.583326002Z","level":"INFO","msg":"created new stream","id":"tjd4itpr"}
+{"time":"2024-07-06T19:36:44.584042377Z","level":"INFO","msg":"handler: started","stream_id":{"value":"tjd4itpr"}}
+{"time":"2024-07-06T19:36:44.584494752Z","level":"INFO","msg":"sender: started","stream_id":{"value":"tjd4itpr"}}
+{"time":"2024-07-06T19:36:44.584096335Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tjd4itpr"}}
+{"time":"2024-07-06T19:36:45.247705544Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-07-06T19:36:45.289026627Z","level":"INFO","msg":"Starting system monitor"}

@@ -1,9 +1,10 @@
 # PINN Configurations
 backend: pytorch
 #ELU, GELU, ReLU, SELU, Sigmoid, SiLU, sin, Swish, tanh, Mish, Softplus, APTx
-activation: tanh     
+activation: ELU     
 initial_weights_regularizer: true
-initialization: Glorot normal
+# Glorot normal, He normal, LeCun normal, Orthogonal, Random normal, Random uniform, Zeros
+initialization: He normal
 iterations: 3000
 LBFGS: false
 learning_rate: 0.001
