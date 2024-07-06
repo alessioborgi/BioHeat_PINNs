@@ -1,4 +1,4 @@
-# BIO-HEAT PINNs
+# BIOHEAT_PINNs: Temperature Estimation with Bio-Heat Equation using Physics-Informed Neural Networks
 ## CONTAINER INSTRUCTIONS 
 
 #### These are the commands to run in the Terminal to build the Container and so on.
