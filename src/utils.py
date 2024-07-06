@@ -20,7 +20,7 @@ import main
 properties = {
     "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
     "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
-    "W": None, "steep": None, "tchange": None
+    "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None
 }
 
 f1, f2, f3 = [None]*3
@@ -95,7 +95,7 @@ def get_properties(n):
         None
     """
     global L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange
-    file_path = os.path.join(main.src_dir, 'simulations', f'data{n}.json')
+    file_path = os.path.join(main.src_dir, 'data_simulations', f'data{n}.json')
 
     # Open the file and load the JSON data
     with open(file_path, 'r') as f:

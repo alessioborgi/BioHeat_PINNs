@@ -24,7 +24,7 @@ figures_dir = "./imgs"
 properties = {
     "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
     "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
-    "W": None, "steep": None, "tchange": None
+    "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None
 }
 
 

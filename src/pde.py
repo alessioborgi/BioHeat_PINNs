@@ -107,21 +107,24 @@ def create_nbho(name, cfg):
     dT = cfg.data.Tmax - cfg.data.Tmin
 
     D = cfg.data.d / cfg.data.L0
-    alpha = cfg.data.k / cfg.data.rhoc
+    # alpha = cfg.data.k / cfg.data.rhoc
+    alpha = cfg.data.rhoc / cfg.data.k 
 
-    C1, C2 = cfg.data.tauf / cfg.data.L0**2, dT * cfg.data.tauf / cfg.data.rhoc
-    C3 = C2 * dT * cfg.data.cb
+    # C1 = cfg.data.tauf / cfg.data.L0**2, 
+    # C2 = dT * cfg.data.tauf / cfg.data.rhoc
+    # C3 = C2 * dT * cfg.data.cb
+    
+    a1 = (cfg.data.rhoc * cfg.data.L0**2) / (cfg.data.tauf * cfg.data.k)
+    a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
+    a3 = 0 
 
     def pde(x, y):
         # dy_t = dde.grad.jacobian(y, x, i=0, j=4)
         dy_t = dde.grad.jacobian(y, x, i=0, j=3)
         dy_xx = dde.grad.hessian(y, x, i=0, j=0)
 
-        return (
-            dy_t
-            - alpha * C1 * dy_xx - C2 * cfg.data.p0*torch.exp(-x[:, 0:1]/D) + C3 * cfg.data.W *y
-        )
-    
+        return (a1 * dy_t - dy_xx + a2*y) 
+        
     def bc1_obs(x, theta, X):
         dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
         # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)

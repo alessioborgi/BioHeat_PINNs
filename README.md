@@ -7,9 +7,6 @@
 
 - Build the Container, with arm64 for MAC Ms Processor:
     docker build --platform linux/arm64 -t bio_heat_pinns .
-
-- Run the Container:
-    docker run --platform linux/arm64 -it --name bio_heat_pinns bio_heat_pinns
     
 - To run the Container without re-building it every time. It saves the changes instantaneously.
     docker run --platform linux/arm64 -it --name bio_heat_pinns -v $(pwd):/working_dir bio_heat_pinns
