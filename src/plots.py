@@ -125,7 +125,7 @@ def plot_loss_components(losshistory):
         plt.close()
 
 def gen_testdata(n):
-    data = np.loadtxt(f"{main.src_dir}/simulations/file{n}.txt")
+    data = np.loadtxt(f"{main.src_dir}/data_simulations/file_1D_{n}.txt")
     x, t, exact = data[:, 0:1].T, data[:, 1:2].T, data[:, 2:].T
     X = np.vstack((x, t)).T
     y = exact.flatten()[:, None]

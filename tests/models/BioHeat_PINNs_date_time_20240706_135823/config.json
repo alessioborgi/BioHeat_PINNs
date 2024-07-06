@@ -1,6 +1,6 @@
 {
     "backend": "pytorch",
-    "activation": "Swish",
+    "activation": "tanh",
     "initial_weights_regularizer": true,
     "initialization": "Glorot normal",
     "iterations": 3000,

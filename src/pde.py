@@ -115,7 +115,7 @@ def create_nbho(name, cfg):
     # C3 = C2 * dT * cfg.data.cb
     
     a1 = (cfg.data.rhoc * cfg.data.L0**2) / (cfg.data.tauf * cfg.data.k)
-    a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / cfg.data.k
+    a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
     a3 = 0 
 
     def pde(x, y):
