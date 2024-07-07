@@ -1,0 +1,19 @@
+Warning: 100 points required, but 125 points sampled.
+Warning: 10000 points required, but 12500 points sampled.
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 54, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 109, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 46, in train_model
+    mm = pde.create_nbho(name, cfg)
+  File "/working_dir/src/pde.py", line 177, in create_nbho
+    net = dde.nn.FNN(layer_size, activation, initialization)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/nn/pytorch/fnn.py", line 22, in __init__
+    initializer = initializers.get(kernel_initializer)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/nn/initializers.py", line 185, in get
+    return INITIALIZER_DICT[identifier]
+KeyError: 'LeCun normal'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

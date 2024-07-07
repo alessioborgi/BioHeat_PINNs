@@ -1,0 +1,31 @@
+network:
+  backend: pytorch
+  activation: SiLU
+  initial_weights_regularizer: true
+  initialization: He normal
+  iterations: 3000
+  LBFGS: false
+  learning_rate: 0.001
+  num_dense_layers: 2
+  num_dense_nodes: 50
+  output_injection_gain: 50
+  resampling: true
+  resampler_period: 100
+data:
+  L0: 0.05
+  tauf: 1800
+  k: 5.0
+  p0: 0.0
+  d: 0.03
+  rhoc: 3820950
+  cb: 3825.0
+  h: 100.0
+  Tmin: 37
+  Tmax: 45
+  alpha: 1.0
+  W: 2.3154600000000003
+  steep: 20.0
+  tchange: 0.25
+  rhob: 1043.0
+  Wb: 0.00222
+run: BioHeat_PINNs_date_time_${now:%Y%m%d_%H%M%S}
