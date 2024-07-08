@@ -98,8 +98,6 @@ model.train(epochs=10000)
 X = geomtime.random_points(100)
 y_pred = model.predict(X)
 dde.saveplot(y_pred, X, "pde_solution")
-```
-
 
 
 
