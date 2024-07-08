@@ -25,3 +25,10 @@ config: {'network': {'backend': 'pytorch', 'activation': 'ELU', 'initial_weights
 2024-07-07 18:50:23,504 INFO    MainThread:1139 [wandb_run.py:_redirect():2300] Wrapping output streams.
 2024-07-07 18:50:23,505 INFO    MainThread:1139 [wandb_run.py:_redirect():2325] Redirects installed.
 2024-07-07 18:50:23,510 INFO    MainThread:1139 [wandb_init.py:init():838] run started, returning control to user process
+2024-07-08 08:15:34,753 INFO    MainThread:1139 [wandb_run.py:_finish():2109] finishing run adavit/BioHeat_PINNs/q01h7ma6
+2024-07-08 08:15:34,754 INFO    MainThread:1139 [wandb_run.py:_atexit_cleanup():2349] got exitcode: 0
+2024-07-08 08:15:34,757 INFO    MainThread:1139 [wandb_run.py:_restore():2332] restore
+2024-07-08 08:15:34,758 INFO    MainThread:1139 [wandb_run.py:_restore():2338] restore done
+2024-07-08 08:15:38,607 INFO    MainThread:1139 [wandb_run.py:_footer_history_summary_info():3991] rendering history
+2024-07-08 08:15:38,622 INFO    MainThread:1139 [wandb_run.py:_footer_history_summary_info():4023] rendering summary
+2024-07-08 08:15:38,686 INFO    MainThread:1139 [wandb_run.py:_footer_sync_info():3950] logging synced files
