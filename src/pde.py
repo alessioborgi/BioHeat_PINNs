@@ -9,7 +9,6 @@ from configurations import HydraConfigStore
 # import tensorflow as tf
 
 
-
 f1, f2, f3 = [None]*3
 
 def mish(x):
@@ -46,6 +45,64 @@ def boundary_1(x, on_boundary):
         bool: True if on the boundary and x[0] is close to 1.
     """
     return on_boundary and np.isclose(x[0], 1)
+
+
+
+
+# Define constants
+a1 = 1.0  # example value
+a2 = 1.0  # example value
+a3 = 1.0  # example value
+omega = 1.0  # example value
+Q = lambda x: np.sin(np.pi * x)  # example source term
+
+# Define the geometry and time domain
+geom = dde.geometry.Interval(0, 1)
+timedomain = dde.geometry.TimeDomain(0, 1)
+geomtime = dde.geometry.GeometryXTime(geom, timedomain)
+
+# Define the PDE
+def pde(x, theta):
+    dtheta_dt = dde.grad.jacobian(theta, x, i=0, j=1)
+    dtheta_dx2 = dde.grad.hessian(theta, x, component=0, i=0, j=0)
+    return a1 * dtheta_dt - dtheta_dx2 + a2 * omega * theta - a3 * Q(x[:, 0:1])
+
+# Define boundary conditions
+def boundary_left(x, on_boundary):
+    return on_boundary and np.isclose(x[0], 0)
+
+def boundary_right(x, on_boundary):
+    return on_boundary and np.isclose(x[0], 1)
+
+c0 = 1.0  # example value for theta(0, tau)
+v_tau = lambda x: np.cos(np.pi * x[:, 1])  # example function for v(tau)
+
+# Define initial condition
+theta_0 = lambda x: np.sin(np.pi * x[:, 0])  # example initial condition
+ic = dde.icbc.IC(geomtime, theta_0, lambda _, on_initial: on_initial)
+
+# Define the data object
+data = dde.data.TimePDE(geomtime, pde, [bc_left, bc_right, ic], num_domain=40, num_boundary=10, num_initial=10)
+
+# Define the neural network
+net = dde.maps.FNN([2] + [20] * 3 + [1], "tanh", "Glorot uniform")
+
+# Define the model
+model = dde.Model(data, net)
+
+# Compile and train the model
+model.compile("adam", lr=1e-3)
+model.train(epochs=10000)
+
+# Predict and plot the solution
+X = geomtime.random_points(100)
+y_pred = model.predict(X)
+dde.saveplot(y_pred, X, "pde_solution")
+```
+
+
+
+
 
 def bc0_obs(x, theta, X):
     """
@@ -118,11 +175,20 @@ def create_nbho(name, cfg):
     a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
     a3 = 0 
 
-    def pde(x, y):
-        # dy_t = dde.grad.jacobian(y, x, i=0, j=4)
-        dy_t = dde.grad.jacobian(y, x, i=0, j=3)
-        dy_xx = dde.grad.hessian(y, x, i=0, j=0)
-
+    def pde(x, u):
+        #   x[:,0] = spatial coordinate
+        #   x[:,1] = temporal coordinate
+        #   y = output of the network (Temperature T if Bio-Heat Equation)
+        
+        du_t = dde.grad.jacobian(u, x, i=0, j=3)
+        du_xx = dde.grad.hessian(u, x, i=0, j=0)
+        du_yy = dde.grad.hessian(u, x, i=1, j=1)
+        
+        
+        u_t = dde.grad.jacobian(u, x, i=0, j=0)
+        u_xx = dde.grad.hessian(u, x, i=1, j=1)
+        u_yy = dde.grad.hessian(u, x, i=2, j=2)
+        points1=Table[{x, t, usol[x,,t]},{t,0,1,0.05},{x,0,1, 0.1}];
         return (a1 * dy_t - dy_xx + a2*y) 
         
     def bc1_obs(x, theta, X):
@@ -155,10 +221,17 @@ def create_nbho(name, cfg):
     timedomain = dde.geometry.TimeDomain(0, 1)
     geomtime = dde.geometry.GeometryXTime(geom, timedomain)
 
-    # bc_0 = dde.icbc.OperatorBC(geomtime, bc0_obs, boundary_0)
-    bc_1 = dde.icbc.OperatorBC(geomtime, bc1_obs, boundary_1)
-
+    # Initial Conditions.
     ic = dde.icbc.IC(geomtime, ic_obs, lambda _, on_initial: on_initial)
+    
+    # Bounday Conditions.
+    bc_1 = dde.icbc.OperatorBC(geomtime, bc1_obs, boundary_1)
+    
+    # Dirichlet boundary condition for theta(0, tau) = c0
+    bc_1 = dde.icbc.DirichletBC(geomtime, lambda x: c0, boundary_1, component=0)
+
+    # Neumann boundary condition for partial_X theta(1, tau) = v(tau)
+    bc_2 = dde.icbc.NeumannBC(geomtime, v_tau, boundary_right, component=0)
 
     data = dde.data.TimePDE(
         geomtime,
