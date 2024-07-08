@@ -119,8 +119,8 @@ def create_nbho(name, cfg):
     a3 = 0 
 
     def pde(x, y):
-        # dy_t = dde.grad.jacobian(y, x, i=0, j=4)
-        dy_t = dde.grad.jacobian(y, x, i=0, j=3)
+        
+        dy_t = dde.grad.jacobian(y, x, i=0, j=1)
         dy_xx = dde.grad.hessian(y, x, i=0, j=0)
 
         return (a1 * dy_t - dy_xx + a2*y) 
