@@ -3,3 +3,4 @@
 
 
 - Ablation Study over: Activation Function, #Nodes in the network, Initialization. 
+- Make plots 
