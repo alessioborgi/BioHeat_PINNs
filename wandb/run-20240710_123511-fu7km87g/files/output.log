@@ -50,3 +50,37 @@ Step      Train loss                        Test loss                         Te
 2600      [9.41e-02, 1.00e-02, 2.34e-01]    [3.32e-02, 1.00e-02, 2.34e-01]    []
 2700      [9.36e-02, 9.77e-03, 2.33e-01]    [3.21e-02, 9.77e-03, 2.33e-01]    []
 2800      [9.44e-02, 9.02e-03, 2.31e-01]    [3.21e-02, 9.02e-03, 2.31e-01]    []
+2900      [9.49e-02, 8.55e-03, 2.28e-01]    [3.17e-02, 8.55e-03, 2.28e-01]    []
+3000      [9.53e-02, 7.82e-03, 2.26e-01]    [3.10e-02, 7.82e-03, 2.26e-01]    []
+
+Best model at step 3000:
+  train loss: 3.29e-01
+  test loss: 2.65e-01
+  test metric: []
+
+Epoch 3000: saving model to ./tests/models/BioHeat_PINNs_date_time_20240710_123505/adam-3000.pt ...
+
+'train' took 4102.825599 s
+
+Compiling model...
+'compile' took 0.005814 s
+
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+3000      [1.91e-02, 9.84e-01, 4.39e-03]    [6.11e-03, 9.84e-01, 4.39e-03]    []
+
+Best model at step 3000:
+  train loss: 3.29e-01
+  test loss: 2.65e-01
+  test metric: []
+
+'train' took 2.794919 s
+
+Compiling model...
+'compile' took 0.006796 s
+
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+3000      [9.71e-02, 7.82e-03, 2.26e-01]    [3.10e-02, 7.82e-03, 2.26e-01]    []
