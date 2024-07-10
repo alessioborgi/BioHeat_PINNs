@@ -173,7 +173,7 @@ def compute_metrics(true, pred):
     MSE = dde.metrics.mean_squared_error(true, pred)        # Mean Squared Error
     MAE = np.mean(np.abs((true - pred) / true_nonzero))     # Mean Absolute Error
     L2RE = dde.metrics.l2_relative_error(true, pred)        # L2 Relative Error
-    max_APE = np.max(np.abs((true - pred) / true_nonzero))  # 
+    max_APE = np.max(np.abs((true - pred) / true_nonzero))  # Maximum Absolute Percentage Error
     
     metrics = {
         "MSE": MSE,
