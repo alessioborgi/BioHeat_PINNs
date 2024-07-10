@@ -14,27 +14,29 @@ def normalize_and_compute_composite_score(csv_file_path, output_file_path, weigh
     data['L2RE_norm'] = (data['L2RE'] - data['L2RE'].min()) / (data['L2RE'].max() - data['L2RE'].min())
     data['MAE_norm'] = (data['MAE'] - data['MAE'].min()) / (data['MAE'].max() - data['MAE'].min())
     data['MSE_norm'] = (data['MSE'] - data['MSE'].min()) / (data['MSE'].max() - data['MSE'].min())
+    data['max_APE_norm'] = (data['max_APE'] - data['max_APE'].min()) / (data['max_APE'].max() - data['max_APE'].min())
 
     # Calculate the composite score using the normalized metrics
     data['total_metrics'] = (
         weights['L2RE'] * data['L2RE_norm'] +
         weights['MAE'] * data['MAE_norm'] +
-        weights['MSE'] * data['MSE_norm']
+        weights['MSE'] * data['MSE_norm'] +
+        weights['max_APE'] * data['max_APE_norm']
     )
 
     # Drop the intermediate normalized columns if not needed
-    data.drop(columns=['L2RE_norm', 'MAE_norm', 'MSE_norm'], inplace=True)
+    data.drop(columns=['L2RE_norm', 'MAE_norm', 'MSE_norm', 'max_APE_norm'], inplace=True)
 
     # Save the updated dataframe to a new CSV file
     data.to_csv(output_file_path, index=False)
     print(f"Normalized metrics and composite scores saved to {output_file_path}")
 
-
 # Define weights
 weights = {
-    'L2RE': 0.4,
+    'L2RE': 0.3,
     'MAE': 0.3,
-    'MSE': 0.3
+    'MSE': 0.2,
+    'max_APE': 0.2
 }
 
 # File paths
