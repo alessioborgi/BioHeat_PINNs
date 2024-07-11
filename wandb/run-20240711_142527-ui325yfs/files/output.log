@@ -1,0 +1,83 @@
+Warning: 100 points required, but 256 points sampled.
+Warning: 10000 points required, but 25600 points sampled.
+Compiling model...
+'compile' took 5.024057 s
+
+Training model...
+
+Step      Train loss                                  Test loss                                   Test metric
+0         [5.18e+00, 7.81e-01, 4.09e-01, 3.47e-01]    [3.42e+00, 7.81e-01, 4.09e-01, 3.47e-01]    []
+
+Best model at step 0:
+  train loss: 6.71e+00
+  test loss: 4.96e+00
+  test metric: []
+
+'train' took 9.612114 s
+
+Compiling model...
+'compile' took 0.002573 s
+
+Training model...
+
+Step      Train loss                                  Test loss                                   Test metric
+0         [4.00e+00, 4.00e+00, 4.00e+00, 4.00e+00]    [2.64e+00, 4.00e+00, 4.00e+00, 4.00e+00]    []
+100       [1.59e-01, 9.34e-01, 2.30e+00, 4.25e-01]    [9.68e-02, 9.34e-01, 2.30e+00, 4.25e-01]    []
+200       [1.41e-01, 9.13e-01, 2.07e+00, 2.90e-01]    [7.89e-02, 9.13e-01, 2.07e+00, 2.90e-01]    []
+300       [1.54e-01, 8.97e-01, 1.75e+00, 2.26e-01]    [8.62e-02, 8.97e-01, 1.75e+00, 2.26e-01]    []
+400       [1.78e-01, 8.95e-01, 1.39e+00, 1.82e-01]    [1.05e-01, 8.95e-01, 1.39e+00, 1.82e-01]    []
+500       [1.69e-01, 8.89e-01, 1.21e+00, 1.47e-01]    [9.34e-02, 8.89e-01, 1.21e+00, 1.47e-01]    []
+600       [1.43e-01, 8.81e-01, 1.13e+00, 1.24e-01]    [8.08e-02, 8.81e-01, 1.13e+00, 1.24e-01]    []
+700       [1.23e-01, 8.77e-01, 1.09e+00, 1.09e-01]    [6.73e-02, 8.77e-01, 1.09e+00, 1.09e-01]    []
+800       [1.07e-01, 8.74e-01, 1.06e+00, 9.69e-02]    [5.81e-02, 8.74e-01, 1.06e+00, 9.69e-02]    []
+900       [9.26e-02, 8.74e-01, 1.03e+00, 8.94e-02]    [4.86e-02, 8.74e-01, 1.03e+00, 8.94e-02]    []
+1000      [8.45e-02, 8.73e-01, 1.01e+00, 8.32e-02]    [4.18e-02, 8.73e-01, 1.01e+00, 8.32e-02]    []
+1100      [8.04e-02, 8.72e-01, 9.76e-01, 7.71e-02]    [4.03e-02, 8.72e-01, 9.76e-01, 7.71e-02]    []
+1200      [7.32e-02, 8.72e-01, 9.50e-01, 7.39e-02]    [3.66e-02, 8.72e-01, 9.50e-01, 7.39e-02]    []
+1300      [6.68e-02, 8.70e-01, 9.25e-01, 6.96e-02]    [3.62e-02, 8.70e-01, 9.25e-01, 6.96e-02]    []
+1400      [6.48e-02, 8.69e-01, 9.01e-01, 6.53e-02]    [3.37e-02, 8.69e-01, 9.01e-01, 6.53e-02]    []
+1500      [6.21e-02, 8.69e-01, 8.69e-01, 6.11e-02]    [3.25e-02, 8.69e-01, 8.69e-01, 6.11e-02]    []
+1600      [5.88e-02, 8.69e-01, 8.50e-01, 5.60e-02]    [2.90e-02, 8.69e-01, 8.50e-01, 5.60e-02]    []
+1700      [5.36e-02, 8.68e-01, 8.37e-01, 5.26e-02]    [2.67e-02, 8.68e-01, 8.37e-01, 5.26e-02]    []
+1800      [5.15e-02, 8.69e-01, 8.29e-01, 4.80e-02]    [2.45e-02, 8.69e-01, 8.29e-01, 4.80e-02]    []
+1900      [4.80e-02, 8.68e-01, 8.20e-01, 4.40e-02]    [2.23e-02, 8.68e-01, 8.20e-01, 4.40e-02]    []
+2000      [4.66e-02, 8.68e-01, 8.16e-01, 4.05e-02]    [2.05e-02, 8.68e-01, 8.16e-01, 4.05e-02]    []
+2100      [4.41e-02, 8.68e-01, 8.13e-01, 3.83e-02]    [1.83e-02, 8.68e-01, 8.13e-01, 3.83e-02]    []
+2200      [4.10e-02, 8.68e-01, 8.11e-01, 3.09e-02]    [1.66e-02, 8.68e-01, 8.11e-01, 3.09e-02]    []
+2300      [3.81e-02, 8.67e-01, 8.10e-01, 2.80e-02]    [1.56e-02, 8.67e-01, 8.10e-01, 2.80e-02]    []
+2400      [3.52e-02, 8.67e-01, 8.08e-01, 2.48e-02]    [1.38e-02, 8.67e-01, 8.08e-01, 2.48e-02]    []
+2500      [3.42e-02, 8.67e-01, 8.08e-01, 2.19e-02]    [1.23e-02, 8.67e-01, 8.08e-01, 2.19e-02]    []
+2600      [3.34e-02, 8.68e-01, 8.07e-01, 1.96e-02]    [1.14e-02, 8.68e-01, 8.07e-01, 1.96e-02]    []
+2700      [3.11e-02, 8.66e-01, 8.06e-01, 2.05e-02]    [1.02e-02, 8.66e-01, 8.06e-01, 2.05e-02]    []
+2800      [2.87e-02, 8.66e-01, 8.05e-01, 1.89e-02]    [1.03e-02, 8.66e-01, 8.05e-01, 1.89e-02]    []
+2900      [2.69e-02, 8.65e-01, 8.05e-01, 1.67e-02]    [9.11e-03, 8.65e-01, 8.05e-01, 1.67e-02]    []
+3000      [2.61e-02, 8.65e-01, 8.04e-01, 1.64e-02]    [9.10e-03, 8.65e-01, 8.04e-01, 1.64e-02]    []
+
+Best model at step 3000:
+  train loss: 1.71e+00
+  test loss: 1.69e+00
+  test metric: []
+
+Epoch 3000: saving model to ./tests/models/BioHeat_PINNs_date_time_20240711_142525/adam-3000.pt ...
+
+'train' took 8302.422673 s
+
+[2024-07-11 16:44:09,356][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-11 16:44:09,402][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-11 16:44:09,427][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-11 16:44:09,451][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 54, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 110, in single_observer
+    metrics = plots.plot_and_metrics(mo, n_test)
+  File "/working_dir/src/plots.py", line 177, in plot_and_metrics
+    g = gen_obsdata(n_test)
+  File "/working_dir/src/plots.py", line 138, in gen_obsdata
+    g = np.hstack((gen_testdata(n)))
+  File "/opt/conda/lib/python3.10/site-packages/numpy/core/shape_base.py", line 359, in hstack
+    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
+ValueError: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 2541 and the array at index 1 has size 5082
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

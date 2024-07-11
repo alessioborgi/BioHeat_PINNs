@@ -169,53 +169,51 @@ def create_nbho(name, cfg):
         # y1 = x[:, 1:2]
         # y2 = x[:, 2:3]
         # y3 = x[:, 3:4]
+        y1 = 0
         y2 = x[:, 1:2]
         y3 = x[:, 2:3]
-        y1 = 0
+        
         beta = cfg.data.h * (y3 - y2) + K * (y2 -y1)
         a2 = 0.7
-
+        
         e = y1 + ((beta - ((2/cfg.data.L0)+K)*a2)/((1/cfg.data.L0)+K))*z + a2*z**2
         return e
-
-    # xmin = [0, 0, 0, 0]
-    # xmax = [1, 1, 1, 1]
-    # geom = dde.geometry.Hypercube(xmin, xmax)
-    xmin = [0, 0, 0]
-    xmax = [1, 1, 1]
-    geom = dde.geometry.Cuboid(xmin, xmax)
+    
+    xmin = [0, 0, 0, 0]
+    xmax = [1, 1, 1, 1]
+    geom = dde.geometry.Hypercube(xmin, xmax)
     timedomain = dde.geometry.TimeDomain(0, 1)
     geomtime = dde.geometry.GeometryXTime(geom, timedomain)
-
-    # bc_0 = dde.icbc.OperatorBC(geomtime, bc0_obs, boundary_0)
     
+    # Boundary Condition Flux at x=1. 
+    bcx_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[3], boundary_x1, component=0)
     
-    bcx_0 = dde.icbc.NeumannBC(geomtime, 0, boundary_x0, component=0)
-    bcx_1 = dde.icbc.NeumannBC(geomtime, 0, boundary_x1, component=0)
+    # Boundary Condition Flux at y=1. 
+    bcy_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[3], boundary_y1, component=0)
     
+    # Boundary Condition at x=0. 
+    bcx_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, boundary_x0, component=0)
+    
+    # Boundary Condition at y=0. 
     bcy_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, boundary_y0, component=0)
-    # bcy_1 =  ### TO DO
-
+    
+    # Initial Condition.
     ic = dde.icbc.IC(geomtime, ic_obs, lambda _, on_initial: on_initial)
 
     data = dde.data.TimePDE(
         geomtime,
         pde,
-        [bcx_1, ic],
+        #[bcx_1, bcy_1, bcx_0, bcy_0, ic],
+        [bcx_1, bcy_1, ic],
         num_domain=2560,
         num_boundary=200,
         num_initial=100,
         num_test=10000,
     )
 
-    # layer_size = [5] + [num_dense_nodes] * num_dense_layers + [1]
-    layer_size = [4] + [num_dense_nodes] * num_dense_layers + [1]
-    # net = dde.nn.FNN(layer_size, activation, initialization)
+    layer_size = [5] + [num_dense_nodes] * num_dense_layers + [1]
     net = dde.nn.FNN(layer_size, activation, initialization)
-    # net = dde.maps.FNN(layer_size, activation, initialization)
-
     net.apply_output_transform(output_transform)
-
     model = dde.Model(data, net)
 
     if initial_weights_regularizer:

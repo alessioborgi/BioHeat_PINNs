@@ -54,8 +54,8 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
     xtr = np.unique(tot[:, 0])
     x = np.linspace(0, 1, 100)
     true = final[:, -1]
-    # Xobs = np.vstack((x, f1(np.ones_like(x)), f2(np.ones_like(x)), f3(np.ones_like(x)), np.ones_like(x))).T
-    Xobs = np.vstack((x, f2(np.ones_like(x)), f3(np.ones_like(x)), np.ones_like(x))).T
+    Xobs = np.vstack((x, f1(np.ones_like(x)), f2(np.ones_like(x)), f3(np.ones_like(x)), np.ones_like(x))).T
+    #Xobs = np.vstack((x, f2(np.ones_like(x)), f3(np.ones_like(x)), np.ones_like(x))).T
     pred = model.predict(Xobs)
 
     ax2 = fig.add_subplot(122)
@@ -99,20 +99,21 @@ def plot_loss_components(losshistory):
     test = np.array(loss_test).sum(axis=1).ravel()
     train = np.array(loss_train).sum(axis=1).ravel()
     loss_res = matrix[:, 0]
-    # loss_bc0 = matrix[:, 1]
-    # loss_bc1 = matrix[:, 2]    
-    # loss_ic = matrix[:, 3]
+    
+    loss_bc0 = matrix[:, 1]
+    loss_bc1 = matrix[:, 2]    
+    loss_ic = matrix[:, 3]
 
-    loss_bc1 = matrix[:, 1]    
-    loss_ic = matrix[:, 2]
+    # loss_bc1 = matrix[:, 1]    
+    # loss_ic = matrix[:, 2]
 
     fig = plt.figure(figsize=(6, 5))
-    # iters = np.arange(len(loss_ic))
-    iters = losshistory.steps
+    iters = np.arange(len(loss_ic))
+    #iters = losshistory.steps
     with sns.axes_style("darkgrid"):
         plt.clf()
         plt.plot(iters, loss_res, label=r'$\mathcal{L}_{res}$')
-        # plt.plot(iters, loss_bc0, label=r'$\mathcal{L}_{bc0}$')
+        plt.plot(iters, loss_bc0, label=r'$\mathcal{L}_{bc0}$')
         plt.plot(iters, loss_bc1, label=r'$\mathcal{L}_{bc1}$')
         plt.plot(iters, loss_ic, label=r'$\mathcal{L}_{ic}$')
         plt.plot(iters, test, label='test loss')
@@ -125,23 +126,23 @@ def plot_loss_components(losshistory):
         plt.close()
 
 def gen_testdata(n):
-    data = np.loadtxt(f"{main.src_dir}/data_simulations/file_1D_{n}.txt")
+    data = np.loadtxt(f"{main.src_dir}/data_simulations/file_2D_{n}.txt")
     x, t, exact = data[:, 0:1].T, data[:, 1:2].T, data[:, 2:].T
     X = np.vstack((x, t)).T
     y = exact.flatten()[:, None]
     return X, y
 
 def gen_obsdata(n):
-    # global f1, f2, f3
-    global f2, f3
+    global f1, f2, f3
+    #global f2, f3
     g = np.hstack((gen_testdata(n)))
     instants = np.unique(g[:, 1])
 
-    # rows_0 = g[g[:, 0] == 0.0]
+    rows_0 = g[g[:, 0] == 0.0]
     rows_1 = g[g[:, 0] == 1.0]
 
-    # y1 = rows_0[:, -1].reshape(len(instants),)
-    # f1 = interp1d(instants, y1, kind='previous')
+    y1 = rows_0[:, -1].reshape(len(instants),)
+    f1 = interp1d(instants, y1, kind='previous')
 
     y2 = rows_1[:, -1].reshape(len(instants),)
     f2 = interp1d(instants, y2, kind='previous')
@@ -153,8 +154,8 @@ def gen_obsdata(n):
     # if tau > tm:
     #     tau = tm
 
-    # Xobs = np.vstack((g[:, 0], f1(g[:, 1]), f2(g[:, 1]), f3(g[:, 1]), g[:, 1])).T
-    Xobs = np.vstack((g[:, 0], f2(g[:, 1]), f3(g[:, 1]), g[:, 1])).T
+    Xobs = np.vstack((g[:, 0], f1(g[:, 1]), f2(g[:, 1]), f3(g[:, 1]), g[:, 1])).T
+    #Xobs = np.vstack((g[:, 0], f2(g[:, 1]), f3(g[:, 1]), g[:, 1])).T
     return Xobs
 
 
