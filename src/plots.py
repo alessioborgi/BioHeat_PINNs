@@ -13,6 +13,7 @@ import train
 import os
 import torch
 from scipy.interpolate import interp1d
+from scipy.interpolate import RegularGridInterpolator
 from mpl_toolkits.mplot3d import Axes3D
 import deepxde as dde
 import main
@@ -22,7 +23,6 @@ from configurations import HydraConfigStore
 
 
 def plot_l2_tf(e, theta_true, theta_pred, model):
-    
     cfg = HydraConfigStore.get_config()
     print(f"Saving the image: {main.figures_dir}/{cfg.run}/l2_tf.png")
     t = np.unique(e[:, 1])
@@ -32,8 +32,7 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
     t = t_filtered
 
     for el in t:
-    # for el in t_filtered:
-        df = tot[tot[:, 1]==el]
+        df = tot[tot[:, 1] == el]
         l2.append(dde.metrics.l2_relative_error(df[:, 2], df[:, 3]))
 
     fig = plt.figure()
@@ -41,42 +40,44 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
     ax1.plot(t, l2, alpha=1.0, linewidth=1.8, color='C0')
     plt.grid()
 
-    ax1.set_xlabel(xlabel=r"Time t", fontsize=7)  # xlabel
-    ax1.set_ylabel(ylabel=r"$L^2$ norm", fontsize=7)  # ylabel
+    ax1.set_xlabel(xlabel=r"Time t", fontsize=7)
+    ax1.set_ylabel(ylabel=r"$L^2$ norm", fontsize=7)
     ax1.set_title(r"Prediction error norm", fontsize=7, weight='semibold')
     ax1.set_ylim(bottom=0.0)
-    # ax1.set_yscale('log')
     ax1.set_xlim(0, 1.01)
     ax1.set_box_aspect(1)
 
     tot = np.hstack((e, theta_true))
-    final = tot[tot[:, 1]==1.0]
-    xtr = np.unique(tot[:, 0])
+    final = tot[tot[:, 1] == 1.0]
+    xtr = np.unique(final[:, 0])
+    
+    print(f"xtr shape: {xtr.shape}, final shape: {final.shape}")
+    
+    if len(xtr) != final[:, -1].shape[0]:
+        min_length = min(len(xtr), final[:, -1].shape[0])
+        xtr = xtr[:min_length]
+        final_values = final[:min_length, -1]
+    else:
+        final_values = final[:, -1]
+        
     x = np.linspace(0, 1, 100)
-    true = final[:, -1]
-    Xobs = np.vstack((x, f1(np.ones_like(x)), f2(np.ones_like(x)), f3(np.ones_like(x)), np.ones_like(x))).T
-    #Xobs = np.vstack((x, f2(np.ones_like(x)), f3(np.ones_like(x)), np.ones_like(x))).T
-    pred = model.predict(Xobs)
+    true = np.interp(x, xtr, final_values)  # Interpolate to match the x-axis
+    Xobs = np.vstack((x, f1((x, x, np.ones_like(x))), f2((x, x, np.ones_like(x))), f3(np.ones_like(x)), np.ones_like(x))).T
+    pred = model.predict(Xobs)[:, 0]
 
     ax2 = fig.add_subplot(122)
-    ax2.plot(xtr, true, marker="x", linestyle="None", alpha=1.0, color='C0', label="true")
-    ax2.plot(x, pred, alpha=1.0, linewidth=1.8, color='C2', label="pred")
-
-    ax2.set_xlabel(xlabel=r"Space x", fontsize=7)  # xlabel
-    ax2.set_ylabel(ylabel=r"$\Theta$", fontsize=7)  # ylabel
-    ax2.set_title(r"Prediction at tf", fontsize=7, weight='semibold')
-    ax2.set_ylim(bottom=0.0)
-    ax2.set_xlim(0, 1.01)
-    ax2.legend()
-    plt.yticks(fontsize=7)
-
+    ax2.plot(x, true, 'k-', label='True')
+    ax2.plot(x, pred, 'r--', label='Prediction')
     plt.grid()
-    ax2.set_box_aspect(1)
+
+    ax2.set_xlabel(xlabel=r"Depth x", fontsize=7)
+    ax2.set_ylabel(ylabel=r"Temperature θ", fontsize=7)
+    ax2.set_title(r"Temperature profile", fontsize=7, weight='semibold')
+    ax2.legend(fontsize=7)
+
     plt.savefig(f"{main.figures_dir}/{cfg.run}/l2_tf.png")
     plt.show()
-    plt.clf()
-
-
+    
 def plot_loss_components(losshistory):
     """
     Plots the components of the loss function during training.
@@ -127,37 +128,37 @@ def plot_loss_components(losshistory):
 
 def gen_testdata(n):
     data = np.loadtxt(f"{main.src_dir}/data_simulations/file_2D_{n}.txt")
-    x, t, exact = data[:, 0:1].T, data[:, 1:2].T, data[:, 2:].T
-    X = np.vstack((x, t)).T
-    y = exact.flatten()[:, None]
+    x1, x2, t, exact = data[:, 0], data[:, 1], data[:, 2], data[:, 3]
+    X = np.vstack((x1, x2, t)).T
+    y = exact[:, None]
     return X, y
 
 def gen_obsdata(n):
     global f1, f2, f3
-    #global f2, f3
-    g = np.hstack((gen_testdata(n)))
-    instants = np.unique(g[:, 1])
+    X, y = gen_testdata(n)
+    g = np.hstack((X, y))
+    instants = np.unique(g[:, 2])
 
-    rows_0 = g[g[:, 0] == 0.0]
-    rows_1 = g[g[:, 0] == 1.0]
+    x1_unique = np.unique(g[:, 0])
+    x2_unique = np.unique(g[:, 1])
+    t_unique = np.unique(g[:, 2])
 
-    y1 = rows_0[:, -1].reshape(len(instants),)
-    f1 = interp1d(instants, y1, kind='previous')
+    y_grid = g[:, 3].reshape((len(x1_unique), len(x2_unique), len(t_unique)))
 
-    y2 = rows_1[:, -1].reshape(len(instants),)
-    f2 = interp1d(instants, y2, kind='previous')
+    # Create the f1 interpolator based on the 2D grid
+    f1 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
+
+    f2 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
 
     def f3(ii):
-        return ii + (1 - ii)/(1 + np.exp(-20*(ii - 0.25)))
-    
-    # tm = 0.9957446808510638
-    # if tau > tm:
-    #     tau = tm
+        return ii + (1 - ii) / (1 + np.exp(-20 * (ii - 0.25)))
 
-    Xobs = np.vstack((g[:, 0], f1(g[:, 1]), f2(g[:, 1]), f3(g[:, 1]), g[:, 1])).T
-    #Xobs = np.vstack((g[:, 0], f2(g[:, 1]), f3(g[:, 1]), g[:, 1])).T
+    interpolated_values = f2((g[:, 0], g[:, 1], g[:, 2]))
+    Xobs = np.vstack((g[:, 0], g[:, 1], interpolated_values, f3(g[:, 2]), g[:, 2])).T
+
+    # Verifying dimensions of the generated data
+    print(f"Generated Xobs shape: {Xobs.shape}")
     return Xobs
-
 
 def plot_and_metrics(model, n_test):
     """
@@ -185,54 +186,39 @@ def plot_and_metrics(model, n_test):
     return metrics
 
 def plot_comparison(e, theta_true, theta_pred):
-    """
-    Plots a comparison between true values and predicted values.
-    
-    This function helps in visualizing how well the model's predictions match
-    the true values, which is crucial for assessing the model's accuracy.
-    
-    Args:
-        true_values (np.ndarray): The ground truth values.
-        predicted_values (np.ndarray): The predicted values by the model.
-        figures_dir (str): Directory where the plot will be saved.
-    
-    Returns:
-        None
-    """
     cfg = HydraConfigStore.get_config()
     
     la = len(np.unique(e[:, 0]))
     le = len(np.unique(e[:, 1]))
+    
+    print(f"Unique e[:, 0] (la): {la}, Unique e[:, 1] (le): {le}")
+    print(f"theta_true.size: {theta_true.size}, theta_pred.size: {theta_pred.size}")
+    print(f"Expected size: {la * le}")
+    
+    theta_true = theta_true[:la * le]
+    theta_pred = theta_pred[:la * le]
+    
+    assert theta_true.size == la * le, f"Theta_true size {theta_true.size} does not match expected size {la * le}"
+    assert theta_pred.size == la * le, f"Theta_pred size {theta_pred.size} does not match expected size {la * le}"
+    
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    # Predictions
-    fig = plt.figure(3, figsize=(9, 4))
+    im0 = axes[0].imshow(theta_true.reshape(le, la), aspect='auto', cmap='viridis')
+    fig.colorbar(im0, ax=axes[0])
+    axes[0].set_title('True Temperature')
 
-    col_titles = ['Measured', 'Observed', 'Error']
-    surfaces = [
-        [theta_true.reshape(le, la), theta_pred.reshape(le, la),
-            np.abs(theta_true - theta_pred).reshape(le, la)]
-    ]
+    im1 = axes[1].imshow(theta_pred.reshape(le, la), aspect='auto', cmap='viridis')
+    fig.colorbar(im1, ax=axes[1])
+    axes[1].set_title('Predicted Temperature')
 
-    # Create a grid of subplots
-    grid = plt.GridSpec(1, 3)
-
-    # Iterate over columns to add subplots
-    for col in range(3):
-        ax = fig.add_subplot(grid[0, col], projection='3d')
-        configure_subplot(ax, e, surfaces[0][col])
-
-        # Set column titles
-        ax.set_title(col_titles[col], fontsize=8, y=.96, weight='semibold')
-
-    # Adjust spacing between subplots
-    plt.subplots_adjust(wspace=0.15)
+    im2 = axes[2].imshow(np.abs(theta_true.reshape(le, la) - theta_pred.reshape(le, la)), aspect='auto', cmap='viridis')
+    fig.colorbar(im2, ax=axes[2])
+    axes[2].set_title('Absolute Error')
 
     plt.tight_layout()
     plt.savefig(f"{main.figures_dir}/{cfg.run}/comparison.png")
     plt.show()
-    plt.close()
-    plt.clf()
-
+    
 def plot_L2_norm(error, theta_true, figures_dir):
     """
     Plots the L2 norm of the error over time.
