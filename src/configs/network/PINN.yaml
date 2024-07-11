@@ -1,15 +1,15 @@
 # PINN Configurations
 backend: pytorch
 #ELU, GELU, ReLU, SELU, Sigmoid, SiLU, sin, Swish, tanh, Mish, Softplus, APTx
-activation: ELU     
+activation: tanh     
 initial_weights_regularizer: true
 # Glorot normal, He normal, Orthogonal, Random normal, Random uniform, Zeros
-initialization: He normal
-iterations: 2
+initialization: Glorot normal
+iterations: 3000
 LBFGS: false
 learning_rate: 0.001
-num_dense_layers: 2
-num_dense_nodes: 50
+num_dense_layers: 4
+num_dense_nodes: 100
 output_injection_gain: 50
 resampling: true
 resampler_period: 100
