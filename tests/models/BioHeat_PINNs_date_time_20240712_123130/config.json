@@ -1,0 +1,14 @@
+{
+    "backend": "pytorch",
+    "activation": "tanh",
+    "initial_weights_regularizer": true,
+    "initialization": "Glorot normal",
+    "iterations": 50,
+    "LBFGS": false,
+    "learning_rate": 0.001,
+    "num_dense_layers": 2,
+    "num_dense_nodes": 50,
+    "output_injection_gain": 50,
+    "resampling": true,
+    "resampler_period": 100
+}

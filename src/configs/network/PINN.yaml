@@ -5,11 +5,11 @@ activation: tanh
 initial_weights_regularizer: true
 # Glorot normal, He normal, Orthogonal, Random normal, Random uniform, Zeros
 initialization: Glorot normal
-iterations: 3000
+iterations: 180
 LBFGS: false
 learning_rate: 0.001
-num_dense_layers: 4
-num_dense_nodes: 100
+num_dense_layers: 2
+num_dense_nodes: 50
 output_injection_gain: 50
 resampling: true
 resampler_period: 100

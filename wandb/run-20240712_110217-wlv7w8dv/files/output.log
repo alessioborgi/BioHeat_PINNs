@@ -1,0 +1,47 @@
+Warning: 100 points required, but 256 points sampled.
+Warning: 10000 points required, but 25600 points sampled.
+Compiling model...
+'compile' took 2.878154 s
+
+Training model...
+
+Step      Train loss                                  Test loss                                   Test metric
+0         [1.08e-01, 5.47e-01, 5.60e-01, 5.47e-02]    [9.06e-02, 5.47e-01, 5.60e-01, 5.47e-02]    []
+
+Best model at step 0:
+  train loss: 1.27e+00
+  test loss: 1.25e+00
+  test metric: []
+
+'train' took 42.570240 s
+
+Compiling model...
+'compile' took 0.005981 s
+
+Training model...
+
+Step      Train loss                                  Test loss                                   Test metric
+0         [4.00e+00, 4.00e+00, 4.00e+00, 4.00e+00]    [3.34e+00, 4.00e+00, 4.00e+00, 4.00e+00]    []
+100       [5.79e-01, 1.51e+00, 3.33e+00, 3.81e+00]    [2.58e-01, 1.51e+00, 3.33e+00, 3.81e+00]    []
+200       [5.11e-01, 1.47e+00, 1.80e+00, 1.18e+00]    [1.84e-01, 1.47e+00, 1.80e+00, 1.18e+00]    []
+300       [4.10e-01, 1.44e+00, 1.56e+00, 9.91e-01]    [2.97e-01, 1.44e+00, 1.56e+00, 9.91e-01]    []
+
+Best model at step 0:
+  train loss: 1.27e+00
+  test loss: 1.25e+00
+  test metric: []
+
+Epoch 300: saving model to ./tests/models/BioHeat_PINNs_date_time_20240712_110215/adam-300.pt ...
+
+'train' took 3921.339200 s
+
+[2024-07-12 12:08:27,833][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-12 12:08:27,862][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-12 12:08:27,883][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-12 12:08:27,904][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Generated Xobs shape: (2541, 5)
+Unique e[:, 0] (la): 11, Unique e[:, 1] (le): 11
+theta_true.size: 2541, theta_pred.size: 2541
+Expected size: 121
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240712_110215/l2_tf.png
+xtr shape: (11,), final shape: (231, 4)
