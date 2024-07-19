@@ -21,7 +21,7 @@ def softplus(x):
 def aptx(x):
     return (1 + torch.tanh(x)) * (x / 2)
 
-def boundary_0(x, on_boundary):
+def boundary_x0(x, on_boundary):
     """
     Boundary condition function for x = 0.
     
@@ -34,7 +34,7 @@ def boundary_0(x, on_boundary):
     """
     return on_boundary and np.isclose(x[0], 0)
 
-def boundary_1(x, on_boundary):
+def boundary_x1(x, on_boundary):
     """
     Boundary condition function for x = 1.
     
@@ -47,19 +47,46 @@ def boundary_1(x, on_boundary):
     """
     return on_boundary and np.isclose(x[0], 1)
 
-def bc0_obs(x, theta, X):
+def boundary_y0(x, on_boundary):
     """
-    Observation function for boundary condition at x = 0.
+    Boundary condition function for x = 0.
     
     Args:
         x (np.ndarray): The coordinates.
-        theta (np.ndarray): The theta values.
-        X (np.ndarray): Additional parameters.
+        on_boundary (bool): Whether the point is on the boundary.
     
     Returns:
-        np.ndarray: Difference between x[:, 1:2] and theta.
+        bool: True if on the boundary and x[0] is close to 0.
     """
-    return x[:, 1:2] - theta
+    return on_boundary and np.isclose(x[1], 0)
+
+def boundary_y1(x, on_boundary):
+    """
+    Boundary condition function for x = 1.
+    
+    Args:
+        x (np.ndarray): The coordinates.
+        on_boundary (bool): Whether the point is on the boundary.
+    
+    Returns:
+        bool: True if on the boundary and x[0] is close to 1.
+    """
+    return on_boundary and np.isclose(x[1], 1)
+
+
+# def bc0_obs(x, theta, X):
+#     """
+#     Observation function for boundary condition at x = 0.
+    
+#     Args:
+#         x (np.ndarray): The coordinates.
+#         theta (np.ndarray): The theta values.
+#         X (np.ndarray): Additional parameters.
+    
+#     Returns:
+#         np.ndarray: Difference between x[:, 1:2] and theta.
+#     """
+#     return x[:, 1:2] - theta
 
 def output_transform(x, y):
     """
@@ -116,20 +143,29 @@ def create_nbho(name, cfg):
     
     a1 = (cfg.data.rhoc * cfg.data.L0**2) / (cfg.data.tauf * cfg.data.k)
     a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
-    a3 = 0 
+    a3 = 0
 
-    def pde(x, y):
+    # a1 = (cfg.data.rhoc * cfg.data.c * cfg.data.L0**2)/(cfg.data.tauf * cfg.data.k)
+    # a2 = (cfg.data.rhob * L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
+    # a3 = cfg.data.Q_m
+
+    def pde(x, u):
         
-        dy_t = dde.grad.jacobian(y, x, i=0, j=1)
-        dy_xx = dde.grad.hessian(y, x, i=0, j=0)
+        du_t = dde.grad.jacobian(u, x, i=0, j=2)
+        du_xx = dde.grad.hessian(u, x, i=0, j=0)
+        du_yy = dde.grad.hessian(u, x, i=0, j=1)
 
-        return (a1 * dy_t - dy_xx + a2*y) 
+        return (a1 * du_t - (du_xx + du_yy) + a2*u - a3) 
         
     def bc1_obs(x, theta, X):
         dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
         # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)
         return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
-
+    
+    def bc2_obs(x, theta, X):
+        dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
+        # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)
+        return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
 
     def ic_obs(x):
 
@@ -137,48 +173,51 @@ def create_nbho(name, cfg):
         # y1 = x[:, 1:2]
         # y2 = x[:, 2:3]
         # y3 = x[:, 3:4]
+        y1 = 0
         y2 = x[:, 1:2]
         y3 = x[:, 2:3]
-        y1 = 0
+        
         beta = cfg.data.h * (y3 - y2) + K * (y2 -y1)
         a2 = 0.7
-
+        
         e = y1 + ((beta - ((2/cfg.data.L0)+K)*a2)/((1/cfg.data.L0)+K))*z + a2*z**2
         return e
-
-    # xmin = [0, 0, 0, 0]
-    # xmax = [1, 1, 1, 1]
-    # geom = dde.geometry.Hypercube(xmin, xmax)
-    xmin = [0, 0, 0]
-    xmax = [1, 1, 1]
-    geom = dde.geometry.Cuboid(xmin, xmax)
+    
+    xmin = [0, 0, 0, 0]
+    xmax = [1, 1, 1, 1]
+    geom = dde.geometry.Hypercube(xmin, xmax)
     timedomain = dde.geometry.TimeDomain(0, 1)
     geomtime = dde.geometry.GeometryXTime(geom, timedomain)
-
-    # bc_0 = dde.icbc.OperatorBC(geomtime, bc0_obs, boundary_0)
-    bc_1 = dde.icbc.OperatorBC(geomtime, bc1_obs, boundary_1)
-
+    
+    # Boundary Condition Flux at x=1. 
+    bcx_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[3], boundary_x1, component=0)
+    
+    # Boundary Condition Flux at y=1. 
+    bcy_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[3], boundary_y1, component=0)
+    
+    # Boundary Condition at x=0. 
+    bcx_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, boundary_x0, component=0)
+    
+    # Boundary Condition at y=0. 
+    bcy_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, boundary_y0, component=0)
+    
+    # Initial Condition.
     ic = dde.icbc.IC(geomtime, ic_obs, lambda _, on_initial: on_initial)
 
     data = dde.data.TimePDE(
         geomtime,
         pde,
-        # [bc_0, bc_1, ic],
-        [bc_1, ic],
+        #[bcx_1, bcy_1, bcx_0, bcy_0, ic],
+        [bcx_1, bcy_1, ic],
         num_domain=2560,
         num_boundary=200,
         num_initial=100,
         num_test=10000,
     )
 
-    # layer_size = [5] + [num_dense_nodes] * num_dense_layers + [1]
-    layer_size = [4] + [num_dense_nodes] * num_dense_layers + [1]
-    # net = dde.nn.FNN(layer_size, activation, initialization)
+    layer_size = [5] + [num_dense_nodes] * num_dense_layers + [1]
     net = dde.nn.FNN(layer_size, activation, initialization)
-    # net = dde.maps.FNN(layer_size, activation, initialization)
-
     net.apply_output_transform(output_transform)
-
     model = dde.Model(data, net)
 
     if initial_weights_regularizer:
