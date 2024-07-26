@@ -1,8 +1,0 @@
-{"time":"2024-07-12T13:49:55.609674459Z","level":"INFO","msg":"using version","core version":"0.17.3"}
-{"time":"2024-07-12T13:49:55.610148209Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240712_134955-cwj64o2t/logs/debug-core.log"}
-{"time":"2024-07-12T13:49:55.621162334Z","level":"INFO","msg":"created new stream","id":"cwj64o2t"}
-{"time":"2024-07-12T13:49:55.621680584Z","level":"INFO","msg":"handler: started","stream_id":{"value":"cwj64o2t"}}
-{"time":"2024-07-12T13:49:55.621944709Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"cwj64o2t"}}
-{"time":"2024-07-12T13:49:55.622200668Z","level":"INFO","msg":"sender: started","stream_id":{"value":"cwj64o2t"}}
-{"time":"2024-07-12T13:49:56.828850085Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
-{"time":"2024-07-12T13:49:56.871475085Z","level":"INFO","msg":"Starting system monitor"}

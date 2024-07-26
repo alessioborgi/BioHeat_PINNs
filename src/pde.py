@@ -186,10 +186,10 @@ def create_nbho(name, cfg):
     geomtime = dde.geometry.GeometryXTime(geom, timedomain)
     
     # Boundary Condition Flux at x=1. 
-    bcx_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[3], boundary_x1, component=0)
+    bcx_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[2], boundary_x1, component=0)
     
     # Boundary Condition Flux at y=1. 
-    bcy_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[3], boundary_y1, component=0)
+    bcy_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[2], boundary_y1, component=0)
     
     # Boundary Condition at x=0. 
     bcx_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, boundary_x0, component=0)

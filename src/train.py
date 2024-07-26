@@ -127,7 +127,7 @@ def train_and_save_model(model, iterations, callbacks, optimizer_name, run):
         losshistory: Training loss history.
         train_state: Final state of the training process.
     """
-    display_every = 100
+    display_every = 10
 
     losshistory, train_state = model.train(
         iterations=iterations,
