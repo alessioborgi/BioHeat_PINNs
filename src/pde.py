@@ -164,7 +164,7 @@ def create_nbho(name, cfg):
         return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
 
     def ic_obs(x):
-
+        """
         z = x[:, 0:1]
         # y1 = x[:, 1:2]
         # y2 = x[:, 2:3]
@@ -178,6 +178,10 @@ def create_nbho(name, cfg):
         
         e = y1 + ((beta - ((2/cfg.data.L0)+K)*a2)/((1/cfg.data.L0)+K))*z + a2*z**2
         return e
+        """
+        # according to the paper, the initial condition for the observer are different:
+        # theta_hat(t=0) = q0*x^4/4*(Tm-Ta)
+        return (cfg.data.q0 * x[:, 0]**4)/(4*(cfg.data.Tmax - cfg.data.Tmin))
     
     xmin = [0, 0, 0, 0]
     xmax = [1, 1, 1, 1]
@@ -203,8 +207,8 @@ def create_nbho(name, cfg):
     data = dde.data.TimePDE(
         geomtime,
         pde,
-        #[bcx_1, bcy_1, bcx_0, bcy_0, ic],
-        [bcx_1, bcy_1, ic],
+        [bcx_1, bcy_1, bcx_0, bcy_0, ic],
+        # [bcx_1, bcy_1, ic], we should use all boundary conditions
         num_domain=2560,
         num_boundary=200,
         num_initial=100,
