@@ -1,0 +1,94 @@
+Warning: 100 points required, but 256 points sampled.
+Warning: 10000 points required, but 25600 points sampled.
+Compiling model...
+'compile' took 2.697101 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.44e-01, 3.39e-01, 3.28e-01, 0.00e+00, 3.67e-02, 4.99e-02]    [3.97e-01, 3.39e-01, 3.28e-01, 0.00e+00, 3.67e-02, 4.99e-02]    []
+
+Best model at step 0:
+  train loss: 1.40e+00
+  test loss: 1.15e+00
+  test metric: []
+
+'train' took 5.250834 s
+/working_dir/src/pde.py:225: RuntimeWarning: divide by zero encountered in divide
+  loss_weights = len(initial_losses) / initial_losses
+
+Compiling model...
+'compile' took 0.001310 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 6.00e+00, 6.00e+00, nan, 6.00e+00, 6.00e+00]         [3.70e+00, 6.00e+00, 6.00e+00, nan, 6.00e+00, 6.00e+00]         []
+
+Best model at step 0:
+  train loss: 1.40e+00
+  test loss: 1.15e+00
+  test metric: []
+
+Epoch 1: saving model to ./tests/models/BioHeat_PINNs_date_time_20240728_201518/adam-1.pt ...
+
+'train' took 6.555424 s
+
+[2024-07-28 20:15:39,975][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-28 20:15:40,005][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-28 20:15:40,027][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-28 20:15:40,053][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Generated Xobs shape: (2541, 5)
+The predicted value will be:  [[nan]
+ [nan]
+ [nan]
+ ...
+ [nan]
+ [nan]
+ [nan]]
+Unique e[:, 0] (la): 11, Unique e[:, 1] (le): 11
+theta_true.size: 2541, theta_pred.size: 2541
+Expected size: 121
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240728_201518/l2_tf.png
+xtr shape: (11,), final shape: (231, 4)
+The true values are:  [[0.        ]
+ [0.        ]
+ [0.        ]
+ ...
+ [0.41299888]
+ [0.41299888]
+ [0.41299888]]
+The predicted values are:  [[nan]
+ [nan]
+ [nan]
+ ...
+ [nan]
+ [nan]
+ [nan]]
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 54, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 110, in single_observer
+    metrics = plots.plot_and_metrics(mo, n_test)
+  File "/working_dir/src/plots.py", line 186, in plot_and_metrics
+    metrics = train.compute_metrics(theta_true, theta_pred)
+  File "/working_dir/src/train.py", line 174, in compute_metrics
+    MSE = dde.metrics.mean_squared_error(true, pred)        # Mean Squared Error
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/metrics.py", line 49, in mean_squared_error
+    return metrics.mean_squared_error(y_true, y_pred)
+  File "/opt/conda/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 506, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 113, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/opt/conda/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1059, in check_array
+    _assert_all_finite(
+  File "/opt/conda/lib/python3.10/site-packages/sklearn/utils/validation.py", line 126, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/opt/conda/lib/python3.10/site-packages/sklearn/utils/validation.py", line 175, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

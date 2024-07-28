@@ -1,0 +1,75 @@
+Warning: 100 points required, but 256 points sampled.
+Warning: 10000 points required, but 25600 points sampled.
+Compiling model...
+'compile' took 2.803501 s
+
+Training model...
+
+Step      Train loss                                  Test loss                                   Test metric
+0         [6.44e-01, 3.39e-01, 3.28e-01, 4.99e-02]    [3.97e-01, 3.39e-01, 3.28e-01, 4.99e-02]    []
+
+Best model at step 0:
+  train loss: 1.36e+00
+  test loss: 1.11e+00
+  test metric: []
+
+'train' took 5.082600 s
+
+Compiling model...
+'compile' took 0.001347 s
+
+Training model...
+
+Step      Train loss                                  Test loss                                   Test metric
+0         [4.00e+00, 4.00e+00, 4.00e+00, 4.00e+00]    [2.47e+00, 4.00e+00, 4.00e+00, 4.00e+00]    []
+10        [2.92e-01, 2.11e+00, 4.10e+00, 1.67e+00]    [1.70e-01, 2.11e+00, 4.10e+00, 1.67e+00]    []
+20        [8.36e-01, 1.58e+00, 3.42e+00, 1.74e+00]    [5.17e-01, 1.58e+00, 3.42e+00, 1.74e+00]    []
+30        [6.88e-01, 1.60e+00, 3.47e+00, 1.68e+00]    [4.47e-01, 1.60e+00, 3.47e+00, 1.68e+00]    []
+40        [4.75e-01, 1.63e+00, 3.64e+00, 1.62e+00]    [2.87e-01, 1.63e+00, 3.64e+00, 1.62e+00]    []
+50        [6.01e-01, 1.50e+00, 3.52e+00, 1.67e+00]    [3.75e-01, 1.50e+00, 3.52e+00, 1.67e+00]    []
+60        [4.39e-01, 1.64e+00, 3.49e+00, 1.63e+00]    [2.66e-01, 1.64e+00, 3.49e+00, 1.63e+00]    []
+70        [4.64e-01, 1.55e+00, 3.45e+00, 1.65e+00]    [2.81e-01, 1.55e+00, 3.45e+00, 1.65e+00]    []
+80        [4.25e-01, 1.54e+00, 3.43e+00, 1.64e+00]    [2.52e-01, 1.54e+00, 3.43e+00, 1.64e+00]    []
+90        [3.73e-01, 1.55e+00, 3.38e+00, 1.64e+00]    [2.21e-01, 1.55e+00, 3.38e+00, 1.64e+00]    []
+100       [3.36e-01, 1.54e+00, 3.33e+00, 1.64e+00]    [1.96e-01, 1.54e+00, 3.33e+00, 1.64e+00]    []
+
+Best model at step 0:
+  train loss: 1.36e+00
+  test loss: 1.11e+00
+  test metric: []
+
+Epoch 100: saving model to ./tests/models/BioHeat_PINNs_date_time_20240728_202229/adam-100.pt ...
+
+'train' took 212.802383 s
+
+[2024-07-28 20:26:16,495][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-28 20:26:16,524][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-28 20:26:16,546][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-07-28 20:26:16,572][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Generated Xobs shape: (2541, 5)
+The generated test data are:  [[0.         0.         0.         0.00669285 0.        ]
+ [0.         0.1        0.         0.00669285 0.        ]
+ [0.         0.2        0.         0.00669285 0.        ]
+ ...
+ [1.         0.8        0.19627177 1.         1.        ]
+ [1.         0.9        0.3237232  1.         1.        ]
+ [1.         1.         0.41299888 1.         1.        ]]
+Unique e[:, 0] (la): 11, Unique e[:, 1] (le): 11
+theta_true.size: 2541, theta_pred.size: 2541
+Expected size: 121
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240728_202229/l2_tf.png
+xtr shape: (11,), final shape: (231, 4)
+The true values are:  [[0.        ]
+ [0.        ]
+ [0.        ]
+ ...
+ [0.41299888]
+ [0.41299888]
+ [0.41299888]]
+The predicted values are:  [[0.        ]
+ [0.        ]
+ [0.        ]
+ ...
+ [0.2867451 ]
+ [0.3035817 ]
+ [0.32262418]]

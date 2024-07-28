@@ -153,15 +153,15 @@ def create_nbho(name, cfg):
 
         return (a1 * du_t - (du_xx + du_yy) + a2*u - a3) 
         
-    def bc1_obs(x, theta, X):
-        dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
-        # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)
-        return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
+    # def bc1_obs(x, theta, X):
+    #     dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
+    #     # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)
+    #     return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
     
-    def bc2_obs(x, theta, X):
-        dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
-        # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)
-        return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
+    # def bc2_obs(x, theta, X):
+    #     dtheta_x = dde.grad.jacobian(theta, x, i=0, j=0)
+    #     # return dtheta_x - (h/k)*(x[:, 3:4]-x[:, 2:3]) - K * (x[:, 2:3] - theta)
+    #     return dtheta_x - (cfg.data.h / cfg.data.k)*(x[:, 2:3]-x[:, 1:2]) - K * (x[:, 1:2] - theta)
 
     def ic_obs(x):
         """
@@ -207,8 +207,8 @@ def create_nbho(name, cfg):
     data = dde.data.TimePDE(
         geomtime,
         pde,
-        [bcx_1, bcy_1, bcx_0, bcy_0, ic],
-        # [bcx_1, bcy_1, ic], we should use all boundary conditions
+        #[bcx_1, bcy_1, bcx_0, bcy_0, ic],
+        [bcx_1, bcy_1, ic], #we should use all boundary conditions
         num_domain=2560,
         num_boundary=200,
         num_initial=100,

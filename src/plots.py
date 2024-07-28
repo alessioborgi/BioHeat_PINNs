@@ -176,8 +176,9 @@ def plot_and_metrics(model, n_test):
     """
     e, theta_true = gen_testdata(n_test)
     g = gen_obsdata(n_test)
-
+    print("The generated test data are: ", g)
     theta_pred = model.predict(g)
+    # print("The predicted value will be: ", theta_pred)
 
     plot_comparison(e, theta_true, theta_pred)
     plot_l2_tf(e, theta_true, theta_pred, model)
