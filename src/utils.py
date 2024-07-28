@@ -20,7 +20,7 @@ import main
 properties = {
     "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
     "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
-    "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None
+    "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None, "q0": None
 }
 
 f1, f2, f3 = [None]*3
@@ -94,7 +94,7 @@ def get_properties(n):
     Returns:
         None
     """
-    global L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange
+    global L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange, rhob, Wb, q0
     file_path = os.path.join(main.src_dir, 'data_simulations', f'data{n}.json')
 
     # Open the file and load the JSON data
@@ -110,5 +110,8 @@ def get_properties(n):
 
     L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange = (
         par["L0"], par["tauf"], par["k"], par["p0"], par["d"], par["rhoc"],
-        par["cb"], par["h"], par["Tmin"], par["Tmax"], par["alpha"], par["W"], par["steep"], par["tchange"]
+        par["cb"], par["h"], par["Tmin"], par["Tmax"], par["alpha"], par["W"], par["steep"], par["tchange"],
+        par["rhob"], par["Wb"], par["q0"]
     )
+
+    
