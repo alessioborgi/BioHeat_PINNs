@@ -137,6 +137,7 @@ def train_and_save_model(model, iterations, callbacks, optimizer_name, run):
     )
     return losshistory, train_state
 
+
 def get_initial_loss(model):
     """
     Computes the initial loss of the model before training starts.
@@ -169,8 +170,8 @@ def compute_metrics(true, pred):
     """
     small_number = 1e-40
     true_nonzero = np.where(true != 0, true, small_number)
-    print("The true values are: ", true)
-    print("The predicted values are: ", pred)
+    # print("The true values are: ", true)
+    # print("The predicted values are: ", pred)
     MSE = dde.metrics.mean_squared_error(true, pred)        # Mean Squared Error
     MAE = np.mean(np.abs((true - pred) / true_nonzero))     # Mean Absolute Error
     L2RE = dde.metrics.l2_relative_error(true, pred)        # L2 Relative Error

@@ -1,0 +1,16 @@
+{"time":"2024-07-31T16:37:29.20779734Z","level":"INFO","msg":"using version","core version":"0.17.3"}
+{"time":"2024-07-31T16:37:29.208374923Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240731_163729-6iymbefu/logs/debug-core.log"}
+{"time":"2024-07-31T16:37:29.219422007Z","level":"INFO","msg":"created new stream","id":"6iymbefu"}
+{"time":"2024-07-31T16:37:29.22000509Z","level":"INFO","msg":"handler: started","stream_id":{"value":"6iymbefu"}}
+{"time":"2024-07-31T16:37:29.220149965Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"6iymbefu"}}
+{"time":"2024-07-31T16:37:29.220620173Z","level":"INFO","msg":"sender: started","stream_id":{"value":"6iymbefu"}}
+{"time":"2024-07-31T16:37:29.76757584Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-07-31T16:37:29.80886284Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-07-31T16:37:34.661236551Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-07-31T16:37:34.661927759Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-07-31T16:37:34.988052801Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-07-31T16:37:34.988302468Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-07-31T16:37:34.988459509Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-07-31T16:37:36.95600251Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"6iymbefu"}}
+{"time":"2024-07-31T16:37:36.955753677Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"6iymbefu"}}
+{"time":"2024-07-31T16:37:36.961750844Z","level":"INFO","msg":"closed stream","id":"6iymbefu"}

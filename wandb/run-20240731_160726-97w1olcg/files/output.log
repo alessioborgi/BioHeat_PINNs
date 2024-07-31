@@ -1,0 +1,37 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 54, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 109, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 46, in train_model
+    mm = pde.create_nbho(name, cfg)
+  File "/working_dir/src/pde.py", line 212, in create_nbho
+    data = dde.data.TimePDE(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 328, in __init__
+    super().__init__(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 127, in __init__
+    self.train_next_batch()
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 38, in wrapper
+    return func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 182, in train_next_batch
+    self.bc_points()  # Generate self.num_bcs and self.train_x_bc
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 38, in wrapper
+    return func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 288, in bc_points
+    x_bcs = [bc.collocation_points(self.train_x_all) for bc in self.bcs]
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 288, in <listcomp>
+    x_bcs = [bc.collocation_points(self.train_x_all) for bc in self.bcs]
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/icbc/boundary_conditions.py", line 53, in collocation_points
+    return self.filter(X)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/icbc/boundary_conditions.py", line 50, in filter
+    return X[self.on_boundary(X, self.geom.on_boundary(X))]
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/icbc/boundary_conditions.py", line 41, in <lambda>
+    [on_boundary(x[i], on[i]) for i in range(len(x))]
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/icbc/boundary_conditions.py", line 41, in <listcomp>
+    [on_boundary(x[i], on[i]) for i in range(len(x))]
+  File "/working_dir/src/pde.py", line 204, in <lambda>
+    bcx_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, lambda _, on_boundary: on_boundary and x[0] == 0)
+NameError: name 'x' is not defined
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

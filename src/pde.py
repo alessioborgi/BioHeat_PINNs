@@ -183,23 +183,28 @@ def create_nbho(name, cfg):
         # theta_hat(t=0) = q0*x^4/4*(Tm-Ta)
         return (cfg.data.q0 * x[:, 0]**4)/(4*(cfg.data.Tmax - cfg.data.Tmin))
     
-    xmin = [0, 0, 0, 0]
-    xmax = [1, 1, 1, 1]
-    geom = dde.geometry.Hypercube(xmin, xmax)
+    # Define the 2D spatial domain
+    xmin = [0, 0]
+    xmax = [1, 1]
+    geom = dde.geometry.Rectangle(xmin, xmax)
+    
+    # Define the time domain
     timedomain = dde.geometry.TimeDomain(0, 1)
+
+    # Combine the spatial and time domains
     geomtime = dde.geometry.GeometryXTime(geom, timedomain)
     
-    # Boundary Condition Flux at x=1. 
-    bcx_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[2], boundary_x1, component=0)
+    # Boundary Condition Flux at x=1
+    bcx_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[1], boundary_x1, component=0)
+
+    # Boundary Condition Flux at y=1
+    bcy_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[1], boundary_y1, component=0)
     
-    # Boundary Condition Flux at y=1. 
-    bcy_1 = dde.icbc.NeumannBC(geomtime, lambda x: x[2], boundary_y1, component=0)
-    
-    # Boundary Condition at x=0. 
-    bcx_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, boundary_x0, component=0)
-    
-    # Boundary Condition at y=0. 
-    bcy_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, boundary_y0, component=0)
+    # Boundary Condition at x=0
+    bcx_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, lambda x, on_boundary: on_boundary and x[0] == 0)
+
+    # Boundary Condition at y=0
+    bcy_0 = dde.icbc.DirichletBC(geomtime, lambda x: 0, lambda x, on_boundary: on_boundary and x[1] == 0)
     
     # Initial Condition.
     ic = dde.icbc.IC(geomtime, ic_obs, lambda _, on_initial: on_initial)
@@ -207,8 +212,8 @@ def create_nbho(name, cfg):
     data = dde.data.TimePDE(
         geomtime,
         pde,
-        #[bcx_1, bcy_1, bcx_0, bcy_0, ic],
-        [bcx_1, bcy_1, ic], #we should use all boundary conditions
+        [bcx_1, bcy_1, bcx_0, bcy_0, ic],
+        # [bcx_1, bcy_1, ic], #we should use all boundary conditions
         num_domain=2560,
         num_boundary=200,
         num_initial=100,
@@ -219,6 +224,7 @@ def create_nbho(name, cfg):
     net = dde.nn.FNN(layer_size, activation, initialization)
     net.apply_output_transform(output_transform)
     model = dde.Model(data, net)
+    print("Layer size is: ", layer_size)
 
     if initial_weights_regularizer:
         initial_losses = train.get_initial_loss(model)
