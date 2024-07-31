@@ -8,7 +8,10 @@ import train
 from configurations import HydraConfigStore
 # import tensorflow as tf
 
-
+# Ogni riga di `x` contiene tre elementi:
+# x[:, 0:1] rappresenta la coordinata spaziale `x`
+# x[:, 1:2] rappresenta la coordinata temporale `t`
+# x[:, 2:3] rappresenta la soluzione della temperatura `u(x,t)`
 
 f1, f2, f3 = [None]*3
 
@@ -145,10 +148,6 @@ def create_nbho(name, cfg):
     a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
     a3 = 0
 
-    # a1 = (cfg.data.rhoc * cfg.data.c * cfg.data.L0**2)/(cfg.data.tauf * cfg.data.k)
-    # a2 = (cfg.data.rhob * L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
-    # a3 = cfg.data.Q_m
-
     def pde(x, u):
         
         du_t = dde.grad.jacobian(u, x, i=0, j=2)
@@ -170,9 +169,6 @@ def create_nbho(name, cfg):
     def ic_obs(x):
 
         z = x[:, 0:1]
-        # y1 = x[:, 1:2]
-        # y2 = x[:, 2:3]
-        # y3 = x[:, 3:4]
         y1 = 0
         y2 = x[:, 1:2]
         y3 = x[:, 2:3]
