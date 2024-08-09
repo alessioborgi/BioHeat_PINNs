@@ -1,0 +1,18 @@
+{"time":"2024-08-09T20:34:04.150682214Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-09T20:34:04.150842673Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240809_203404-cevmaz5g/logs/debug-core.log"}
+{"time":"2024-08-09T20:34:04.158458756Z","level":"INFO","msg":"created new stream","id":"cevmaz5g"}
+{"time":"2024-08-09T20:34:04.158744756Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"cevmaz5g"}}
+{"time":"2024-08-09T20:34:04.158745798Z","level":"INFO","msg":"sender: started","stream_id":{"value":"cevmaz5g"}}
+{"time":"2024-08-09T20:34:04.158758589Z","level":"INFO","msg":"handler: started","stream_id":{"value":"cevmaz5g"}}
+{"time":"2024-08-09T20:34:04.890628381Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-09T20:34:04.93876534Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-09T20:34:06.405651924Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-09T20:34:06.422835965Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-09T20:34:06.424048465Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-09T20:34:06.642081215Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-09T20:34:06.642829299Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-09T20:34:06.643311715Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-09T20:34:08.740184383Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"cevmaz5g"}}
+{"time":"2024-08-09T20:34:08.740512175Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"cevmaz5g"}}
+{"time":"2024-08-09T20:34:08.740458341Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"cevmaz5g"}}
+{"time":"2024-08-09T20:34:08.741532675Z","level":"INFO","msg":"closed stream","id":"cevmaz5g"}

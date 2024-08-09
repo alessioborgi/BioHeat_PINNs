@@ -1,0 +1,43 @@
+Layer size is:  [3, 50, 50, 1]
+Compiling model...
+'compile' took 3.119902 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [9.24e-02, 4.80e-01, 5.75e-01, 0.00e+00, 2.95e-04, 3.94e-02]    [7.86e-02, 4.80e-01, 5.75e-01, 0.00e+00, 2.95e-04, 3.94e-02]    []
+
+Best model at step 0:
+  train loss: 1.19e+00
+  test loss: 1.17e+00
+  test metric: []
+
+'train' took 2.572006 s
+
+Compiling model...
+'compile' took 0.001254 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 6.00e+00, 6.00e+00, 0.00e+00, 5.98e+00, 6.00e+00]    [5.10e+00, 6.00e+00, 6.00e+00, 0.00e+00, 5.98e+00, 6.00e+00]    []
+10        [1.13e-01, 5.70e+00, 4.62e+00, 0.00e+00, 3.33e-02, 4.31e+00]    [8.84e-02, 5.70e+00, 4.62e+00, 0.00e+00, 3.33e-02, 4.31e+00]    []
+20        [9.59e-01, 4.46e+00, 3.91e+00, 0.00e+00, 2.75e-01, 3.27e+00]    [7.27e-01, 4.46e+00, 3.91e+00, 0.00e+00, 2.75e-01, 3.27e+00]    []
+30        [1.91e+00, 4.13e+00, 3.70e+00, 0.00e+00, 4.52e-01, 3.12e+00]    [1.43e+00, 4.13e+00, 3.70e+00, 0.00e+00, 4.52e-01, 3.12e+00]    []
+
+Best model at step 0:
+  train loss: 1.19e+00
+  test loss: 1.17e+00
+  test metric: []
+
+Epoch 30: saving model to ./tests/models/BioHeat_PINNs_date_time_20240809_203221/adam-30.pt ...
+
+'train' took 57.137643 s
+
+[2024-08-09 20:33:53,503][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-09 20:33:53,532][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-09 20:33:53,555][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-09 20:33:53,576][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240809_203221/l2_tf.png

@@ -41,12 +41,18 @@ def main(cfg: DictConfig):
 
     def objective(trial):
         # Suggest the number of iterations from a predefined set of values
-        cfg.network.iterations = trial.suggest_categorical("iterations", [10, 30])
+        cfg.network.iterations = trial.suggest_categorical("iterations", [100, 150, 200, 250, 300, 400])
        
         # print("cfg is ", OmegaConf.to_yaml(cfg))  # This should now show the correct structure
+        utils.seed_all(31)
+        
+        name, general_figures, model_dir, figures_dir = utils.set_name(prj, cfg.run)
 
+        # Create NBHO with some config.json
+        configurations.write_config(cfg, cfg.run)
+    
         # Train the model with the suggested number of iterations
-        model, metrics = train.single_observer(cfg.run, cfg.run, "0", cfg)
+        model, metrics = train.single_observer(prj, cfg.run, "0", cfg)
 
         # Retrieve the L2RE, MAE, MSE, and max_APE from the metrics
         l2re = metrics["L2RE"]
@@ -58,7 +64,6 @@ def main(cfg: DictConfig):
         
         # Log the trial's parameters and metrics to WandB
         wandb.log({
-            "iterations": cfg.network.iterations,
             "L2RE": l2re,
             "MAE": mae,
             "MSE": mse,
