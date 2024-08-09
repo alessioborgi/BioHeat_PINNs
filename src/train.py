@@ -159,9 +159,6 @@ def compute_metrics(true, pred):
     """
     Computes various performance metrics for the trained model.
     
-    Metrics can include accuracy, precision, recall, F1-score, etc., depending
-    on the specific requirements of the project.
-    
     Args:
         None
     

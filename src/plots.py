@@ -51,7 +51,7 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
     final = tot[tot[:, 1] == 1.0]
     xtr = np.unique(final[:, 0])
     
-    print(f"xtr shape: {xtr.shape}, final shape: {final.shape}")
+    # print(f"xtr shape: {xtr.shape}, final shape: {final.shape}")
     
     if len(xtr) != final[:, -1].shape[0]:
         min_length = min(len(xtr), final[:, -1].shape[0])
@@ -62,7 +62,8 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
         
     x = np.linspace(0, 1, 100)
     true = np.interp(x, xtr, final_values)  # Interpolate to match the x-axis
-    Xobs = np.vstack((x, f1((x, x, np.ones_like(x))), f2((x, x, np.ones_like(x))), f3(np.ones_like(x)), np.ones_like(x))).T
+    # Xobs = np.vstack((x, f1((x, x, np.ones_like(x))), f2((x, x, np.ones_like(x))), f3(np.ones_like(x)), np.ones_like(x))).T
+    Xobs = np.vstack((x, x, np.ones_like(x))).T 
     pred = model.predict(Xobs)[:, 0]
 
     ax2 = fig.add_subplot(122)
@@ -136,6 +137,7 @@ def gen_testdata(n):
 def gen_obsdata(n):
     global f1, f2, f3
     X, y = gen_testdata(n)
+    # print("gen_testdata is equal to: ", X, y)
     g = np.hstack((X, y))
     instants = np.unique(g[:, 2])
 
@@ -154,10 +156,10 @@ def gen_obsdata(n):
         return ii + (1 - ii) / (1 + np.exp(-20 * (ii - 0.25)))
 
     interpolated_values = f2((g[:, 0], g[:, 1], g[:, 2]))
-    Xobs = np.vstack((g[:, 0], g[:, 1], interpolated_values, f3(g[:, 2]), g[:, 2])).T
-
+    # Xobs = np.vstack((g[:, 0], g[:, 1], interpolated_values, f3(g[:, 2]), g[:, 2])).T
+    Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T 
     # Verifying dimensions of the generated data
-    print(f"Generated Xobs shape: {Xobs.shape}")
+    # print(f"Generated Xobs shape: {Xobs.shape}")
     return Xobs
 
 def plot_and_metrics(model, n_test):
@@ -176,7 +178,7 @@ def plot_and_metrics(model, n_test):
     """
     e, theta_true = gen_testdata(n_test)
     g = gen_obsdata(n_test)
-    print("The generated test data are: ", g)
+    # print("The generated test data are: ", g)
     theta_pred = model.predict(g)
     # print("The predicted value will be: ", theta_pred)
 
@@ -192,9 +194,9 @@ def plot_comparison(e, theta_true, theta_pred):
     la = len(np.unique(e[:, 0]))
     le = len(np.unique(e[:, 1]))
     
-    print(f"Unique e[:, 0] (la): {la}, Unique e[:, 1] (le): {le}")
-    print(f"theta_true.size: {theta_true.size}, theta_pred.size: {theta_pred.size}")
-    print(f"Expected size: {la * le}")
+    # print(f"Unique e[:, 0] (la): {la}, Unique e[:, 1] (le): {le}")
+    # print(f"theta_true.size: {theta_true.size}, theta_pred.size: {theta_pred.size}")
+    # print(f"Expected size: {la * le}")
     
     theta_true = theta_true[:la * le]
     theta_pred = theta_pred[:la * le]

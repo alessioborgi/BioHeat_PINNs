@@ -209,26 +209,43 @@ def create_nbho(name, cfg):
     # Initial Condition.
     ic = dde.icbc.IC(geomtime, ic_obs, lambda _, on_initial: on_initial)
 
+    # Exclude all vertices (manually define the vertices of the rectangle).
+    vertices = np.array([
+    [xmin[0], xmin[1]],  # Bottom-left corner
+    [xmax[0], xmin[1]],  # Bottom-right corner
+    [xmin[0], xmax[1]],  # Top-left corner
+    [xmax[0], xmax[1]]   # Top-right corner
+])
+
+    # Expand each vertex to include the full time domain (0 to 1)
+    time_points = np.linspace(0, 1, num=10)  # Adjust num as needed for granularity
+    expanded_exclusions = np.array([
+        [vx, vy, t] for t in time_points for vx, vy in vertices
+    ])
+
     data = dde.data.TimePDE(
         geomtime,
         pde,
         [bcx_1, bcy_1, bcx_0, bcy_0, ic],
-        # [bcx_1, bcy_1, ic], #we should use all boundary conditions
         num_domain=2560,
         num_boundary=200,
         num_initial=100,
         num_test=10000,
+        exclusions = expanded_exclusions # Why? --> In a rectangular domain, a vertex is a point where two edges (boundaries) meet, each with its own distinct normal vector.
+	                                     #          At such a vertex, it’s not straightforward to define a single, unambiguous normal vector because the direction is not uniquely defined.
+                                         #          When boundary conditions involve normal vectors (like Neumann boundary conditions), applying these conditions at vertices can lead to mathematical ambiguity or numerical instability.
     )
 
-    layer_size = [5] + [num_dense_nodes] * num_dense_layers + [1]
+    layer_size = [3] + [num_dense_nodes] * num_dense_layers + [1]
     net = dde.nn.FNN(layer_size, activation, initialization)
     net.apply_output_transform(output_transform)
     model = dde.Model(data, net)
     print("Layer size is: ", layer_size)
+    eps = 0.000001
 
     if initial_weights_regularizer:
         initial_losses = train.get_initial_loss(model)
-        loss_weights = len(initial_losses) / initial_losses
+        loss_weights = len(initial_losses) / (initial_losses + eps)
         model.compile("adam", lr=learning_rate, loss_weights=loss_weights)
     else:
         model.compile("adam", lr=learning_rate)
