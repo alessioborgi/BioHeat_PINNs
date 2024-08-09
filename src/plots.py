@@ -51,8 +51,6 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
     final = tot[tot[:, 1] == 1.0]
     xtr = np.unique(final[:, 0])
     
-    # print(f"xtr shape: {xtr.shape}, final shape: {final.shape}")
-    
     if len(xtr) != final[:, -1].shape[0]:
         min_length = min(len(xtr), final[:, -1].shape[0])
         xtr = xtr[:min_length]
@@ -62,8 +60,10 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
         
     x = np.linspace(0, 1, 100)
     true = np.interp(x, xtr, final_values)  # Interpolate to match the x-axis
-    # Xobs = np.vstack((x, f1((x, x, np.ones_like(x))), f2((x, x, np.ones_like(x))), f3(np.ones_like(x)), np.ones_like(x))).T
+    
+    # Use only the 3 main features (x1, x2, t)
     Xobs = np.vstack((x, x, np.ones_like(x))).T 
+    
     pred = model.predict(Xobs)[:, 0]
 
     ax2 = fig.add_subplot(122)
@@ -77,7 +77,7 @@ def plot_l2_tf(e, theta_true, theta_pred, model):
     ax2.legend(fontsize=7)
 
     plt.savefig(f"{main.figures_dir}/{cfg.run}/l2_tf.png")
-    plt.show()
+    plt.show() 
     
 def plot_loss_components(losshistory):
     """
@@ -137,9 +137,7 @@ def gen_testdata(n):
 def gen_obsdata(n):
     global f1, f2, f3
     X, y = gen_testdata(n)
-    # print("gen_testdata is equal to: ", X, y)
     g = np.hstack((X, y))
-    instants = np.unique(g[:, 2])
 
     x1_unique = np.unique(g[:, 0])
     x2_unique = np.unique(g[:, 1])
@@ -147,19 +145,15 @@ def gen_obsdata(n):
 
     y_grid = g[:, 3].reshape((len(x1_unique), len(x2_unique), len(t_unique)))
 
-    # Create the f1 interpolator based on the 2D grid
+    # Create the interpolators based on the 2D grid
     f1 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
+    
+    # Interpolation on the grid to generate input features
+    interpolated_values = f1((g[:, 0], g[:, 1], g[:, 2]))
 
-    f2 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
-
-    def f3(ii):
-        return ii + (1 - ii) / (1 + np.exp(-20 * (ii - 0.25)))
-
-    interpolated_values = f2((g[:, 0], g[:, 1], g[:, 2]))
-    # Xobs = np.vstack((g[:, 0], g[:, 1], interpolated_values, f3(g[:, 2]), g[:, 2])).T
-    Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T 
-    # Verifying dimensions of the generated data
-    # print(f"Generated Xobs shape: {Xobs.shape}")
+    # Construct Xobs with only 3 features (x1, x2, t)
+    Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T
+    
     return Xobs
 
 def plot_and_metrics(model, n_test):

@@ -1,0 +1,14 @@
+{"time":"2024-08-09T12:24:39.325524714Z","level":"INFO","msg":"using version","core version":"0.17.3"}
+{"time":"2024-08-09T12:24:39.325781255Z","level":"INFO","msg":"created symlink","path":"/working_dir/src/outputs/2024-08-09/12-24-36/wandb/run-20240809_122439-14kz98ct/logs/debug-core.log"}
+{"time":"2024-08-09T12:24:39.336636422Z","level":"INFO","msg":"created new stream","id":"14kz98ct"}
+{"time":"2024-08-09T12:24:39.337751214Z","level":"INFO","msg":"sender: started","stream_id":{"value":"14kz98ct"}}
+{"time":"2024-08-09T12:24:39.337262714Z","level":"INFO","msg":"handler: started","stream_id":{"value":"14kz98ct"}}
+{"time":"2024-08-09T12:24:39.337370755Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"14kz98ct"}}
+{"time":"2024-08-09T12:24:40.573651756Z","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2024-08-09T12:24:40.577949506Z","level":"WARN","msg":"No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2024-08-09T12:24:40.578580881Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-09T12:24:41.113618423Z","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2024-08-09T12:24:41.114620465Z","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"project /BioHeat_Tuning not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2024-08-09T12:24:41.13173659Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"14kz98ct"}}
+{"time":"2024-08-09T12:24:41.131773006Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"14kz98ct"}}
+{"time":"2024-08-09T12:24:41.13252159Z","level":"INFO","msg":"closed stream","id":"14kz98ct"}

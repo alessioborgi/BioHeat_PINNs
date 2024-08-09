@@ -11,4 +11,5 @@ tensorboard
 pykan
 datetime
 hydra-core
+optuna
 #os

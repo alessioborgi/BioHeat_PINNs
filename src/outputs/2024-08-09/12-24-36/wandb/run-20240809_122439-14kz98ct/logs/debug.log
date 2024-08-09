@@ -1,0 +1,44 @@
+2024-08-09 12:24:39,230 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-08-09 12:24:39,231 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Configure stats pid to 1372
+2024-08-09 12:24:39,232 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2024-08-09 12:24:39,232 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Loading settings from /working_dir/src/outputs/2024-08-09/12-24-36/wandb/settings
+2024-08-09 12:24:39,233 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'_require_core': 'true'}
+2024-08-09 12:24:39,233 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-09 12:24:39,234 WARNING MainThread:1372 [wandb_setup.py:_flush():76] Could not save program above cwd: /working_dir/src/tuning.py
+2024-08-09 12:24:39,234 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': None, 'program_abspath': '/working_dir/src/tuning.py', 'program': '/working_dir/src/tuning.py'}
+2024-08-09 12:24:39,235 INFO    MainThread:1372 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-09 12:24:39,236 INFO    MainThread:1372 [wandb_init.py:_log_setup():520] Logging user logs to /working_dir/src/outputs/2024-08-09/12-24-36/wandb/run-20240809_122439-14kz98ct/logs/debug.log
+2024-08-09 12:24:39,237 INFO    MainThread:1372 [wandb_init.py:_log_setup():521] Logging internal logs to /working_dir/src/outputs/2024-08-09/12-24-36/wandb/run-20240809_122439-14kz98ct/logs/debug-internal.log
+2024-08-09 12:24:39,237 INFO    MainThread:1372 [wandb_init.py:init():560] calling init triggers
+2024-08-09 12:24:39,239 INFO    MainThread:1372 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'_metadata': ContainerMetadata(ref_type=typing.Any, object_type=<class 'dict'>, optional=True, key=None, flags={'struct': True}, flags_root=False, resolver_cache=defaultdict(<class 'dict'>, {'now': {('%Y-%m-%d',): '2024-08-09', ('%H-%M-%S',): '12-24-36'}}), key_type=typing.Any, element_type=typing.Any), '_parent': None, '_flags_cache': {'struct': True}, '_content': {'': {'': {'': {'network': {'backend': 'pytorch', 'activation': 'tanh', 'initial_weights_regularizer': True, 'initialization': 'Glorot normal', 'iterations': 100, 'LBFGS': False, 'learning_rate': 0.001, 'num_dense_layers': 2, 'num_dense_nodes': 50, 'output_injection_gain': 50, 'resampling': True, 'resampler_period': 100}, 'data': {'L0': 0.05, 'tauf': 1800, 'k': 5.0, 'p0': 0.0, 'd': 0.03, 'rhoc': 3820950, 'cb': 3825.0, 'h': 100.0, 'Tmin': 37, 'Tmax': 45, 'alpha': 1.0, 'W': 2.3154600000000003, 'steep': 20.0, 'tchange': 0.25, 'rhob': 1043.0, 'Wb': 0.00222, 'q0': 16.0}}}}, 'tuning': {'num_trials': 2, 'study_name': 'BioHeat_Tuning_Study', 'direction': 'minimize'}, 'network': {'iterations': '???'}}}
+2024-08-09 12:24:39,239 INFO    MainThread:1372 [wandb_init.py:init():610] starting backend
+2024-08-09 12:24:39,240 INFO    MainThread:1372 [wandb_init.py:init():614] setting up manager
+2024-08-09 12:24:39,251 INFO    MainThread:1372 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-08-09 12:24:39,257 INFO    MainThread:1372 [wandb_init.py:init():622] backend started and connected
+2024-08-09 12:24:39,271 ERROR   MainThread:1372 [wandb_init.py:init():1181] error in wandb.init()
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1171, in init
+    return wi.init()
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 627, in init
+    run = Run(
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 594, in __init__
+    self._init(
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 715, in _init
+    self._config._update(config, ignore_locked=True)
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/wandb_config.py", line 177, in _update
+    sanitized = self._sanitize_dict(
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/wandb_config.py", line 264, in _sanitize_dict
+    k, v = self._sanitize(k, v, allow_val_change)
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/wandb_config.py", line 282, in _sanitize
+    val = json_friendly_val(val)
+  File "/opt/conda/lib/python3.10/site-packages/wandb/util.py", line 674, in json_friendly_val
+    converted = asdict(val)
+  File "/opt/conda/lib/python3.10/dataclasses.py", line 1238, in asdict
+    return _asdict_inner(obj, dict_factory)
+  File "/opt/conda/lib/python3.10/dataclasses.py", line 1245, in _asdict_inner
+    value = _asdict_inner(getattr(obj, f.name), dict_factory)
+  File "/opt/conda/lib/python3.10/dataclasses.py", line 1275, in _asdict_inner
+    return type(obj)((_asdict_inner(k, dict_factory),
+TypeError: first argument must be callable or None
+2024-08-09 12:24:40,556 WARNING MsgRouterThr:1372 [router.py:message_loop():77] message_loop has been closed
