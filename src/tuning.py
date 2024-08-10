@@ -16,6 +16,33 @@ project_dir = os.path.dirname(src_dir)
 tests_dir = os.path.join(project_dir, "tests")
 os.makedirs(tests_dir, exist_ok=True)
 
+### PARAMETERS ###
+# Define activation functions, iteration values, and corresponding optimal initializations
+# activation_functions = {
+#     'ELU': ['Glorot normal'],
+#     'GELU': ['He normal'],
+#     'ReLu': ['He normal']
+# }
+activation_functions = {
+    'ELU': ['He normal'],
+    'GELU': ['He normal'],
+    'ReLu': ['He normal'],
+    'SELU': ['Glorot normal'],
+    'Sigmoid': ['Glorot normal'],
+    'SiLU': ['He normal'],
+    'sin': ['Glorot normal'],
+    'Swish': ['He normal'],
+    'tanh': ['Glorot normal'],
+    'Mish': ['He normal'],
+    'Softplus': ['Glorot normal'],
+    'APTx': ['Glorot normal', 'He normal']
+}
+# iteration_values = [10, 30]  # Replace with your actual iteration values
+iteration_values = [100, 150, 200, 250, 300, 350, 400, 500]    
+
+
+
+
 @hydra.main(version_base=None, config_path="configs", config_name="tuning")
 def main(cfg: DictConfig):
     # Set seed for reproducibility
@@ -37,63 +64,69 @@ def main(cfg: DictConfig):
 
     # Create NBHO with some config.json
     configurations.write_config(cfg, cfg.run)
-
-    # List of iteration values to try
-    # iteration_values = [100, 150, 200, 250, 300, 400]
-    iteration_values = [10, 30]
     
-    # Initialize list to collect all metrics and run IDs for global min-max calculation
+    # Initialize list to collect all metrics, run IDs, and configuration details
     all_metrics = []
     run_ids = []
+    config_details = []
 
     # First loop: Collect metrics and log them to WandB
-    for iterations in iteration_values:
-        cfg.network.iterations = iterations
-       
-        utils.seed_all(31)
+    for act_fun, init_methods in activation_functions.items():
+        cfg.network.activation = act_fun  # Set the activation function
         
-        name, general_figures, model_dir, figures_dir = utils.set_name(prj, cfg.run)
+        for init_method in init_methods:
+            cfg.network.initialization = init_method  # Set the initialization method
 
-        # Create NBHO with some config.json
-        configurations.write_config(cfg, cfg.run)
-    
-        # Train the model with the current number of iterations
-        model, metrics = train.single_observer(prj, cfg.run, "0", cfg)
+            for iterations in iteration_values:
+                cfg.network.iterations = iterations
+                
+                utils.seed_all(31)
+                
+                name, general_figures, model_dir, figures_dir = utils.set_name(prj, cfg.run)
 
-        # Retrieve the L2RE, MAE, MSE, and max_APE from the metrics
-        l2re = metrics["L2RE"]
-        mae = metrics["MAE"]
-        mse = metrics["MSE"]
-        max_ape = metrics["max_APE"]
-        
-        # Initialize WandB for each run
-        wandb_run = wandb.init(project="BioHeat_Tuning", config=OmegaConf.to_container(cfg, resolve=True), reinit=True)
-        
-        # Log the run's parameters and metrics to WandB
-        wandb.log({
-            "iterations": iterations,
-            "L2RE": l2re,
-            "MAE": mae,
-            "MSE": mse,
-            "max_APE": max_ape,
-        })
+                # Create NBHO with some config.json
+                configurations.write_config(cfg, cfg.run)
+            
+                # Train the model with the current number of iterations
+                model, metrics = train.single_observer(prj, cfg.run, "0", cfg)
 
-        # Store current metrics for global min-max calculation
-        current_metrics = np.array([l2re, mae, mse, max_ape])
-        all_metrics.append(current_metrics)
-        
-        # Store the WandB run ID for later use
-        run_ids.append(wandb_run.id)
+                # Retrieve the L2RE, MAE, MSE, and max_APE from the metrics
+                l2re = metrics["L2RE"]
+                mae = metrics["MAE"]
+                mse = metrics["MSE"]
+                max_ape = metrics["max_APE"]
+                
+                # Initialize WandB for each run
+                wandb_run = wandb.init(project="BioHeat_Tuning", config=OmegaConf.to_container(cfg, resolve=True), reinit=True)
+                
+                # Log the run's parameters and metrics to WandB
+                wandb.log({
+                    "activation_function": act_fun,
+                    "initialization_method": init_method,
+                    "iterations": iterations,
+                    "L2RE": l2re,
+                    "MAE": mae,
+                    "MSE": mse,
+                    "max_APE": max_ape,
+                })
 
-        # Finish the WandB run for this iteration
-        wandb_run.finish()
+                # Store current metrics, configuration, and run ID for global min-max calculation
+                current_metrics = np.array([l2re, mae, mse, max_ape])
+                all_metrics.append(current_metrics)
+                run_ids.append(wandb_run.id)
+                config_details.append((act_fun, init_method, iterations))
+
+                # Finish the WandB run for this iteration
+                wandb_run.finish()
 
     # Convert list to numpy array for easier manipulation
     all_metrics = np.array(all_metrics)
     
-    # Calculate global min and max across all iterations
+    # Calculate global min and max across all iterations, activation functions, and initializations
     global_min_metrics = np.min(all_metrics, axis=0)
     global_max_metrics = np.max(all_metrics, axis=0)
+
+    best_configs = {}  # To store the best configuration for each activation function and initialization
 
     # Update logs with globally normalized weighted scores
     for i, run_id in enumerate(run_ids):
@@ -105,7 +138,9 @@ def main(cfg: DictConfig):
 
         # Calculate the weighted score
         weighted_score = np.dot(weights, normalized_metrics)
-        
+
+        act_fun, init_method, iterations = config_details[i]
+
         # Reinitialize WandB run for this run ID
         wandb_run = wandb.init(id=run_id, project="BioHeat_Tuning", resume="allow")
 
@@ -117,6 +152,20 @@ def main(cfg: DictConfig):
 
         # Finish the WandB run again
         wandb_run.finish()
+
+        # Update the best configuration based on the weighted score
+        config_key = (act_fun, init_method)
+        if config_key not in best_configs or weighted_score < best_configs[config_key]["score"]:
+            best_configs[config_key] = {
+                "iterations": iterations,
+                "score": weighted_score
+            }
+
+    # Print out the optimal configurations
+    print("Optimal configurations:")
+    for config_key, best_config in best_configs.items():
+        act_fun, init_method = config_key
+        print(f"Activation Function: {act_fun}, Initialization: {init_method}, Best Iterations: {best_config['iterations']}")
 
     print("All runs completed and WandB logs updated with weighted scores.")
 

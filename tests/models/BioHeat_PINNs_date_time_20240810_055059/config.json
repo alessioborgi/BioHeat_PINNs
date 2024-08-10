@@ -1,8 +1,8 @@
 {
     "backend": "pytorch",
-    "activation": "tanh",
+    "activation": "ReLu",
     "initial_weights_regularizer": true,
-    "initialization": "Glorot normal",
+    "initialization": "He normal",
     "iterations": 30,
     "LBFGS": false,
     "learning_rate": 0.001,
