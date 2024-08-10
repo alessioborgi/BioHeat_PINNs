@@ -40,9 +40,6 @@ activation_functions = {
 # iteration_values = [10, 30]  # Replace with your actual iteration values
 iteration_values = [100, 150, 200, 250, 300, 350, 400, 500]    
 
-
-
-
 @hydra.main(version_base=None, config_path="configs", config_name="tuning")
 def main(cfg: DictConfig):
     # Set seed for reproducibility
@@ -127,6 +124,7 @@ def main(cfg: DictConfig):
     global_max_metrics = np.max(all_metrics, axis=0)
 
     best_configs = {}  # To store the best configuration for each activation function and initialization
+    ranked_scores = []  # To store all scores for ranking
 
     # Update logs with globally normalized weighted scores
     for i, run_id in enumerate(run_ids):
@@ -161,11 +159,22 @@ def main(cfg: DictConfig):
                 "score": weighted_score
             }
 
+        # Add the score and corresponding details to the ranking list
+        ranked_scores.append((weighted_score, act_fun, init_method, iterations))
+
+    # Sort the ranked scores from best to worst
+    ranked_scores.sort(key=lambda x: x[0], reverse=True)  # Sort by weighted_score (first element)
+
     # Print out the optimal configurations
     print("Optimal configurations:")
     for config_key, best_config in best_configs.items():
         act_fun, init_method = config_key
         print(f"Activation Function: {act_fun}, Initialization: {init_method}, Best Iterations: {best_config['iterations']}")
+
+    # Print out the ranking of all runs
+    print("\nRanking of all runs based on weighted score:")
+    for rank, (score, act_fun, init_method, iterations) in enumerate(ranked_scores, start=1):
+        print(f"Rank {rank}: Activation Function: {act_fun}, Initialization: {init_method}, Iterations: {iterations}, Weighted Score: {score}")
 
     print("All runs completed and WandB logs updated with weighted scores.")
 
