@@ -4,7 +4,7 @@ defaults:
   - _self_
 
 tuning:
-  num_trials: 6  # Number of trials Optuna will perform to find the best value for iterations
+  num_trials: 2  # Number of trials Optuna will perform to find the best value for iterations
   study_name: "BioHeat_Tuning_Study"  # Name of the study
   direction: "minimize"  # Direction of optimization (minimize the objective)
 

@@ -39,12 +39,17 @@ def main(cfg: DictConfig):
     configurations.write_config(cfg, cfg.run)
 
     # List of iteration values to try
-    iteration_values = [100, 150, 200, 250, 300, 400]
+    # iteration_values = [100, 150, 200, 250, 300, 400]
+    iteration_values = [10, 30]
     
+    # Initialize list to collect all metrics and run IDs for global min-max calculation
+    all_metrics = []
+    run_ids = []
+
+    # First loop: Collect metrics and log them to WandB
     for iterations in iteration_values:
         cfg.network.iterations = iterations
        
-        # print("cfg is ", OmegaConf.to_yaml(cfg))  # This should now show the correct structure
         utils.seed_all(31)
         
         name, general_figures, model_dir, figures_dir = utils.set_name(prj, cfg.run)
@@ -60,18 +65,6 @@ def main(cfg: DictConfig):
         mae = metrics["MAE"]
         mse = metrics["MSE"]
         max_ape = metrics["max_APE"]
-
-        # Normalize the metrics to bring them to a comparable scale
-        metrics_array = np.array([l2re, mae, mse, max_ape])
-        min_metrics = np.min(metrics_array)
-        max_metrics = np.max(metrics_array)
-        normalized_metrics = (metrics_array - min_metrics) / (max_metrics - min_metrics + 1e-10)
-
-        # Assign weights to each metric (you can adjust these weights based on importance)
-        weights = np.array([0.25, 0.25, 0.25, 0.25])  # Adjust the weights as necessary
-
-        # Calculate the weighted score
-        weighted_score = np.dot(weights, normalized_metrics)
         
         # Initialize WandB for each run
         wandb_run = wandb.init(project="BioHeat_Tuning", config=OmegaConf.to_container(cfg, resolve=True), reinit=True)
@@ -83,14 +76,49 @@ def main(cfg: DictConfig):
             "MAE": mae,
             "MSE": mse,
             "max_APE": max_ape,
-            "weighted_score": weighted_score,
-            "weights_array": weights,
         })
+
+        # Store current metrics for global min-max calculation
+        current_metrics = np.array([l2re, mae, mse, max_ape])
+        all_metrics.append(current_metrics)
+        
+        # Store the WandB run ID for later use
+        run_ids.append(wandb_run.id)
 
         # Finish the WandB run for this iteration
         wandb_run.finish()
 
-        print(f"Completed run for {iterations} iterations: Weighted Score = {weighted_score}")
+    # Convert list to numpy array for easier manipulation
+    all_metrics = np.array(all_metrics)
+    
+    # Calculate global min and max across all iterations
+    global_min_metrics = np.min(all_metrics, axis=0)
+    global_max_metrics = np.max(all_metrics, axis=0)
+
+    # Update logs with globally normalized weighted scores
+    for i, run_id in enumerate(run_ids):
+        # Normalize the metrics using global min-max
+        normalized_metrics = (all_metrics[i] - global_min_metrics) / (global_max_metrics - global_min_metrics + 1e-10)
+
+        # Assign weights to each metric (you can adjust these weights based on importance)
+        weights = np.array([0.25, 0.25, 0.25, 0.25])  # Adjust the weights as necessary
+
+        # Calculate the weighted score
+        weighted_score = np.dot(weights, normalized_metrics)
+        
+        # Reinitialize WandB run for this run ID
+        wandb_run = wandb.init(id=run_id, project="BioHeat_Tuning", resume="allow")
+
+        # Update the run with the weighted score
+        wandb.log({
+            "weighted_score": weighted_score,
+            "weighted_array": weights,
+        })
+
+        # Finish the WandB run again
+        wandb_run.finish()
+
+    print("All runs completed and WandB logs updated with weighted scores.")
 
 if __name__ == "__main__":
     main()
