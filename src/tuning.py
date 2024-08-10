@@ -1,7 +1,6 @@
 import hydra
 from omegaconf import DictConfig, OmegaConf
 from configurations import HydraConfigStore
-import optuna
 import train  # Ensure this is your training module
 import wandb
 import utils
@@ -39,9 +38,11 @@ def main(cfg: DictConfig):
     # Create NBHO with some config.json
     configurations.write_config(cfg, cfg.run)
 
-    def objective(trial):
-        # Suggest the number of iterations from a predefined set of values
-        cfg.network.iterations = trial.suggest_categorical("iterations", [100, 150, 200, 250, 300, 400])
+    # List of iteration values to try
+    iteration_values = [100, 150, 200, 250, 300, 400]
+    
+    for iterations in iteration_values:
+        cfg.network.iterations = iterations
        
         # print("cfg is ", OmegaConf.to_yaml(cfg))  # This should now show the correct structure
         utils.seed_all(31)
@@ -51,7 +52,7 @@ def main(cfg: DictConfig):
         # Create NBHO with some config.json
         configurations.write_config(cfg, cfg.run)
     
-        # Train the model with the suggested number of iterations
+        # Train the model with the current number of iterations
         model, metrics = train.single_observer(prj, cfg.run, "0", cfg)
 
         # Retrieve the L2RE, MAE, MSE, and max_APE from the metrics
@@ -59,16 +60,6 @@ def main(cfg: DictConfig):
         mae = metrics["MAE"]
         mse = metrics["MSE"]
         max_ape = metrics["max_APE"]
-        # Initialize WandB for each trial
-        wandb_run = wandb.init(project="BioHeat_Tuning", config=OmegaConf.to_container(cfg, resolve=True), reinit=True)
-        
-        # Log the trial's parameters and metrics to WandB
-        wandb.log({
-            "L2RE": l2re,
-            "MAE": mae,
-            "MSE": mse,
-            "max_APE": max_ape,
-        })
 
         # Normalize the metrics to bring them to a comparable scale
         metrics_array = np.array([l2re, mae, mse, max_ape])
@@ -81,20 +72,25 @@ def main(cfg: DictConfig):
 
         # Calculate the weighted score
         weighted_score = np.dot(weights, normalized_metrics)
+        
+        # Initialize WandB for each run
+        wandb_run = wandb.init(project="BioHeat_Tuning", config=OmegaConf.to_container(cfg, resolve=True), reinit=True)
+        
+        # Log the run's parameters and metrics to WandB
+        wandb.log({
+            "iterations": iterations,
+            "L2RE": l2re,
+            "MAE": mae,
+            "MSE": mse,
+            "max_APE": max_ape,
+            "weighted_score": weighted_score,
+            "weights_array": weights,
+        })
 
-        # Finish the WandB run for this trial
+        # Finish the WandB run for this iteration
         wandb_run.finish()
 
-        # Return the weighted score for Optuna to minimize
-        return weighted_score
-
-    # Create an Optuna study and optimize it
-    study = optuna.create_study(direction=cfg.tuning.direction)
-    study.optimize(objective, n_trials=cfg.tuning.num_trials)
-
-    # Print the best parameters and the corresponding metric value
-    print(f"Best trial: {study.best_trial.params}")
-    print(f"Best value: {study.best_trial.value}")
+        print(f"Completed run for {iterations} iterations: Weighted Score = {weighted_score}")
 
 if __name__ == "__main__":
     main()
