@@ -1,0 +1,18 @@
+{"time":"2024-08-10T15:24:19.016309505Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T15:24:19.01657038Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_152418-rzskeaya/logs/debug-core.log"}
+{"time":"2024-08-10T15:24:19.024755797Z","level":"INFO","msg":"created new stream","id":"rzskeaya"}
+{"time":"2024-08-10T15:24:19.025034797Z","level":"INFO","msg":"handler: started","stream_id":{"value":"rzskeaya"}}
+{"time":"2024-08-10T15:24:19.025090713Z","level":"INFO","msg":"sender: started","stream_id":{"value":"rzskeaya"}}
+{"time":"2024-08-10T15:24:19.025145963Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"rzskeaya"}}
+{"time":"2024-08-10T15:24:19.641570797Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T15:24:19.686660297Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T15:24:52.513105048Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T15:24:52.527029548Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T15:24:52.528258382Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T15:24:52.762462798Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T15:24:52.763212465Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T15:24:52.763500465Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T15:24:54.874097174Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"rzskeaya"}}
+{"time":"2024-08-10T15:24:54.874291674Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"rzskeaya"}}
+{"time":"2024-08-10T15:24:54.874392591Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"rzskeaya"}}
+{"time":"2024-08-10T15:24:54.875293966Z","level":"INFO","msg":"closed stream","id":"rzskeaya"}

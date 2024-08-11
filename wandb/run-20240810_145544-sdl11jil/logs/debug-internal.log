@@ -1,0 +1,18 @@
+{"time":"2024-08-10T14:55:44.666505753Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T14:55:44.666803961Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_145544-sdl11jil/logs/debug-core.log"}
+{"time":"2024-08-10T14:55:44.672943336Z","level":"INFO","msg":"created new stream","id":"sdl11jil"}
+{"time":"2024-08-10T14:55:44.673301045Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"sdl11jil"}}
+{"time":"2024-08-10T14:55:44.67335142Z","level":"INFO","msg":"handler: started","stream_id":{"value":"sdl11jil"}}
+{"time":"2024-08-10T14:55:44.673289003Z","level":"INFO","msg":"sender: started","stream_id":{"value":"sdl11jil"}}
+{"time":"2024-08-10T14:55:45.397140462Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T14:55:45.43944717Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T14:56:17.612638588Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T14:56:17.623742921Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T14:56:17.624554754Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T14:56:17.932109796Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T14:56:17.932672546Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T14:56:17.932915338Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T14:56:20.656270839Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"sdl11jil"}}
+{"time":"2024-08-10T14:56:20.656519714Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"sdl11jil"}}
+{"time":"2024-08-10T14:56:20.656512381Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"sdl11jil"}}
+{"time":"2024-08-10T14:56:20.657457131Z","level":"INFO","msg":"closed stream","id":"sdl11jil"}

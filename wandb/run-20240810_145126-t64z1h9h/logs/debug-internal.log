@@ -1,0 +1,19 @@
+{"time":"2024-08-10T14:51:26.527958967Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T14:51:26.528147342Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_145126-t64z1h9h/logs/debug-core.log"}
+{"time":"2024-08-10T14:51:26.535064884Z","level":"INFO","msg":"created new stream","id":"t64z1h9h"}
+{"time":"2024-08-10T14:51:26.535372009Z","level":"INFO","msg":"handler: started","stream_id":{"value":"t64z1h9h"}}
+{"time":"2024-08-10T14:51:26.535337884Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"t64z1h9h"}}
+{"time":"2024-08-10T14:51:26.5353398Z","level":"INFO","msg":"sender: started","stream_id":{"value":"t64z1h9h"}}
+{"time":"2024-08-10T14:51:27.052500967Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T14:51:27.097817717Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T14:52:00.810946177Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T14:52:00.833711177Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T14:52:00.834994136Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T14:52:01.205790011Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T14:52:01.206207761Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T14:52:01.206465594Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T14:54:16.251460962Z","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-08-10T14:54:20.293700006Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"t64z1h9h"}}
+{"time":"2024-08-10T14:54:20.293933797Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"t64z1h9h"}}
+{"time":"2024-08-10T14:54:20.294018714Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"t64z1h9h"}}
+{"time":"2024-08-10T14:54:20.295199381Z","level":"INFO","msg":"closed stream","id":"t64z1h9h"}

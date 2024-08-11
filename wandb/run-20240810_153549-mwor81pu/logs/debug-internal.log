@@ -1,0 +1,18 @@
+{"time":"2024-08-10T15:35:49.555337505Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T15:35:49.55553613Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_153549-mwor81pu/logs/debug-core.log"}
+{"time":"2024-08-10T15:35:49.561642172Z","level":"INFO","msg":"created new stream","id":"mwor81pu"}
+{"time":"2024-08-10T15:35:49.561974005Z","level":"INFO","msg":"sender: started","stream_id":{"value":"mwor81pu"}}
+{"time":"2024-08-10T15:35:49.561950588Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mwor81pu"}}
+{"time":"2024-08-10T15:35:49.562009297Z","level":"INFO","msg":"handler: started","stream_id":{"value":"mwor81pu"}}
+{"time":"2024-08-10T15:35:50.342449255Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T15:35:50.386201006Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T15:35:51.644250839Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T15:35:51.660372423Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T15:35:51.661503631Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T15:35:51.858578006Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T15:35:51.858957965Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T15:35:51.859128506Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T15:35:53.879871674Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"mwor81pu"}}
+{"time":"2024-08-10T15:35:53.880127716Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mwor81pu"}}
+{"time":"2024-08-10T15:35:53.880148757Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"mwor81pu"}}
+{"time":"2024-08-10T15:35:53.881317091Z","level":"INFO","msg":"closed stream","id":"mwor81pu"}

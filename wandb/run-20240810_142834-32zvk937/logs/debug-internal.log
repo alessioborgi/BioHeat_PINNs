@@ -1,0 +1,18 @@
+{"time":"2024-08-10T14:28:34.713782096Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T14:28:34.713978971Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_142834-32zvk937/logs/debug-core.log"}
+{"time":"2024-08-10T14:28:34.720885471Z","level":"INFO","msg":"created new stream","id":"32zvk937"}
+{"time":"2024-08-10T14:28:34.721157096Z","level":"INFO","msg":"handler: started","stream_id":{"value":"32zvk937"}}
+{"time":"2024-08-10T14:28:34.721236971Z","level":"INFO","msg":"sender: started","stream_id":{"value":"32zvk937"}}
+{"time":"2024-08-10T14:28:34.721221346Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"32zvk937"}}
+{"time":"2024-08-10T14:28:35.251181013Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T14:28:35.30323343Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T14:28:36.471835597Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T14:28:36.482655055Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T14:28:36.483989805Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T14:28:36.68391043Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T14:28:36.684435889Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T14:28:36.684659014Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T14:28:38.714100875Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"32zvk937"}}
+{"time":"2024-08-10T14:28:38.714357Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"32zvk937"}}
+{"time":"2024-08-10T14:28:38.714376792Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"32zvk937"}}
+{"time":"2024-08-10T14:28:38.715320917Z","level":"INFO","msg":"closed stream","id":"32zvk937"}

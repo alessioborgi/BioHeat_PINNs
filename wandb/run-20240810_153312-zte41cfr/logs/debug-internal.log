@@ -1,0 +1,18 @@
+{"time":"2024-08-10T15:33:12.911664585Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T15:33:12.911876835Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_153312-zte41cfr/logs/debug-core.log"}
+{"time":"2024-08-10T15:33:12.923047627Z","level":"INFO","msg":"created new stream","id":"zte41cfr"}
+{"time":"2024-08-10T15:33:12.923626835Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"zte41cfr"}}
+{"time":"2024-08-10T15:33:12.923708502Z","level":"INFO","msg":"handler: started","stream_id":{"value":"zte41cfr"}}
+{"time":"2024-08-10T15:33:12.923700002Z","level":"INFO","msg":"sender: started","stream_id":{"value":"zte41cfr"}}
+{"time":"2024-08-10T15:33:13.763184294Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T15:33:13.807149919Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T15:33:15.132086586Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T15:33:15.147345086Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T15:33:15.148552753Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T15:33:15.345358211Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T15:33:15.346186545Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T15:33:15.34648067Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T15:33:17.349972087Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"zte41cfr"}}
+{"time":"2024-08-10T15:33:17.350319546Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"zte41cfr"}}
+{"time":"2024-08-10T15:33:17.350285254Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"zte41cfr"}}
+{"time":"2024-08-10T15:33:17.351430587Z","level":"INFO","msg":"closed stream","id":"zte41cfr"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-10T14:25:32.521576137Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T14:25:32.521735012Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_142532-eauty4ki/logs/debug-core.log"}
+{"time":"2024-08-10T14:25:32.526909012Z","level":"INFO","msg":"created new stream","id":"eauty4ki"}
+{"time":"2024-08-10T14:25:32.527166928Z","level":"INFO","msg":"handler: started","stream_id":{"value":"eauty4ki"}}
+{"time":"2024-08-10T14:25:32.527189553Z","level":"INFO","msg":"sender: started","stream_id":{"value":"eauty4ki"}}
+{"time":"2024-08-10T14:25:32.527184678Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"eauty4ki"}}
+{"time":"2024-08-10T14:25:32.999180262Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T14:25:33.045625179Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T14:26:03.598921387Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T14:26:03.607952012Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T14:26:03.608754179Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T14:26:03.811040221Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T14:26:03.811470637Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T14:26:03.811732512Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T14:26:06.53960718Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"eauty4ki"}}
+{"time":"2024-08-10T14:26:06.539869305Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"eauty4ki"}}
+{"time":"2024-08-10T14:26:06.53996518Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"eauty4ki"}}
+{"time":"2024-08-10T14:26:06.54097243Z","level":"INFO","msg":"closed stream","id":"eauty4ki"}

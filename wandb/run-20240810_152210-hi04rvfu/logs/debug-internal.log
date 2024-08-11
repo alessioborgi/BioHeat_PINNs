@@ -1,0 +1,18 @@
+{"time":"2024-08-10T15:22:10.166526251Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T15:22:10.166687792Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_152210-hi04rvfu/logs/debug-core.log"}
+{"time":"2024-08-10T15:22:10.199359126Z","level":"INFO","msg":"created new stream","id":"hi04rvfu"}
+{"time":"2024-08-10T15:22:10.199694834Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"hi04rvfu"}}
+{"time":"2024-08-10T15:22:10.199795126Z","level":"INFO","msg":"sender: started","stream_id":{"value":"hi04rvfu"}}
+{"time":"2024-08-10T15:22:10.199690042Z","level":"INFO","msg":"handler: started","stream_id":{"value":"hi04rvfu"}}
+{"time":"2024-08-10T15:22:10.689107959Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T15:22:10.730498751Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T15:22:12.172081793Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T15:22:12.186330085Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T15:22:12.18691796Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T15:22:12.402165627Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T15:22:12.402363294Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T15:22:12.402466335Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T15:22:14.537505461Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"hi04rvfu"}}
+{"time":"2024-08-10T15:22:14.537666836Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"hi04rvfu"}}
+{"time":"2024-08-10T15:22:14.537664253Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"hi04rvfu"}}
+{"time":"2024-08-10T15:22:14.538346795Z","level":"INFO","msg":"closed stream","id":"hi04rvfu"}

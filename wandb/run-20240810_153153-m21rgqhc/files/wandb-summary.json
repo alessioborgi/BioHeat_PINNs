@@ -1,0 +1,1 @@
+{"weighted_score":0.20370822684033016,"activation_function":"Sigmoid","max_APE":2.3694723337620456e+69,"iterations":500,"_runtime":2.464053591,"MAE":1.8348499946266624e+66,"MSE":0.028080556796581495,"weighted_array":[0.25,0.25,0.25,0.25],"_step":1,"_timestamp":1.7233039152711298e+09,"L2RE":1.5475526783629692,"_wandb":{"runtime":3},"initialization_method":"Glorot normal"}

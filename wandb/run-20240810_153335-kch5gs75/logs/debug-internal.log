@@ -1,0 +1,18 @@
+{"time":"2024-08-10T15:33:35.828531805Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T15:33:35.828791471Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_153335-kch5gs75/logs/debug-core.log"}
+{"time":"2024-08-10T15:33:35.833674388Z","level":"INFO","msg":"created new stream","id":"kch5gs75"}
+{"time":"2024-08-10T15:33:35.833967513Z","level":"INFO","msg":"handler: started","stream_id":{"value":"kch5gs75"}}
+{"time":"2024-08-10T15:33:35.833941805Z","level":"INFO","msg":"sender: started","stream_id":{"value":"kch5gs75"}}
+{"time":"2024-08-10T15:33:35.833952596Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"kch5gs75"}}
+{"time":"2024-08-10T15:33:36.605341847Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T15:33:36.651740472Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T15:33:37.892341625Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T15:33:37.904738666Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T15:33:37.907288208Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T15:33:38.113169041Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T15:33:38.116253958Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T15:33:38.116741208Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T15:33:40.102135876Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"kch5gs75"}}
+{"time":"2024-08-10T15:33:40.102264959Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"kch5gs75"}}
+{"time":"2024-08-10T15:33:40.102289542Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"kch5gs75"}}
+{"time":"2024-08-10T15:33:40.103069626Z","level":"INFO","msg":"closed stream","id":"kch5gs75"}

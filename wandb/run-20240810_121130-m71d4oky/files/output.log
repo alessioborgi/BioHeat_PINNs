@@ -1,0 +1,50 @@
+Layer size is:  [3, 50, 50, 1]
+Compiling model...
+'compile' took 3.202860 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [5.71e+00, 5.58e-01, 1.24e+00, 0.00e+00, 4.98e-02, 1.06e-01]    [5.68e+00, 5.58e-01, 1.24e+00, 0.00e+00, 4.98e-02, 1.06e-01]    []
+
+Best model at step 0:
+  train loss: 7.66e+00
+  test loss: 7.63e+00
+  test metric: []
+
+'train' took 4.370045 s
+
+Compiling model...
+'compile' took 0.002069 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 6.00e+00, 6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00]    [5.97e+00, 6.00e+00, 6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00]    []
+10        [4.96e-01, 9.73e-01, 1.33e+00, 0.00e+00, 6.55e-01, 1.17e+00]    [4.64e-01, 9.73e-01, 1.33e+00, 0.00e+00, 6.55e-01, 1.17e+00]    []
+20        [8.66e-01, 1.03e+00, 1.09e+00, 0.00e+00, 7.15e-02, 2.55e+00]    [6.78e-01, 1.03e+00, 1.09e+00, 0.00e+00, 7.15e-02, 2.55e+00]    []
+30        [3.50e-01, 9.29e-01, 1.22e+00, 0.00e+00, 1.23e-01, 1.24e+00]    [2.94e-01, 9.29e-01, 1.22e+00, 0.00e+00, 1.23e-01, 1.24e+00]    []
+40        [2.58e-01, 9.50e-01, 1.34e+00, 0.00e+00, 2.10e-01, 1.23e+00]    [2.29e-01, 9.50e-01, 1.34e+00, 0.00e+00, 2.10e-01, 1.23e+00]    []
+50        [3.29e-01, 9.33e-01, 1.16e+00, 0.00e+00, 9.05e-02, 1.22e+00]    [2.77e-01, 9.33e-01, 1.16e+00, 0.00e+00, 9.05e-02, 1.22e+00]    []
+60        [3.17e-01, 9.49e-01, 1.13e+00, 0.00e+00, 7.93e-02, 1.22e+00]    [2.65e-01, 9.49e-01, 1.13e+00, 0.00e+00, 7.93e-02, 1.22e+00]    []
+70        [2.74e-01, 9.26e-01, 1.15e+00, 0.00e+00, 1.07e-01, 1.18e+00]    [2.36e-01, 9.26e-01, 1.15e+00, 0.00e+00, 1.07e-01, 1.18e+00]    []
+80        [2.73e-01, 9.37e-01, 1.12e+00, 0.00e+00, 9.06e-02, 1.18e+00]    [2.31e-01, 9.37e-01, 1.12e+00, 0.00e+00, 9.06e-02, 1.18e+00]    []
+90        [2.78e-01, 9.42e-01, 1.09e+00, 0.00e+00, 8.16e-02, 1.18e+00]    [2.35e-01, 9.42e-01, 1.09e+00, 0.00e+00, 8.16e-02, 1.18e+00]    []
+100       [2.61e-01, 9.42e-01, 1.09e+00, 0.00e+00, 8.97e-02, 1.17e+00]    [2.23e-01, 9.42e-01, 1.09e+00, 0.00e+00, 8.97e-02, 1.17e+00]    []
+
+Best model at step 100:
+  train loss: 3.55e+00
+  test loss: 3.51e+00
+  test metric: []
+
+Epoch 100: saving model to ./tests/models/BioHeat_PINNs_date_time_20240810_121127/adam-100.pt ...
+
+'train' took 329.301306 s
+
+[2024-08-10 12:17:33,357][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-10 12:17:33,390][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-10 12:17:33,415][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-10 12:17:33,441][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240810_121127/l2_tf.png

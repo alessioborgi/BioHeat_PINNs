@@ -1,0 +1,18 @@
+{"time":"2024-08-10T14:42:32.520063553Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T14:42:32.520225428Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_144232-wk515nas/logs/debug-core.log"}
+{"time":"2024-08-10T14:42:32.52706647Z","level":"INFO","msg":"created new stream","id":"wk515nas"}
+{"time":"2024-08-10T14:42:32.527304678Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wk515nas"}}
+{"time":"2024-08-10T14:42:32.527346053Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wk515nas"}}
+{"time":"2024-08-10T14:42:32.527309512Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wk515nas"}}
+{"time":"2024-08-10T14:42:33.012618137Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T14:42:33.063006262Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T14:42:34.300571096Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T14:42:34.311326971Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T14:42:34.312492179Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T14:42:34.524797179Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T14:42:34.525595304Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T14:42:34.525897554Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T14:42:36.472748013Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wk515nas"}}
+{"time":"2024-08-10T14:42:36.472938555Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wk515nas"}}
+{"time":"2024-08-10T14:42:36.473032055Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wk515nas"}}
+{"time":"2024-08-10T14:42:36.473922138Z","level":"INFO","msg":"closed stream","id":"wk515nas"}

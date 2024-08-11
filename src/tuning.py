@@ -163,7 +163,7 @@ def main(cfg: DictConfig):
         ranked_scores.append((weighted_score, act_fun, init_method, iterations))
 
     # Sort the ranked scores from best to worst
-    ranked_scores.sort(key=lambda x: x[0], reverse=True)  # Sort by weighted_score (first element)
+    ranked_scores.sort(key=lambda x: x[0])  # Sort by weighted_score (first element)
 
     # Print out the optimal configurations
     print("Optimal configurations:")

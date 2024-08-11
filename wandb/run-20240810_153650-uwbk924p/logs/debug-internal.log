@@ -1,0 +1,18 @@
+{"time":"2024-08-10T15:36:50.188939589Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-10T15:36:50.189144255Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240810_153650-uwbk924p/logs/debug-core.log"}
+{"time":"2024-08-10T15:36:50.194416089Z","level":"INFO","msg":"created new stream","id":"uwbk924p"}
+{"time":"2024-08-10T15:36:50.194722047Z","level":"INFO","msg":"handler: started","stream_id":{"value":"uwbk924p"}}
+{"time":"2024-08-10T15:36:50.194735172Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"uwbk924p"}}
+{"time":"2024-08-10T15:36:50.194769214Z","level":"INFO","msg":"sender: started","stream_id":{"value":"uwbk924p"}}
+{"time":"2024-08-10T15:36:50.941338881Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-10T15:36:50.985930672Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-10T15:36:52.225155923Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-10T15:36:52.239501006Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-10T15:36:52.241238965Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-10T15:36:52.458597507Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-10T15:36:52.459366798Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-10T15:36:52.459856757Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-10T15:36:54.444643132Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"uwbk924p"}}
+{"time":"2024-08-10T15:36:54.444819841Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"uwbk924p"}}
+{"time":"2024-08-10T15:36:54.444894382Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"uwbk924p"}}
+{"time":"2024-08-10T15:36:54.445707382Z","level":"INFO","msg":"closed stream","id":"uwbk924p"}
