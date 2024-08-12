@@ -23,22 +23,32 @@ os.makedirs(tests_dir, exist_ok=True)
 #     'GELU': ['He normal'],
 #     'ReLu': ['He normal']
 # }
+
+# activation_functions = {
+#     'ELU': ['He normal'],
+#     'GELU': ['He normal'],
+#     'ReLu': ['He normal'],
+#     'SELU': ['Glorot normal'],
+#     'Sigmoid': ['Glorot normal'],
+#     'SiLU': ['He normal'],
+#     'sin': ['Glorot normal'],
+#     'Swish': ['He normal'],
+#     'tanh': ['Glorot normal'],
+#     'Mish': ['He normal'],
+#     'Softplus': ['Glorot normal'],
+#     'APTx': ['Glorot normal', 'He normal']
+# }
+
 activation_functions = {
-    'ELU': ['He normal'],
-    'GELU': ['He normal'],
-    'ReLu': ['He normal'],
-    'SELU': ['Glorot normal'],
-    'Sigmoid': ['Glorot normal'],
     'SiLU': ['He normal'],
     'sin': ['Glorot normal'],
     'Swish': ['He normal'],
     'tanh': ['Glorot normal'],
-    'Mish': ['He normal'],
-    'Softplus': ['Glorot normal'],
-    'APTx': ['Glorot normal', 'He normal']
 }
 # iteration_values = [10, 30]  # Replace with your actual iteration values
-iteration_values = [100, 150, 200, 250, 300, 350, 400, 500]    
+# iteration_values = [100, 150, 200, 250, 300, 350, 400, 500]   
+iteration_values = [59, 75, 100, 150, 200]    
+ 
 
 @hydra.main(version_base=None, config_path="configs", config_name="tuning")
 def main(cfg: DictConfig):

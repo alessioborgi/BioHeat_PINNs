@@ -151,7 +151,7 @@ def get_initial_loss(model):
     Returns:
         float: The initial training loss.
     """
-    model.compile("adam", lr=0.001)
+    model.compile("Adadelta", lr=0.001)
     losshistory, _ = model.train(0)
     return losshistory.loss_train[0]
 
