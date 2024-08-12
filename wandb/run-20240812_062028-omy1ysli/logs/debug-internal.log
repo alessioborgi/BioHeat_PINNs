@@ -1,0 +1,18 @@
+{"time":"2024-08-12T06:20:28.946232423Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-12T06:20:28.946396631Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240812_062028-omy1ysli/logs/debug-core.log"}
+{"time":"2024-08-12T06:20:28.963847673Z","level":"INFO","msg":"created new stream","id":"omy1ysli"}
+{"time":"2024-08-12T06:20:28.964192631Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"omy1ysli"}}
+{"time":"2024-08-12T06:20:28.964248215Z","level":"INFO","msg":"sender: started","stream_id":{"value":"omy1ysli"}}
+{"time":"2024-08-12T06:20:28.96411584Z","level":"INFO","msg":"handler: started","stream_id":{"value":"omy1ysli"}}
+{"time":"2024-08-12T06:20:29.724572173Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-12T06:20:29.776373132Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-12T06:20:31.582213883Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-12T06:20:31.599760133Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-12T06:20:31.605035133Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-12T06:20:31.822491549Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-12T06:20:31.822965633Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-12T06:20:31.823256883Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-12T06:20:35.051492259Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"omy1ysli"}}
+{"time":"2024-08-12T06:20:35.051679218Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"omy1ysli"}}
+{"time":"2024-08-12T06:20:35.051756426Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"omy1ysli"}}
+{"time":"2024-08-12T06:20:35.052574301Z","level":"INFO","msg":"closed stream","id":"omy1ysli"}

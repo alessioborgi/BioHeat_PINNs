@@ -1,0 +1,18 @@
+{"time":"2024-08-12T06:30:04.275728092Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-12T06:30:04.275879134Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240812_063004-ck13g3vx/logs/debug-core.log"}
+{"time":"2024-08-12T06:30:04.283725134Z","level":"INFO","msg":"created new stream","id":"ck13g3vx"}
+{"time":"2024-08-12T06:30:04.284080092Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ck13g3vx"}}
+{"time":"2024-08-12T06:30:04.284079717Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ck13g3vx"}}
+{"time":"2024-08-12T06:30:04.284114551Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ck13g3vx"}}
+{"time":"2024-08-12T06:30:04.997374759Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-12T06:30:05.040470759Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-12T06:30:06.291467301Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-12T06:30:06.29882201Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-12T06:30:06.299563843Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-12T06:30:06.516798302Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-12T06:30:06.517177552Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-12T06:30:06.517424052Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-12T06:30:09.283150136Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ck13g3vx"}}
+{"time":"2024-08-12T06:30:09.283434928Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ck13g3vx"}}
+{"time":"2024-08-12T06:30:09.283426845Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ck13g3vx"}}
+{"time":"2024-08-12T06:30:09.284162053Z","level":"INFO","msg":"closed stream","id":"ck13g3vx"}
