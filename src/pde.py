@@ -146,10 +146,26 @@ def create_nbho(name, cfg):
     a3 = 0
 
     def pde(x, u):
+        """
+        Definition of the PDE
+
+        Args:
+            x : our input, which has different columns:
+                x : x dimension (position j=0)
+                y : y dimension (position j=1)
+                t : time (position j=2)
+
+            u : our output
         
-        du_t = dde.grad.jacobian(u, x, i=0, j=2)
-        du_xx = dde.grad.hessian(u, x, i=0, j=0)
-        du_yy = dde.grad.hessian(u, x, i=0, j=1)
+        Return:
+            PDE equation
+
+            a1*du_t = du_xx + du_yy + a2*u - a3
+        """
+        
+        du_t = dde.grad.jacobian(u, x, i=0, j=2) # first derivative with respect to time
+        du_xx = dde.grad.hessian(u, x, i=0, j=0) # second derivative with respect to x dimension 
+        du_yy = dde.grad.hessian(u, x, i=0, j=1) # second derivative with respect to y dimension
 
         return (a1 * du_t - (du_xx + du_yy) + a2*u - a3) 
         
