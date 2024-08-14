@@ -150,12 +150,12 @@ def create_nbho(name, cfg):
         Definition of the PDE
 
         Args:
-            x : our input, which has different columns:
-                x : x dimension (position j=0)
-                y : y dimension (position j=1)
-                t : time (position j=2)
+            x : our input, which is a 3D vector with a 2D space domain and 1D time domain
+                x : x coordinate    (x[:,0])
+                y : y coordinate    (x[:,1])
+                t : time coordinate (x[:,2])
 
-            u : our output
+            u : our network output
         
         Return:
             PDE equation
@@ -163,9 +163,9 @@ def create_nbho(name, cfg):
             a1*du_t = du_xx + du_yy + a2*u - a3
         """
         
-        du_t = dde.grad.jacobian(u, x, i=0, j=2) # first derivative with respect to time
-        du_xx = dde.grad.hessian(u, x, i=0, j=0) # second derivative with respect to x dimension 
-        du_yy = dde.grad.hessian(u, x, i=0, j=1) # second derivative with respect to y dimension
+        du_t = dde.grad.jacobian(u, x, i=0, j=2) # first derivative with respect to time coordinate
+        du_xx = dde.grad.hessian(u, x, i=0, j=0) # second derivative with respect to x coordinate 
+        du_yy = dde.grad.hessian(u, x, i=0, j=1) # second derivative with respect to y coordinate
 
         return (a1 * du_t - (du_xx + du_yy) + a2*u - a3) 
         
