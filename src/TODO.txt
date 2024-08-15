@@ -1,5 +1,7 @@
-- Implement multi-Observer network.
-- Fourier Thing 
-
-
-- Ablation Study over: Activation Function, #Nodes in the network, Initialization. 
+- Check if everything works correctly
+- Adjust a1,a2,a3 coefficients --> a1 and a2 are always the same while a3 changes according to Q (internal heat source)
+  Read a3 directly from the .json file
+- Try different types of Q
+- Update ReadMe
+- Update Report
+- Slides
