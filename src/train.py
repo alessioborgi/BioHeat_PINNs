@@ -1,7 +1,6 @@
 # train.py
 import deepxde as dde
 import configurations
-import pde
 import plots
 import glob
 import utils
@@ -9,7 +8,7 @@ import wandb
 from omegaconf import OmegaConf
 
 import numpy as np
-import pde
+import nhbo
 import os
 import torch
 
@@ -43,7 +42,7 @@ def train_model(name, cfg):
         dict: Training metrics.
     """
     conf = configurations.read_config(name, cfg)
-    mm = pde.create_nbho(name, cfg)
+    mm = nhbo.create_nbho(name, cfg)
 
     LBFGS = conf["LBFGS"]
     epochs = conf["iterations"]
