@@ -144,45 +144,45 @@ def upper_boundary(x, on_boundary):
 
     # Initial Condition for the Observer
 
-    def ic_obs(x):
-        """
-        This function identifies the initial condition for the observer.
-        Remember that the Initial condition for the Observer is different from the one used in the Equation's Model
+def ic_obs(x):
+    """
+    This function identifies the initial condition for the observer.
+    Remember that the Initial condition for the Observer is different from the one used in the Equation's Model
 
-        Args:
-            x : our input, which is a 3D vector with a 2D space domain and 1D time domain
-                x : x coordinate    (x[:,0])
-                y : y coordinate    (x[:,1])
-                t : time coordinate (x[:,2])
+    Args:
+        x : our input, which is a 3D vector with a 2D space domain and 1D time domain
+            x : x coordinate    (x[:,0])
+            y : y coordinate    (x[:,1])
+            t : time coordinate (x[:,2])
 
-        Return:
-            Initial condition for the Observer
-        """
+    Return:
+        Initial condition for the Observer
+    """
+    ### import utils function (.json file)
+    return (cfg.data.q0 * x[0]**4)/(4*(cfg.data.Tmax - cfg.data.Tmin))
 
-        return (cfg.data.q0 * x[0]**4)/(4*(cfg.data.Tmax - cfg.data.Tmin))
 
+# Define the vertices exclusion:
 
-    # Define the vertices exclusion:
+def vertices_exclusion():
+    """
+    In a rectangular domain, a vertex is a point where two edges (boundaries) meet, each with its own distinct normal vector.
+    At such a vertex, it’s not straightforward to define a single, unambiguous normal vector because the direction is not uniquely defined.
+    When boundary conditions involve normal vectors (like Neumann boundary conditions), applying these conditions at vertices can lead to mathematical ambiguity or numerical instability.
+    """
 
-    def vertices_exclusion():
-        """
-        In a rectangular domain, a vertex is a point where two edges (boundaries) meet, each with its own distinct normal vector.
-	    At such a vertex, it’s not straightforward to define a single, unambiguous normal vector because the direction is not uniquely defined.
-        When boundary conditions involve normal vectors (like Neumann boundary conditions), applying these conditions at vertices can lead to mathematical ambiguity or numerical instability.
-        """
+    # Exclude all vertices (manually define the vertices of the square).
+    vertices = np.array([
+        [0, 0],  # Bottom-left corner   ( X=0, Y=0 )
+        [1, 0],  # Bottom-right corner  ( X=1, Y=0 )
+        [0, 1],  # Top-left corner      ( X=0, Y=1 )
+        [1, 1]   # Top-right corner     ( X=1, Y=1 )
+    ])
 
-        # Exclude all vertices (manually define the vertices of the square).
-        vertices = np.array([
-            [0, 0],  # Bottom-left corner   ( X=0, Y=0 )
-            [1, 0],  # Bottom-right corner  ( X=1, Y=0 )
-            [0, 1],  # Top-left corner      ( X=0, Y=1 )
-            [1, 1]   # Top-right corner     ( X=1, Y=1 )
-        ])
-
-        # Expand each vertex to include the full time domain (0 to 1)
-        time_points = np.linspace(0, 1, num=10)  # Adjust num as needed for granularity
-        expanded_exclusions = np.array([
-            [vx, vy, t] for t in time_points for vx, vy in vertices
-        ])
+    # Expand each vertex to include the full time domain (0 to 1)
+    time_points = np.linspace(0, 1, num=10)  # Adjust num as needed for granularity
+    expanded_exclusions = np.array([
+        [vx, vy, t] for t in time_points for vx, vy in vertices
+    ])
     
     return expanded_exclusions

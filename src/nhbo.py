@@ -8,12 +8,30 @@ import train
 from configurations import HydraConfigStore
 import icbc
 import equation
+import json
 
 """
     Inside this file you will find the implementation of the Neural Bio-Heat Observer (NHBO).
     The Observer shares the same Left Boundary condition with the equation model while it has different Inital and Right boundary conditions.
     Since the paper [2] refers only to the 1D case, we will assume that also the Upper and Lower boundary conditions are the same.
 """
+
+def open_json_config(run_type):
+    """
+    Open the .json configuration file
+    
+    Args:
+        run_type (str): This specifies the group of parameters 
+    
+    Returns:
+        Dictionary that contains all the parameters
+    """
+    path = "../mathematica/TwoDim" + run_type + "data_2D_0.json"
+
+    with open(path, 'r') as file:
+        data = json.load(file)
+
+    return data
 
     ###   maybe this should be in another file
 
@@ -74,13 +92,13 @@ def create_nbho(name, cfg):
     num_dense_layers = cfg.network.num_dense_layers
     num_dense_nodes = cfg.network.num_dense_nodes
 
-    K = cfg.network.output_injection_gain # unused but it should be already inside the initial condition definition
-    dT = cfg.data.Tmax - cfg.data.Tmin
+    ## K = cfg.network.output_injection_gain # unused but it should be already inside the initial condition definition
+    ## dT = cfg.data.Tmax - cfg.data.Tmin
 
-    D = cfg.data.d / cfg.data.L0 #? unused
-    alpha = cfg.data.rhoc / cfg.data.k 
+    ### D = cfg.data.d / cfg.data.L0 #? unused
+    ### alpha = cfg.data.rhoc / cfg.data.k 
     
-    #
+    # read from .json file
     a1 = (cfg.data.rhoc * cfg.data.L0**2) / (cfg.data.tauf * cfg.data.k)
     a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
     a3 = 0 # ---> need to define an internal heat source
