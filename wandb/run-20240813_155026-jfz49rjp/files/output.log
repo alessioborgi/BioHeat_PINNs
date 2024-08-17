@@ -1,0 +1,46 @@
+Layer size is:  [3, 50, 50, 50, 50, 1]
+Compiling model...
+'compile' took 3.323288 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [1.56e-01, 2.92e-01, 3.38e-01, 0.00e+00, 2.63e-03, 2.53e-02]    [1.55e-01, 2.92e-01, 3.38e-01, 0.00e+00, 2.63e-03, 2.53e-02]    []
+
+Best model at step 0:
+  train loss: 8.14e-01
+  test loss: 8.12e-01
+  test metric: []
+
+'train' took 11.725485 s
+
+Compiling model...
+'compile' took 0.020810 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 6.00e+00, 6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00]    [5.94e+00, 6.00e+00, 6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00]    []
+10        [3.19e+00, 3.09e+00, 4.04e+00, 0.00e+00, 5.00e-01, 5.18e+00]    [2.81e+00, 3.09e+00, 4.04e+00, 0.00e+00, 5.00e-01, 5.18e+00]    []
+20        [1.23e+00, 3.55e+00, 4.23e+00, 0.00e+00, 6.28e-01, 4.89e+00]    [1.14e+00, 3.55e+00, 4.23e+00, 0.00e+00, 6.28e-01, 4.89e+00]    []
+30        [7.52e-01, 3.89e+00, 4.28e+00, 0.00e+00, 5.21e-01, 4.87e+00]    [7.00e-01, 3.89e+00, 4.28e+00, 0.00e+00, 5.21e-01, 4.87e+00]    []
+40        [1.08e+00, 3.49e+00, 4.09e+00, 0.00e+00, 4.54e-01, 4.92e+00]    [9.01e-01, 3.49e+00, 4.09e+00, 0.00e+00, 4.54e-01, 4.92e+00]    []
+50        [7.74e-01, 3.75e+00, 4.09e+00, 0.00e+00, 4.37e-01, 4.85e+00]    [6.71e-01, 3.75e+00, 4.09e+00, 0.00e+00, 4.37e-01, 4.85e+00]    []
+59        [6.94e-01, 3.74e+00, 4.08e+00, 0.00e+00, 4.29e-01, 4.88e+00]    [5.90e-01, 3.74e+00, 4.08e+00, 0.00e+00, 4.29e-01, 4.88e+00]    []
+
+Best model at step 0:
+  train loss: 8.14e-01
+  test loss: 8.12e-01
+  test metric: []
+
+Epoch 59: saving model to ./tests/models/BioHeat_PINNs_date_time_20240813_155024/adam-59.pt ...
+
+'train' took 354.410387 s
+
+[2024-08-13 15:57:03,822][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-13 15:57:03,854][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-13 15:57:03,875][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-13 15:57:03,900][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240813_155024/l2_tf.png

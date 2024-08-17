@@ -1,0 +1,18 @@
+{"time":"2024-08-13T17:30:55.870116675Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-13T17:30:55.870497134Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240813_173055-v8449let/logs/debug-core.log"}
+{"time":"2024-08-13T17:30:55.877925634Z","level":"INFO","msg":"created new stream","id":"v8449let"}
+{"time":"2024-08-13T17:30:55.878502217Z","level":"INFO","msg":"sender: started","stream_id":{"value":"v8449let"}}
+{"time":"2024-08-13T17:30:55.878437175Z","level":"INFO","msg":"handler: started","stream_id":{"value":"v8449let"}}
+{"time":"2024-08-13T17:30:55.878562842Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"v8449let"}}
+{"time":"2024-08-13T17:30:56.728230926Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-13T17:30:56.779708218Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-13T17:30:58.736529843Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-13T17:30:58.748372427Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-13T17:30:58.749584885Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-13T17:30:58.959751885Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-13T17:30:58.960338177Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-13T17:30:58.960811969Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-13T17:31:03.474778012Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"v8449let"}}
+{"time":"2024-08-13T17:31:03.477574179Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"v8449let"}}
+{"time":"2024-08-13T17:31:03.477623096Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"v8449let"}}
+{"time":"2024-08-13T17:31:03.489112971Z","level":"INFO","msg":"closed stream","id":"v8449let"}

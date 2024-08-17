@@ -14,7 +14,7 @@ steep: 2.0e1            # Steepness of the sigmoid function
 tchange: 0.25           # Temperature change                    
 rhob: 1043.0            # Blood Density.
 Wb: 2.22e-3             # Blood perfusion rate.
-q0: 16.0               # Initial Heat Source .
+q0: 16.0               # Initial Heat Source.
 # a1 = 
 # a2 =
 # a3 =

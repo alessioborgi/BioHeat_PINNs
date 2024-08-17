@@ -1,0 +1,18 @@
+{"time":"2024-08-13T17:31:51.229015382Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-13T17:31:51.229367173Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240813_173151-mnr79ha1/logs/debug-core.log"}
+{"time":"2024-08-13T17:31:51.23745834Z","level":"INFO","msg":"created new stream","id":"mnr79ha1"}
+{"time":"2024-08-13T17:31:51.237983257Z","level":"INFO","msg":"sender: started","stream_id":{"value":"mnr79ha1"}}
+{"time":"2024-08-13T17:31:51.237943298Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mnr79ha1"}}
+{"time":"2024-08-13T17:31:51.238031965Z","level":"INFO","msg":"handler: started","stream_id":{"value":"mnr79ha1"}}
+{"time":"2024-08-13T17:31:52.50982359Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-13T17:31:52.553803965Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-13T17:31:54.521111341Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-13T17:31:54.533147925Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-13T17:31:54.534538216Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-13T17:31:54.781028217Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-13T17:31:54.7817248Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-13T17:31:54.78204355Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-13T17:31:56.859886759Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"mnr79ha1"}}
+{"time":"2024-08-13T17:31:56.860149259Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mnr79ha1"}}
+{"time":"2024-08-13T17:31:56.860347843Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"mnr79ha1"}}
+{"time":"2024-08-13T17:31:56.861450551Z","level":"INFO","msg":"closed stream","id":"mnr79ha1"}

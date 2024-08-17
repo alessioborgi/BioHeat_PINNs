@@ -1,0 +1,19 @@
+{"time":"2024-08-13T17:00:34.613488759Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-13T17:00:34.613662134Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240813_170034-kik89kln/logs/debug-core.log"}
+{"time":"2024-08-13T17:00:34.6207798Z","level":"INFO","msg":"created new stream","id":"kik89kln"}
+{"time":"2024-08-13T17:00:34.621076217Z","level":"INFO","msg":"sender: started","stream_id":{"value":"kik89kln"}}
+{"time":"2024-08-13T17:00:34.621050092Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"kik89kln"}}
+{"time":"2024-08-13T17:00:34.621023467Z","level":"INFO","msg":"handler: started","stream_id":{"value":"kik89kln"}}
+{"time":"2024-08-13T17:00:35.08219605Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-13T17:00:35.1342353Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-13T17:00:51.298583544Z","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-08-13T17:15:04.890684006Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-13T17:15:04.905387131Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-13T17:15:04.907594006Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-13T17:15:05.309025673Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-13T17:15:05.309625506Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-13T17:15:05.309955548Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-13T17:15:08.189614258Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"kik89kln"}}
+{"time":"2024-08-13T17:15:08.189841424Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"kik89kln"}}
+{"time":"2024-08-13T17:15:08.189892341Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"kik89kln"}}
+{"time":"2024-08-13T17:15:08.191350966Z","level":"INFO","msg":"closed stream","id":"kik89kln"}

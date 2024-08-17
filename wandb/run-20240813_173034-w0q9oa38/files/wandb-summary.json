@@ -1,0 +1,1 @@
+{"activation_function":"SiLU","_step":1,"_runtime":3.146103458,"max_APE":1.6281524321470887e+69,"MAE":8.458400325944556e+65,"L2RE":0.7292629056128508,"initialization_method":"He normal","_wandb":{"runtime":3},"iterations":200,"MSE":0.006235669365094452,"weighted_array":[0.25,0.25,0.25,0.25],"_timestamp":1.7235702365128446e+09,"weighted_score":0.034244889495560475}

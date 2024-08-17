@@ -1,0 +1,22 @@
+Layer size is:  [3, 50, 50, 50, 50, 1]
+Compiling model...
+'compile' took 0.038409 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [3.24e-02, 2.31e-01, 5.19e-01, 0.00e+00, 4.82e-03, 2.43e-02]    [2.56e-02, 2.31e-01, 5.19e-01, 0.00e+00, 4.82e-03, 2.43e-02]    []
+
+Best model at step 0:
+  train loss: 8.11e-01
+  test loss: 8.05e-01
+  test metric: []
+
+'train' took 14.857482 s
+
+Compiling model...
+'compile' took 0.002694 s
+
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240813_155024/l2_tf.png

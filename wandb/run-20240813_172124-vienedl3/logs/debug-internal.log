@@ -1,0 +1,18 @@
+{"time":"2024-08-13T17:21:24.948265467Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-13T17:21:24.948764717Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240813_172124-vienedl3/logs/debug-core.log"}
+{"time":"2024-08-13T17:21:24.974270133Z","level":"INFO","msg":"created new stream","id":"vienedl3"}
+{"time":"2024-08-13T17:21:24.974897717Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"vienedl3"}}
+{"time":"2024-08-13T17:21:24.974958717Z","level":"INFO","msg":"sender: started","stream_id":{"value":"vienedl3"}}
+{"time":"2024-08-13T17:21:24.975046383Z","level":"INFO","msg":"handler: started","stream_id":{"value":"vienedl3"}}
+{"time":"2024-08-13T17:21:25.674833425Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-13T17:21:25.726377717Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-13T17:21:27.80849151Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-13T17:21:27.81852226Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-13T17:21:27.819714801Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-13T17:21:28.149201343Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-13T17:21:28.149891927Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-13T17:21:28.150398593Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-13T17:21:30.313323053Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"vienedl3"}}
+{"time":"2024-08-13T17:21:30.313530053Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"vienedl3"}}
+{"time":"2024-08-13T17:21:30.313545886Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"vienedl3"}}
+{"time":"2024-08-13T17:21:30.314655178Z","level":"INFO","msg":"closed stream","id":"vienedl3"}

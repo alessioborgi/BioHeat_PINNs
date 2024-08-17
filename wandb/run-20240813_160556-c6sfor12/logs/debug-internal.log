@@ -1,0 +1,18 @@
+{"time":"2024-08-13T16:05:56.112267506Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-13T16:05:56.112433381Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240813_160556-c6sfor12/logs/debug-core.log"}
+{"time":"2024-08-13T16:05:56.118261381Z","level":"INFO","msg":"created new stream","id":"c6sfor12"}
+{"time":"2024-08-13T16:05:56.118540423Z","level":"INFO","msg":"sender: started","stream_id":{"value":"c6sfor12"}}
+{"time":"2024-08-13T16:05:56.118560464Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"c6sfor12"}}
+{"time":"2024-08-13T16:05:56.118607298Z","level":"INFO","msg":"handler: started","stream_id":{"value":"c6sfor12"}}
+{"time":"2024-08-13T16:05:56.907846423Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-13T16:05:56.955376048Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-13T16:16:58.657056424Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-13T16:16:58.670474007Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-13T16:16:58.672810257Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-13T16:16:58.884264924Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-13T16:16:58.884674091Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-13T16:16:58.884933049Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-13T16:17:01.237595425Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"c6sfor12"}}
+{"time":"2024-08-13T16:17:01.237775009Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"c6sfor12"}}
+{"time":"2024-08-13T16:17:01.237725884Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"c6sfor12"}}
+{"time":"2024-08-13T16:17:01.238899342Z","level":"INFO","msg":"closed stream","id":"c6sfor12"}
