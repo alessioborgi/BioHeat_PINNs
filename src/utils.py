@@ -25,6 +25,23 @@ properties = {
 
 f1, f2, f3 = [None]*3
 
+def open_json_config(run_type):
+    """
+    Open the .json configuration file
+    
+    Args:
+        run_type (str): This specifies the group of parameters 
+    
+    Returns:
+        Dictionary that contains all the parameters
+    """
+    path = "../mathematica/TwoDim" + run_type + "data_2D_0.json"
+
+    with open(path, 'r') as file:
+        data = json.load(file)
+
+    return data
+
 
 def seed_all(seed):
     """
