@@ -17,11 +17,11 @@ import main
 
 # Initialize global variables
 # L0 = tauf = k = p0 = d = rhoc = cb = h = Tmin = Tmax = alpha = W = steep = tchange = None
-properties = {
-    "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
-    "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
-    "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None, "q0": None
-}
+# properties = {
+#     "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
+#     "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
+#     "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None, "q0": None
+# }
 
 f1, f2, f3 = [None]*3
 
@@ -98,37 +98,37 @@ def set_name(prj, run):
 
     return name, general_figures, model_dir, figures_dir
 
-def get_properties(n):
-    """
-    Retrieves and returns properties related to the model or dataset.
+# def get_properties(n):
+#     """
+#     Retrieves and returns properties related to the model or dataset.
     
-    This function can include information such as data shapes, model parameters,
-    or other relevant metadata required for training or evaluation.
+#     This function can include information such as data shapes, model parameters,
+#     or other relevant metadata required for training or evaluation.
     
-    Args:
-        None
+#     Args:
+#         None
     
-    Returns:
-        None
-    """
-    global L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange, rhob, Wb, q0
-    file_path = os.path.join(main.src_dir, 'data_simulations', f'data{n}.json')
+#     Returns:
+#         None
+#     """
+#     global L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange, rhob, Wb, q0
+#     file_path = os.path.join(main.src_dir, 'data_simulations', f'data{n}.json')
 
-    # Open the file and load the JSON data
-    with open(file_path, 'r') as f:
-        data = json.load(f)
+#     # Open the file and load the JSON data
+#     with open(file_path, 'r') as f:
+#         data = json.load(f)
 
-    properties.update(data['Parameters'])
-    par = data['Parameters']
-    local_vars = locals()
-    for key in par:
-        if key in local_vars:
-            local_vars[key] = par[key]
+#     properties.update(data['Parameters'])
+#     par = data['Parameters']
+#     local_vars = locals()
+#     for key in par:
+#         if key in local_vars:
+#             local_vars[key] = par[key]
 
-    L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange = (
-        par["L0"], par["tauf"], par["k"], par["p0"], par["d"], par["rhoc"],
-        par["cb"], par["h"], par["Tmin"], par["Tmax"], par["alpha"], par["W"], par["steep"], par["tchange"],
-        par["rhob"], par["Wb"], par["q0"]
-    )
+#     L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange = (
+#         par["L0"], par["tauf"], par["k"], par["p0"], par["d"], par["rhoc"],
+#         par["cb"], par["h"], par["Tmin"], par["Tmax"], par["alpha"], par["W"], par["steep"], par["tchange"],
+#         par["rhob"], par["Wb"], par["q0"]
+#     )
 
     

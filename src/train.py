@@ -20,13 +20,6 @@ model_dir = "./tests/models"
 figures_dir = "./imgs"
 
 
-properties = {
-    "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
-    "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
-    "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None, "q0": None
-}
-
-
 def train_model(name, cfg):
     """
     This function handles the training process of the neural network model.
@@ -150,7 +143,7 @@ def get_initial_loss(model):
     Returns:
         float: The initial training loss.
     """
-    model.compile("Adadelta", lr=0.001)
+    model.compile("adam", lr=0.001)
     losshistory, _ = model.train(0)
     return losshistory.loss_train[0]
 

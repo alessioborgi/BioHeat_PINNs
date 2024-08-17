@@ -1,5 +1,6 @@
 import numpy as np
 import deepxde as dde
+from utils import open_json_config 
 
 """
 Inside this file you will find the initialization of the domain and all the definitions of the boundary and initial conditions for the 2D case.
@@ -159,7 +160,15 @@ def ic_obs(x):
         Initial condition for the Observer
     """
     ### import utils function (.json file)
-    return (cfg.data.q0 * x[0]**4)/(4*(cfg.data.Tmax - cfg.data.Tmin))
+    # read from .json file
+    # Load the parameters using the provided function
+    parameters = open_json_config("without_Q")
+
+    # Access specific parameters
+    q0 = parameters["Parameters"]["?"]
+    Tmax = parameters["Parameters"]["Tmax"]
+    Tmin = parameters["Parameters"]["Ta"]
+    return (q0 * x[0]**4)/(4*(Tmax - Tmin))
 
 
 # Define the vertices exclusion:

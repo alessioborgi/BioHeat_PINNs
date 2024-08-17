@@ -1,6 +1,5 @@
 defaults:
   - network: PINN  # Load the base network configuration from PINN.yaml
-  - data: PDE  # Load the base PDE configuration from pde.yaml
   - _self_
 
 tuning:

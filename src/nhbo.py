@@ -6,6 +6,8 @@ import torch.nn.functional as F
 import os
 import train
 from configurations import HydraConfigStore
+from utils import open_json_config
+from icbc import vertices_exclusion
 import icbc
 import equation
 import json
@@ -73,18 +75,15 @@ def create_nbho(name, cfg):
     learning_rate = cfg.network.learning_rate
     num_dense_layers = cfg.network.num_dense_layers
     num_dense_nodes = cfg.network.num_dense_nodes
-
-    ## K = cfg.network.output_injection_gain # unused but it should be already inside the initial condition definition
-    ## dT = cfg.data.Tmax - cfg.data.Tmin
-
-    ### D = cfg.data.d / cfg.data.L0 #? unused
-    ### alpha = cfg.data.rhoc / cfg.data.k 
     
     # read from .json file
-    a1 = (cfg.data.rhoc * cfg.data.L0**2) / (cfg.data.tauf * cfg.data.k)
-    a2 = (cfg.data.rhob * cfg.data.L0**2 * cfg.data.cb * cfg.data.Wb) / (cfg.data.k)
-    a3 = 0 # ---> need to define an internal heat source
-    # not sure if it's better to read this directly from the .json file
+    # Load the parameters using the provided function
+    parameters = open_json_config("without_Q")
+
+    # Access specific parameters
+    a1 = parameters["Parameters"]["a1"]
+    a2 = parameters["Parameters"]["a2"]
+    a3 = parameters["Parameters"]["a3"]
 
     geomtime = icbc.domain_definition
 
@@ -132,7 +131,7 @@ def create_nbho(name, cfg):
         num_boundary=200,   # number of training points sampled on the boundary
         num_initial=100,    # number of the initial residual points for the initial condition
         num_test=10000,
-        exclusions = expanded_exclusions
+        exclusions = vertices_exclusion
     )
 
     # Definition of the network:
