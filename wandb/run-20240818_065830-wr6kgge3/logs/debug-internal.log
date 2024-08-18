@@ -1,0 +1,28 @@
+{"time":"2024-08-18T06:58:30.156666636Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T06:58:30.157246469Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_065830-wr6kgge3/logs/debug-core.log"}
+{"time":"2024-08-18T06:58:30.187280136Z","level":"INFO","msg":"created new stream","id":"wr6kgge3"}
+{"time":"2024-08-18T06:58:30.188290302Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wr6kgge3"}}
+{"time":"2024-08-18T06:58:30.188961552Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wr6kgge3"}}
+{"time":"2024-08-18T06:58:30.188851802Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wr6kgge3"}}
+{"time":"2024-08-18T06:58:31.145615095Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T06:58:31.19613022Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T06:58:32.298831304Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T06:58:32.648212345Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T06:58:32.649005887Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T06:58:32.990250637Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T06:58:32.99079497Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T06:58:32.991034929Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T06:58:35.30267368Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T06:58:39.650092793Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T06:58:49.884097673Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T06:59:09.643792543Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T06:59:49.980469673Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T07:00:50.333370006Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T07:01:50.689764006Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T07:02:50.997720298Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T07:03:51.400961673Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T07:04:51.791685882Z","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/adavit/BioHeat_PINNs/wr6kgge3/file_stream"}
+{"time":"2024-08-18T07:05:52.500938174Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wr6kgge3"}}
+{"time":"2024-08-18T07:05:52.50226784Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wr6kgge3"}}
+{"time":"2024-08-18T07:05:52.502415965Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wr6kgge3"}}
+{"time":"2024-08-18T07:05:52.506327465Z","level":"INFO","msg":"closed stream","id":"wr6kgge3"}

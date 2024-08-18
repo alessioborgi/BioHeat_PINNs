@@ -1,0 +1,16 @@
+Current Working Directory: /working_dir
+Absolute Path: /mathematica/TwoDim/without_Q/data_2D_0.json
+File does not exist: /mathematica/TwoDim/without_Q/data_2D_0.json
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 55, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 101, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 38, in train_model
+    mm = nhbo.create_nbho(name, cfg)
+  File "/working_dir/src/nhbo.py", line 84, in create_nbho
+    a1 = parameters["Parameters"]["a1"]
+TypeError: 'NoneType' object is not subscriptable
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
