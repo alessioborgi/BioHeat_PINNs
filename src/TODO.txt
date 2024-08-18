@@ -1,5 +1,4 @@
 - Check if everything works correctly
-- insert open_json_config into utils.py and change nhbo.py and icbc.py accordingly
 - Try Q (Q_met + Q_ext)
 - Restyle train.py, utils.py, plots.py
 - Update ReadMe
