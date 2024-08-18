@@ -15,13 +15,13 @@ initial_weights_regularizer: true
 ## ELU, GELU, ReLU, SELU, Sigmoid, SiLU, sin, Swish, tanh, Mish, Softplus, APTx
 ## Glorot normal, He normal, Orthogonal, Random normal, Random uniform, Zeros
 
-activation: tanh     
-iterations: 100
-initialization: Glorot normal
+# activation: tanh     
+# iterations: 100
+# initialization: Glorot normal
 
 
 
 # TUNING CONFIGURATIONS
-# activation: "???"  # Placeholder for tuning the activation function.
-# iterations: "???"  # Placeholder for tuning the number of iterations (epochs)
-# initialization: "???"  # Placeholder for tuning the initialization method.
+activation: "???"  # Placeholder for tuning the activation function.
+iterations: "???"  # Placeholder for tuning the number of iterations (epochs)
+initialization: "???"  # Placeholder for tuning the initialization method.
