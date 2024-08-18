@@ -142,8 +142,8 @@ def gen_testdata(n):
     data = np.loadtxt(f"{main.src_dir}/data_simulations/file_2D_{n}.txt")
     #   those are the columns inside the .txt file
     #       | X | Y | t | U |
-    #   > X: spatial coordinate    
-    #   > Y: spatial coordinate
+    #   > X: spatial coordinate (x1)
+    #   > Y: spatial coordinate (x2)
     #   > t: temporal coordinate
     #   > U: solution of the equation (ground truth)
     x1, x2, t, exact = data[:, 0], data[:, 1], data[:, 2], data[:, 3]
@@ -152,13 +152,24 @@ def gen_testdata(n):
     return X, y
 
 def gen_obsdata(n):
+    """
+    This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
+
+    Args:
+        n: number of simulation (right now is always n = 0)
+
+    Returns:
+        Xobs : n x 3 matrix which contains the spatial and temporal coordinates (input features)
+    """
+
     global f1, f2, f3
     X, y = gen_testdata(n)
     g = np.hstack((X, y))
+    # now we have a n x 4 matrix g with these columns: | X | Y | t | U |
 
-    x1_unique = np.unique(g[:, 0])
-    x2_unique = np.unique(g[:, 1])
-    t_unique = np.unique(g[:, 2])
+    x1_unique = np.unique(g[:, 0]) # all unique points for the X coordinate
+    x2_unique = np.unique(g[:, 1]) # all unique points for the Y coordinate
+    t_unique = np.unique(g[:, 2]) # all unique points for the t coordinate
 
     y_grid = g[:, 3].reshape((len(x1_unique), len(x2_unique), len(t_unique)))
 
