@@ -165,7 +165,7 @@ def ic_obs(x):
     parameters = open_json_config("without_Q")
 
     # Access specific parameters
-    q0 = parameters["Parameters"]["?"]
+    q0 = parameters["Parameters"]["q0"]
     Tmax = parameters["Parameters"]["Tmax"]
     Tmin = parameters["Parameters"]["Ta"]
     return (q0 * x[0]**4)/(4*(Tmax - Tmin))
