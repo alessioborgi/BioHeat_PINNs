@@ -10,6 +10,8 @@ import numpy as np
 import torch
 import os
 import json
+import torch
+import torch.nn.functional as F
 
 # Setting the device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
