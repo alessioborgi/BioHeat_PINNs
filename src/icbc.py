@@ -143,22 +143,22 @@ def upper_boundary(x, on_boundary):
     return on_boundary and np.isclose(x[1], 1)
 
 
-    # Initial Condition for the Observer
-
+# Initial Condition for the Observer
 def ic_obs(x):
     """
     This function identifies the initial condition for the observer.
-    Remember that the Initial condition for the Observer is different from the one used in the Equation's Model
+    Remember that the Initial condition for the Observer is different from the one used in the Equation's Model.
 
     Args:
-        x : our input, which is a 3D vector with a 2D space domain and 1D time domain
+        x : our input, which is a 3D vector with a 2D space domain and 1D time domain. 
             x : x coordinate    (x[:,0])
             y : y coordinate    (x[:,1])
             t : time coordinate (x[:,2])
 
     Return:
-        Initial condition for the Observer
+        Initial condition for the Observer.
     """
+    
     ### import utils function (.json file)
     # read from .json file
     # Load the parameters using the provided function
@@ -166,17 +166,15 @@ def ic_obs(x):
 
     # Access specific parameters
     q0 = parameters["Parameters"]["q0"]
-    Tmax = parameters["Parameters"]["Tmax"]
-    Tmin = parameters["Parameters"]["Ta"]
-    return (q0 * x[0]**4)/(4*(Tmax - Tmin))
+    delta_t = parameters["Parameters"]["deltat"]
+    return (q0 * x[0]**4)/(4*delta_t)
 
 
 # Define the vertices exclusion:
-
 def vertices_exclusion():
     """
     In a rectangular domain, a vertex is a point where two edges (boundaries) meet, each with its own distinct normal vector.
-    At such a vertex, it’s not straightforward to define a single, unambiguous normal vector because the direction is not uniquely defined.
+    At such a vertex, it's not straightforward to define a single, unambiguous normal vector because the direction is not uniquely defined.
     When boundary conditions involve normal vectors (like Neumann boundary conditions), applying these conditions at vertices can lead to mathematical ambiguity or numerical instability.
     """
 

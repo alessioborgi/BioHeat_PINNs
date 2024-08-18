@@ -13,16 +13,6 @@ import json
 import main
 
 
-
-
-# Initialize global variables
-# L0 = tauf = k = p0 = d = rhoc = cb = h = Tmin = Tmax = alpha = W = steep = tchange = None
-# properties = {
-#     "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
-#     "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
-#     "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None, "q0": None
-# }
-
 f1, f2, f3 = [None]*3
 
 def open_json_config(run_type):
