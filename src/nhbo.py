@@ -7,7 +7,6 @@ import os
 import train
 from configurations import HydraConfigStore
 from utils import open_json_config
-from icbc import vertices_exclusion
 import icbc
 import equation
 import json
@@ -92,7 +91,7 @@ def create_nbho(name, cfg):
     left_bc = dde.icbc.DirichletBC(
         geomtime,
         lambda x: 0,
-        icbc.left_boundary 
+        icbc.left_boundary()
     )
 
     right_bc = dde.icbc.NeumannBC(
@@ -131,7 +130,7 @@ def create_nbho(name, cfg):
         num_boundary=200,   # number of training points sampled on the boundary
         num_initial=100,    # number of the initial residual points for the initial condition
         num_test=10000,
-        exclusions = vertices_exclusion
+        exclusions = icbc.vertices_exclusion
     )
 
     # Definition of the network:

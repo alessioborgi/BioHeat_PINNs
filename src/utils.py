@@ -39,8 +39,8 @@ def open_json_config(run_type):
     abs_path = os.path.abspath(path)
     
     # Print current working directory and the absolute path for debugging
-    print("Current Working Directory:", os.getcwd())
-    print("Absolute Path:", abs_path)
+    #print("Current Working Directory:", os.getcwd())
+    #print("Absolute Path:", abs_path)
 
     # Check if the file exists
     if not os.path.exists(abs_path):
