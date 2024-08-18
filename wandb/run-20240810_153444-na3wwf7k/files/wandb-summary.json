@@ -1,1 +1,0 @@
-{"weighted_array":[0.25,0.25,0.25,0.25],"_wandb":{"runtime":6},"activation_function":"Mish","L2RE":1.798883861155746,"iterations":300,"max_APE":2.2826086732086507e+69,"_runtime":5.45504292,"MAE":1.1335047324080685e+66,"MSE":0.03794207546526007,"weighted_score":0.1764401613712167,"initialization_method":"He normal","_timestamp":1.7233040859441307e+09,"_step":1}
