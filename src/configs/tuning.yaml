@@ -7,7 +7,4 @@ tuning:
   study_name: "BioHeat_Tuning_Study"  # Name of the study
   direction: "minimize"  # Direction of optimization (minimize the objective)
 
-# network:
-#   iterations: "???"  # Placeholder for tuning the number of iterations (epochs)
-
 run: "BioHeat_PINNs_date_time_${now:%Y%m%d_%H%M%S}"
