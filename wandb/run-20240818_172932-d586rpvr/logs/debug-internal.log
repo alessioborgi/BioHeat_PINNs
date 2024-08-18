@@ -1,0 +1,18 @@
+{"time":"2024-08-18T17:29:32.682488091Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T17:29:32.6826833Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_172932-d586rpvr/logs/debug-core.log"}
+{"time":"2024-08-18T17:29:32.688271758Z","level":"INFO","msg":"created new stream","id":"d586rpvr"}
+{"time":"2024-08-18T17:29:32.688561633Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"d586rpvr"}}
+{"time":"2024-08-18T17:29:32.688599925Z","level":"INFO","msg":"handler: started","stream_id":{"value":"d586rpvr"}}
+{"time":"2024-08-18T17:29:32.688562758Z","level":"INFO","msg":"sender: started","stream_id":{"value":"d586rpvr"}}
+{"time":"2024-08-18T17:29:33.282160425Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T17:29:33.328924383Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T17:29:34.699934801Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T17:29:34.711368426Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T17:29:34.712363342Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T17:29:34.951928217Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T17:29:34.952520551Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T17:29:34.952750801Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T17:29:37.001403802Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"d586rpvr"}}
+{"time":"2024-08-18T17:29:37.001716927Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"d586rpvr"}}
+{"time":"2024-08-18T17:29:37.00154676Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"d586rpvr"}}
+{"time":"2024-08-18T17:29:37.002581302Z","level":"INFO","msg":"closed stream","id":"d586rpvr"}

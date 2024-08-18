@@ -1,0 +1,18 @@
+{"time":"2024-08-18T16:46:43.710018513Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T16:46:43.710250263Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_164643-qhpp2sz2/logs/debug-core.log"}
+{"time":"2024-08-18T16:46:43.71869068Z","level":"INFO","msg":"created new stream","id":"qhpp2sz2"}
+{"time":"2024-08-18T16:46:43.718954263Z","level":"INFO","msg":"handler: started","stream_id":{"value":"qhpp2sz2"}}
+{"time":"2024-08-18T16:46:43.719008513Z","level":"INFO","msg":"sender: started","stream_id":{"value":"qhpp2sz2"}}
+{"time":"2024-08-18T16:46:43.718983597Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"qhpp2sz2"}}
+{"time":"2024-08-18T16:46:44.269799472Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T16:46:44.31514018Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T16:47:13.672725263Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T16:47:13.681020597Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T16:47:13.681882847Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T16:47:14.138516305Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T16:47:14.13916743Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T16:47:14.139420972Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T16:47:16.213403334Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"qhpp2sz2"}}
+{"time":"2024-08-18T16:47:16.213651125Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"qhpp2sz2"}}
+{"time":"2024-08-18T16:47:16.213763542Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"qhpp2sz2"}}
+{"time":"2024-08-18T16:47:16.21544325Z","level":"INFO","msg":"closed stream","id":"qhpp2sz2"}

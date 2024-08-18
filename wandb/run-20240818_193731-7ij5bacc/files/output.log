@@ -1,0 +1,26 @@
+Layer size is:  [3, 50, 50, 50, 1]
+Compiling model...
+'compile' took 3.118300 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [7.59e+00, 0.00e+00, 2.47e+00, 1.66e+00, 5.87e-02, 4.15e-01]    [6.81e+00, 0.00e+00, 2.47e+00, 1.66e+00, 5.87e-02, 4.15e-01]    []
+
+Best model at step 0:
+  train loss: 1.22e+01
+  test loss: 1.14e+01
+  test metric: []
+
+'train' took 6.530029 s
+
+Compiling model...
+'compile' took 0.001337 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    [5.39e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    []
+10        [1.84e+00, 0.00e+00, 4.55e-01, 5.36e-02, 1.16e+00, 7.83e-02]    [1.54e+00, 0.00e+00, 4.55e-01, 5.36e-02, 1.16e+00, 7.83e-02]    []

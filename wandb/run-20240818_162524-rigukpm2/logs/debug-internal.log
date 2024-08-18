@@ -1,0 +1,18 @@
+{"time":"2024-08-18T16:25:24.639381004Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T16:25:24.639573004Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_162524-rigukpm2/logs/debug-core.log"}
+{"time":"2024-08-18T16:25:24.653687629Z","level":"INFO","msg":"created new stream","id":"rigukpm2"}
+{"time":"2024-08-18T16:25:24.653985338Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"rigukpm2"}}
+{"time":"2024-08-18T16:25:24.653982963Z","level":"INFO","msg":"handler: started","stream_id":{"value":"rigukpm2"}}
+{"time":"2024-08-18T16:25:24.654054588Z","level":"INFO","msg":"sender: started","stream_id":{"value":"rigukpm2"}}
+{"time":"2024-08-18T16:25:25.131258421Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T16:25:25.175103046Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T16:25:26.495020005Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T16:25:26.51237838Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T16:25:26.512997422Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T16:25:26.73230888Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T16:25:26.732821089Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T16:25:26.733152255Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T16:25:28.780188506Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"rigukpm2"}}
+{"time":"2024-08-18T16:25:28.780466548Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"rigukpm2"}}
+{"time":"2024-08-18T16:25:28.780384756Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"rigukpm2"}}
+{"time":"2024-08-18T16:25:28.781136923Z","level":"INFO","msg":"closed stream","id":"rigukpm2"}

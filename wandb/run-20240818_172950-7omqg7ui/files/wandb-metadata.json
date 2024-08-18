@@ -1,0 +1,28 @@
+{
+  "os": "Linux-6.5.11-linuxkit-x86_64-with-glibc2.35",
+  "python": "3.10.13",
+  "startedAt": "2024-08-18T17:29:50.824215Z",
+  "program": "/working_dir/./src/tuning.py",
+  "codePath": "src/tuning.py",
+  "email": "alessioborgi3@gmail.com",
+  "root": "/working_dir",
+  "host": "c1a5c4da84f7",
+  "username": "root",
+  "executable": "/opt/conda/bin/python3",
+  "codePathLocal": "src/tuning.py",
+  "cpu_count": 10,
+  "cpu_count_logical": 10,
+  "disk": {
+    "/": {
+      "total": "62671097856",
+      "used": "26369183744"
+    }
+  },
+  "memory": {
+    "total": "8227573760"
+  },
+  "cpu": {
+    "count": 10,
+    "countLogical": 10
+  }
+}

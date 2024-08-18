@@ -1,0 +1,18 @@
+{"time":"2024-08-18T16:22:28.302888673Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T16:22:28.30336384Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_162228-xhnat8ep/logs/debug-core.log"}
+{"time":"2024-08-18T16:22:28.317935965Z","level":"INFO","msg":"created new stream","id":"xhnat8ep"}
+{"time":"2024-08-18T16:22:28.318298881Z","level":"INFO","msg":"sender: started","stream_id":{"value":"xhnat8ep"}}
+{"time":"2024-08-18T16:22:28.318360631Z","level":"INFO","msg":"handler: started","stream_id":{"value":"xhnat8ep"}}
+{"time":"2024-08-18T16:22:28.318318006Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"xhnat8ep"}}
+{"time":"2024-08-18T16:22:28.77143834Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T16:22:28.819236506Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T16:22:30.235190132Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T16:22:30.241919674Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T16:22:30.242975799Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T16:22:30.443737216Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T16:22:30.444182216Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T16:22:30.444491841Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T16:22:32.417828175Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"xhnat8ep"}}
+{"time":"2024-08-18T16:22:32.41808905Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"xhnat8ep"}}
+{"time":"2024-08-18T16:22:32.418140258Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"xhnat8ep"}}
+{"time":"2024-08-18T16:22:32.418946925Z","level":"INFO","msg":"closed stream","id":"xhnat8ep"}

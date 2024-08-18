@@ -1,0 +1,18 @@
+{"time":"2024-08-18T16:32:38.043362511Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T16:32:38.043578344Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_163238-zoa2cwi4/logs/debug-core.log"}
+{"time":"2024-08-18T16:32:38.057355552Z","level":"INFO","msg":"created new stream","id":"zoa2cwi4"}
+{"time":"2024-08-18T16:32:38.057751636Z","level":"INFO","msg":"handler: started","stream_id":{"value":"zoa2cwi4"}}
+{"time":"2024-08-18T16:32:38.057760677Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"zoa2cwi4"}}
+{"time":"2024-08-18T16:32:38.057889677Z","level":"INFO","msg":"sender: started","stream_id":{"value":"zoa2cwi4"}}
+{"time":"2024-08-18T16:32:38.606894386Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T16:32:38.652913678Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T16:32:39.890241595Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T16:32:39.896417262Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T16:32:39.89693022Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T16:32:40.099293887Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T16:32:40.099926678Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T16:32:40.100293637Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T16:32:42.011746346Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"zoa2cwi4"}}
+{"time":"2024-08-18T16:32:42.011906013Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"zoa2cwi4"}}
+{"time":"2024-08-18T16:32:42.011998804Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"zoa2cwi4"}}
+{"time":"2024-08-18T16:32:42.012888221Z","level":"INFO","msg":"closed stream","id":"zoa2cwi4"}

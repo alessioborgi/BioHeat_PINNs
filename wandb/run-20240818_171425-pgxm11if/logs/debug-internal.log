@@ -1,0 +1,18 @@
+{"time":"2024-08-18T17:14:25.51404713Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T17:14:25.514246963Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_171425-pgxm11if/logs/debug-core.log"}
+{"time":"2024-08-18T17:14:25.519500296Z","level":"INFO","msg":"created new stream","id":"pgxm11if"}
+{"time":"2024-08-18T17:14:25.519854921Z","level":"INFO","msg":"handler: started","stream_id":{"value":"pgxm11if"}}
+{"time":"2024-08-18T17:14:25.519833963Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"pgxm11if"}}
+{"time":"2024-08-18T17:14:25.51987863Z","level":"INFO","msg":"sender: started","stream_id":{"value":"pgxm11if"}}
+{"time":"2024-08-18T17:14:26.773207755Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T17:14:26.820638505Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T17:14:28.121208589Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T17:14:28.127036214Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T17:14:28.127899464Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T17:14:28.328255339Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T17:14:28.328630381Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T17:14:28.328878006Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T17:14:30.336656799Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"pgxm11if"}}
+{"time":"2024-08-18T17:14:30.337039424Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"pgxm11if"}}
+{"time":"2024-08-18T17:14:30.337010507Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"pgxm11if"}}
+{"time":"2024-08-18T17:14:30.338140132Z","level":"INFO","msg":"closed stream","id":"pgxm11if"}

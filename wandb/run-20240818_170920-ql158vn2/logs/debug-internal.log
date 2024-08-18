@@ -1,0 +1,18 @@
+{"time":"2024-08-18T17:09:20.565326586Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T17:09:20.565510294Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_170920-ql158vn2/logs/debug-core.log"}
+{"time":"2024-08-18T17:09:20.570922086Z","level":"INFO","msg":"created new stream","id":"ql158vn2"}
+{"time":"2024-08-18T17:09:20.571244377Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ql158vn2"}}
+{"time":"2024-08-18T17:09:20.571225919Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ql158vn2"}}
+{"time":"2024-08-18T17:09:20.571304544Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ql158vn2"}}
+{"time":"2024-08-18T17:09:21.094983711Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T17:09:21.145049044Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T17:09:22.355640211Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T17:09:22.364023253Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T17:09:22.366422128Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T17:09:22.572105712Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T17:09:22.572675087Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T17:09:22.572973545Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T17:09:24.674049796Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ql158vn2"}}
+{"time":"2024-08-18T17:09:24.674335379Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ql158vn2"}}
+{"time":"2024-08-18T17:09:24.674413171Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ql158vn2"}}
+{"time":"2024-08-18T17:09:24.675386713Z","level":"INFO","msg":"closed stream","id":"ql158vn2"}

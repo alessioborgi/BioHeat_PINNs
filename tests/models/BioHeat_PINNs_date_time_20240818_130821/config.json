@@ -1,6 +1,6 @@
 {
     "backend": "pytorch",
-    "activation": "GELU",
+    "activation": "APTx",
     "initial_weights_regularizer": true,
     "initialization": "He normal",
     "iterations": 500,

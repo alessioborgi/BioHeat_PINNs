@@ -1,0 +1,18 @@
+{"time":"2024-08-18T16:01:40.907592429Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T16:01:40.907759387Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_160140-ikrozdxf/logs/debug-core.log"}
+{"time":"2024-08-18T16:01:40.914289762Z","level":"INFO","msg":"created new stream","id":"ikrozdxf"}
+{"time":"2024-08-18T16:01:40.914601429Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ikrozdxf"}}
+{"time":"2024-08-18T16:01:40.914571429Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ikrozdxf"}}
+{"time":"2024-08-18T16:01:40.914601971Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ikrozdxf"}}
+{"time":"2024-08-18T16:01:41.448046388Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T16:01:41.495030096Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T16:02:15.503090292Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T16:02:15.5143115Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T16:02:15.515335667Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T16:02:15.7293885Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T16:02:15.730333042Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T16:02:15.731356292Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T16:02:17.652357043Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ikrozdxf"}}
+{"time":"2024-08-18T16:02:17.652549501Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ikrozdxf"}}
+{"time":"2024-08-18T16:02:17.652515001Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ikrozdxf"}}
+{"time":"2024-08-18T16:02:17.653853001Z","level":"INFO","msg":"closed stream","id":"ikrozdxf"}

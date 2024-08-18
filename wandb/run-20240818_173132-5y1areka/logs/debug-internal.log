@@ -1,0 +1,18 @@
+{"time":"2024-08-18T17:31:32.279171591Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T17:31:32.279341758Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_173132-5y1areka/logs/debug-core.log"}
+{"time":"2024-08-18T17:31:32.284076508Z","level":"INFO","msg":"created new stream","id":"5y1areka"}
+{"time":"2024-08-18T17:31:32.284368633Z","level":"INFO","msg":"handler: started","stream_id":{"value":"5y1areka"}}
+{"time":"2024-08-18T17:31:32.284333799Z","level":"INFO","msg":"sender: started","stream_id":{"value":"5y1areka"}}
+{"time":"2024-08-18T17:31:32.284367924Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"5y1areka"}}
+{"time":"2024-08-18T17:31:33.086148633Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T17:31:33.132018883Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T17:31:34.442038717Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T17:31:34.447103384Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T17:31:34.447685259Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T17:31:34.707141759Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T17:31:34.707754842Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T17:31:34.708377592Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T17:31:37.001311302Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"5y1areka"}}
+{"time":"2024-08-18T17:31:37.001563343Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"5y1areka"}}
+{"time":"2024-08-18T17:31:37.001591343Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"5y1areka"}}
+{"time":"2024-08-18T17:31:37.002432802Z","level":"INFO","msg":"closed stream","id":"5y1areka"}

@@ -1,0 +1,1 @@
+{"max_APE":2.3783165394615346e+68,"activation_function":"SiLU","initialization_method":"He normal","L2RE":0.9766350141581781,"MSE":0.01118354303971053,"MAE":1.1018786234122481e+65,"_runtime":1.279141212,"_step":0,"_wandb":{"runtime":1},"_timestamp":1.7239979333743827e+09,"iterations":125}

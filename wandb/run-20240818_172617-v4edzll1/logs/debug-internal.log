@@ -1,0 +1,18 @@
+{"time":"2024-08-18T17:26:17.374475417Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T17:26:17.374844751Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_172617-v4edzll1/logs/debug-core.log"}
+{"time":"2024-08-18T17:26:17.380368126Z","level":"INFO","msg":"created new stream","id":"v4edzll1"}
+{"time":"2024-08-18T17:26:17.380715376Z","level":"INFO","msg":"handler: started","stream_id":{"value":"v4edzll1"}}
+{"time":"2024-08-18T17:26:17.380670876Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"v4edzll1"}}
+{"time":"2024-08-18T17:26:17.380704042Z","level":"INFO","msg":"sender: started","stream_id":{"value":"v4edzll1"}}
+{"time":"2024-08-18T17:26:18.225826001Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T17:26:18.276782043Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T17:26:19.954394252Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T17:26:19.964924585Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T17:26:19.966789127Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T17:26:20.178023127Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T17:26:20.178757502Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T17:26:20.179057044Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T17:26:22.20768642Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"v4edzll1"}}
+{"time":"2024-08-18T17:26:22.207902753Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"v4edzll1"}}
+{"time":"2024-08-18T17:26:22.207954628Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"v4edzll1"}}
+{"time":"2024-08-18T17:26:22.208869253Z","level":"INFO","msg":"closed stream","id":"v4edzll1"}

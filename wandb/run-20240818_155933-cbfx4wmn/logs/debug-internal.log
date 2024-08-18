@@ -1,0 +1,18 @@
+{"time":"2024-08-18T15:59:33.23368155Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T15:59:33.23384755Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_155933-cbfx4wmn/logs/debug-core.log"}
+{"time":"2024-08-18T15:59:33.245018092Z","level":"INFO","msg":"created new stream","id":"cbfx4wmn"}
+{"time":"2024-08-18T15:59:33.245392842Z","level":"INFO","msg":"sender: started","stream_id":{"value":"cbfx4wmn"}}
+{"time":"2024-08-18T15:59:33.245381634Z","level":"INFO","msg":"handler: started","stream_id":{"value":"cbfx4wmn"}}
+{"time":"2024-08-18T15:59:33.245381175Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"cbfx4wmn"}}
+{"time":"2024-08-18T15:59:33.692020592Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T15:59:33.738491259Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T16:00:07.877711969Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T16:00:07.888181386Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T16:00:07.889222761Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T16:00:08.092872511Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T16:00:08.093389136Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T16:00:08.093665511Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T16:00:10.013033595Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"cbfx4wmn"}}
+{"time":"2024-08-18T16:00:10.01332297Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"cbfx4wmn"}}
+{"time":"2024-08-18T16:00:10.013282887Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"cbfx4wmn"}}
+{"time":"2024-08-18T16:00:10.014307262Z","level":"INFO","msg":"closed stream","id":"cbfx4wmn"}
