@@ -1,0 +1,19 @@
+{"time":"2024-08-18T13:22:29.406975216Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T13:22:29.407169424Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_132229-wrwq3nmi/logs/debug-core.log"}
+{"time":"2024-08-18T13:22:29.411795341Z","level":"INFO","msg":"created new stream","id":"wrwq3nmi"}
+{"time":"2024-08-18T13:22:29.412068716Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wrwq3nmi"}}
+{"time":"2024-08-18T13:22:29.412116549Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wrwq3nmi"}}
+{"time":"2024-08-18T13:22:29.412076133Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wrwq3nmi"}}
+{"time":"2024-08-18T13:22:29.8657788Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T13:22:29.911992175Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T13:23:21.548552046Z","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/graphql"}
+{"time":"2024-08-18T13:30:02.687003843Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T13:30:02.698647884Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T13:30:02.700315009Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T13:30:03.073118468Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T13:30:03.073747968Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T13:30:03.073872426Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T13:30:05.794227344Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wrwq3nmi"}}
+{"time":"2024-08-18T13:30:05.794397177Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wrwq3nmi"}}
+{"time":"2024-08-18T13:30:05.794543594Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wrwq3nmi"}}
+{"time":"2024-08-18T13:30:05.795848344Z","level":"INFO","msg":"closed stream","id":"wrwq3nmi"}

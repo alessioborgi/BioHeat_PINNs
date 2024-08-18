@@ -1,0 +1,20 @@
+{"time":"2024-08-18T13:16:19.585261045Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-18T13:16:19.585452128Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240818_131619-aityqvh1/logs/debug-core.log"}
+{"time":"2024-08-18T13:16:19.58926217Z","level":"INFO","msg":"created new stream","id":"aityqvh1"}
+{"time":"2024-08-18T13:16:19.589546961Z","level":"INFO","msg":"sender: started","stream_id":{"value":"aityqvh1"}}
+{"time":"2024-08-18T13:16:19.589537378Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"aityqvh1"}}
+{"time":"2024-08-18T13:16:19.589633003Z","level":"INFO","msg":"handler: started","stream_id":{"value":"aityqvh1"}}
+{"time":"2024-08-18T13:16:20.222949087Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-18T13:16:20.27057617Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-18T13:18:51.341761796Z","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-08-18T13:20:40.677059971Z","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-08-18T13:22:22.647365629Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-18T13:22:22.657971129Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-18T13:22:22.659050421Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-18T13:22:22.856586338Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-18T13:22:22.857135463Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-18T13:22:22.857461796Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-18T13:22:24.958243089Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"aityqvh1"}}
+{"time":"2024-08-18T13:22:24.958413214Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"aityqvh1"}}
+{"time":"2024-08-18T13:22:24.958374881Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"aityqvh1"}}
+{"time":"2024-08-18T13:22:24.959568172Z","level":"INFO","msg":"closed stream","id":"aityqvh1"}
