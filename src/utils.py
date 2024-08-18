@@ -112,37 +112,27 @@ def set_name(prj, run):
 
     return name, general_figures, model_dir, figures_dir
 
-# def get_properties(n):
-#     """
-#     Retrieves and returns properties related to the model or dataset.
-    
-#     This function can include information such as data shapes, model parameters,
-#     or other relevant metadata required for training or evaluation.
-    
-#     Args:
-#         None
-    
-#     Returns:
-#         None
-#     """
-#     global L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange, rhob, Wb, q0
-#     file_path = os.path.join(main.src_dir, 'data_simulations', f'data{n}.json')
 
-#     # Open the file and load the JSON data
-#     with open(file_path, 'r') as f:
-#         data = json.load(f)
+def mish(x):
+    return x * torch.tanh(F.softplus(x))
 
-#     properties.update(data['Parameters'])
-#     par = data['Parameters']
-#     local_vars = locals()
-#     for key in par:
-#         if key in local_vars:
-#             local_vars[key] = par[key]
+def softplus(x):
+    return F.softplus(x)
 
-#     L0, tauf, k, p0, d, rhoc, cb, h, Tmin, Tmax, alpha, W, steep, tchange = (
-#         par["L0"], par["tauf"], par["k"], par["p0"], par["d"], par["rhoc"],
-#         par["cb"], par["h"], par["Tmin"], par["Tmax"], par["alpha"], par["W"], par["steep"], par["tchange"],
-#         par["rhob"], par["Wb"], par["q0"]
-#     )
+def aptx(x):
+    return (1 + torch.tanh(x)) * (x / 2)
+
+def output_transform(x, y):
+    """
+    Output transformation function.
+    
+    Args:
+        x (np.ndarray): The input coordinates.
+        y (np.ndarray): The output values.
+    
+    Returns:
+        np.ndarray: Transformed output.
+    """
+    return x[:, 0:1] * y
 
     

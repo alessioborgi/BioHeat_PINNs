@@ -1,0 +1,31 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 55, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 101, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 38, in train_model
+    mm = nhbo.create_nbho(name, cfg)
+  File "/working_dir/src/nhbo.py", line 125, in create_nbho
+    data = dde.data.TimePDE(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 338, in __init__
+    super().__init__(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 130, in __init__
+    self.train_next_batch()
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 38, in wrapper
+    return func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 185, in train_next_batch
+    self.train_x_all = self.train_points()
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 38, in wrapper
+    return func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 354, in train_points
+    X = super().train_points()
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 38, in wrapper
+    return func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 292, in train_points
+    X = np.array(list(filter(is_not_excluded, X)))
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 290, in is_not_excluded
+    return not np.any([np.allclose(x, y) for y in self.exclusions])
+TypeError: 'function' object is not iterable
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

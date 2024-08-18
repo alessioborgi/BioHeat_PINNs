@@ -6,8 +6,8 @@ import torch.nn.functional as F
 import os
 import train
 from configurations import HydraConfigStore
-from utils import open_json_config
-import icbc
+from utils import open_json_config, mish, softplus, aptx, output_transform
+import conditions
 import equation
 import json
 
@@ -19,30 +19,6 @@ import json
 
 
 f1, f2, f3 = [None]*3
-
-def mish(x):
-    return x * torch.tanh(F.softplus(x))
-
-def softplus(x):
-    return F.softplus(x)
-
-def aptx(x):
-    return (1 + torch.tanh(x)) * (x / 2)
-
-def output_transform(x, y):
-    """
-    Output transformation function.
-    
-    Args:
-        x (np.ndarray): The input coordinates.
-        y (np.ndarray): The output values.
-    
-    Returns:
-        np.ndarray: Transformed output.
-    """
-    return x[:, 0:1] * y
-
-    ###
 
 # Neural Bio-Heat Observer
 def create_nbho(name, cfg):
@@ -84,39 +60,39 @@ def create_nbho(name, cfg):
     a2 = parameters["Parameters"]["a2"]
     a3 = parameters["Parameters"]["a3"]
 
-    geomtime = icbc.domain_definition
+    geomtime = conditions.domain_definition()
 
     # definition of the boundary conditions:
 
     left_bc = dde.icbc.DirichletBC(
         geomtime,
         lambda x: 0,
-        icbc.left_boundary()
+        conditions.left_boundary
     )
-
+    
     right_bc = dde.icbc.NeumannBC(
         geomtime,
         lambda x: x[2],
-        icbc.right_boundary 
+        conditions.right_boundary 
     )
 
     lower_bc = dde.icbc.NeumannBC(
         geomtime,
         lambda x: 0,
-        icbc.lower_boundary 
+        conditions.lower_boundary 
     )
 
     upper_bc = dde.icbc.NeumannBC(
         geomtime,
         lambda x: 0,
-        icbc.upper_boundary 
+        conditions.upper_boundary 
     )
 
     # definition of the initial condition:
 
     ic = dde.icbc.IC(
         geomtime,
-        icbc.ic_obs,
+        conditions.ic_obs,
         lambda _, on_initial: on_initial # Function to identify the points at t=0
     )
 
@@ -130,7 +106,7 @@ def create_nbho(name, cfg):
         num_boundary=200,   # number of training points sampled on the boundary
         num_initial=100,    # number of the initial residual points for the initial condition
         num_test=10000,
-        exclusions = icbc.vertices_exclusion
+        exclusions = conditions.vertices_exclusion()
     )
 
     # Definition of the network:

@@ -7,7 +7,7 @@ import os
 import train
 from configurations import HydraConfigStore
 from utils import open_json_config
-import icbc
+import conditions
 
 """
     Inside thi file you will find the definition of the Bio-Heat Equation.

@@ -1,0 +1,17 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/working_dir/./src/main.py", line 55, in main
+    train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 101, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 38, in train_model
+    mm = nhbo.create_nbho(name, cfg)
+  File "/working_dir/src/nhbo.py", line 91, in create_nbho
+    left_bc = dde.icbc.DirichletBC(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/icbc/boundary_conditions.py", line 71, in __init__
+    super().__init__(geom, on_boundary, component)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/icbc/boundary_conditions.py", line 46, in __init__
+    utils.return_tensor(self.geom.boundary_normal)
+AttributeError: 'function' object has no attribute 'boundary_normal'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

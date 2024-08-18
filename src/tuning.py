@@ -47,7 +47,7 @@ activation_functions = {
 }
 # iteration_values = [10, 30]  # Replace with your actual iteration values
 # iteration_values = [100, 150, 200, 250, 300, 350, 400, 500]   
-iteration_values = [59, 75, 100, 150, 200]    
+iteration_values = [50, 75, 100, 150, 200]    
  
 
 @hydra.main(version_base=None, config_path="configs", config_name="tuning")
