@@ -128,7 +128,24 @@ def plot_loss_components(losshistory):
         plt.close()
 
 def gen_testdata(n):
+    """
+    This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
+
+    Args:
+        n: number of simulation (right now is always n = 0)
+
+    Returns:
+        X : n x 3 matrix which contains the spatial and temporal coordinates (input features)
+        y : n x 1 matrix which contains the solution of the PDE (ground truth)
+    """
+    
     data = np.loadtxt(f"{main.src_dir}/data_simulations/file_2D_{n}.txt")
+    #   those are the columns inside the .txt file
+    #       | X | Y | t | U |
+    #   > X: spatial coordinate    
+    #   > Y: spatial coordinate
+    #   > t: temporal coordinate
+    #   > U: solution of the equation (ground truth)
     x1, x2, t, exact = data[:, 0], data[:, 1], data[:, 2], data[:, 3]
     X = np.vstack((x1, x2, t)).T
     y = exact[:, None]
@@ -164,11 +181,11 @@ def plot_and_metrics(model, n_test):
     recall, F1-score, etc., providing insights into the model's performance.
     
     Args:
-        metrics (dict): A dictionary containing the performance metrics.
-        figures_dir (str): Directory where the plot will be saved.
+        model (nhbo): Model defined in nhbo.py
+        n_test (int): Number of tests
     
     Returns:
-        None
+        metrics ():
     """
     e, theta_true = gen_testdata(n_test)
     g = gen_obsdata(n_test)
