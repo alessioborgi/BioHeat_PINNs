@@ -3,7 +3,7 @@
     "activation": "ELU",
     "initial_weights_regularizer": true,
     "initialization": "He normal",
-    "iterations": 50,
+    "iterations": 350,
     "LBFGS": false,
     "learning_rate": 0.001,
     "num_dense_layers": 3,
