@@ -46,7 +46,7 @@ activation_functions = {
 #     'tanh': ['Glorot normal'],
 # }
 # iteration_values = [10, 30]  # Replace with your actual iteration values
-iteration_values = [50, 75, 100, 125, 150, 175, 200, 250, 300, 350, 400, 500]   
+iteration_values = [250, 500, 750, 1000]   
 # iteration_values = [50, 75, 100, 150, 200]    
  
 
