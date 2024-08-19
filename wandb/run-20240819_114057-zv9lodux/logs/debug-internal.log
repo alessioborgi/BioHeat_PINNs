@@ -1,0 +1,18 @@
+{"time":"2024-08-19T11:40:57.806369471Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T11:40:57.806503221Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_114057-zv9lodux/logs/debug-core.log"}
+{"time":"2024-08-19T11:40:57.852668429Z","level":"INFO","msg":"created new stream","id":"zv9lodux"}
+{"time":"2024-08-19T11:40:57.853285221Z","level":"INFO","msg":"sender: started","stream_id":{"value":"zv9lodux"}}
+{"time":"2024-08-19T11:40:57.853241762Z","level":"INFO","msg":"handler: started","stream_id":{"value":"zv9lodux"}}
+{"time":"2024-08-19T11:40:57.853563554Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"zv9lodux"}}
+{"time":"2024-08-19T11:40:58.326540596Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T11:40:58.372893096Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T11:41:00.157838222Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T11:41:00.163356389Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T11:41:00.164112722Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T11:41:01.039657041Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T11:41:01.039923875Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T11:41:01.04009275Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T11:41:04.212988835Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"zv9lodux"}}
+{"time":"2024-08-19T11:41:04.21311871Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"zv9lodux"}}
+{"time":"2024-08-19T11:41:04.213243918Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"zv9lodux"}}
+{"time":"2024-08-19T11:41:04.213948085Z","level":"INFO","msg":"closed stream","id":"zv9lodux"}

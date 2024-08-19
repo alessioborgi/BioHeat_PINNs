@@ -1,0 +1,18 @@
+{"time":"2024-08-19T12:02:24.350613135Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T12:02:24.350762552Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_120224-rntm38lm/logs/debug-core.log"}
+{"time":"2024-08-19T12:02:24.356601844Z","level":"INFO","msg":"created new stream","id":"rntm38lm"}
+{"time":"2024-08-19T12:02:24.357038719Z","level":"INFO","msg":"sender: started","stream_id":{"value":"rntm38lm"}}
+{"time":"2024-08-19T12:02:24.357014469Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"rntm38lm"}}
+{"time":"2024-08-19T12:02:24.35716601Z","level":"INFO","msg":"handler: started","stream_id":{"value":"rntm38lm"}}
+{"time":"2024-08-19T12:02:25.213521553Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T12:02:25.257775678Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T12:02:26.47672272Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T12:02:26.486698095Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T12:02:26.487556887Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T12:02:26.684378387Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T12:02:26.685097678Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T12:02:26.685444262Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T12:02:28.816536513Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"rntm38lm"}}
+{"time":"2024-08-19T12:02:28.816799221Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"rntm38lm"}}
+{"time":"2024-08-19T12:02:28.816855888Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"rntm38lm"}}
+{"time":"2024-08-19T12:02:28.817989513Z","level":"INFO","msg":"closed stream","id":"rntm38lm"}

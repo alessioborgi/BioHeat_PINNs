@@ -1,0 +1,18 @@
+{"time":"2024-08-19T11:53:29.206927305Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T11:53:29.207195305Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_115329-ls65rbk6/logs/debug-core.log"}
+{"time":"2024-08-19T11:53:29.218123721Z","level":"INFO","msg":"created new stream","id":"ls65rbk6"}
+{"time":"2024-08-19T11:53:29.21844193Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ls65rbk6"}}
+{"time":"2024-08-19T11:53:29.218482805Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ls65rbk6"}}
+{"time":"2024-08-19T11:53:29.218521221Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ls65rbk6"}}
+{"time":"2024-08-19T11:53:29.618602805Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T11:53:29.662969805Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T11:53:30.910221958Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T11:53:30.923723208Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T11:53:30.924919458Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T11:53:31.131572666Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T11:53:31.131976708Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T11:53:31.132197625Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T11:53:33.087052334Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ls65rbk6"}}
+{"time":"2024-08-19T11:53:33.087323376Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ls65rbk6"}}
+{"time":"2024-08-19T11:53:33.087496001Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ls65rbk6"}}
+{"time":"2024-08-19T11:53:33.088351542Z","level":"INFO","msg":"closed stream","id":"ls65rbk6"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-19T11:43:26.395413387Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T11:43:26.395788303Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_114326-ck66hg4s/logs/debug-core.log"}
+{"time":"2024-08-19T11:43:26.409190178Z","level":"INFO","msg":"created new stream","id":"ck66hg4s"}
+{"time":"2024-08-19T11:43:26.40964097Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ck66hg4s"}}
+{"time":"2024-08-19T11:43:26.409721053Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ck66hg4s"}}
+{"time":"2024-08-19T11:43:26.409863345Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ck66hg4s"}}
+{"time":"2024-08-19T11:43:27.791181012Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T11:43:27.836681887Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T11:44:06.356747252Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T11:44:06.365180669Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T11:44:06.366171586Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T11:44:06.729046669Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T11:44:06.729578419Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T11:44:06.729833336Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T11:44:08.872946503Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ck66hg4s"}}
+{"time":"2024-08-19T11:44:08.873096253Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ck66hg4s"}}
+{"time":"2024-08-19T11:44:08.873214753Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ck66hg4s"}}
+{"time":"2024-08-19T11:44:08.874041837Z","level":"INFO","msg":"closed stream","id":"ck66hg4s"}

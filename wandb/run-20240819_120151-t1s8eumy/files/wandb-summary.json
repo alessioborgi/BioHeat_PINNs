@@ -1,0 +1,1 @@
+{"MSE":0.05397541845780913,"max_APE":2.435535189847487e+69,"iterations":500,"initialization_method":"He normal","weighted_score":0.764490057399545,"_timestamp":1.7240689133837743e+09,"L2RE":2.1455596481599875,"_step":1,"_runtime":2.4080401350000002,"_wandb":{"runtime":2},"weighted_array":[0.25,0.25,0.25,0.25],"MAE":1.4401767824992492e+66,"activation_function":"ReLu"}
