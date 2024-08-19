@@ -1,6 +1,6 @@
-- Check if everything works correctly
 - Try Q (Q_met + Q_ext)
 - Restyle train.py, utils.py, plots.py
+- Restyle 1D
 - Update ReadMe
 - Update Report
 - Slides
