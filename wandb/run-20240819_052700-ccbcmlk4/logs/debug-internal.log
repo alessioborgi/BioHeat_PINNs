@@ -1,0 +1,18 @@
+{"time":"2024-08-19T05:27:00.430144256Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T05:27:00.430318964Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_052700-ccbcmlk4/logs/debug-core.log"}
+{"time":"2024-08-19T05:27:00.436923464Z","level":"INFO","msg":"created new stream","id":"ccbcmlk4"}
+{"time":"2024-08-19T05:27:00.437261922Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ccbcmlk4"}}
+{"time":"2024-08-19T05:27:00.437236797Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ccbcmlk4"}}
+{"time":"2024-08-19T05:27:00.437210297Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ccbcmlk4"}}
+{"time":"2024-08-19T05:27:01.074751422Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T05:27:01.120431464Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T05:27:02.346886381Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T05:27:02.360482298Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T05:27:02.361540173Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T05:27:02.55558259Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T05:27:02.556163757Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T05:27:02.556415423Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T05:27:04.513660716Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ccbcmlk4"}}
+{"time":"2024-08-19T05:27:04.513765841Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ccbcmlk4"}}
+{"time":"2024-08-19T05:27:04.513808841Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ccbcmlk4"}}
+{"time":"2024-08-19T05:27:04.515055132Z","level":"INFO","msg":"closed stream","id":"ccbcmlk4"}

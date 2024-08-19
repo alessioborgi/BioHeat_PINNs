@@ -1,0 +1,1 @@
+{"weighted_score":0.10734448593382823,"MAE":1.2894570955190219e+65,"_step":1,"weighted_array":[0.25,0.25,0.25,0.25],"activation_function":"Mish","_timestamp":1.7240456538268354e+09,"_wandb":{"runtime":3},"MSE":0.012157236930018613,"L2RE":1.0182631423635544,"initialization_method":"He normal","_runtime":2.455535054,"iterations":500,"max_APE":3.2563714979081774e+68}

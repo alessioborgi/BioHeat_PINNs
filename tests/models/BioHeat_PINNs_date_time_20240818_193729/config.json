@@ -1,9 +1,9 @@
 {
     "backend": "pytorch",
-    "activation": "ELU",
+    "activation": "APTx",
     "initial_weights_regularizer": true,
     "initialization": "He normal",
-    "iterations": 350,
+    "iterations": 500,
     "LBFGS": false,
     "learning_rate": 0.001,
     "num_dense_layers": 3,

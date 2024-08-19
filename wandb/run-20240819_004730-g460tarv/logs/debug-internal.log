@@ -1,0 +1,18 @@
+{"time":"2024-08-19T00:47:30.088142969Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T00:47:30.088389469Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_004730-g460tarv/logs/debug-core.log"}
+{"time":"2024-08-19T00:47:30.100326386Z","level":"INFO","msg":"created new stream","id":"g460tarv"}
+{"time":"2024-08-19T00:47:30.100774052Z","level":"INFO","msg":"handler: started","stream_id":{"value":"g460tarv"}}
+{"time":"2024-08-19T00:47:30.100869511Z","level":"INFO","msg":"sender: started","stream_id":{"value":"g460tarv"}}
+{"time":"2024-08-19T00:47:30.100891552Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"g460tarv"}}
+{"time":"2024-08-19T00:47:30.606267303Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T00:47:30.657613303Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T00:47:32.83404822Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T00:47:32.845388595Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T00:47:32.846522429Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T00:47:33.056483637Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T00:47:33.057177721Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T00:47:33.057479637Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T00:47:34.965751888Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"g460tarv"}}
+{"time":"2024-08-19T00:47:34.96603818Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"g460tarv"}}
+{"time":"2024-08-19T00:47:34.965987638Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"g460tarv"}}
+{"time":"2024-08-19T00:47:34.966709305Z","level":"INFO","msg":"closed stream","id":"g460tarv"}

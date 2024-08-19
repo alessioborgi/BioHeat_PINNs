@@ -1,0 +1,18 @@
+{"time":"2024-08-19T01:07:22.61342859Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T01:07:22.613689257Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_010722-sdk5cfj5/logs/debug-core.log"}
+{"time":"2024-08-19T01:07:22.62594184Z","level":"INFO","msg":"created new stream","id":"sdk5cfj5"}
+{"time":"2024-08-19T01:07:22.62640959Z","level":"INFO","msg":"handler: started","stream_id":{"value":"sdk5cfj5"}}
+{"time":"2024-08-19T01:07:22.626453715Z","level":"INFO","msg":"sender: started","stream_id":{"value":"sdk5cfj5"}}
+{"time":"2024-08-19T01:07:22.626458632Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"sdk5cfj5"}}
+{"time":"2024-08-19T01:07:23.158366424Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T01:07:23.207291507Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T01:07:24.532103425Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T01:07:24.542439425Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T01:07:24.543476383Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T01:07:24.722221425Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T01:07:24.722739675Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T01:07:24.723124841Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T01:07:26.722689009Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"sdk5cfj5"}}
+{"time":"2024-08-19T01:07:26.722820301Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"sdk5cfj5"}}
+{"time":"2024-08-19T01:07:26.722853384Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"sdk5cfj5"}}
+{"time":"2024-08-19T01:07:26.723944509Z","level":"INFO","msg":"closed stream","id":"sdk5cfj5"}

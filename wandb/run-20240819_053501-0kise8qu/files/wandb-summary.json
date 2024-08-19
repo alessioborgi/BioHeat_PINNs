@@ -1,0 +1,1 @@
+{"weighted_score":0.9137146443536891,"L2RE":2.546446342074448,"max_APE":2.3398384743875874e+69,"iterations":350,"MSE":0.07602980753215809,"initialization_method":"Glorot normal","_runtime":4.011866549,"_step":1,"activation_function":"Softplus","_timestamp":1.7240457045727024e+09,"MAE":1.5117721645038284e+66,"_wandb":{"runtime":4},"weighted_array":[0.25,0.25,0.25,0.25]}

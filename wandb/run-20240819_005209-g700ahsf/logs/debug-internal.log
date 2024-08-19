@@ -1,0 +1,18 @@
+{"time":"2024-08-19T00:52:09.773695376Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T00:52:09.773894834Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_005209-g700ahsf/logs/debug-core.log"}
+{"time":"2024-08-19T00:52:09.779835751Z","level":"INFO","msg":"created new stream","id":"g700ahsf"}
+{"time":"2024-08-19T00:52:09.780075251Z","level":"INFO","msg":"sender: started","stream_id":{"value":"g700ahsf"}}
+{"time":"2024-08-19T00:52:09.780081834Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"g700ahsf"}}
+{"time":"2024-08-19T00:52:09.780120709Z","level":"INFO","msg":"handler: started","stream_id":{"value":"g700ahsf"}}
+{"time":"2024-08-19T00:52:10.273738793Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T00:52:10.325151668Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T00:52:48.545743172Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T00:52:48.552333422Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T00:52:48.553046589Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T00:52:48.749845839Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T00:52:48.750327255Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T00:52:48.750911297Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T00:52:50.878834881Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"g700ahsf"}}
+{"time":"2024-08-19T00:52:50.878974465Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"g700ahsf"}}
+{"time":"2024-08-19T00:52:50.878986756Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"g700ahsf"}}
+{"time":"2024-08-19T00:52:50.879826548Z","level":"INFO","msg":"closed stream","id":"g700ahsf"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-19T05:25:51.399531043Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T05:25:51.399740501Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_052551-ftgpfrv9/logs/debug-core.log"}
+{"time":"2024-08-19T05:25:51.406085751Z","level":"INFO","msg":"created new stream","id":"ftgpfrv9"}
+{"time":"2024-08-19T05:25:51.406454126Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ftgpfrv9"}}
+{"time":"2024-08-19T05:25:51.406441001Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ftgpfrv9"}}
+{"time":"2024-08-19T05:25:51.406509335Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ftgpfrv9"}}
+{"time":"2024-08-19T05:25:52.071742293Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T05:25:52.116232627Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T05:25:53.353455627Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T05:25:53.355732669Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T05:25:53.356122419Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T05:25:53.535204127Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T05:25:53.535383377Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T05:25:53.535519877Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T05:25:55.717618753Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ftgpfrv9"}}
+{"time":"2024-08-19T05:25:55.717836087Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ftgpfrv9"}}
+{"time":"2024-08-19T05:25:55.71790267Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ftgpfrv9"}}
+{"time":"2024-08-19T05:25:55.71872592Z","level":"INFO","msg":"closed stream","id":"ftgpfrv9"}

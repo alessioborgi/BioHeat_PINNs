@@ -1,0 +1,18 @@
+{"time":"2024-08-19T01:03:20.80601559Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T01:03:20.80621134Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_010320-j8hpydht/logs/debug-core.log"}
+{"time":"2024-08-19T01:03:20.811752548Z","level":"INFO","msg":"created new stream","id":"j8hpydht"}
+{"time":"2024-08-19T01:03:20.812044548Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"j8hpydht"}}
+{"time":"2024-08-19T01:03:20.812036673Z","level":"INFO","msg":"handler: started","stream_id":{"value":"j8hpydht"}}
+{"time":"2024-08-19T01:03:20.81213409Z","level":"INFO","msg":"sender: started","stream_id":{"value":"j8hpydht"}}
+{"time":"2024-08-19T01:03:21.289521757Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T01:03:21.340531465Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T01:03:57.656757176Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T01:03:57.67240426Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T01:03:57.67324776Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T01:03:57.865073635Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T01:03:57.865854843Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T01:03:57.86617451Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T01:03:59.776905719Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"j8hpydht"}}
+{"time":"2024-08-19T01:03:59.777183219Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"j8hpydht"}}
+{"time":"2024-08-19T01:03:59.777181886Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"j8hpydht"}}
+{"time":"2024-08-19T01:03:59.778164094Z","level":"INFO","msg":"closed stream","id":"j8hpydht"}

@@ -1,0 +1,1 @@
+{"max_APE":1.0292625922095874e+68,"_wandb":{"runtime":1},"_step":0,"L2RE":1.0561450340232206,"initialization_method":"Glorot normal","iterations":75,"MAE":6.614501177283825e+64,"_timestamp":1.724026039809152e+09,"activation_function":"Sigmoid","MSE":0.013078621013525664,"_runtime":1.321838464}

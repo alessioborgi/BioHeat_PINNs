@@ -1,0 +1,18 @@
+{"time":"2024-08-19T05:30:28.719233796Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T05:30:28.719417421Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_053028-0xjkzzci/logs/debug-core.log"}
+{"time":"2024-08-19T05:30:28.724787921Z","level":"INFO","msg":"created new stream","id":"0xjkzzci"}
+{"time":"2024-08-19T05:30:28.725066296Z","level":"INFO","msg":"handler: started","stream_id":{"value":"0xjkzzci"}}
+{"time":"2024-08-19T05:30:28.725151713Z","level":"INFO","msg":"sender: started","stream_id":{"value":"0xjkzzci"}}
+{"time":"2024-08-19T05:30:28.725193005Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"0xjkzzci"}}
+{"time":"2024-08-19T05:30:29.36509588Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T05:30:29.416757338Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T05:30:30.603761881Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T05:30:30.616040547Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T05:30:30.617316839Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T05:30:30.800815422Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T05:30:30.801478631Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T05:30:30.801774589Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T05:30:32.880699507Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"0xjkzzci"}}
+{"time":"2024-08-19T05:30:32.880832757Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"0xjkzzci"}}
+{"time":"2024-08-19T05:30:32.88096084Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"0xjkzzci"}}
+{"time":"2024-08-19T05:30:32.881760548Z","level":"INFO","msg":"closed stream","id":"0xjkzzci"}

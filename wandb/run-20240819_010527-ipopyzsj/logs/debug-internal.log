@@ -1,0 +1,18 @@
+{"time":"2024-08-19T01:05:27.800988426Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T01:05:27.801162051Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_010527-ipopyzsj/logs/debug-core.log"}
+{"time":"2024-08-19T01:05:27.806149093Z","level":"INFO","msg":"created new stream","id":"ipopyzsj"}
+{"time":"2024-08-19T01:05:27.806456343Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ipopyzsj"}}
+{"time":"2024-08-19T01:05:27.80646076Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ipopyzsj"}}
+{"time":"2024-08-19T01:05:27.806553635Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ipopyzsj"}}
+{"time":"2024-08-19T01:05:28.186520051Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T01:05:28.232207801Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T01:06:00.716834678Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T01:06:00.729456428Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T01:06:00.730831553Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T01:06:00.933040844Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T01:06:00.933863511Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T01:06:00.934216511Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T01:06:02.817412929Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ipopyzsj"}}
+{"time":"2024-08-19T01:06:02.817665304Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ipopyzsj"}}
+{"time":"2024-08-19T01:06:02.817675345Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ipopyzsj"}}
+{"time":"2024-08-19T01:06:02.818980429Z","level":"INFO","msg":"closed stream","id":"ipopyzsj"}

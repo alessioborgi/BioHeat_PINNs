@@ -1,0 +1,1 @@
+{"activation_function":"tanh","weighted_array":[0.25,0.25,0.25,0.25],"max_APE":9.248243329102218e+68,"MSE":0.02258100626037422,"L2RE":1.3877595649410093,"initialization_method":"Glorot normal","_runtime":3.379361294,"iterations":175,"MAE":4.1214284318909725e+65,"_wandb":{"runtime":4},"_timestamp":1.7240455746540036e+09,"weighted_score":0.29045271216154667,"_step":1}

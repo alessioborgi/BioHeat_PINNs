@@ -61,3 +61,21 @@ Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., excl
 Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
 310       [2.85e-02, 0.00e+00, 3.09e-01, 1.66e-03, 1.64e-02, 1.37e-02]    [2.48e-02, 0.00e+00, 3.09e-01, 1.66e-03, 1.64e-02, 1.37e-02]    []
 320       [2.86e-02, 0.00e+00, 3.09e-01, 1.62e-03, 1.61e-02, 1.36e-02]    [2.41e-02, 0.00e+00, 3.09e-01, 1.62e-03, 1.61e-02, 1.36e-02]    []
+330       [2.75e-02, 0.00e+00, 3.09e-01, 1.58e-03, 1.59e-02, 1.35e-02]    [2.34e-02, 0.00e+00, 3.09e-01, 1.58e-03, 1.59e-02, 1.35e-02]    []
+340       [2.70e-02, 0.00e+00, 3.08e-01, 1.53e-03, 1.57e-02, 1.35e-02]    [2.28e-02, 0.00e+00, 3.08e-01, 1.53e-03, 1.57e-02, 1.35e-02]    []
+350       [2.58e-02, 0.00e+00, 3.08e-01, 1.47e-03, 1.57e-02, 1.34e-02]    [2.23e-02, 0.00e+00, 3.08e-01, 1.47e-03, 1.57e-02, 1.34e-02]    []
+
+Best model at step 350:
+  train loss: 3.64e-01
+  test loss: 3.61e-01
+  test metric: []
+
+Epoch 350: saving model to ./tests/models/BioHeat_PINNs_date_time_20240818_193729/adam-350.pt ...
+
+'train' took 1833.100854 s
+
+[2024-08-18 22:19:56,352][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-18 22:19:56,381][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-18 22:19:56,405][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-18 22:19:56,429][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240818_193729/l2_tf.png
