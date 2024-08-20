@@ -151,38 +151,38 @@ def gen_testdata(n):
     y = exact[:, None]
     return X, y
 
-def gen_obsdata(n):
-    """
-    This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
-
-    Args:
-        n: number of simulation (right now is always n = 0)
-
-    Returns:
-        Xobs : n x 3 matrix which contains the spatial and temporal coordinates (input features)
-    """
-
-    global f1, f2, f3
-    X, y = gen_testdata(n)
-    g = np.hstack((X, y))
-    # now we have a n x 4 matrix g with these columns: | X | Y | t | U |
-
-    x1_unique = np.unique(g[:, 0]) # all unique points for the X coordinate
-    x2_unique = np.unique(g[:, 1]) # all unique points for the Y coordinate
-    t_unique = np.unique(g[:, 2]) # all unique points for the t coordinate
-
-    y_grid = g[:, 3].reshape((len(x1_unique), len(x2_unique), len(t_unique)))
-
-    # Create the interpolators based on the 2D grid
-    f1 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
-    
-    # Interpolation on the grid to generate input features
-    interpolated_values = f1((g[:, 0], g[:, 1], g[:, 2]))
-
-    # Construct Xobs with only 3 features (x1, x2, t)
-    Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T
-    
-    return Xobs
+### def gen_obsdata(n): ?????
+###     """
+###     This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
+### 
+###     Args:
+###         n: number of simulation (right now is always n = 0)
+### 
+###     Returns:
+###         Xobs : n x 3 matrix which contains the spatial and temporal coordinates (input features)
+###     """
+### 
+###     global f1, f2, f3
+###     X, y = gen_testdata(n)
+###     g = np.hstack((X, y))
+###     # now we have a n x 4 matrix g with these columns: | X | Y | t | U |
+### 
+###     x1_unique = np.unique(g[:, 0]) # all unique points for the X coordinate
+###     x2_unique = np.unique(g[:, 1]) # all unique points for the Y coordinate
+###     t_unique = np.unique(g[:, 2]) # all unique points for the t coordinate
+### 
+###     y_grid = g[:, 3].reshape((len(x1_unique), len(x2_unique), len(t_unique)))
+### 
+###     # Create the interpolators based on the 2D grid
+###     f1 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
+###     
+###     # Interpolation on the grid to generate input features
+###     interpolated_values = f1((g[:, 0], g[:, 1], g[:, 2]))
+### 
+###     # Construct Xobs with only 3 features (x1, x2, t)
+###     Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T
+###     
+###     return Xobs
 
 def plot_and_metrics(model, n_test):
     """
@@ -198,45 +198,61 @@ def plot_and_metrics(model, n_test):
     Returns:
         metrics ():
     """
-    e, theta_true = gen_testdata(n_test)
-    g = gen_obsdata(n_test)
-    # print("The generated test data are: ", g)
-    theta_pred = model.predict(g)
-    # print("The predicted value will be: ", theta_pred)
+    # obtain the X,y and Xobs matrices:
+    X, y_true = gen_testdata(n_test)
+    # g = gen_obsdata(n_test) ?
+    
+    # prediction from Xobs
+    y_pred = model.predict(g)
 
-    plot_comparison(e, theta_true, theta_pred)
-    plot_l2_tf(e, theta_true, theta_pred, model)
-    # plot_tf(e, theta_true, model)
-    metrics = train.compute_metrics(theta_true, theta_pred)
+    # see the comparison between what you have predicted and the ground truth
+    plot_comparison(X, y_true, y_pred)
+
+    # ? 
+    plot_l2_tf(X, y_true, y_pred, model)
+    
+    # compute the metrics
+    metrics = train.compute_metrics(y_true, y_pred)
+
     return metrics
 
-def plot_comparison(e, theta_true, theta_pred):
+def plot_comparison(X, y_true, y_pred):
+    """
+    Creates plots for various metrics computed during training and evaluation.
+    
+    This function visualizes performance metrics such as accuracy, precision,
+    recall, F1-score, etc., providing insights into the model's performance.
+    
+    Args:
+        X (2D matrix): Input Features
+        y_true (2D matrix): Ground Truth
+        y_pred (2D matrix): Predictions
+    
+    Returns:
+        metrics ():
+    """
     cfg = HydraConfigStore.get_config()
     
-    la = len(np.unique(e[:, 0]))
-    le = len(np.unique(e[:, 1]))
+    la = len(np.unique(X[:, 0]))
+    le = len(np.unique(X[:, 1]))
     
-    # print(f"Unique e[:, 0] (la): {la}, Unique e[:, 1] (le): {le}")
-    # print(f"theta_true.size: {theta_true.size}, theta_pred.size: {theta_pred.size}")
-    # print(f"Expected size: {la * le}")
+    y_true = y_true[:la * le]
+    y_pred = y_pred[:la * le]
     
-    theta_true = theta_true[:la * le]
-    theta_pred = theta_pred[:la * le]
-    
-    assert theta_true.size == la * le, f"Theta_true size {theta_true.size} does not match expected size {la * le}"
-    assert theta_pred.size == la * le, f"Theta_pred size {theta_pred.size} does not match expected size {la * le}"
+    assert y_true.size == la * le, f"Theta_true size {y_true.size} does not match expected size {la * le}"
+    assert y_pred.size == la * le, f"Theta_pred size {y_pred.size} does not match expected size {la * le}"
     
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    im0 = axes[0].imshow(theta_true.reshape(le, la), aspect='auto', cmap='viridis')
+    im0 = axes[0].imshow(y_true.reshape(le, la), aspect='auto', cmap='viridis')
     fig.colorbar(im0, ax=axes[0])
     axes[0].set_title('True Temperature')
 
-    im1 = axes[1].imshow(theta_pred.reshape(le, la), aspect='auto', cmap='viridis')
+    im1 = axes[1].imshow(y_pred.reshape(le, la), aspect='auto', cmap='viridis')
     fig.colorbar(im1, ax=axes[1])
     axes[1].set_title('Predicted Temperature')
 
-    im2 = axes[2].imshow(np.abs(theta_true.reshape(le, la) - theta_pred.reshape(le, la)), aspect='auto', cmap='viridis')
+    im2 = axes[2].imshow(np.abs(y_true.reshape(le, la) - y_pred.reshape(le, la)), aspect='auto', cmap='viridis')
     fig.colorbar(im2, ax=axes[2])
     axes[2].set_title('Absolute Error')
 
