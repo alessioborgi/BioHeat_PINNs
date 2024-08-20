@@ -11,6 +11,7 @@ import numpy as np
 import nhbo
 import os
 import torch
+import evaluation
 
 wandb.require("core")
 # device = torch.device("cpu")
@@ -99,7 +100,7 @@ def single_observer(name_prj, run, n_test, cfg):
 
     # Rest of the function continues as before
     mo = train_model(run, cfg)
-    metrics = plots.plot_and_metrics(mo, n_test)
+    metrics = evaluation.plot_and_metrics(mo, n_test)
 
     wandb.log(metrics)
     wandb.finish()

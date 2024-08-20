@@ -127,30 +127,6 @@ def plot_loss_components(losshistory):
         plt.savefig(f"{main.figures_dir}/{cfg.run}/losses.png")
         plt.close()
 
-def gen_testdata(n):
-    """
-    This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
-
-    Args:
-        n: number of simulation (right now is always n = 0)
-
-    Returns:
-        X : n x 3 matrix which contains the spatial and temporal coordinates (input features)
-        y : n x 1 matrix which contains the solution of the PDE (ground truth)
-    """
-    
-    data = np.loadtxt(f"{main.src_dir}/data_simulations/file_2D_{n}.txt")
-    #   those are the columns inside the .txt file
-    #       | X | Y | t | U |
-    #   > X: spatial coordinate (x1)
-    #   > Y: spatial coordinate (x2)
-    #   > t: temporal coordinate
-    #   > U: solution of the equation (ground truth)
-    x1, x2, t, exact = data[:, 0], data[:, 1], data[:, 2], data[:, 3]
-    X = np.vstack((x1, x2, t)).T
-    y = exact[:, None]
-    return X, y
-
 def gen_obsdata(n):
     """
     This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
@@ -184,38 +160,6 @@ def gen_obsdata(n):
     Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T
     
     return Xobs
-
-def plot_and_metrics(model, n_test):
-    """
-    Creates plots for various metrics computed during training and evaluation.
-    
-    This function visualizes performance metrics such as accuracy, precision,
-    recall, F1-score, etc., providing insights into the model's performance.
-    
-    Args:
-        model (nhbo): Model defined in nhbo.py
-        n_test (int): Number of tests
-    
-    Returns:
-        metrics ():
-    """
-    # obtain the X,y and Xobs matrices:
-    X, y_true = gen_testdata(n_test)
-    # g = gen_obsdata(n_test)
-    
-    # prediction from Xobs
-    y_pred = model.predict(X)
-
-    # see the comparison between what you have predicted and the ground truth
-    plot_comparison(X, y_true, y_pred)
-
-    # ? 
-    plot_l2_tf(X, y_true, y_pred, model)
-    
-    # compute the metrics
-    metrics = train.compute_metrics(y_true, y_pred)
-
-    return metrics
 
 def plot_comparison(X, y_true, y_pred):
     """

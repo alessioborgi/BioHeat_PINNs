@@ -42,3 +42,32 @@ def load_data(n): # maybe this could be inserted inside utils.py
     X = np.vstack((x1, x2, t)).T
     y = exact[:, None]
     return X, y
+
+def plot_and_metrics(model, n_test):
+    """
+    This is the main function of this file. By calling this you are using each function inside the evalutation.py file.
+    Creates plots and computes some metrics.
+    
+    Args:
+        model (nhbo): Model defined in nhbo.py
+        n_test (int): Right now it specifies the .txt file (always 0)
+    
+    Returns:
+        metrics (dict): Dictionary containing various performance metrics
+    """
+    # obtain the X,y and Xobs matrices:
+    X, y_true = load_data(n_test)
+    
+    # obtain the prediction of the model
+    y_pred = model.predict(X)
+
+    # see the comparison between what you have predicted and the ground truth
+    # plot_comparison(X, y_true, y_pred)
+
+    # ? 
+    # plot_l2_tf(X, y_true, y_pred, model)
+    
+    # compute the metrics
+    metrics = train.compute_metrics(y_true, y_pred)
+
+    return metrics
