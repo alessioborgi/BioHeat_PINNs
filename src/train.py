@@ -98,9 +98,9 @@ def single_observer(name_prj, run, n_test, cfg):
     # Initialize wandb with the serializable dictionary
     wandb.init(project=name_prj, name=run, config=config_dict)
 
-    # Rest of the function continues as before
+    # Train and Evaluate
     mo = train_model(run, cfg)
-    metrics = evaluation.plot_and_metrics(mo, n_test)
+    metrics = evaluation.plots_and_metrics(mo, n_test) # right now n_test=0 (only one type of run)
 
     wandb.log(metrics)
     wandb.finish()

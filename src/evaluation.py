@@ -43,7 +43,7 @@ def load_data(n): # maybe this could be inserted inside utils.py
     y = exact[:, None]
     return X, y
 
-def plot_and_metrics(model, n_test):
+def plots_and_metrics(model, n_test):
     """
     This is the main function of this file. By calling this you are using each function inside the evalutation.py file.
     Creates plots and computes some metrics.
