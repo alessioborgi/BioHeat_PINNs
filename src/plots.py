@@ -151,38 +151,39 @@ def gen_testdata(n):
     y = exact[:, None]
     return X, y
 
-### def gen_obsdata(n): ?????
-###     """
-###     This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
-### 
-###     Args:
-###         n: number of simulation (right now is always n = 0)
-### 
-###     Returns:
-###         Xobs : n x 3 matrix which contains the spatial and temporal coordinates (input features)
-###     """
-### 
-###     global f1, f2, f3
-###     X, y = gen_testdata(n)
-###     g = np.hstack((X, y))
-###     # now we have a n x 4 matrix g with these columns: | X | Y | t | U |
-### 
-###     x1_unique = np.unique(g[:, 0]) # all unique points for the X coordinate
-###     x2_unique = np.unique(g[:, 1]) # all unique points for the Y coordinate
-###     t_unique = np.unique(g[:, 2]) # all unique points for the t coordinate
-### 
-###     y_grid = g[:, 3].reshape((len(x1_unique), len(x2_unique), len(t_unique)))
-### 
-###     # Create the interpolators based on the 2D grid
-###     f1 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
-###     
-###     # Interpolation on the grid to generate input features
-###     interpolated_values = f1((g[:, 0], g[:, 1], g[:, 2]))
-### 
-###     # Construct Xobs with only 3 features (x1, x2, t)
-###     Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T
-###     
-###     return Xobs
+def gen_obsdata(n):
+    """
+    This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
+    USELESS
+
+    Args:
+        n: number of simulation (right now is always n = 0)
+
+    Returns:
+        Xobs : n x 3 matrix which contains the spatial and temporal coordinates (input features)
+    """
+
+    global f1, f2, f3
+    X, y = gen_testdata(n)
+    g = np.hstack((X, y))
+    # now we have a n x 4 matrix g with these columns: | X | Y | t | U |
+
+    x1_unique = np.unique(g[:, 0]) # all unique points for the X coordinate
+    x2_unique = np.unique(g[:, 1]) # all unique points for the Y coordinate
+    t_unique = np.unique(g[:, 2]) # all unique points for the t coordinate
+
+    y_grid = g[:, 3].reshape((len(x1_unique), len(x2_unique), len(t_unique))) # 3D matrix
+
+    # Create the interpolators based on the 2D grid
+    f1 = RegularGridInterpolator((x1_unique, x2_unique, t_unique), y_grid, method='nearest')
+    
+    # Interpolation on the grid to generate input features
+    interpolated_values = f1((g[:, 0], g[:, 1], g[:, 2]))
+
+    # Construct Xobs with only 3 features (x1, x2, t)
+    Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T
+    
+    return Xobs
 
 def plot_and_metrics(model, n_test):
     """
@@ -200,10 +201,10 @@ def plot_and_metrics(model, n_test):
     """
     # obtain the X,y and Xobs matrices:
     X, y_true = gen_testdata(n_test)
-    # g = gen_obsdata(n_test) ?
+    # g = gen_obsdata(n_test)
     
     # prediction from Xobs
-    y_pred = model.predict(g)
+    y_pred = model.predict(X)
 
     # see the comparison between what you have predicted and the ground truth
     plot_comparison(X, y_true, y_pred)
@@ -233,6 +234,7 @@ def plot_comparison(X, y_true, y_pred):
     """
     cfg = HydraConfigStore.get_config()
     
+    # how many uniques values in X and Y coordinates
     la = len(np.unique(X[:, 0]))
     le = len(np.unique(X[:, 1]))
     
@@ -298,32 +300,32 @@ def plot_L2_norm(error, theta_true, figures_dir):
     plt.savefig(f"{figures_dir}/{cfg.run}/L2_norm.png")
     plt.close()
 
-def configure_subplot(ax, XS, surface):
-    """
-    Configures a subplot for visualizing multiple plots in a single figure.
-    
-    This function sets up the layoput, titles, labels, and other settings to
-    create a coherent and informative subplot for comparison or detailed analysis.
-    
-    Args:
-        XS (np.ndarray): The x and y coordinates for the surface plot.
-        surface (np.ndarray): The surface values to be plotted.
-        ax (matplotlib.axes._subplots.Axes3DSubplot): The subplot axis to configure.
-    
-    Returns:
-        None
-    """
-    la = len(np.unique(XS[:, 0:1]))
-    le = len(np.unique(XS[:, 1:]))
-    X = XS[:, 0].reshape(le, la)
-    T = XS[:, 1].reshape(le, la)
-
-    ax.plot_surface(X, T, surface, cmap='inferno', alpha=.8)
-    ax.tick_params(axis='both', labelsize=7, pad=2)
-    ax.dist = 10
-    ax.view_init(20, -120)
-
+# def configure_subplot(ax, XS, surface):
+    # """
+    # Configures a subplot for visualizing multiple plots in a single figure.
+    # 
+    # This function sets up the layoput, titles, labels, and other settings to
+    # create a coherent and informative subplot for comparison or detailed analysis.
+    # 
+    # Args:
+        # XS (np.ndarray): The x and y coordinates for the surface plot.
+        # surface (np.ndarray): The surface values to be plotted.
+        # ax (matplotlib.axes._subplots.Axes3DSubplot): The subplot axis to configure.
+    # 
+    # Returns:
+        # None
+    # """
+    # la = len(np.unique(XS[:, 0:1]))
+    # le = len(np.unique(XS[:, 1:]))
+    # X = XS[:, 0].reshape(le, la)
+    # T = XS[:, 1].reshape(le, la)
+# 
+    # ax.plot_surface(X, T, surface, cmap='inferno', alpha=.8)
+    # ax.tick_params(axis='both', labelsize=7, pad=2)
+    # ax.dist = 10
+    # ax.view_init(20, -120)
+# 
     # Set axis labels
-    ax.set_xlabel('Depth', fontsize=7, labelpad=-1)
-    ax.set_ylabel('Time', fontsize=7, labelpad=-1)
-    ax.set_zlabel('Theta', fontsize=7, labelpad=-4)
+    # ax.set_xlabel('Depth', fontsize=7, labelpad=-1)
+    # ax.set_ylabel('Time', fontsize=7, labelpad=-1)
+    # ax.set_zlabel('Theta', fontsize=7, labelpad=-4)
