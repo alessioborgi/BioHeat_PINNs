@@ -1,0 +1,18 @@
+{"time":"2024-08-19T16:58:42.661449295Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T16:58:42.661902461Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_165842-nhww48m9/logs/debug-core.log"}
+{"time":"2024-08-19T16:58:42.667797336Z","level":"INFO","msg":"created new stream","id":"nhww48m9"}
+{"time":"2024-08-19T16:58:42.668061795Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nhww48m9"}}
+{"time":"2024-08-19T16:58:42.668104628Z","level":"INFO","msg":"sender: started","stream_id":{"value":"nhww48m9"}}
+{"time":"2024-08-19T16:58:42.668072211Z","level":"INFO","msg":"handler: started","stream_id":{"value":"nhww48m9"}}
+{"time":"2024-08-19T16:58:43.176407128Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T16:58:43.224101712Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T16:58:44.478157296Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T16:58:44.489042129Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T16:58:44.489836504Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T16:58:44.691821462Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T16:58:44.692507337Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T16:58:44.692821171Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T16:58:46.706698088Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"nhww48m9"}}
+{"time":"2024-08-19T16:58:46.707018255Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"nhww48m9"}}
+{"time":"2024-08-19T16:58:46.706986838Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"nhww48m9"}}
+{"time":"2024-08-19T16:58:46.708167338Z","level":"INFO","msg":"closed stream","id":"nhww48m9"}

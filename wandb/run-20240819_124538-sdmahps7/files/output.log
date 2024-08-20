@@ -1,0 +1,69 @@
+Layer size is:  [3, 75, 75, 1]
+Compiling model...
+'compile' took 3.435811 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [8.14e+00, 0.00e+00, 8.34e+00, 1.37e-02, 1.44e-01, 2.43e-01]    [6.50e+00, 0.00e+00, 8.34e+00, 1.37e-02, 1.44e-01, 2.43e-01]    []
+
+Best model at step 0:
+  train loss: 1.69e+01
+  test loss: 1.52e+01
+  test metric: []
+
+'train' took 7.100732 s
+
+Compiling model...
+'compile' took 0.001387 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    [4.79e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    []
+10        [4.95e-01, 0.00e+00, 2.10e-01, 7.59e-01, 3.40e-01, 2.27e+00]    [3.95e-01, 0.00e+00, 2.10e-01, 7.59e-01, 3.40e-01, 2.27e+00]    []
+20        [1.75e-01, 0.00e+00, 3.25e-01, 5.83e-01, 3.05e-02, 2.98e-01]    [1.26e-01, 0.00e+00, 3.25e-01, 5.83e-01, 3.05e-02, 2.98e-01]    []
+30        [1.18e-01, 0.00e+00, 1.02e-01, 1.26e-01, 1.27e-01, 2.33e-02]    [9.60e-02, 0.00e+00, 1.02e-01, 1.26e-01, 1.27e-01, 2.33e-02]    []
+40        [8.08e-02, 0.00e+00, 1.27e-01, 1.41e-01, 6.24e-02, 2.00e-02]    [7.49e-02, 0.00e+00, 1.27e-01, 1.41e-01, 6.24e-02, 2.00e-02]    []
+50        [8.07e-02, 0.00e+00, 1.30e-01, 5.49e-02, 5.56e-02, 1.61e-02]    [7.74e-02, 0.00e+00, 1.30e-01, 5.49e-02, 5.56e-02, 1.61e-02]    []
+60        [7.62e-02, 0.00e+00, 1.21e-01, 3.67e-02, 4.14e-02, 1.52e-02]    [6.72e-02, 0.00e+00, 1.21e-01, 3.67e-02, 4.14e-02, 1.52e-02]    []
+70        [6.46e-02, 0.00e+00, 1.25e-01, 2.97e-02, 2.35e-02, 1.46e-02]    [6.14e-02, 0.00e+00, 1.25e-01, 2.97e-02, 2.35e-02, 1.46e-02]    []
+80        [6.00e-02, 0.00e+00, 1.24e-01, 2.60e-02, 1.63e-02, 1.50e-02]    [5.55e-02, 0.00e+00, 1.24e-01, 2.60e-02, 1.63e-02, 1.50e-02]    []
+90        [5.85e-02, 0.00e+00, 1.20e-01, 2.06e-02, 1.55e-02, 1.43e-02]    [5.39e-02, 0.00e+00, 1.20e-01, 2.06e-02, 1.55e-02, 1.43e-02]    []
+100       [5.77e-02, 0.00e+00, 1.16e-01, 1.73e-02, 1.57e-02, 1.40e-02]    [5.11e-02, 0.00e+00, 1.16e-01, 1.73e-02, 1.57e-02, 1.40e-02]    []
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+110       [5.63e-02, 0.00e+00, 1.15e-01, 1.47e-02, 1.56e-02, 1.35e-02]    [4.92e-02, 0.00e+00, 1.15e-01, 1.47e-02, 1.56e-02, 1.35e-02]    []
+120       [5.48e-02, 0.00e+00, 1.12e-01, 1.27e-02, 1.59e-02, 1.39e-02]    [4.78e-02, 0.00e+00, 1.12e-01, 1.27e-02, 1.59e-02, 1.39e-02]    []
+130       [5.30e-02, 0.00e+00, 1.12e-01, 1.11e-02, 1.53e-02, 1.33e-02]    [4.63e-02, 0.00e+00, 1.12e-01, 1.11e-02, 1.53e-02, 1.33e-02]    []
+140       [5.06e-02, 0.00e+00, 1.10e-01, 9.78e-03, 1.50e-02, 1.34e-02]    [4.48e-02, 0.00e+00, 1.10e-01, 9.78e-03, 1.50e-02, 1.34e-02]    []
+150       [4.89e-02, 0.00e+00, 1.09e-01, 8.87e-03, 1.47e-02, 1.32e-02]    [4.31e-02, 0.00e+00, 1.09e-01, 8.87e-03, 1.47e-02, 1.32e-02]    []
+160       [4.69e-02, 0.00e+00, 1.09e-01, 7.98e-03, 1.44e-02, 1.31e-02]    [4.16e-02, 0.00e+00, 1.09e-01, 7.98e-03, 1.44e-02, 1.31e-02]    []
+170       [4.50e-02, 0.00e+00, 1.08e-01, 7.00e-03, 1.43e-02, 1.30e-02]    [4.00e-02, 0.00e+00, 1.08e-01, 7.00e-03, 1.43e-02, 1.30e-02]    []
+180       [4.33e-02, 0.00e+00, 1.07e-01, 6.22e-03, 1.43e-02, 1.29e-02]    [3.88e-02, 0.00e+00, 1.07e-01, 6.22e-03, 1.43e-02, 1.29e-02]    []
+190       [4.21e-02, 0.00e+00, 1.07e-01, 5.64e-03, 1.40e-02, 1.28e-02]    [3.80e-02, 0.00e+00, 1.07e-01, 5.64e-03, 1.40e-02, 1.28e-02]    []
+200       [4.04e-02, 0.00e+00, 1.06e-01, 5.16e-03, 1.38e-02, 1.27e-02]    [3.73e-02, 0.00e+00, 1.06e-01, 5.16e-03, 1.38e-02, 1.27e-02]    []
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+210       [3.95e-02, 0.00e+00, 1.06e-01, 4.81e-03, 1.37e-02, 1.27e-02]    [3.64e-02, 0.00e+00, 1.06e-01, 4.81e-03, 1.37e-02, 1.27e-02]    []
+220       [4.09e-02, 0.00e+00, 9.93e-02, 2.54e-01, 3.22e-02, 2.09e-02]    [3.72e-02, 0.00e+00, 9.93e-02, 2.54e-01, 3.22e-02, 2.09e-02]    []
+230       [3.85e-02, 0.00e+00, 1.01e-01, 8.83e-02, 2.08e-02, 1.59e-02]    [3.52e-02, 0.00e+00, 1.01e-01, 8.83e-02, 2.08e-02, 1.59e-02]    []
+240       [3.68e-02, 0.00e+00, 1.07e-01, 3.21e-02, 1.31e-02, 1.22e-02]    [3.38e-02, 0.00e+00, 1.07e-01, 3.21e-02, 1.31e-02, 1.22e-02]    []
+250       [3.52e-02, 0.00e+00, 1.04e-01, 4.15e-03, 1.30e-02, 1.26e-02]    [3.28e-02, 0.00e+00, 1.04e-01, 4.15e-03, 1.30e-02, 1.26e-02]    []
+
+Best model at step 250:
+  train loss: 1.69e-01
+  test loss: 1.66e-01
+  test metric: []
+
+Epoch 250: saving model to ./tests/models/BioHeat_PINNs_date_time_20240819_124537/adam-250.pt ...
+
+'train' took 1463.743365 s
+
+[2024-08-19 13:10:41,798][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-19 13:10:41,831][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-19 13:10:41,854][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-19 13:10:41,879][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240819_124537/l2_tf.png

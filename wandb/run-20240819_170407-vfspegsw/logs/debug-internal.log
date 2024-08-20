@@ -1,0 +1,18 @@
+{"time":"2024-08-19T17:04:07.817374334Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-19T17:04:07.817537834Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240819_170407-vfspegsw/logs/debug-core.log"}
+{"time":"2024-08-19T17:04:07.823164501Z","level":"INFO","msg":"created new stream","id":"vfspegsw"}
+{"time":"2024-08-19T17:04:07.823449292Z","level":"INFO","msg":"sender: started","stream_id":{"value":"vfspegsw"}}
+{"time":"2024-08-19T17:04:07.823548417Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"vfspegsw"}}
+{"time":"2024-08-19T17:04:07.823440001Z","level":"INFO","msg":"handler: started","stream_id":{"value":"vfspegsw"}}
+{"time":"2024-08-19T17:04:09.466822627Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-19T17:04:09.51853996Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-19T17:04:11.204979502Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-19T17:04:11.212127169Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-19T17:04:11.213905627Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-19T17:04:11.429203711Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-19T17:04:11.429412753Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-19T17:04:11.429551544Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-19T17:04:13.47854517Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"vfspegsw"}}
+{"time":"2024-08-19T17:04:13.478672503Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"vfspegsw"}}
+{"time":"2024-08-19T17:04:13.478731795Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"vfspegsw"}}
+{"time":"2024-08-19T17:04:13.47926217Z","level":"INFO","msg":"closed stream","id":"vfspegsw"}
