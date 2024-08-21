@@ -1,6 +1,7 @@
 - Try Q (Q_met + Q_ext)
-- Restyle train.py, utils.py, plots.py
-- Restyle 1D
+- Finish evaluation.py + Delete plots.py
+- Restyle 1D 
+- Try one Run with another function (e.g t^2 instead of t for the boundary condition)
 - Update ReadMe
 - Update Report
 - Slides
