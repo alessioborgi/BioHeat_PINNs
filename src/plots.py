@@ -160,51 +160,6 @@ def gen_obsdata(n):
     Xobs = np.vstack((g[:, 0], g[:, 1], g[:, 2])).T
     
     return Xobs
-
-def plot_comparison(X, y_true, y_pred):
-    """
-    Creates plots for various metrics computed during training and evaluation.
-    
-    This function visualizes performance metrics such as accuracy, precision,
-    recall, F1-score, etc., providing insights into the model's performance.
-    
-    Args:
-        X (2D matrix): Input Features
-        y_true (2D matrix): Ground Truth
-        y_pred (2D matrix): Predictions
-    
-    Returns:
-        metrics ():
-    """
-    cfg = HydraConfigStore.get_config()
-    
-    # how many uniques values in X and Y coordinates
-    la = len(np.unique(X[:, 0]))
-    le = len(np.unique(X[:, 1]))
-    
-    y_true = y_true[:la * le]
-    y_pred = y_pred[:la * le]
-    
-    assert y_true.size == la * le, f"Theta_true size {y_true.size} does not match expected size {la * le}"
-    assert y_pred.size == la * le, f"Theta_pred size {y_pred.size} does not match expected size {la * le}"
-    
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
-
-    im0 = axes[0].imshow(y_true.reshape(le, la), aspect='auto', cmap='viridis')
-    fig.colorbar(im0, ax=axes[0])
-    axes[0].set_title('True Temperature')
-
-    im1 = axes[1].imshow(y_pred.reshape(le, la), aspect='auto', cmap='viridis')
-    fig.colorbar(im1, ax=axes[1])
-    axes[1].set_title('Predicted Temperature')
-
-    im2 = axes[2].imshow(np.abs(y_true.reshape(le, la) - y_pred.reshape(le, la)), aspect='auto', cmap='viridis')
-    fig.colorbar(im2, ax=axes[2])
-    axes[2].set_title('Absolute Error')
-
-    plt.tight_layout()
-    plt.savefig(f"{main.figures_dir}/{cfg.run}/comparison.png")
-    plt.show()
     
 def plot_L2_norm(error, theta_true, figures_dir):
     """

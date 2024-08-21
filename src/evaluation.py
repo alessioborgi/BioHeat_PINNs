@@ -43,6 +43,49 @@ def load_data(n): # maybe this could be inserted inside utils.py
     y = exact[:, None]
     return X, y
 
+
+
+def plot_comparison(X, y_true, y_pred):
+    """ 
+    Creates plots comparing the true values, predicted values, and their absolute errors.
+
+    Args:
+        X (nx3 matrix): Input features
+        y_true (nx1 matrix): Ground truth values
+        y_pred (nx1 matrix): Predicted values
+
+    Returns:
+        None
+    """
+
+    cfg = HydraConfigStore.get_config()
+
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+    # Plot Ground Truth
+
+    image0 = axes[0].imshow(y_true, aspect='auto', cmap='viridis')
+    fig.colorbar(image0, ax=axes[0])
+    axes[0].set_title('True Temperature')
+
+    # Plot Predictions
+
+    image1 = axes[1].imshow(y_pred, aspect='auto', cmap='viridis')
+    fig.colorbar(image1, ax=axes[1])
+    axes[1].set_title('Predicted Temperature')
+
+    # Plot Absolute Error
+
+    image2 = axes[2].imshow(np.abs(y_true - y_pred), aspect='auto', cmap='viridis')
+    fig.colorbar(image2, ax=axes[2])
+    axes[2].set_title('Absolute Error')
+
+    plt.tight_layout()
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/comparison.png")
+    plt.show()
+
+
+
 def plots_and_metrics(model, n_test):
     """
     This is the main function of this file. By calling this you are using each function inside the evalutation.py file.
