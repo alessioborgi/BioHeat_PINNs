@@ -112,3 +112,27 @@ def get_properties(n):
         par["L0"], par["tauf"], par["k"], par["p0"], par["d"], par["rhoc"],
         par["cb"], par["h"], par["Tmin"], par["Tmax"], par["alpha"], par["W"], par["steep"], par["tchange"]
     )
+
+f1, f2, f3 = [None]*3
+
+def mish(x):
+    return x * torch.tanh(F.softplus(x))
+
+def softplus(x):
+    return F.softplus(x)
+
+def aptx(x):
+    return (1 + torch.tanh(x)) * (x / 2)
+
+def output_transform(x, y):
+    """
+    Output transformation function.
+    
+    Args:
+        x (np.ndarray): The input coordinates.
+        y (np.ndarray): The output values.
+    
+    Returns:
+        np.ndarray: Transformed output.
+    """
+    return x[:, 0:1] * y

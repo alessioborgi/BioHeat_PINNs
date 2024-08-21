@@ -76,18 +76,6 @@ def create_nbho(name, cfg):
         conditions.right_boundary 
     )
 
-    lower_bc = dde.icbc.NeumannBC(
-        geomtime,
-        lambda x: 0,
-        conditions.lower_boundary 
-    )
-
-    upper_bc = dde.icbc.NeumannBC(
-        geomtime,
-        lambda x: 0,
-        conditions.upper_boundary 
-    )
-
     # definition of the initial condition:
 
     ic = dde.icbc.IC(
@@ -101,12 +89,11 @@ def create_nbho(name, cfg):
     data = dde.data.TimePDE(
         geomtime,
         equation.pde,
-        [left_bc, right_bc, lower_bc, upper_bc, ic],
+        [left_bc, right_bc, ic],
         num_domain=2560,    # number of training residual points sampled inside the domain
         num_boundary=200,   # number of training points sampled on the boundary
         num_initial=100,    # number of the initial residual points for the initial condition
-        num_test=10000,
-        exclusions = conditions.vertices_exclusion()
+        num_test=10000
     )
 
     # Definition of the network:
