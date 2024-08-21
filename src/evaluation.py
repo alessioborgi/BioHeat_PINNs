@@ -19,10 +19,10 @@ from configurations import HydraConfigStore
     and comparing different models or configurations.
 """
 
-def load_data(n): # maybe this could be inserted inside utils.py
+def load_test_data(n): # maybe this could be inserted inside utils.py
     """
     This function loads data from the .txt file obtained from simulations performed inside the mathematica environment.
-
+    We use them to test our Model.
     Args:
         n: number of simulation (right now is always n = 0)
 
@@ -134,7 +134,7 @@ def plots_and_metrics(model, n_test):
         metrics (dict): Dictionary containing various performance metrics
     """
     # obtain the X,y and Xobs matrices:
-    X, y_true = load_data(n_test)
+    X, y_true = load_test_data(n_test)
     
     # obtain the prediction of the model
     y_pred = model.predict(X)
