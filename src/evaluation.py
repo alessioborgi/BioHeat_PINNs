@@ -86,6 +86,41 @@ def plot_comparison(X, y_true, y_pred):
 
 
 
+def plot_time_temp(X, y_true, y_pred):
+    """ 
+    Creates plots temperature readings over time.
+
+    Args:
+        X (nx3 matrix): Input features
+        y_true (nx1 matrix): Ground truth values
+        y_pred (nx1 matrix): Predicted values
+
+    Returns:
+        None
+    """
+
+    _, axes = plt.subplots(1, 2, figsize=(15, 5))
+
+    time = X[:, 2]
+
+    # Ground Truth
+    axes[0].plot(time, y_true, color='purple', linestyle='-', marker='o')
+    axes[0].set_xlabel('Time')
+    axes[0].set_ylabel('Temperature')
+    axes[0].set_title('Ground Truth Temperature Over Time')
+
+    # Predictions
+    axes[1].plot(time, y_pred, color='green', linestyle='-', marker='o')
+    axes[1].set_xlabel('Time')
+    axes[1].set_ylabel('Temperature')
+    axes[1].set_title('Predicted Temperature Over Time')
+
+
+    plt.tight_layout()
+    plt.show()
+
+
+
 def plots_and_metrics(model, n_test):
     """
     This is the main function of this file. By calling this you are using each function inside the evalutation.py file.
