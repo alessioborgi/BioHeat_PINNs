@@ -1,0 +1,19 @@
+> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7308290/#:~:text=Constrained%20by%20empirical%20blood%20perfusion,3%20for%20cancerous%20breast%20tissue.
+
+> https://www.albahyperthermia.com/brochure_ALBAON4000D.pdf
+
+> https://www.ncbi.nlm.nih.gov/books/NBK13291/
+
+> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9143271/
+
+Alba ON 4000D|
+_____________|
+
+> fixed frequency 434 MHz (microwave)
+> heating range 41 - 43 C
+> ideal depth 4 +- 0.5 cm ---> 0.7 energy absorption efficiency (assumption)
+> power 400 W (assumption)
+
+> Q_met = 1.1E05 W/m^3 cancerous breast tissue | 2.0E04 W/m^3 normal breast tissue
+
+> Q_ext = (energy absorption * Device Power)/(cancer volume)=(400*0.7)/(0.000035)=8000000 W/m^3
