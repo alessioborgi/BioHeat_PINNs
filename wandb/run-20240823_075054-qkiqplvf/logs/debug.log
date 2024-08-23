@@ -25,3 +25,4 @@ config: {'network': {'backend': 'pytorch', 'LBFGS': True, 'learning_rate': 0.001
 2024-08-23 07:50:56,809 INFO    MainThread:24256 [wandb_run.py:_redirect():2323] Wrapping output streams.
 2024-08-23 07:50:56,809 INFO    MainThread:24256 [wandb_run.py:_redirect():2348] Redirects installed.
 2024-08-23 07:50:56,817 INFO    MainThread:24256 [wandb_init.py:init():843] run started, returning control to user process
+2024-08-23 07:59:25,078 WARNING MsgRouterThr:24256 [router.py:message_loop():77] message_loop has been closed

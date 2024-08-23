@@ -6,3 +6,12 @@
 {"time":"2024-08-23T07:50:54.932282013Z","level":"INFO","msg":"handler: started","stream_id":{"value":"qkiqplvf"}}
 {"time":"2024-08-23T07:50:55.853637596Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
 {"time":"2024-08-23T07:50:55.912166596Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-23T07:59:25.085541846Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-23T07:59:25.086465179Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-23T07:59:25.307062679Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-23T07:59:25.307662596Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-23T07:59:25.308126429Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-23T07:59:26.245368972Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"qkiqplvf"}}
+{"time":"2024-08-23T07:59:26.24642268Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"qkiqplvf"}}
+{"time":"2024-08-23T07:59:26.246044597Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"qkiqplvf"}}
+{"time":"2024-08-23T07:59:26.253491388Z","level":"INFO","msg":"closed stream","id":"qkiqplvf"}
