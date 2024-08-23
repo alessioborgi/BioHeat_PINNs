@@ -1,0 +1,74 @@
+Layer size is:  [3, 50, 50, 1]
+Compiling model...
+'compile' took 3.139880 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [5.71e+00, 0.00e+00, 6.75e-01, 4.50e-01, 3.27e-01, 6.01e-02]    [5.68e+00, 0.00e+00, 6.75e-01, 4.50e-01, 3.27e-01, 6.01e-02]    []
+
+Best model at step 0:
+  train loss: 7.22e+00
+  test loss: 7.19e+00
+  test metric: []
+
+'train' took 4.486610 s
+
+Compiling model...
+'compile' took 0.001399 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    [5.97e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    []
+3         [1.74e+00, 0.00e+00, 3.25e+00, 1.39e+00, 1.36e+00, 1.60e+00]    [1.69e+00, 0.00e+00, 3.25e+00, 1.39e+00, 1.36e+00, 1.60e+00]    []
+
+Best model at step 0:
+  train loss: 7.22e+00
+  test loss: 7.19e+00
+  test metric: []
+
+Epoch 3: saving model to ./tests/models/BioHeat_PINNs_date_time_20240821_202551/adam-3.pt ...
+
+'train' took 16.432201 s
+
+Compiling model...
+'compile' took 0.002433 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+3         [1.66e+00, 0.00e+00, 3.66e-01, 1.04e-01, 7.45e-02, 1.61e-02]    [1.61e+00, 0.00e+00, 3.66e-01, 1.04e-01, 7.45e-02, 1.61e-02]    []
+
+Best model at step 3:
+  train loss: 2.22e+00
+  test loss: 2.17e+00
+  test metric: []
+
+'train' took 4.378285 s
+
+Compiling model...
+'compile' took 0.035556 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+3         [1.74e+00, 0.00e+00, 3.25e+00, 1.39e+00, 1.36e+00, 1.60e+00]    [1.69e+00, 0.00e+00, 3.25e+00, 1.39e+00, 1.36e+00, 1.60e+00]    []
+109       [1.38e-02, 0.00e+00, 1.03e+00, 6.62e-04, 2.60e-02, 3.53e-02]    [9.58e-03, 0.00e+00, 1.03e+00, 6.62e-04, 2.60e-02, 3.53e-02]    []
+
+Best model at step 109:
+  train loss: 1.10e+00
+  test loss: 1.10e+00
+  test metric: []
+
+Epoch 109: saving model to ./tests/models/BioHeat_PINNs_date_time_20240821_202551/lbfgs-109.pt ...
+
+'train' took 478.298480 s
+
+[2024-08-21 20:34:47,505][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-21 20:34:47,532][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-21 20:34:47,554][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+[2024-08-21 20:34:47,577][matplotlib.mathtext][INFO] - Substituting symbol L from STIXNonUnicode
+Saving the image: ./tests/figures/BioHeat_PINNs_date_time_20240821_202551/l2_tf.png

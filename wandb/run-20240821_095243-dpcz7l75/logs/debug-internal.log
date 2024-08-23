@@ -1,0 +1,18 @@
+{"time":"2024-08-21T09:52:43.067920923Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T09:52:43.06813159Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_095243-dpcz7l75/logs/debug-core.log"}
+{"time":"2024-08-21T09:52:43.112605632Z","level":"INFO","msg":"created new stream","id":"dpcz7l75"}
+{"time":"2024-08-21T09:52:43.113169757Z","level":"INFO","msg":"handler: started","stream_id":{"value":"dpcz7l75"}}
+{"time":"2024-08-21T09:52:43.11331959Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"dpcz7l75"}}
+{"time":"2024-08-21T09:52:43.11334034Z","level":"INFO","msg":"sender: started","stream_id":{"value":"dpcz7l75"}}
+{"time":"2024-08-21T09:52:43.959051257Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T09:52:44.002501257Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T09:52:45.58306905Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T09:52:45.5910033Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T09:52:45.59192005Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T09:52:46.123150133Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T09:52:46.123523966Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T09:52:46.123794175Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T09:52:48.455877426Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"dpcz7l75"}}
+{"time":"2024-08-21T09:52:48.456108884Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"dpcz7l75"}}
+{"time":"2024-08-21T09:52:48.456038176Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"dpcz7l75"}}
+{"time":"2024-08-21T09:52:48.456683051Z","level":"INFO","msg":"closed stream","id":"dpcz7l75"}

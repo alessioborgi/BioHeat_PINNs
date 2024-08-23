@@ -1,0 +1,18 @@
+{"time":"2024-08-21T21:15:56.370951585Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T21:15:56.37113171Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_211556-cfd4fenb/logs/debug-core.log"}
+{"time":"2024-08-21T21:15:56.377095669Z","level":"INFO","msg":"created new stream","id":"cfd4fenb"}
+{"time":"2024-08-21T21:15:56.377407127Z","level":"INFO","msg":"handler: started","stream_id":{"value":"cfd4fenb"}}
+{"time":"2024-08-21T21:15:56.377465502Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"cfd4fenb"}}
+{"time":"2024-08-21T21:15:56.377449877Z","level":"INFO","msg":"sender: started","stream_id":{"value":"cfd4fenb"}}
+{"time":"2024-08-21T21:15:56.934481711Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T21:15:56.977821544Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T21:16:27.754452128Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T21:16:27.763952044Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T21:16:27.764975336Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T21:16:28.777479128Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T21:16:28.778028087Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T21:16:28.778394462Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T21:16:36.352514423Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"cfd4fenb"}}
+{"time":"2024-08-21T21:16:36.352753507Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"cfd4fenb"}}
+{"time":"2024-08-21T21:16:36.352708298Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"cfd4fenb"}}
+{"time":"2024-08-21T21:16:36.35471534Z","level":"INFO","msg":"closed stream","id":"cfd4fenb"}

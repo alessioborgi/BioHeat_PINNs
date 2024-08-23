@@ -1,0 +1,18 @@
+{"time":"2024-08-22T20:30:32.928502667Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T20:30:32.928693875Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_203032-yvpea45m/logs/debug-core.log"}
+{"time":"2024-08-22T20:30:32.934221417Z","level":"INFO","msg":"created new stream","id":"yvpea45m"}
+{"time":"2024-08-22T20:30:32.93454Z","level":"INFO","msg":"sender: started","stream_id":{"value":"yvpea45m"}}
+{"time":"2024-08-22T20:30:32.934623292Z","level":"INFO","msg":"handler: started","stream_id":{"value":"yvpea45m"}}
+{"time":"2024-08-22T20:30:32.934546375Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"yvpea45m"}}
+{"time":"2024-08-22T20:30:33.571911667Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T20:30:33.617501042Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T20:30:34.859512543Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T20:30:34.868834626Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T20:30:34.87007571Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T20:30:35.08418846Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T20:30:35.085444918Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T20:30:35.085914668Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T20:30:37.169641711Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"yvpea45m"}}
+{"time":"2024-08-22T20:30:37.170032086Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"yvpea45m"}}
+{"time":"2024-08-22T20:30:37.169991627Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"yvpea45m"}}
+{"time":"2024-08-22T20:30:37.171037502Z","level":"INFO","msg":"closed stream","id":"yvpea45m"}

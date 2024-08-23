@@ -1,0 +1,18 @@
+{"time":"2024-08-21T21:45:35.443520631Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T21:45:35.443732798Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_214535-jznnjoil/logs/debug-core.log"}
+{"time":"2024-08-21T21:45:35.451497798Z","level":"INFO","msg":"created new stream","id":"jznnjoil"}
+{"time":"2024-08-21T21:45:35.451940465Z","level":"INFO","msg":"sender: started","stream_id":{"value":"jznnjoil"}}
+{"time":"2024-08-21T21:45:35.451877798Z","level":"INFO","msg":"handler: started","stream_id":{"value":"jznnjoil"}}
+{"time":"2024-08-21T21:45:35.451909381Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jznnjoil"}}
+{"time":"2024-08-21T21:45:36.18928959Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T21:45:36.235213507Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T21:45:37.726987299Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T21:45:37.738704132Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T21:45:37.739899257Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T21:45:37.941152674Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T21:45:37.941938632Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T21:45:37.942452632Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T21:45:39.938045425Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"jznnjoil"}}
+{"time":"2024-08-21T21:45:39.938285467Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"jznnjoil"}}
+{"time":"2024-08-21T21:45:39.938251717Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jznnjoil"}}
+{"time":"2024-08-21T21:45:39.939313883Z","level":"INFO","msg":"closed stream","id":"jznnjoil"}

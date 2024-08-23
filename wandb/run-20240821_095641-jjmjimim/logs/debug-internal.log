@@ -1,0 +1,18 @@
+{"time":"2024-08-21T09:56:41.751045673Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T09:56:41.751251589Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_095641-jjmjimim/logs/debug-core.log"}
+{"time":"2024-08-21T09:56:41.759487714Z","level":"INFO","msg":"created new stream","id":"jjmjimim"}
+{"time":"2024-08-21T09:56:41.759843589Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jjmjimim"}}
+{"time":"2024-08-21T09:56:41.759883714Z","level":"INFO","msg":"sender: started","stream_id":{"value":"jjmjimim"}}
+{"time":"2024-08-21T09:56:41.759914089Z","level":"INFO","msg":"handler: started","stream_id":{"value":"jjmjimim"}}
+{"time":"2024-08-21T09:56:42.42274634Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T09:56:42.46714509Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T09:56:43.93398984Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T09:56:43.942903757Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T09:56:43.944593965Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T09:56:44.302785507Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T09:56:44.303087174Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T09:56:44.303241674Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T09:56:46.6084168Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"jjmjimim"}}
+{"time":"2024-08-21T09:56:46.608620925Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jjmjimim"}}
+{"time":"2024-08-21T09:56:46.608699008Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"jjmjimim"}}
+{"time":"2024-08-21T09:56:46.609871092Z","level":"INFO","msg":"closed stream","id":"jjmjimim"}

@@ -1,0 +1,75 @@
+Layer size is:  [3, 50, 50, 1]
+Compiling model...
+'compile' took 3.539819 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [5.71e+00, 0.00e+00, 6.75e-01, 4.50e-01, 3.27e-01, 6.01e-02]    [5.68e+00, 0.00e+00, 6.75e-01, 4.50e-01, 3.27e-01, 6.01e-02]    []
+
+Best model at step 0:
+  train loss: 7.22e+00
+  test loss: 7.19e+00
+  test metric: []
+
+'train' took 4.059659 s
+
+Compiling model...
+'compile' took 0.001474 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    [5.97e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    []
+10        [8.72e-01, 0.00e+00, 1.28e+00, 8.66e-01, 8.51e-01, 3.39e-01]    [8.84e-01, 0.00e+00, 1.28e+00, 8.66e-01, 8.51e-01, 3.39e-01]    []
+20        [2.39e-01, 0.00e+00, 1.14e+00, 8.82e-02, 7.29e-02, 4.65e-02]    [2.35e-01, 0.00e+00, 1.14e+00, 8.82e-02, 7.29e-02, 4.65e-02]    []
+Traceback (most recent call last):
+  File "/working_dir/./src/tuning.py", line 193, in <module>
+    main()
+  File "/opt/conda/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/working_dir/./src/tuning.py", line 99, in main
+    model, metrics = train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 101, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 64, in train_model
+    losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name)
+  File "/working_dir/src/train.py", line 124, in train_and_save_model
+    losshistory, train_state = model.train(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 22, in wrapper
+    result = f(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 657, in train
+    self._train_sgd(iterations, display_every)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 675, in _train_sgd
+    self._train_step(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 567, in _train_step
+    self.train_step(inputs, targets, auxiliary_vars)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 364, in train_step
+    self.opt.step(closure)
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/adam.py", line 146, in step
+    loss = closure()
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 361, in closure
+    total_loss.backward()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/conda/lib/python3.10/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

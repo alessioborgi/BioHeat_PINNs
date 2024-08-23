@@ -1,0 +1,1 @@
+{"activation_function":"SELU","_step":0,"iterations":20,"MAE":5.460457514207681e+65,"L2RE":0.6974402768245905,"_timestamp":1.7242736292018108e+09,"max_APE":8.095193716508313e+68,"_wandb":{"runtime":2},"MSE":0.005703334985156818,"_runtime":1.482940388,"initialization_method":"Glorot normal"}

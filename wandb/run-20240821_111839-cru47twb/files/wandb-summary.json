@@ -1,0 +1,1 @@
+{"_step":1,"L2RE":1.9085053900455409,"weighted_score":0.12457299223247842,"_runtime":3.44524488,"max_APE":5.647375368954981e+68,"weighted_array":[0.25,0.25,0.25,0.25],"MAE":4.1550143349747753e+65,"MSE":0.04270725067587338,"iterations":300,"_timestamp":1.7242391208360496e+09,"activation_function":"GELU","_wandb":{"runtime":4},"initialization_method":"He normal"}

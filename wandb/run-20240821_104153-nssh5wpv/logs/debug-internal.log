@@ -1,0 +1,18 @@
+{"time":"2024-08-21T10:41:53.697659678Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T10:41:53.697887511Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_104153-nssh5wpv/logs/debug-core.log"}
+{"time":"2024-08-21T10:41:53.715114595Z","level":"INFO","msg":"created new stream","id":"nssh5wpv"}
+{"time":"2024-08-21T10:41:53.715562928Z","level":"INFO","msg":"handler: started","stream_id":{"value":"nssh5wpv"}}
+{"time":"2024-08-21T10:41:53.715526303Z","level":"INFO","msg":"sender: started","stream_id":{"value":"nssh5wpv"}}
+{"time":"2024-08-21T10:41:53.715611511Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nssh5wpv"}}
+{"time":"2024-08-21T10:41:54.212623095Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T10:41:54.261310553Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T10:41:55.549826554Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T10:41:55.554039471Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T10:41:55.554590304Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T10:41:55.870419012Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T10:41:55.870756346Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T10:41:55.870937512Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T10:41:57.80581968Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"nssh5wpv"}}
+{"time":"2024-08-21T10:41:57.805955847Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"nssh5wpv"}}
+{"time":"2024-08-21T10:41:57.806007638Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"nssh5wpv"}}
+{"time":"2024-08-21T10:41:57.806637847Z","level":"INFO","msg":"closed stream","id":"nssh5wpv"}

@@ -1,0 +1,19 @@
+{"time":"2024-08-22T17:58:01.580309542Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T17:58:01.580469417Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_175801-uty3t5pe/logs/debug-core.log"}
+{"time":"2024-08-22T17:58:01.586155333Z","level":"INFO","msg":"created new stream","id":"uty3t5pe"}
+{"time":"2024-08-22T17:58:01.586451167Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"uty3t5pe"}}
+{"time":"2024-08-22T17:58:01.586548083Z","level":"INFO","msg":"handler: started","stream_id":{"value":"uty3t5pe"}}
+{"time":"2024-08-22T17:58:01.586450125Z","level":"INFO","msg":"sender: started","stream_id":{"value":"uty3t5pe"}}
+{"time":"2024-08-22T17:58:02.916639292Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T17:58:02.963983834Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T17:58:04.299591751Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T17:58:04.312663876Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T17:58:04.314218835Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T17:58:04.616952168Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T17:58:04.617407168Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T17:58:04.617666835Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T17:58:34.388632126Z","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-08-22T17:58:39.580694004Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"uty3t5pe"}}
+{"time":"2024-08-22T17:58:39.581039587Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"uty3t5pe"}}
+{"time":"2024-08-22T17:58:39.580974962Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"uty3t5pe"}}
+{"time":"2024-08-22T17:58:39.58171742Z","level":"INFO","msg":"closed stream","id":"uty3t5pe"}

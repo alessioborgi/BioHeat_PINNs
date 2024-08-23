@@ -1,0 +1,18 @@
+{"time":"2024-08-22T18:48:33.015631918Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T18:48:33.015845501Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_184832-nlp74vh6/logs/debug-core.log"}
+{"time":"2024-08-22T18:48:33.019724293Z","level":"INFO","msg":"created new stream","id":"nlp74vh6"}
+{"time":"2024-08-22T18:48:33.020010126Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nlp74vh6"}}
+{"time":"2024-08-22T18:48:33.020110251Z","level":"INFO","msg":"handler: started","stream_id":{"value":"nlp74vh6"}}
+{"time":"2024-08-22T18:48:33.02000496Z","level":"INFO","msg":"sender: started","stream_id":{"value":"nlp74vh6"}}
+{"time":"2024-08-22T18:48:34.385102502Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T18:48:34.437452002Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T18:48:36.120519919Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T18:48:36.128769294Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T18:48:36.129767919Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T18:48:36.638993295Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T18:48:36.639729545Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T18:48:36.640017878Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T18:48:40.29001938Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"nlp74vh6"}}
+{"time":"2024-08-22T18:48:40.290320713Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"nlp74vh6"}}
+{"time":"2024-08-22T18:48:40.290312171Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"nlp74vh6"}}
+{"time":"2024-08-22T18:48:40.29152788Z","level":"INFO","msg":"closed stream","id":"nlp74vh6"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-22T16:36:05.48009988Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T16:36:05.480315422Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_163605-ceok4ubb/logs/debug-core.log"}
+{"time":"2024-08-22T16:36:05.49282863Z","level":"INFO","msg":"created new stream","id":"ceok4ubb"}
+{"time":"2024-08-22T16:36:05.493144047Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ceok4ubb"}}
+{"time":"2024-08-22T16:36:05.493219422Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ceok4ubb"}}
+{"time":"2024-08-22T16:36:05.493214297Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ceok4ubb"}}
+{"time":"2024-08-22T16:36:06.020681922Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T16:36:06.06777563Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T16:36:07.399800714Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T16:36:07.404590048Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T16:36:07.405190589Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T16:36:07.598021131Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T16:36:07.598604256Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T16:36:07.598901215Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T16:36:09.552441132Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ceok4ubb"}}
+{"time":"2024-08-22T16:36:09.552589424Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ceok4ubb"}}
+{"time":"2024-08-22T16:36:09.552714132Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ceok4ubb"}}
+{"time":"2024-08-22T16:36:09.553340465Z","level":"INFO","msg":"closed stream","id":"ceok4ubb"}

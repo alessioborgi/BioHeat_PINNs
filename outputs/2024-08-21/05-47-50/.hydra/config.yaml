@@ -1,0 +1,18 @@
+network:
+  backend: pytorch
+  LBFGS: true
+  learning_rate: 0.001
+  num_dense_layers: 2
+  num_dense_nodes: 50
+  output_injection_gain: 100
+  resampling: true
+  resampler_period: 50
+  initial_weights_regularizer: true
+  activation: ???
+  iterations: ???
+  initialization: ???
+tuning:
+  num_trials: 2
+  study_name: BioHeat_Tuning_Study
+  direction: minimize
+run: BioHeat_PINNs_date_time_${now:%Y%m%d_%H%M%S}

@@ -1,0 +1,18 @@
+{"time":"2024-08-21T10:27:49.829187593Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T10:27:49.829408676Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_102749-kmz25gle/logs/debug-core.log"}
+{"time":"2024-08-21T10:27:49.836527135Z","level":"INFO","msg":"created new stream","id":"kmz25gle"}
+{"time":"2024-08-21T10:27:49.836909593Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"kmz25gle"}}
+{"time":"2024-08-21T10:27:49.83691126Z","level":"INFO","msg":"sender: started","stream_id":{"value":"kmz25gle"}}
+{"time":"2024-08-21T10:27:49.837028301Z","level":"INFO","msg":"handler: started","stream_id":{"value":"kmz25gle"}}
+{"time":"2024-08-21T10:27:50.432498885Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T10:27:50.479531052Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T10:27:51.834380969Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T10:27:51.839189802Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T10:27:51.839707136Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T10:27:52.040205761Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T10:27:52.040380969Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T10:27:52.040482636Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T10:27:54.525524637Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"kmz25gle"}}
+{"time":"2024-08-21T10:27:54.525895679Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"kmz25gle"}}
+{"time":"2024-08-21T10:27:54.525854137Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"kmz25gle"}}
+{"time":"2024-08-21T10:27:54.527028804Z","level":"INFO","msg":"closed stream","id":"kmz25gle"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-22T20:03:20.162273884Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T20:03:20.16255755Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_200320-imax4gqc/logs/debug-core.log"}
+{"time":"2024-08-22T20:03:20.170984384Z","level":"INFO","msg":"created new stream","id":"imax4gqc"}
+{"time":"2024-08-22T20:03:20.171294009Z","level":"INFO","msg":"sender: started","stream_id":{"value":"imax4gqc"}}
+{"time":"2024-08-22T20:03:20.171301509Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"imax4gqc"}}
+{"time":"2024-08-22T20:03:20.171365592Z","level":"INFO","msg":"handler: started","stream_id":{"value":"imax4gqc"}}
+{"time":"2024-08-22T20:03:20.663667217Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T20:03:20.709657176Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T20:03:53.142356552Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T20:03:53.155229093Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T20:03:53.15669226Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T20:03:53.724983135Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T20:03:53.725631052Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T20:03:53.725925135Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T20:03:55.885036136Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"imax4gqc"}}
+{"time":"2024-08-22T20:03:55.885192428Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"imax4gqc"}}
+{"time":"2024-08-22T20:03:55.885308178Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"imax4gqc"}}
+{"time":"2024-08-22T20:03:55.885998595Z","level":"INFO","msg":"closed stream","id":"imax4gqc"}

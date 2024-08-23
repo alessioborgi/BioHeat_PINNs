@@ -1,0 +1,18 @@
+{"time":"2024-08-21T09:38:06.027275003Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T09:38:06.027461628Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_093805-wepdna4s/logs/debug-core.log"}
+{"time":"2024-08-21T09:38:06.039104837Z","level":"INFO","msg":"created new stream","id":"wepdna4s"}
+{"time":"2024-08-21T09:38:06.039540962Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wepdna4s"}}
+{"time":"2024-08-21T09:38:06.03959267Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wepdna4s"}}
+{"time":"2024-08-21T09:38:06.039640295Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wepdna4s"}}
+{"time":"2024-08-21T09:38:06.512224587Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T09:38:06.557096379Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T09:38:08.72374588Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T09:38:08.737155921Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T09:38:08.738333421Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T09:38:08.96602838Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T09:38:08.96893563Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T09:38:08.96952188Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T09:38:11.716085506Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wepdna4s"}}
+{"time":"2024-08-21T09:38:11.716272339Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wepdna4s"}}
+{"time":"2024-08-21T09:38:11.716226506Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wepdna4s"}}
+{"time":"2024-08-21T09:38:11.717310131Z","level":"INFO","msg":"closed stream","id":"wepdna4s"}

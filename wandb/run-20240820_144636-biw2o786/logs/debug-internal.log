@@ -1,0 +1,18 @@
+{"time":"2024-08-20T14:46:36.558916637Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-20T14:46:36.559510512Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240820_144636-biw2o786/logs/debug-core.log"}
+{"time":"2024-08-20T14:46:36.580981137Z","level":"INFO","msg":"created new stream","id":"biw2o786"}
+{"time":"2024-08-20T14:46:36.581320054Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"biw2o786"}}
+{"time":"2024-08-20T14:46:36.581401679Z","level":"INFO","msg":"handler: started","stream_id":{"value":"biw2o786"}}
+{"time":"2024-08-20T14:46:36.581395346Z","level":"INFO","msg":"sender: started","stream_id":{"value":"biw2o786"}}
+{"time":"2024-08-20T14:46:37.398748929Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-20T14:46:37.445788304Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-20T14:47:19.692408838Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-20T14:47:19.703851171Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-20T14:47:19.704886463Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-20T14:47:19.935666629Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-20T14:47:19.936205213Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-20T14:47:19.936549213Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-20T14:47:22.283544881Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"biw2o786"}}
+{"time":"2024-08-20T14:47:22.283786672Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"biw2o786"}}
+{"time":"2024-08-20T14:47:22.283783214Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"biw2o786"}}
+{"time":"2024-08-20T14:47:22.284760506Z","level":"INFO","msg":"closed stream","id":"biw2o786"}

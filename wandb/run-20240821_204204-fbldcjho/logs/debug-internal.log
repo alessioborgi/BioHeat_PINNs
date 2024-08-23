@@ -1,0 +1,18 @@
+{"time":"2024-08-21T20:42:04.840106173Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T20:42:04.840280173Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_204204-fbldcjho/logs/debug-core.log"}
+{"time":"2024-08-21T20:42:04.846077756Z","level":"INFO","msg":"created new stream","id":"fbldcjho"}
+{"time":"2024-08-21T20:42:04.846371131Z","level":"INFO","msg":"sender: started","stream_id":{"value":"fbldcjho"}}
+{"time":"2024-08-21T20:42:04.846400881Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"fbldcjho"}}
+{"time":"2024-08-21T20:42:04.846453173Z","level":"INFO","msg":"handler: started","stream_id":{"value":"fbldcjho"}}
+{"time":"2024-08-21T20:42:05.536666465Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T20:42:05.582933423Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T20:42:39.12067705Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T20:42:39.12884805Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T20:42:39.131207217Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T20:42:39.386682633Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T20:42:39.387331342Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T20:42:39.38771305Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T20:42:41.885605093Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"fbldcjho"}}
+{"time":"2024-08-21T20:42:41.885765426Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"fbldcjho"}}
+{"time":"2024-08-21T20:42:41.885813093Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"fbldcjho"}}
+{"time":"2024-08-21T20:42:41.886886801Z","level":"INFO","msg":"closed stream","id":"fbldcjho"}

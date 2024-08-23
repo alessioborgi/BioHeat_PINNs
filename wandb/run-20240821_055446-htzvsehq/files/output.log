@@ -1,0 +1,140 @@
+Layer size is:  [3, 50, 50, 1]
+Compiling model...
+'compile' took 3.087172 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [5.71e+00, 0.00e+00, 6.75e-01, 4.50e-01, 3.27e-01, 6.01e-02]    [5.68e+00, 0.00e+00, 6.75e-01, 4.50e-01, 3.27e-01, 6.01e-02]    []
+
+Best model at step 0:
+  train loss: 7.22e+00
+  test loss: 7.19e+00
+  test metric: []
+
+'train' took 3.751062 s
+
+Compiling model...
+'compile' took 0.001191 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+0         [6.00e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    [5.97e+00, 0.00e+00, 6.00e+00, 6.00e+00, 6.00e+00, 6.00e+00]    []
+10        [8.72e-01, 0.00e+00, 1.28e+00, 8.66e-01, 8.51e-01, 3.39e-01]    [8.84e-01, 0.00e+00, 1.28e+00, 8.66e-01, 8.51e-01, 3.39e-01]    []
+20        [2.39e-01, 0.00e+00, 1.14e+00, 8.82e-02, 7.29e-02, 4.65e-02]    [2.35e-01, 0.00e+00, 1.14e+00, 8.82e-02, 7.29e-02, 4.65e-02]    []
+30        [2.46e-01, 0.00e+00, 1.19e+00, 7.37e-02, 2.21e-01, 2.18e-01]    [2.43e-01, 0.00e+00, 1.19e+00, 7.37e-02, 2.21e-01, 2.18e-01]    []
+40        [9.38e-02, 0.00e+00, 1.11e+00, 7.97e-02, 9.23e-02, 6.17e-02]    [8.92e-02, 0.00e+00, 1.11e+00, 7.97e-02, 9.23e-02, 6.17e-02]    []
+50        [6.33e-02, 0.00e+00, 1.07e+00, 2.05e-03, 5.81e-02, 7.17e-02]    [6.36e-02, 0.00e+00, 1.07e+00, 2.05e-03, 5.81e-02, 7.17e-02]    []
+
+Best model at step 50:
+  train loss: 1.27e+00
+  test loss: 1.27e+00
+  test metric: []
+
+Epoch 50: saving model to ./tests/models/BioHeat_PINNs_date_time_20240821_055444/adam-50.pt ...
+
+'train' took 184.991761 s
+
+Compiling model...
+'compile' took 0.002271 s
+
+Training model...
+
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Warning: Rectangle boundary_normal called on vertices. You may use PDE(..., exclusions=...) to exclude the vertices.
+Step      Train loss                                                      Test loss                                                       Test metric
+50        [6.04e-02, 0.00e+00, 1.21e-01, 1.54e-04, 3.17e-03, 7.18e-04]    [6.05e-02, 0.00e+00, 1.21e-01, 1.54e-04, 3.17e-03, 7.18e-04]    []
+
+Best model at step 50:
+  train loss: 1.85e-01
+  test loss: 1.85e-01
+  test metric: []
+
+'train' took 3.673441 s
+/working_dir/src/train.py:68: RuntimeWarning: divide by zero encountered in divide
+  loss_weights = len(initial_losses) / initial_losses
+
+Compiling model...
+'compile' took 0.002992 s
+
+Training model...
+
+Step      Train loss                                                      Test loss                                                       Test metric
+50        [6.35e-02, nan, 1.07e+00, 2.05e-03, 5.81e-02, 7.17e-02]         [6.36e-02, nan, 1.07e+00, 2.05e-03, 5.81e-02, 7.17e-02]         []
+Traceback (most recent call last):
+  File "/working_dir/./src/tuning.py", line 193, in <module>
+    main()
+  File "/opt/conda/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/opt/conda/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/working_dir/./src/tuning.py", line 99, in main
+    model, metrics = train.single_observer(prj, cfg.run, "0", cfg)
+  File "/working_dir/src/train.py", line 101, in single_observer
+    mo = train_model(run, cfg)
+  File "/working_dir/src/train.py", line 73, in train_model
+    losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs", name)
+  File "/working_dir/src/train.py", line 124, in train_and_save_model
+    losshistory, train_state = model.train(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/utils/internal.py", line 22, in wrapper
+    result = f(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 651, in train
+    self._train_pytorch_lbfgs()
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 773, in _train_pytorch_lbfgs
+    self._train_step(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 567, in _train_step
+    self.train_step(inputs, targets, auxiliary_vars)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 364, in train_step
+    self.opt.step(closure)
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/lbfgs.py", line 428, in step
+    loss, flat_grad, t, ls_func_evals = _strong_wolfe(
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/lbfgs.py", line 99, in _strong_wolfe
+    f_new, g_new = obj_func(x, t, d)
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/lbfgs.py", line 426, in obj_func
+    return self._directional_evaluate(closure, x, t, d)
+  File "/opt/conda/lib/python3.10/site-packages/torch/optim/lbfgs.py", line 280, in _directional_evaluate
+    loss = float(closure())
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 358, in closure
+    losses = outputs_losses_train(inputs, targets, auxiliary_vars)[1]
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 322, in outputs_losses_train
+    return outputs_losses(
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/model.py", line 310, in outputs_losses
+    losses = losses_fn(targets, outputs_, loss_fn, inputs, self, aux=aux)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/data.py", line 13, in losses_train
+    return self.losses(targets, outputs, loss_fn, inputs, model, aux=aux)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/data/pde.py", line 149, in losses
+    f = self.pde(inputs, outputs_pde)
+  File "/working_dir/src/equation.py", line 36, in pde
+    du_yy = dde.grad.hessian(u, x, i=0, j=1) # second derivative with respect to y coordinate
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/gradients/gradients.py", line 61, in hessian
+    return gradients_reverse.hessian(ys, xs, component=component, i=i, j=j)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/gradients/gradients_reverse.py", line 140, in hessian
+    return hessian._Hessians(ys, xs, component=component, i=i, j=j)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/gradients/gradients_reverse.py", line 132, in __call__
+    return self.Hs[key](i, j)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/gradients/gradients_reverse.py", line 109, in __call__
+    return self.H(j, i)
+  File "/opt/conda/lib/python3.10/site-packages/deepxde/gradients/gradients_reverse.py", line 29, in __call__
+    self.J[i] = torch.autograd.grad(
+  File "/opt/conda/lib/python3.10/site-packages/torch/autograd/__init__.py", line 411, in grad
+    result = Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

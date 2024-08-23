@@ -1,0 +1,18 @@
+{"time":"2024-08-21T09:32:51.842253261Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T09:32:51.842421553Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_093251-ukxvstdj/logs/debug-core.log"}
+{"time":"2024-08-21T09:32:51.847996803Z","level":"INFO","msg":"created new stream","id":"ukxvstdj"}
+{"time":"2024-08-21T09:32:51.848323261Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ukxvstdj"}}
+{"time":"2024-08-21T09:32:51.848275553Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ukxvstdj"}}
+{"time":"2024-08-21T09:32:51.848305011Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ukxvstdj"}}
+{"time":"2024-08-21T09:32:52.354429386Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T09:32:52.400549553Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T09:33:25.505161679Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T09:33:25.516486721Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T09:33:25.518035888Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T09:33:25.750185763Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T09:33:25.756272263Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T09:33:25.757125929Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T09:33:27.728148389Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ukxvstdj"}}
+{"time":"2024-08-21T09:33:27.72828843Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ukxvstdj"}}
+{"time":"2024-08-21T09:33:27.728396472Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ukxvstdj"}}
+{"time":"2024-08-21T09:33:27.729169639Z","level":"INFO","msg":"closed stream","id":"ukxvstdj"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-22T20:30:23.405072677Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T20:30:23.405274802Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_203023-godf585a/logs/debug-core.log"}
+{"time":"2024-08-22T20:30:23.41103451Z","level":"INFO","msg":"created new stream","id":"godf585a"}
+{"time":"2024-08-22T20:30:23.411346093Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"godf585a"}}
+{"time":"2024-08-22T20:30:23.411342927Z","level":"INFO","msg":"sender: started","stream_id":{"value":"godf585a"}}
+{"time":"2024-08-22T20:30:23.41139251Z","level":"INFO","msg":"handler: started","stream_id":{"value":"godf585a"}}
+{"time":"2024-08-22T20:30:24.204292802Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T20:30:24.255666594Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T20:30:25.509439053Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T20:30:25.521074094Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T20:30:25.522262594Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T20:30:25.740472553Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T20:30:25.741065928Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T20:30:25.741310969Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T20:30:28.359690721Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"godf585a"}}
+{"time":"2024-08-22T20:30:28.359952137Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"godf585a"}}
+{"time":"2024-08-22T20:30:28.360006096Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"godf585a"}}
+{"time":"2024-08-22T20:30:28.360787012Z","level":"INFO","msg":"closed stream","id":"godf585a"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-22T20:29:50.11839105Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T20:29:50.118574592Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_202950-tc53u1wn/logs/debug-core.log"}
+{"time":"2024-08-22T20:29:50.152080592Z","level":"INFO","msg":"created new stream","id":"tc53u1wn"}
+{"time":"2024-08-22T20:29:50.152834467Z","level":"INFO","msg":"sender: started","stream_id":{"value":"tc53u1wn"}}
+{"time":"2024-08-22T20:29:50.152860092Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tc53u1wn"}}
+{"time":"2024-08-22T20:29:50.152968508Z","level":"INFO","msg":"handler: started","stream_id":{"value":"tc53u1wn"}}
+{"time":"2024-08-22T20:29:50.980012717Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T20:29:51.024562176Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T20:29:52.606109885Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T20:29:52.616149093Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T20:29:52.61827226Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T20:29:52.915917051Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T20:29:52.916218093Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T20:29:52.916332926Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T20:29:55.107237803Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"tc53u1wn"}}
+{"time":"2024-08-22T20:29:55.107371428Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"tc53u1wn"}}
+{"time":"2024-08-22T20:29:55.107451011Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"tc53u1wn"}}
+{"time":"2024-08-22T20:29:55.108000178Z","level":"INFO","msg":"closed stream","id":"tc53u1wn"}

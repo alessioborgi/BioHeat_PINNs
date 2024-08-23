@@ -1,0 +1,18 @@
+{"time":"2024-08-21T10:29:11.057630589Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T10:29:11.057900089Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_102911-wgv33prm/logs/debug-core.log"}
+{"time":"2024-08-21T10:29:11.064167964Z","level":"INFO","msg":"created new stream","id":"wgv33prm"}
+{"time":"2024-08-21T10:29:11.064488547Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wgv33prm"}}
+{"time":"2024-08-21T10:29:11.064510505Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wgv33prm"}}
+{"time":"2024-08-21T10:29:11.06456988Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wgv33prm"}}
+{"time":"2024-08-21T10:29:11.641893797Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T10:29:11.692509756Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T10:29:13.222267881Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T10:29:13.228522798Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T10:29:13.229539923Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T10:29:13.452929965Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T10:29:13.453447173Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T10:29:13.453839465Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T10:29:15.756032341Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wgv33prm"}}
+{"time":"2024-08-21T10:29:15.756187424Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wgv33prm"}}
+{"time":"2024-08-21T10:29:15.756265966Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wgv33prm"}}
+{"time":"2024-08-21T10:29:15.756884216Z","level":"INFO","msg":"closed stream","id":"wgv33prm"}

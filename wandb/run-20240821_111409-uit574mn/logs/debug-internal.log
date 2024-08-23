@@ -1,0 +1,18 @@
+{"time":"2024-08-21T11:14:09.561548921Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T11:14:09.561729171Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_111409-uit574mn/logs/debug-core.log"}
+{"time":"2024-08-21T11:14:09.56551013Z","level":"INFO","msg":"created new stream","id":"uit574mn"}
+{"time":"2024-08-21T11:14:09.565735838Z","level":"INFO","msg":"handler: started","stream_id":{"value":"uit574mn"}}
+{"time":"2024-08-21T11:14:09.565846255Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"uit574mn"}}
+{"time":"2024-08-21T11:14:09.565821005Z","level":"INFO","msg":"sender: started","stream_id":{"value":"uit574mn"}}
+{"time":"2024-08-21T11:14:09.993543421Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T11:14:10.043274296Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T11:14:40.55290063Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T11:14:40.559974297Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T11:14:40.560990463Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T11:14:40.757625213Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T11:14:40.757819005Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T11:14:40.757938713Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T11:14:42.716381298Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"uit574mn"}}
+{"time":"2024-08-21T11:14:42.716761173Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"uit574mn"}}
+{"time":"2024-08-21T11:14:42.716619256Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"uit574mn"}}
+{"time":"2024-08-21T11:14:42.717444381Z","level":"INFO","msg":"closed stream","id":"uit574mn"}

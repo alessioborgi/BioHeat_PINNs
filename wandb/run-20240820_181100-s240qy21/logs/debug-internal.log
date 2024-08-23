@@ -1,0 +1,18 @@
+{"time":"2024-08-20T18:11:00.84929493Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-20T18:11:00.849450805Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240820_181100-s240qy21/logs/debug-core.log"}
+{"time":"2024-08-20T18:11:00.862570888Z","level":"INFO","msg":"created new stream","id":"s240qy21"}
+{"time":"2024-08-20T18:11:00.862825555Z","level":"INFO","msg":"handler: started","stream_id":{"value":"s240qy21"}}
+{"time":"2024-08-20T18:11:00.862852722Z","level":"INFO","msg":"sender: started","stream_id":{"value":"s240qy21"}}
+{"time":"2024-08-20T18:11:00.86293443Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"s240qy21"}}
+{"time":"2024-08-20T18:11:01.336785722Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-20T18:11:01.388812139Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-20T18:11:30.97124143Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-20T18:11:30.98139168Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-20T18:11:30.982293847Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-20T18:11:31.182554972Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-20T18:11:31.183454264Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-20T18:11:31.18376143Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-20T18:11:33.155476709Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"s240qy21"}}
+{"time":"2024-08-20T18:11:33.155686959Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"s240qy21"}}
+{"time":"2024-08-20T18:11:33.155722834Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"s240qy21"}}
+{"time":"2024-08-20T18:11:33.156672709Z","level":"INFO","msg":"closed stream","id":"s240qy21"}

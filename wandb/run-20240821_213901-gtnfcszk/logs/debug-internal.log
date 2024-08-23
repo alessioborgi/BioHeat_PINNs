@@ -1,0 +1,18 @@
+{"time":"2024-08-21T21:39:01.484335379Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T21:39:01.484544463Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_213901-gtnfcszk/logs/debug-core.log"}
+{"time":"2024-08-21T21:39:01.491246796Z","level":"INFO","msg":"created new stream","id":"gtnfcszk"}
+{"time":"2024-08-21T21:39:01.491536046Z","level":"INFO","msg":"sender: started","stream_id":{"value":"gtnfcszk"}}
+{"time":"2024-08-21T21:39:01.491609671Z","level":"INFO","msg":"handler: started","stream_id":{"value":"gtnfcszk"}}
+{"time":"2024-08-21T21:39:01.491572421Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"gtnfcszk"}}
+{"time":"2024-08-21T21:39:02.12377538Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T21:39:02.168386505Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T21:39:03.503256089Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T21:39:03.512138672Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T21:39:03.513462214Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T21:39:03.741101172Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T21:39:03.741881839Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T21:39:03.74237513Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T21:39:06.064879423Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"gtnfcszk"}}
+{"time":"2024-08-21T21:39:06.065205923Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"gtnfcszk"}}
+{"time":"2024-08-21T21:39:06.065200048Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"gtnfcszk"}}
+{"time":"2024-08-21T21:39:06.066186715Z","level":"INFO","msg":"closed stream","id":"gtnfcszk"}

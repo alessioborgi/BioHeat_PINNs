@@ -1,0 +1,18 @@
+{"time":"2024-08-20T18:16:36.401641752Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-20T18:16:36.401817085Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240820_181636-iwxdk605/logs/debug-core.log"}
+{"time":"2024-08-20T18:16:36.409884877Z","level":"INFO","msg":"created new stream","id":"iwxdk605"}
+{"time":"2024-08-20T18:16:36.410174502Z","level":"INFO","msg":"sender: started","stream_id":{"value":"iwxdk605"}}
+{"time":"2024-08-20T18:16:36.410134793Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"iwxdk605"}}
+{"time":"2024-08-20T18:16:36.410126127Z","level":"INFO","msg":"handler: started","stream_id":{"value":"iwxdk605"}}
+{"time":"2024-08-20T18:16:36.908869252Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-20T18:16:36.957488169Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-20T18:16:38.158846128Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-20T18:16:38.170082419Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-20T18:16:38.172090919Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-20T18:16:38.365248419Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-20T18:16:38.365552836Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-20T18:16:38.365731461Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-20T18:16:40.434994962Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"iwxdk605"}}
+{"time":"2024-08-20T18:16:40.43523892Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"iwxdk605"}}
+{"time":"2024-08-20T18:16:40.435219712Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"iwxdk605"}}
+{"time":"2024-08-20T18:16:40.43627867Z","level":"INFO","msg":"closed stream","id":"iwxdk605"}

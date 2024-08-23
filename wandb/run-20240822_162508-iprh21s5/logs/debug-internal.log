@@ -1,0 +1,18 @@
+{"time":"2024-08-22T16:25:08.249279965Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T16:25:08.249621673Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_162508-iprh21s5/logs/debug-core.log"}
+{"time":"2024-08-22T16:25:08.275747132Z","level":"INFO","msg":"created new stream","id":"iprh21s5"}
+{"time":"2024-08-22T16:25:08.27974359Z","level":"INFO","msg":"handler: started","stream_id":{"value":"iprh21s5"}}
+{"time":"2024-08-22T16:25:08.279656257Z","level":"INFO","msg":"sender: started","stream_id":{"value":"iprh21s5"}}
+{"time":"2024-08-22T16:25:08.278465715Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"iprh21s5"}}
+{"time":"2024-08-22T16:25:09.161026299Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T16:25:09.213681215Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T16:34:29.745222252Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T16:34:29.757420752Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T16:34:29.759180086Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T16:34:29.983310878Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T16:34:29.983878919Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T16:34:29.984157169Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T16:34:32.122408462Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"iprh21s5"}}
+{"time":"2024-08-22T16:34:32.12282967Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"iprh21s5"}}
+{"time":"2024-08-22T16:34:32.12307492Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"iprh21s5"}}
+{"time":"2024-08-22T16:34:32.124349087Z","level":"INFO","msg":"closed stream","id":"iprh21s5"}

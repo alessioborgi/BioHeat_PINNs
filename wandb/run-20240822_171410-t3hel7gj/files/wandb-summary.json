@@ -1,0 +1,1 @@
+{"initialization_method":"Glorot normal","iterations":3,"MSE":0.003276420860117474,"MAE":3.852947916391969e+65,"activation_function":"tanh","_step":0,"_wandb":{"runtime":2},"_timestamp":1.7243468515019968e+09,"L2RE":0.528618581417117,"max_APE":6.782811134723052e+68,"_runtime":1.362291425}

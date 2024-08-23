@@ -1,0 +1,18 @@
+{"time":"2024-08-22T20:06:35.17696146Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T20:06:35.177172918Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_200635-ejmen0po/logs/debug-core.log"}
+{"time":"2024-08-22T20:06:35.182575585Z","level":"INFO","msg":"created new stream","id":"ejmen0po"}
+{"time":"2024-08-22T20:06:35.183057376Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ejmen0po"}}
+{"time":"2024-08-22T20:06:35.183192251Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ejmen0po"}}
+{"time":"2024-08-22T20:06:35.183192793Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ejmen0po"}}
+{"time":"2024-08-22T20:06:35.688380668Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T20:06:35.737217377Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T20:06:36.978974252Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T20:06:36.992783127Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T20:06:36.994211961Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T20:06:37.218288002Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T20:06:37.218920419Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T20:06:37.219336794Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T20:06:39.298452878Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ejmen0po"}}
+{"time":"2024-08-22T20:06:39.298705503Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ejmen0po"}}
+{"time":"2024-08-22T20:06:39.298714545Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ejmen0po"}}
+{"time":"2024-08-22T20:06:39.299612712Z","level":"INFO","msg":"closed stream","id":"ejmen0po"}

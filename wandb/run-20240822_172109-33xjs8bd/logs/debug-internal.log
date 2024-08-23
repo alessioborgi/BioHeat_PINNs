@@ -1,0 +1,21 @@
+{"time":"2024-08-22T17:21:09.962391629Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T17:21:09.962584504Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_172109-33xjs8bd/logs/debug-core.log"}
+{"time":"2024-08-22T17:21:09.967664588Z","level":"INFO","msg":"created new stream","id":"33xjs8bd"}
+{"time":"2024-08-22T17:21:09.967911171Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"33xjs8bd"}}
+{"time":"2024-08-22T17:21:09.967907921Z","level":"INFO","msg":"handler: started","stream_id":{"value":"33xjs8bd"}}
+{"time":"2024-08-22T17:21:09.968194338Z","level":"INFO","msg":"sender: started","stream_id":{"value":"33xjs8bd"}}
+{"time":"2024-08-22T17:21:10.473413546Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T17:21:10.525367421Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T17:21:45.811336924Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T17:21:45.82012809Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T17:21:45.82109584Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T17:21:46.834026549Z","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-08-22T17:21:46.834026674Z","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-08-22T17:21:49.971238092Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T17:21:49.971947759Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T17:21:49.972302967Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T17:21:50.193008467Z","level":"ERROR","msg":"request failed","error":"Put \"https://storage.googleapis.com/wandb-production.appspot.com/adavit/BioHeat_PINNs/33xjs8bd/wandb-summary.json?Expires=1724434663&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=CD57H2mUrLm25%2BRmnnb4HGs2R1kDAuZSsKyVV4PXsg%2FodX%2FoFLcZOcpm0aqPUeCp%2FxwX8nO7LHJZhQSlpOU5li0XFgMuwJTqqgGOhrgd%2FOSoNgmJNmD%2Bm0dVYG0j8IftJqQbjtjPV36agzVO0JvN1ZIpLNU1p83ANZcKCYOB8%2BbDC4DPDnRB%2BPL8eXD3PWeNg1QwQEDev9tYEs3%2F%2FoIC6sbcu21kwSU5h83%2BCRjtYA1GdSSkEPK1%2Bz7wSY3gANiag3usTohTmhzl0nodGP9hBdT%2BHEue6xQO2fmzj7N1qEHCJehl2OEaDW3Pchoni8vmoIucW1mbBZv9KNqdyXsP7g%3D%3D\": unexpected EOF","method":"PUT","url":"https://storage.googleapis.com/wandb-production.appspot.com/adavit/BioHeat_PINNs/33xjs8bd/wandb-summary.json?Expires=1724434663&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=CD57H2mUrLm25%2BRmnnb4HGs2R1kDAuZSsKyVV4PXsg%2FodX%2FoFLcZOcpm0aqPUeCp%2FxwX8nO7LHJZhQSlpOU5li0XFgMuwJTqqgGOhrgd%2FOSoNgmJNmD%2Bm0dVYG0j8IftJqQbjtjPV36agzVO0JvN1ZIpLNU1p83ANZcKCYOB8%2BbDC4DPDnRB%2BPL8eXD3PWeNg1QwQEDev9tYEs3%2F%2FoIC6sbcu21kwSU5h83%2BCRjtYA1GdSSkEPK1%2Bz7wSY3gANiag3usTohTmhzl0nodGP9hBdT%2BHEue6xQO2fmzj7N1qEHCJehl2OEaDW3Pchoni8vmoIucW1mbBZv9KNqdyXsP7g%3D%3D"}
+{"time":"2024-08-22T17:21:55.164381803Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"33xjs8bd"}}
+{"time":"2024-08-22T17:21:55.164548511Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"33xjs8bd"}}
+{"time":"2024-08-22T17:21:55.164525053Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"33xjs8bd"}}
+{"time":"2024-08-22T17:21:55.16554372Z","level":"INFO","msg":"closed stream","id":"33xjs8bd"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-22T18:47:41.844100214Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T18:47:41.844300339Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_184741-vumsrs6a/logs/debug-core.log"}
+{"time":"2024-08-22T18:47:41.84967788Z","level":"INFO","msg":"created new stream","id":"vumsrs6a"}
+{"time":"2024-08-22T18:47:41.849979964Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"vumsrs6a"}}
+{"time":"2024-08-22T18:47:41.849940422Z","level":"INFO","msg":"handler: started","stream_id":{"value":"vumsrs6a"}}
+{"time":"2024-08-22T18:47:41.850075422Z","level":"INFO","msg":"sender: started","stream_id":{"value":"vumsrs6a"}}
+{"time":"2024-08-22T18:47:42.735129673Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T18:47:42.779427048Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T18:47:45.25687509Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T18:47:45.268576924Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T18:47:45.269713549Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T18:47:46.119239341Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T18:47:46.119731632Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T18:47:46.120068841Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T18:47:49.484039467Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"vumsrs6a"}}
+{"time":"2024-08-22T18:47:49.484249676Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"vumsrs6a"}}
+{"time":"2024-08-22T18:47:49.484332467Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"vumsrs6a"}}
+{"time":"2024-08-22T18:47:49.485488176Z","level":"INFO","msg":"closed stream","id":"vumsrs6a"}

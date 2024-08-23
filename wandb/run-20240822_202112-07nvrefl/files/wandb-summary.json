@@ -1,0 +1,1 @@
+{"_timestamp":1.7243580747028432e+09,"MAE":1.1364763230131538e+64,"max_APE":2.6636746948523145e+67,"MSE":0.016150876720304446,"initialization_method":"He normal","L2RE":1.1736554906308545,"_step":0,"activation_function":"Mish","_wandb":{"runtime":2},"_runtime":1.8535242140000001,"iterations":2}

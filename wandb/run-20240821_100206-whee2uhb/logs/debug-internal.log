@@ -1,0 +1,18 @@
+{"time":"2024-08-21T10:02:06.63171342Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T10:02:06.631877003Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_100206-whee2uhb/logs/debug-core.log"}
+{"time":"2024-08-21T10:02:06.638174003Z","level":"INFO","msg":"created new stream","id":"whee2uhb"}
+{"time":"2024-08-21T10:02:06.63851542Z","level":"INFO","msg":"handler: started","stream_id":{"value":"whee2uhb"}}
+{"time":"2024-08-21T10:02:06.638556462Z","level":"INFO","msg":"sender: started","stream_id":{"value":"whee2uhb"}}
+{"time":"2024-08-21T10:02:06.638594337Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"whee2uhb"}}
+{"time":"2024-08-21T10:02:07.401724129Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T10:02:07.453962671Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T10:02:39.586954047Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T10:02:39.60100663Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T10:02:39.60245538Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T10:02:40.463370214Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T10:02:40.463765297Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T10:02:40.463952964Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T10:02:43.204010507Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"whee2uhb"}}
+{"time":"2024-08-21T10:02:43.204199465Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"whee2uhb"}}
+{"time":"2024-08-21T10:02:43.204255132Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"whee2uhb"}}
+{"time":"2024-08-21T10:02:43.205187507Z","level":"INFO","msg":"closed stream","id":"whee2uhb"}

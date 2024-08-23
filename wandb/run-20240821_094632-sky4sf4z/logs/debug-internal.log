@@ -1,0 +1,18 @@
+{"time":"2024-08-21T09:46:32.989746127Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T09:46:32.990005919Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_094632-sky4sf4z/logs/debug-core.log"}
+{"time":"2024-08-21T09:46:33.023204419Z","level":"INFO","msg":"created new stream","id":"sky4sf4z"}
+{"time":"2024-08-21T09:46:33.023888044Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"sky4sf4z"}}
+{"time":"2024-08-21T09:46:33.023730294Z","level":"INFO","msg":"handler: started","stream_id":{"value":"sky4sf4z"}}
+{"time":"2024-08-21T09:46:33.02381696Z","level":"INFO","msg":"sender: started","stream_id":{"value":"sky4sf4z"}}
+{"time":"2024-08-21T09:46:33.556146419Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T09:46:33.603349169Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T09:47:07.311985171Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T09:47:07.321608337Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T09:47:07.322670837Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T09:47:07.536757212Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T09:47:07.537341462Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T09:47:07.537646754Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T09:47:09.45268163Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"sky4sf4z"}}
+{"time":"2024-08-21T09:47:09.45290538Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"sky4sf4z"}}
+{"time":"2024-08-21T09:47:09.452857047Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"sky4sf4z"}}
+{"time":"2024-08-21T09:47:09.453971963Z","level":"INFO","msg":"closed stream","id":"sky4sf4z"}

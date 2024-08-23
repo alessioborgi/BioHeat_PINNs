@@ -1,0 +1,18 @@
+{"time":"2024-08-21T10:38:27.33229968Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T10:38:27.332522888Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_103827-yzm389dn/logs/debug-core.log"}
+{"time":"2024-08-21T10:38:27.34473768Z","level":"INFO","msg":"created new stream","id":"yzm389dn"}
+{"time":"2024-08-21T10:38:27.345145013Z","level":"INFO","msg":"handler: started","stream_id":{"value":"yzm389dn"}}
+{"time":"2024-08-21T10:38:27.345205596Z","level":"INFO","msg":"sender: started","stream_id":{"value":"yzm389dn"}}
+{"time":"2024-08-21T10:38:27.34520218Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"yzm389dn"}}
+{"time":"2024-08-21T10:38:27.838033055Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T10:38:27.881776305Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T10:38:29.515023375Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T10:38:29.532744417Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T10:38:29.537142667Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T10:38:29.76279325Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T10:38:29.763265167Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T10:38:29.76393675Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T10:38:31.747417584Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"yzm389dn"}}
+{"time":"2024-08-21T10:38:31.747650251Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"yzm389dn"}}
+{"time":"2024-08-21T10:38:31.747645001Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"yzm389dn"}}
+{"time":"2024-08-21T10:38:31.748387876Z","level":"INFO","msg":"closed stream","id":"yzm389dn"}

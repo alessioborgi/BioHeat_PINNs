@@ -1,0 +1,1 @@
+{"_timestamp":1.7243577905718246e+09,"initialization_method":"He normal","activation_function":"Swish","_wandb":{"runtime":2},"_step":0,"_runtime":1.256773597,"MAE":1.5871114741853595e+64,"max_APE":2.8329032302244797e+67,"L2RE":0.9890663712015482,"MSE":0.01147006038351851,"iterations":1}

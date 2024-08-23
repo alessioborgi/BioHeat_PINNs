@@ -1,0 +1,1 @@
+{"iterations":100,"_runtime":1.448939088,"_timestamp":1.7242386102852042e+09,"_wandb":{"runtime":2},"activation_function":"APTx","MAE":3.323937066326494e+65,"_step":0,"L2RE":1.8888646012216195,"initialization_method":"He normal","MSE":0.04183275700077686,"max_APE":4.838784597383686e+68}

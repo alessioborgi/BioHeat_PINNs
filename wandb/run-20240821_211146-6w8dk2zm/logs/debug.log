@@ -1,0 +1,34 @@
+2024-08-21 21:11:46,864 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Current SDK version is 0.17.6
+2024-08-21 21:11:46,865 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Configure stats pid to 18823
+2024-08-21 21:11:46,865 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2024-08-21 21:11:46,866 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Loading settings from /working_dir/wandb/settings
+2024-08-21 21:11:46,866 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'_require_core': 'true'}
+2024-08-21 21:11:46,867 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-21 21:11:46,867 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src/tuning.py', 'program_abspath': '/working_dir/src/tuning.py', 'program': '/working_dir/./src/tuning.py'}
+2024-08-21 21:11:46,867 INFO    MainThread:18823 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-21 21:11:46,868 INFO    MainThread:18823 [wandb_init.py:_log_setup():521] Logging user logs to /working_dir/wandb/run-20240821_211146-6w8dk2zm/logs/debug.log
+2024-08-21 21:11:46,868 INFO    MainThread:18823 [wandb_init.py:_log_setup():522] Logging internal logs to /working_dir/wandb/run-20240821_211146-6w8dk2zm/logs/debug-internal.log
+2024-08-21 21:11:46,869 INFO    MainThread:18823 [wandb_init.py:init():559] calling init triggers
+2024-08-21 21:11:46,869 INFO    MainThread:18823 [wandb_init.py:init():566] wandb.init called with sweep_config: {}
+config: {'network': {'backend': 'pytorch', 'LBFGS': True, 'learning_rate': 0.001, 'num_dense_layers': 2, 'num_dense_nodes': 50, 'output_injection_gain': 50, 'resampling': True, 'resampler_period': 50, 'initial_weights_regularizer': True, 'activation': 'Swish', 'iterations': 15, 'initialization': 'He normal'}, 'tuning': {'num_trials': 2, 'study_name': 'BioHeat_Tuning_Study', 'direction': 'minimize'}, 'run': 'BioHeat_PINNs_date_time_20240821_202551'}
+2024-08-21 21:11:46,869 INFO    MainThread:18823 [wandb_init.py:init():609] starting backend
+2024-08-21 21:11:46,870 INFO    MainThread:18823 [wandb_init.py:init():613] setting up manager
+2024-08-21 21:11:46,877 INFO    MainThread:18823 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-08-21 21:11:46,879 INFO    MainThread:18823 [wandb_init.py:init():621] backend started and connected
+2024-08-21 21:11:46,894 INFO    MainThread:18823 [wandb_init.py:init():716] updated telemetry
+2024-08-21 21:11:46,895 INFO    MainThread:18823 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-08-21 21:11:47,376 INFO    MainThread:18823 [wandb_run.py:_on_init():2438] communicating current version
+2024-08-21 21:11:47,378 INFO    MainThread:18823 [wandb_run.py:_on_init():2447] got version response 
+2024-08-21 21:11:47,379 INFO    MainThread:18823 [wandb_init.py:init():800] starting run threads in backend
+2024-08-21 21:11:48,075 INFO    MainThread:18823 [wandb_run.py:_console_start():2416] atexit reg
+2024-08-21 21:11:48,077 INFO    MainThread:18823 [wandb_run.py:_redirect():2258] redirect: wrap_raw
+2024-08-21 21:11:48,078 INFO    MainThread:18823 [wandb_run.py:_redirect():2323] Wrapping output streams.
+2024-08-21 21:11:48,078 INFO    MainThread:18823 [wandb_run.py:_redirect():2348] Redirects installed.
+2024-08-21 21:11:48,081 INFO    MainThread:18823 [wandb_init.py:init():843] run started, returning control to user process
+2024-08-21 21:12:20,045 INFO    MainThread:18823 [wandb_run.py:_finish():2110] finishing run adavit/BioHeat_PINNs/6w8dk2zm
+2024-08-21 21:12:20,047 INFO    MainThread:18823 [wandb_run.py:_atexit_cleanup():2377] got exitcode: 0
+2024-08-21 21:12:20,048 INFO    MainThread:18823 [wandb_run.py:_restore():2355] restore
+2024-08-21 21:12:20,049 INFO    MainThread:18823 [wandb_run.py:_restore():2361] restore done
+2024-08-21 21:12:23,112 INFO    MainThread:18823 [wandb_run.py:_footer_history_summary_info():4035] rendering history
+2024-08-21 21:12:23,118 INFO    MainThread:18823 [wandb_run.py:_footer_history_summary_info():4067] rendering summary
+2024-08-21 21:12:23,169 INFO    MainThread:18823 [wandb_run.py:_footer_sync_info():3994] logging synced files

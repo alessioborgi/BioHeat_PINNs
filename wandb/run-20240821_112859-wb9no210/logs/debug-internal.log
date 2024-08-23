@@ -1,0 +1,18 @@
+{"time":"2024-08-21T11:28:59.111293764Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T11:28:59.11147718Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_112859-wb9no210/logs/debug-core.log"}
+{"time":"2024-08-21T11:28:59.117346389Z","level":"INFO","msg":"created new stream","id":"wb9no210"}
+{"time":"2024-08-21T11:28:59.11762968Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wb9no210"}}
+{"time":"2024-08-21T11:28:59.117654055Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wb9no210"}}
+{"time":"2024-08-21T11:28:59.117662639Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wb9no210"}}
+{"time":"2024-08-21T11:28:59.84151775Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T11:28:59.886623166Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T11:29:01.215184834Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T11:29:01.23047225Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T11:29:01.232449542Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T11:29:01.462059209Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T11:29:01.462765917Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T11:29:01.463232542Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T11:29:03.46810471Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wb9no210"}}
+{"time":"2024-08-21T11:29:03.468268418Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wb9no210"}}
+{"time":"2024-08-21T11:29:03.468387835Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wb9no210"}}
+{"time":"2024-08-21T11:29:03.469214168Z","level":"INFO","msg":"closed stream","id":"wb9no210"}

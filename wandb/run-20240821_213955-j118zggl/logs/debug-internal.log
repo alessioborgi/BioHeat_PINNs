@@ -1,0 +1,18 @@
+{"time":"2024-08-21T21:39:55.185409376Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T21:39:55.18580571Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_213955-j118zggl/logs/debug-core.log"}
+{"time":"2024-08-21T21:39:55.194246751Z","level":"INFO","msg":"created new stream","id":"j118zggl"}
+{"time":"2024-08-21T21:39:55.19477796Z","level":"INFO","msg":"handler: started","stream_id":{"value":"j118zggl"}}
+{"time":"2024-08-21T21:39:55.194879376Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"j118zggl"}}
+{"time":"2024-08-21T21:39:55.194835793Z","level":"INFO","msg":"sender: started","stream_id":{"value":"j118zggl"}}
+{"time":"2024-08-21T21:39:55.897591418Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T21:39:55.94141571Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T21:39:57.278114836Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T21:39:57.301558544Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T21:39:57.302441002Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T21:39:57.486547669Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T21:39:57.487028669Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T21:39:57.487339336Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T21:40:00.071124379Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"j118zggl"}}
+{"time":"2024-08-21T21:40:00.07133092Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"j118zggl"}}
+{"time":"2024-08-21T21:40:00.071441504Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"j118zggl"}}
+{"time":"2024-08-21T21:40:00.072138754Z","level":"INFO","msg":"closed stream","id":"j118zggl"}

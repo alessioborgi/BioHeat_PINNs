@@ -1,0 +1,18 @@
+{"time":"2024-08-21T09:55:24.860879346Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T09:55:24.861082179Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_095524-ibarbb3g/logs/debug-core.log"}
+{"time":"2024-08-21T09:55:24.868265554Z","level":"INFO","msg":"created new stream","id":"ibarbb3g"}
+{"time":"2024-08-21T09:55:24.868513179Z","level":"INFO","msg":"handler: started","stream_id":{"value":"ibarbb3g"}}
+{"time":"2024-08-21T09:55:24.868543012Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ibarbb3g"}}
+{"time":"2024-08-21T09:55:24.868527846Z","level":"INFO","msg":"sender: started","stream_id":{"value":"ibarbb3g"}}
+{"time":"2024-08-21T09:55:25.643158596Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T09:55:25.686378888Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T09:55:27.238779138Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T09:55:27.246271847Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T09:55:27.247138597Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T09:55:27.463842388Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T09:55:27.464472888Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T09:55:27.464690847Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T09:55:29.733706584Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"ibarbb3g"}}
+{"time":"2024-08-21T09:55:29.733858584Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ibarbb3g"}}
+{"time":"2024-08-21T09:55:29.733971709Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"ibarbb3g"}}
+{"time":"2024-08-21T09:55:29.734424209Z","level":"INFO","msg":"closed stream","id":"ibarbb3g"}

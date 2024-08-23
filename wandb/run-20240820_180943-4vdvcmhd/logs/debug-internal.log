@@ -1,0 +1,18 @@
+{"time":"2024-08-20T18:09:43.346783755Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-20T18:09:43.346944463Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240820_180943-4vdvcmhd/logs/debug-core.log"}
+{"time":"2024-08-20T18:09:43.35127913Z","level":"INFO","msg":"created new stream","id":"4vdvcmhd"}
+{"time":"2024-08-20T18:09:43.351516172Z","level":"INFO","msg":"handler: started","stream_id":{"value":"4vdvcmhd"}}
+{"time":"2024-08-20T18:09:43.351588088Z","level":"INFO","msg":"sender: started","stream_id":{"value":"4vdvcmhd"}}
+{"time":"2024-08-20T18:09:43.351572338Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"4vdvcmhd"}}
+{"time":"2024-08-20T18:09:43.845236964Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-20T18:09:43.895140172Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-20T18:09:45.100014548Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-20T18:09:45.109913798Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-20T18:09:45.111061256Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-20T18:09:45.639362548Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-20T18:09:45.639966673Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-20T18:09:45.640258839Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-20T18:09:47.58323034Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"4vdvcmhd"}}
+{"time":"2024-08-20T18:09:47.583464965Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"4vdvcmhd"}}
+{"time":"2024-08-20T18:09:47.583515299Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"4vdvcmhd"}}
+{"time":"2024-08-20T18:09:47.584482799Z","level":"INFO","msg":"closed stream","id":"4vdvcmhd"}

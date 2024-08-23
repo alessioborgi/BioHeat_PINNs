@@ -1,0 +1,18 @@
+{"time":"2024-08-22T20:30:18.649419716Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T20:30:18.649617258Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_203018-px1loot4/logs/debug-core.log"}
+{"time":"2024-08-22T20:30:18.653492133Z","level":"INFO","msg":"created new stream","id":"px1loot4"}
+{"time":"2024-08-22T20:30:18.653781674Z","level":"INFO","msg":"handler: started","stream_id":{"value":"px1loot4"}}
+{"time":"2024-08-22T20:30:18.653751799Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"px1loot4"}}
+{"time":"2024-08-22T20:30:18.653747674Z","level":"INFO","msg":"sender: started","stream_id":{"value":"px1loot4"}}
+{"time":"2024-08-22T20:30:19.361073758Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T20:30:19.412645008Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T20:30:20.838460134Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T20:30:20.850193425Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T20:30:20.851505134Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T20:30:21.058086134Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T20:30:21.058795092Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T20:30:21.059184759Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T20:30:23.273200718Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"px1loot4"}}
+{"time":"2024-08-22T20:30:23.273329052Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"px1loot4"}}
+{"time":"2024-08-22T20:30:23.27330501Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"px1loot4"}}
+{"time":"2024-08-22T20:30:23.273924635Z","level":"INFO","msg":"closed stream","id":"px1loot4"}

@@ -1,0 +1,18 @@
+{"time":"2024-08-21T20:52:27.486360003Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T20:52:27.486558419Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_205227-wuji4flf/logs/debug-core.log"}
+{"time":"2024-08-21T20:52:27.491008336Z","level":"INFO","msg":"created new stream","id":"wuji4flf"}
+{"time":"2024-08-21T20:52:27.491309378Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wuji4flf"}}
+{"time":"2024-08-21T20:52:27.491306336Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wuji4flf"}}
+{"time":"2024-08-21T20:52:27.491382544Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wuji4flf"}}
+{"time":"2024-08-21T20:52:27.954476545Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T20:52:28.000691128Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T20:53:03.244476797Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T20:53:03.253603172Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T20:53:03.254482589Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T20:53:04.172506756Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T20:53:04.173647548Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T20:53:04.174312756Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T20:53:06.788041132Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wuji4flf"}}
+{"time":"2024-08-21T20:53:06.788167049Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wuji4flf"}}
+{"time":"2024-08-21T20:53:06.788220341Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wuji4flf"}}
+{"time":"2024-08-21T20:53:06.789325757Z","level":"INFO","msg":"closed stream","id":"wuji4flf"}

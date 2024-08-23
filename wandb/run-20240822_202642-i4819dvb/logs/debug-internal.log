@@ -1,0 +1,18 @@
+{"time":"2024-08-22T20:26:42.541585421Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T20:26:42.541750963Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_202642-i4819dvb/logs/debug-core.log"}
+{"time":"2024-08-22T20:26:42.546860338Z","level":"INFO","msg":"created new stream","id":"i4819dvb"}
+{"time":"2024-08-22T20:26:42.547087546Z","level":"INFO","msg":"sender: started","stream_id":{"value":"i4819dvb"}}
+{"time":"2024-08-22T20:26:42.547095838Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"i4819dvb"}}
+{"time":"2024-08-22T20:26:42.547115338Z","level":"INFO","msg":"handler: started","stream_id":{"value":"i4819dvb"}}
+{"time":"2024-08-22T20:26:43.555109589Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T20:26:43.603450922Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T20:27:13.90245888Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T20:27:13.917530297Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T20:27:13.920167755Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T20:27:14.233214756Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T20:27:14.233838797Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T20:27:14.234242089Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T20:27:17.005245507Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"i4819dvb"}}
+{"time":"2024-08-22T20:27:17.005416424Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"i4819dvb"}}
+{"time":"2024-08-22T20:27:17.005530549Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"i4819dvb"}}
+{"time":"2024-08-22T20:27:17.006275257Z","level":"INFO","msg":"closed stream","id":"i4819dvb"}

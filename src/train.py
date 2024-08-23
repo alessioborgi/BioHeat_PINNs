@@ -45,6 +45,7 @@ def train_model(name, cfg):
 
     optim = "lbfgs" if LBFGS else "adam"
     iters = "*" if LBFGS else epochs
+    eps = 0.000001
 
     # Check if a trained model with the exact configuration already exists
     trained_models = sorted(glob.glob(f"{model_dir}/{name}/{optim}-{iters}.pt"))
@@ -65,7 +66,7 @@ def train_model(name, cfg):
         
         if ini_w:
             initial_losses = get_initial_loss(mm)
-            loss_weights = len(initial_losses) / initial_losses
+            loss_weights = len(initial_losses) / (initial_losses + eps)
             mm.compile("L-BFGS", loss_weights=loss_weights)
         else:
             mm.compile("L-BFGS")

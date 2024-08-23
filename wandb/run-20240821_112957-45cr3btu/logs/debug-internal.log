@@ -1,0 +1,18 @@
+{"time":"2024-08-21T11:29:57.172781054Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-21T11:29:57.173061763Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240821_112957-45cr3btu/logs/debug-core.log"}
+{"time":"2024-08-21T11:29:57.181891221Z","level":"INFO","msg":"created new stream","id":"45cr3btu"}
+{"time":"2024-08-21T11:29:57.182289346Z","level":"INFO","msg":"sender: started","stream_id":{"value":"45cr3btu"}}
+{"time":"2024-08-21T11:29:57.182254679Z","level":"INFO","msg":"handler: started","stream_id":{"value":"45cr3btu"}}
+{"time":"2024-08-21T11:29:57.182282263Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"45cr3btu"}}
+{"time":"2024-08-21T11:29:57.835549971Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-21T11:29:57.887019055Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-21T11:29:59.183787514Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-21T11:29:59.198001014Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-21T11:29:59.198930222Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-21T11:29:59.414469416Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-21T11:29:59.421209125Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-21T11:29:59.431529416Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-21T11:30:01.495973334Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"45cr3btu"}}
+{"time":"2024-08-21T11:30:01.496097376Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"45cr3btu"}}
+{"time":"2024-08-21T11:30:01.496218126Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"45cr3btu"}}
+{"time":"2024-08-21T11:30:01.496824959Z","level":"INFO","msg":"closed stream","id":"45cr3btu"}

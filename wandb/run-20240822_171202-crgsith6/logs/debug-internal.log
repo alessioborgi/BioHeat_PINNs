@@ -1,0 +1,18 @@
+{"time":"2024-08-22T17:12:02.977430296Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-22T17:12:02.977593879Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240822_171202-crgsith6/logs/debug-core.log"}
+{"time":"2024-08-22T17:12:02.983307379Z","level":"INFO","msg":"created new stream","id":"crgsith6"}
+{"time":"2024-08-22T17:12:02.983633421Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"crgsith6"}}
+{"time":"2024-08-22T17:12:02.983686421Z","level":"INFO","msg":"handler: started","stream_id":{"value":"crgsith6"}}
+{"time":"2024-08-22T17:12:02.983713129Z","level":"INFO","msg":"sender: started","stream_id":{"value":"crgsith6"}}
+{"time":"2024-08-22T17:12:03.757957629Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-22T17:12:03.804133796Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-22T17:12:37.684969173Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-22T17:12:37.692684923Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-22T17:12:37.693596464Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-22T17:12:38.429937631Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-22T17:12:38.430903548Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-22T17:12:38.431240965Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-22T17:12:40.943794258Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"crgsith6"}}
+{"time":"2024-08-22T17:12:40.944003174Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"crgsith6"}}
+{"time":"2024-08-22T17:12:40.944006508Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"crgsith6"}}
+{"time":"2024-08-22T17:12:40.945508716Z","level":"INFO","msg":"closed stream","id":"crgsith6"}
