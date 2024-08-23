@@ -1,0 +1,18 @@
+{"time":"2024-08-23T09:21:10.200258878Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-23T09:21:10.200453753Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240823_092110-g751fsr1/logs/debug-core.log"}
+{"time":"2024-08-23T09:21:10.221909712Z","level":"INFO","msg":"created new stream","id":"g751fsr1"}
+{"time":"2024-08-23T09:21:10.222452795Z","level":"INFO","msg":"sender: started","stream_id":{"value":"g751fsr1"}}
+{"time":"2024-08-23T09:21:10.222527628Z","level":"INFO","msg":"handler: started","stream_id":{"value":"g751fsr1"}}
+{"time":"2024-08-23T09:21:10.222483212Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"g751fsr1"}}
+{"time":"2024-08-23T09:21:10.87796667Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-23T09:21:10.924511712Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-23T09:21:12.178229754Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-23T09:21:12.195425254Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-23T09:21:12.203499004Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-23T09:21:12.404578254Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-23T09:21:12.404967879Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-23T09:21:12.405256046Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-23T09:21:14.487905922Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"g751fsr1"}}
+{"time":"2024-08-23T09:21:14.488124089Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"g751fsr1"}}
+{"time":"2024-08-23T09:21:14.488252964Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"g751fsr1"}}
+{"time":"2024-08-23T09:21:14.489144964Z","level":"INFO","msg":"closed stream","id":"g751fsr1"}

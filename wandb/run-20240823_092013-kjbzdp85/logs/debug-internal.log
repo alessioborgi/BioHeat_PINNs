@@ -1,0 +1,19 @@
+{"time":"2024-08-23T09:20:13.262631838Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-23T09:20:13.262852296Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240823_092013-kjbzdp85/logs/debug-core.log"}
+{"time":"2024-08-23T09:20:13.268339796Z","level":"INFO","msg":"created new stream","id":"kjbzdp85"}
+{"time":"2024-08-23T09:20:13.26864613Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"kjbzdp85"}}
+{"time":"2024-08-23T09:20:13.26865913Z","level":"INFO","msg":"handler: started","stream_id":{"value":"kjbzdp85"}}
+{"time":"2024-08-23T09:20:13.26866938Z","level":"INFO","msg":"sender: started","stream_id":{"value":"kjbzdp85"}}
+{"time":"2024-08-23T09:20:13.951761422Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-23T09:20:13.998298213Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-23T09:20:16.34764884Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-23T09:20:16.36104009Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-23T09:20:16.361974381Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-23T09:20:16.572575006Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-23T09:20:16.573160965Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-23T09:20:16.573540381Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-23T09:20:26.327836678Z","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/adavit/BioHeat_Tuning/kjbzdp85/file_stream"}
+{"time":"2024-08-23T09:20:30.097656346Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"kjbzdp85"}}
+{"time":"2024-08-23T09:20:30.097886304Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"kjbzdp85"}}
+{"time":"2024-08-23T09:20:30.097994763Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"kjbzdp85"}}
+{"time":"2024-08-23T09:20:30.098639304Z","level":"INFO","msg":"closed stream","id":"kjbzdp85"}

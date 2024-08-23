@@ -1,0 +1,18 @@
+{"time":"2024-08-23T09:20:50.850030675Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-23T09:20:50.85024105Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240823_092050-pccwd15s/logs/debug-core.log"}
+{"time":"2024-08-23T09:20:50.859025758Z","level":"INFO","msg":"created new stream","id":"pccwd15s"}
+{"time":"2024-08-23T09:20:50.85934755Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"pccwd15s"}}
+{"time":"2024-08-23T09:20:50.859437133Z","level":"INFO","msg":"sender: started","stream_id":{"value":"pccwd15s"}}
+{"time":"2024-08-23T09:20:50.859417633Z","level":"INFO","msg":"handler: started","stream_id":{"value":"pccwd15s"}}
+{"time":"2024-08-23T09:20:51.626292509Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-23T09:20:51.694063467Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-23T09:20:53.241196468Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-23T09:20:53.244966384Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-23T09:20:53.245407551Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-23T09:20:53.427629301Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-23T09:20:53.427823468Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-23T09:20:53.427959801Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-23T09:20:55.471816219Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"pccwd15s"}}
+{"time":"2024-08-23T09:20:55.472104177Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"pccwd15s"}}
+{"time":"2024-08-23T09:20:55.472041469Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"pccwd15s"}}
+{"time":"2024-08-23T09:20:55.473212886Z","level":"INFO","msg":"closed stream","id":"pccwd15s"}

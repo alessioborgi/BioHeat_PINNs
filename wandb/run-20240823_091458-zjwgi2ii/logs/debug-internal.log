@@ -1,0 +1,18 @@
+{"time":"2024-08-23T09:14:58.091032678Z","level":"INFO","msg":"using version","core version":"0.17.6"}
+{"time":"2024-08-23T09:14:58.091239428Z","level":"INFO","msg":"created symlink","path":"/working_dir/wandb/run-20240823_091458-zjwgi2ii/logs/debug-core.log"}
+{"time":"2024-08-23T09:14:58.100269387Z","level":"INFO","msg":"created new stream","id":"zjwgi2ii"}
+{"time":"2024-08-23T09:14:58.100537429Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"zjwgi2ii"}}
+{"time":"2024-08-23T09:14:58.100594512Z","level":"INFO","msg":"handler: started","stream_id":{"value":"zjwgi2ii"}}
+{"time":"2024-08-23T09:14:58.100607929Z","level":"INFO","msg":"sender: started","stream_id":{"value":"zjwgi2ii"}}
+{"time":"2024-08-23T09:14:58.565393345Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-08-23T09:14:58.611569554Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-08-23T09:15:00.051402263Z","level":"INFO","msg":"sender: getServerInfo: got server info","serverInfo":{"cliVersionInfo":{"max_cli_version":"0.17.5","min_cli_version":"0.8.20"},"latestLocalVersionInfo":null}}
+{"time":"2024-08-23T09:15:00.055611929Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-08-23T09:15:00.056074763Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-08-23T09:15:00.26174768Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-08-23T09:15:00.262471055Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-08-23T09:15:00.26270643Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-08-23T09:15:02.644168958Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"zjwgi2ii"}}
+{"time":"2024-08-23T09:15:02.644353208Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"zjwgi2ii"}}
+{"time":"2024-08-23T09:15:02.644823Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"zjwgi2ii"}}
+{"time":"2024-08-23T09:15:02.645662291Z","level":"INFO","msg":"closed stream","id":"zjwgi2ii"}
