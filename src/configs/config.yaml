@@ -1,6 +1,5 @@
 defaults:
   - network: PINN
-  - data: PDE
   - _self_
   
 

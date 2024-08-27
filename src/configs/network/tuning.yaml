@@ -1,0 +1,10 @@
+defaults:
+  - network: PINN  # Load the base network configuration from PINN.yaml
+  - _self_
+
+tuning:
+  num_trials: 2  # Number of trials Optuna will perform to find the best value for iterations
+  study_name: "BioHeat_Tuning_Study"  # Name of the study
+  direction: "minimize"  # Direction of optimization (minimize the objective)
+
+run: "BioHeat_PINNs_date_time_${now:%Y%m%d_%H%M%S}"
