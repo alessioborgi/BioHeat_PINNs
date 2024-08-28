@@ -98,7 +98,7 @@ def create_nbho(name, cfg):
 
     # Definition of the network:
 
-    layer_size = [3] + [num_dense_nodes] * num_dense_layers + [1]
+    layer_size = [2] + [num_dense_nodes] * num_dense_layers + [1]
     net = dde.nn.FNN(layer_size, activation, initialization)
     net.apply_output_transform(output_transform)
 
