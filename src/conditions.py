@@ -17,10 +17,7 @@ def domain_definition():
     """
     # Definition of the Spatial domain as follows:
 
-    spatial_domain = dde.geometry.Interval(
-        xmin = 0, 
-        xmax = 1
-    )
+    spatial_domain = dde.geometry.Interval(0,1)
 
     # Definition of the Time domain
 
