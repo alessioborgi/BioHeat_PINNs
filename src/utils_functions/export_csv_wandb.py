@@ -6,7 +6,8 @@ wandb.login()
 
 # Replace 'your_project' and 'your_entity' with your project and entity names
 project = 'BioHeat_PINNs'
-entity = 'adavit'
+# entity = 'adavit' # Alessio
+entity = 'eugeniobugli' # Eugenio
 
 # Initialize the API
 api = wandb.Api()
