@@ -27,9 +27,8 @@ def pde(x, u):
         a1*du_t = du_xx + du_yy + a2*u - a3
     """
         
-    du_t = dde.grad.jacobian(u, x, i=0, j=2) # first derivative with respect to time coordinate
-    du_xx = dde.grad.hessian(u, x, i=0, j=0) # second derivative with respect to x coordinate 
-    du_yy = dde.grad.hessian(u, x, i=0, j=1) # second derivative with respect to y coordinate
+    du_t = dde.grad.jacobian(u, x, i=0, j=1) # first derivative with respect to time coordinate
+    du_xx = dde.grad.hessian(u, x, i=0, j=0) # second derivative with respect to x coordinate
     
     # Load the parameters using the provided function
     parameters = open_json_config("without_Q")
@@ -39,4 +38,4 @@ def pde(x, u):
     a2 = parameters["Parameters"]["a2"]
     a3 = parameters["Parameters"]["a3"]
 
-    return (a1 * du_t - (du_xx + du_yy) + a2*u - a3)
+    return (a1 * du_t - du_xx + a2*u - a3)
