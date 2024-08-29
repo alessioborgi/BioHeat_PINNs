@@ -31,8 +31,7 @@ def load_2D_data(n): # maybe this could be inserted inside utils.py
     #   > U: solution of the equation (ground truth)
     x1, t, exact = data[:, 0], data[:, 1], data[:, 2]
     X = np.vstack((x1, t, exact)).T
-    y = exact[:, None]
-    return X, y
+    return X
 
 def plot_3D_comparison(data, pred, title, size=11, SMOOTH=True):
     """
@@ -190,7 +189,7 @@ def plot_2D_comparison(data, pred, title, size=11, offset_time=0.25):
     fig.legend(['Ground Truth', 'Prediction'])
     plt.show()
 
-def plot_and_metrics(model, n_test):
+def plots_and_metrics(model, n_test):
     """
     This is the main function of this file. By calling this you are using each function inside the evalutation.py file.
     Creates plots and computes some metrics.
@@ -203,12 +202,13 @@ def plot_and_metrics(model, n_test):
         metrics (dict): Dictionary containing various performance metrics
     """
 
-    e, theta_true = load_2D_data(n_test)
+    data = load_2D_data(n_test) # whole data (X,t,T)
+    
+    theta_true = data[:, 2].reshape(-1, 1)
+    theta_pred = model.predict(data[:, 0:2])
 
-    theta_pred = model.predict(e)
-
-    # plot_2D_comparison(data, theta_pred, "")
-    # plot_3D_comparison(data, theta_pred, "")
+    plot_2D_comparison(data, theta_pred, "1D Comparison at Specific Time Instants")
+    plot_3D_comparison(data, theta_pred, "Comparison 1D case")
     
     metrics = train.compute_metrics(theta_true, theta_pred)
     return metrics

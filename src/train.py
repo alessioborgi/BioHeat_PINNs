@@ -2,7 +2,7 @@
 import deepxde as dde
 import configurations
 import nhbo
-import plots
+import evaluation
 import glob
 import utils
 import wandb
@@ -75,7 +75,7 @@ def train_model(name, cfg):
     else:
         losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name)
 
-    plots.plot_loss_components(losshistory)
+    evaluation.plot_loss_components(losshistory)
     return mm
 
 def single_observer(name_prj, run, n_test, cfg):
@@ -100,7 +100,7 @@ def single_observer(name_prj, run, n_test, cfg):
 
     # Rest of the function continues as before
     mo = train_model(run, cfg)
-    metrics = plots.plot_and_metrics(mo, n_test)
+    metrics = evaluation.plots_and_metrics(mo, n_test)
 
     wandb.log(metrics)
     wandb.finish()
