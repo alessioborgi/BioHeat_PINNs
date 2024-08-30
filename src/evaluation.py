@@ -43,7 +43,7 @@ def plot_3D_comparison(data, pred, title, size=11, SMOOTH=True):
             size (int): size of the grid used (chosen according to the .txt file structure)
 
         Returns:
-            None (plots are save in //)
+            None (plots are saved in "{main.figures_dir}/{cfg.run}/comparison3D.png")
     """
     cfg = HydraConfigStore.get_config()
     time_size = len(np.unique(data[:,1]))
@@ -83,12 +83,12 @@ def plot_3D_comparison(data, pred, title, size=11, SMOOTH=True):
     else :
         # Use this if you want an Edgy Plot
 
-        x = X[:, 0].reshape(size, time_size)
-        t = X[:, 1].reshape(size, time_size)
+        x = data[:, 0].reshape(size, time_size)
+        t = data[:, 1].reshape(size, time_size)
 
         # Ground Truth
 
-        T = X[:, 2].reshape(size, time_size)
+        T = data[:, 2].reshape(size, time_size)
 
         # Prediction 
 
@@ -113,7 +113,7 @@ def plot_3D_comparison(data, pred, title, size=11, SMOOTH=True):
     # Error
     surface = axs[0][2].plot_surface(x, t, err, cmap='YlGnBu')
     surface = axs[1][2].plot_surface(t, x, err, cmap='YlGnBu')
-    axs[0][2].set_title('Error')
+    axs[0][2].set_title('Absolute Error')
 
     for idx in range(0,3):
 
@@ -149,7 +149,7 @@ def plot_2D_comparison(data, pred, title, size=11, offset_time=0.25):
             offset_time (float):
 
         Returns:
-            None (plots are save in "{main.figures_dir}/{cfg.run}/comparison.png")
+            None (plots are saved in "{main.figures_dir}/{cfg.run}/comparison2D.png")
     """
     cfg = HydraConfigStore.get_config()
     offset_data = size
