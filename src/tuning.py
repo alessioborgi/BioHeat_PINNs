@@ -10,6 +10,7 @@ import configurations
 
 run = ""
 figures_dir = "./tests/figures"
+ranking_dir = "./tests/ranking"
 current_file = os.path.abspath(__file__)
 src_dir = os.path.dirname(current_file)
 project_dir = os.path.dirname(src_dir)
@@ -185,16 +186,30 @@ def main(cfg: DictConfig):
     # Sort the ranked scores from best to worst
     ranked_scores.sort(key=lambda x: x[0])  # Sort by weighted_score (first element)
 
-    # Print out the optimal configurations
-    print("Optimal configurations:")
-    for config_key, best_config in best_configs.items():
-        act_fun, init_method = config_key
-        print(f"Activation Function: {act_fun}, Initialization: {init_method}, Best Iterations: {best_config['iterations']}")
+    ranking_path = os.path.join(base_dir, "tests", "ranking", cfg.run)
+    os.makedirs(ranking_path, exist_ok=True)
 
-    # Print out the ranking of all runs
-    print("\nRanking of all runs based on weighted score:")
-    for rank, (score, act_fun, init_method, iterations) in enumerate(ranked_scores, start=1):
-        print(f"Rank {rank}: Activation Function: {act_fun}, Initialization: {init_method}, Iterations: {iterations}, Weighted Score: {score}")
+    with open(f"{ranking_dir}/{cfg.run}/configs_and_scores.txt", "w") as file:
+        # Print out the optimal configurations
+        first_line = "Optimal configurations:\n"
+        print(first_line)
+        file.write(first_line)
+        for config_key, best_config in best_configs.items():
+            act_fun, init_method = config_key
+            line = f"Activation Function: {act_fun}, Initialization: {init_method}, Best Iterations: {best_config['iterations']}\n"
+            print(line)
+            file.write(line)
+
+        file.write("\n########################\n")
+
+        # Print out the ranking of all runs
+        first_line = "\nRanking of all runs based on weighted score:\n"
+        print(first_line)
+        file.write(first_line)
+        for rank, (score, act_fun, init_method, iterations) in enumerate(ranked_scores, start=1):
+            line = f"Rank {rank}: Activation Function: {act_fun}, Initialization: {init_method}, Iterations: {iterations}, Weighted Score: {score}\n"
+            print(line)
+            file.write(line)
 
     print("All runs completed and WandB logs updated with weighted scores.")
 
