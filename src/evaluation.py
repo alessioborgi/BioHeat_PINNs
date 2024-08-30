@@ -45,6 +45,7 @@ def plot_3D_comparison(data, pred, title, size=11, SMOOTH=True):
         Returns:
             None (plots are save in //)
     """
+    cfg = HydraConfigStore.get_config()
     time_size = len(np.unique(data[:,1]))
 
     fig, axs = plt.subplots(2, 3, subplot_kw={'projection': '3d'}, figsize=(15, 8))
@@ -131,7 +132,9 @@ def plot_3D_comparison(data, pred, title, size=11, SMOOTH=True):
 
     plt.subplots_adjust(left=0.1, right=0.87, top=0.85, bottom=0.2)
 
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/comparison3D.png")
     plt.show()
+    plt.close()
 
 
 def plot_2D_comparison(data, pred, title, size=11, offset_time=0.25):
@@ -148,6 +151,7 @@ def plot_2D_comparison(data, pred, title, size=11, offset_time=0.25):
         Returns:
             None (plots are save in "{main.figures_dir}/{cfg.run}/comparison.png")
     """
+    cfg = HydraConfigStore.get_config()
     offset_data = size
     unique_time = np.unique(data[:,1])
 
@@ -187,7 +191,9 @@ def plot_2D_comparison(data, pred, title, size=11, offset_time=0.25):
 
     plt.subplots_adjust(left=0.05, right=0.95, top=0.85, bottom=0.2, wspace=0.3)
     fig.legend(['Ground Truth', 'Prediction'])
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/comparison2D.png")
     plt.show()
+    plt.close()
 
 def plots_and_metrics(model, n_test):
     """
