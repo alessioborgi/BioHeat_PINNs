@@ -1,5 +1,6 @@
 import numpy as np
 import deepxde as dde
+import torch
 from utils import open_json_config 
 
 """
@@ -75,6 +76,24 @@ def right_boundary(x, on_boundary):
 
     # here we use x[0] since this function is applied to one point at a time
     return on_boundary and np.isclose(x[0], 1)
+
+def right_function(x, y):
+    """
+    This function returns the value associated to the right boundary condition.
+
+    Args:
+        x : our input, which is a 2D vector with a 1D space domain and 1D time domain
+            x : x coordinate    (x[:,0])
+            t : time coordinate (x[:,1])
+
+        y : our ground truth which is a 1D vector
+        
+    Return:
+        100*[t + (1-t)/(1 +exp[-20*(t - 0.25)]) - y]
+    """
+    x = torch.from_numpy(x)
+    res = 100*( (x[:, 1] + (1-x[:, 1]))/(1+np.exp(-20*(x[:, 1]-0.25))) - y[:,])
+    return res
 
 
 # Initial Condition for the Observer

@@ -55,11 +55,6 @@ def create_nbho(name, cfg):
     # Load the parameters using the provided function
     parameters = open_json_config("without_Q")
 
-    # Access specific parameters
-    a1 = parameters["Parameters"]["a1"]
-    a2 = parameters["Parameters"]["a2"]
-    a3 = parameters["Parameters"]["a3"]
-
     geomtime = conditions.domain_definition()
 
     # definition of the boundary conditions:
@@ -70,9 +65,9 @@ def create_nbho(name, cfg):
         conditions.left_boundary
     )
     
-    right_bc = dde.icbc.NeumannBC(
+    right_bc = dde.icbc.RobinBC(
         geomtime,
-        lambda x: x[2],
+        conditions.right_function,
         conditions.right_boundary 
     )
 
