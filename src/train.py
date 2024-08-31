@@ -75,8 +75,8 @@ def train_model(name, cfg):
     else:
         losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name, cfg)
 
-    print("Losshistory train: ", np.array(losshistory.loss_train), np.array(losshistory.loss_train).shape)
-    print("Losshistory test: ", np.array(losshistory.loss_test), np.array(losshistory.loss_test).shape)
+    # print("Losshistory train: ", np.array(losshistory.loss_train), np.array(losshistory.loss_train).shape)
+    # print("Losshistory test: ", np.array(losshistory.loss_test), np.array(losshistory.loss_test).shape)
 
     evaluation.plot_loss_components(losshistory)
     return mm
