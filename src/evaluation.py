@@ -195,6 +195,64 @@ def plot_2D_comparison(data, pred, title, size=11, offset_time=0.25):
     plt.show()
     plt.close()
 
+def plot_loss_components(losshistory):
+    """
+    Plots the components of the loss function during training.
+    
+    This function helps in understanding how different parts of the loss contribute
+    to the overall loss and how they evolve during the training process.
+    
+    Args:
+        losshistory (dde.callbacks.LossHistory): The history of the loss during training.
+        losshistory structure:
+            > steps
+            > loss_train
+            > loss_test
+            > metric_test
+
+            loss_train structure:
+                > loss_res
+                > loss_bc0
+                > loss_bc1
+                > loss_ic
+    Returns:
+        None
+    """
+    cfg = HydraConfigStore.get_config()
+    
+    loss_train = np.array(losshistory.loss_train)
+    loss_test = np.array(losshistory.loss_test)
+
+    # find all the component of the loss:
+    loss_res = loss_train[:, 0]
+    loss_left = loss_train[:, 1]    
+    loss_right = loss_train[:, 2]
+    loss_ic  = loss_train[:, 3]
+
+    # find the total loss:
+    total_train = np.array(loss_test).sum(axis=1).ravel() 
+    total_test  = np.array(loss_test).sum(axis=1).ravel()
+
+    # num of iterations
+    iters = losshistory.steps
+
+    fig = plt.figure(figsize=(6, 5))
+
+    plt.plot(iters, loss_res, label=r'$\mathcal{L}_{res}$')
+    plt.plot(iters, loss_left, label=r'$\mathcal{L}_{left}$')
+    plt.plot(iters, loss_right, label=r'$\mathcal{L}_{right}$')
+    plt.plot(iters, loss_ic,  label=r'$\mathcal{L}_{ic}$')
+    plt.plot(iters, total_train, label=r'$\mathcal{L}_{train}$')    
+    plt.plot(iters, total_test, label=r'$\mathcal{L}_{test}$')
+        
+    plt.yscale('log')
+    plt.xlabel('iterations')
+    plt.ylabel('loss')
+    plt.legend(ncol=2)
+    plt.tight_layout()
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/losses_{cfg.network.activation}_{cfg.network.initialization}_{cfg.network.iterations}.png")
+    plt.close()
+        
 def plots_and_metrics(model, n_test):
     """
     This is the main function of this file. By calling this you are using each function inside the evalutation.py file.
