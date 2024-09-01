@@ -41,11 +41,11 @@ os.makedirs(tests_dir, exist_ok=True)
 # }
 
 activation_functions = {
-    'GELU': ['He normal'],
-    # 'SiLU': ['He normal'],
-    # 'Swish': ['He normal'],
-    # 'Mish': ['He normal'],
-    'APTx': ['He normal']
+    # 'GELU': ['He normal'],
+    'SiLU': ['He normal'],
+    'Swish': ['He normal'],
+    # 'APTx': ['He normal'],
+    'Mish': ['He normal']
 }
 
 # activation_functions = {
@@ -63,7 +63,7 @@ activation_functions = {
 
 # iteration_values = [25, 50, 75, 100, 125, 150, 175, 200, 250, 300, 400, 500, 750, 1000]
 # iteration_values = [1, 2, 3]
-iteration_values = [500]
+iteration_values = [1000]
 
 # iteration_values = [250, 500, 750, 1000]   
 # iteration_values = [25, 50]   
