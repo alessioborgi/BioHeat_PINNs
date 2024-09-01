@@ -53,8 +53,8 @@ activation_functions = {
 #     'Mish': ['He normal']   
 # }
 
-# iteration_values = [25, 50, 75, 100, 125, 150, 175, 200, 250, 300, 400, 500, 750, 1000]
-iteration_values = [1, 2, 3]
+iteration_values = [25, 50, 75, 100, 125, 150, 175, 200, 250, 300, 400, 500, 750, 1000]
+# iteration_values = [1, 2, 3]
 
 # iteration_values = [250, 500, 750, 1000]   
 # iteration_values = [25, 50]   
