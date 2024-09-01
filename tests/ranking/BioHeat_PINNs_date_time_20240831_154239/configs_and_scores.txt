@@ -1,0 +1,57 @@
+Optimal configurations:
+Activation Function: ELU, Initialization: He normal, Best Iterations: 2
+Activation Function: GELU, Initialization: He normal, Best Iterations: 2
+Activation Function: ReLu, Initialization: He normal, Best Iterations: 2
+Activation Function: SELU, Initialization: Glorot normal, Best Iterations: 2
+Activation Function: Sigmoid, Initialization: Glorot normal, Best Iterations: 3
+Activation Function: SiLU, Initialization: He normal, Best Iterations: 2
+Activation Function: sin, Initialization: Glorot normal, Best Iterations: 2
+Activation Function: Swish, Initialization: He normal, Best Iterations: 2
+Activation Function: tanh, Initialization: Glorot normal, Best Iterations: 2
+Activation Function: Mish, Initialization: He normal, Best Iterations: 2
+Activation Function: Softplus, Initialization: Glorot normal, Best Iterations: 3
+Activation Function: APTx, Initialization: Glorot normal, Best Iterations: 1
+Activation Function: APTx, Initialization: He normal, Best Iterations: 2
+
+########################
+
+Ranking of all runs based on weighted score:
+Rank 1: Activation Function: APTx, Initialization: Glorot normal, Iterations: 1, Weighted Score: 0.0050039836184183634
+Rank 2: Activation Function: APTx, Initialization: Glorot normal, Iterations: 2, Weighted Score: 0.008700078359195318
+Rank 3: Activation Function: APTx, Initialization: Glorot normal, Iterations: 3, Weighted Score: 0.018351835595667408
+Rank 4: Activation Function: tanh, Initialization: Glorot normal, Iterations: 2, Weighted Score: 0.05448847310990571
+Rank 5: Activation Function: sin, Initialization: Glorot normal, Iterations: 2, Weighted Score: 0.05574071025962345
+Rank 6: Activation Function: tanh, Initialization: Glorot normal, Iterations: 1, Weighted Score: 0.07954828867057236
+Rank 7: Activation Function: sin, Initialization: Glorot normal, Iterations: 1, Weighted Score: 0.08431665521469886
+Rank 8: Activation Function: tanh, Initialization: Glorot normal, Iterations: 3, Weighted Score: 0.10381437209468243
+Rank 9: Activation Function: sin, Initialization: Glorot normal, Iterations: 3, Weighted Score: 0.10646790324083873
+Rank 10: Activation Function: SELU, Initialization: Glorot normal, Iterations: 2, Weighted Score: 0.13238113036585394
+Rank 11: Activation Function: SELU, Initialization: Glorot normal, Iterations: 1, Weighted Score: 0.14861535315360025
+Rank 12: Activation Function: SiLU, Initialization: He normal, Iterations: 2, Weighted Score: 0.16155927551112903
+Rank 13: Activation Function: Swish, Initialization: He normal, Iterations: 2, Weighted Score: 0.16155927551112903
+Rank 14: Activation Function: Sigmoid, Initialization: Glorot normal, Iterations: 3, Weighted Score: 0.16159507931652606
+Rank 15: Activation Function: Softplus, Initialization: Glorot normal, Iterations: 3, Weighted Score: 0.16224797743062602
+Rank 16: Activation Function: SiLU, Initialization: He normal, Iterations: 3, Weighted Score: 0.18654932565969276
+Rank 17: Activation Function: Swish, Initialization: He normal, Iterations: 3, Weighted Score: 0.18654932565969276
+Rank 18: Activation Function: ReLu, Initialization: He normal, Iterations: 2, Weighted Score: 0.19148405181444927
+Rank 19: Activation Function: GELU, Initialization: He normal, Iterations: 2, Weighted Score: 0.2178809222123839
+Rank 20: Activation Function: Sigmoid, Initialization: Glorot normal, Iterations: 2, Weighted Score: 0.2278444463633205
+Rank 21: Activation Function: SELU, Initialization: Glorot normal, Iterations: 3, Weighted Score: 0.2289524932452237
+Rank 22: Activation Function: ReLu, Initialization: He normal, Iterations: 3, Weighted Score: 0.22979195988902898
+Rank 23: Activation Function: Mish, Initialization: He normal, Iterations: 2, Weighted Score: 0.23537742012656
+Rank 24: Activation Function: APTx, Initialization: He normal, Iterations: 2, Weighted Score: 0.23836839223438014
+Rank 25: Activation Function: APTx, Initialization: He normal, Iterations: 1, Weighted Score: 0.24752732890849136
+Rank 26: Activation Function: GELU, Initialization: He normal, Iterations: 3, Weighted Score: 0.26085977076143735
+Rank 27: Activation Function: GELU, Initialization: He normal, Iterations: 1, Weighted Score: 0.2689959515315511
+Rank 28: Activation Function: APTx, Initialization: He normal, Iterations: 3, Weighted Score: 0.27272577557347566
+Rank 29: Activation Function: SiLU, Initialization: He normal, Iterations: 1, Weighted Score: 0.27791417798712476
+Rank 30: Activation Function: Swish, Initialization: He normal, Iterations: 1, Weighted Score: 0.27791417798712476
+Rank 31: Activation Function: ReLu, Initialization: He normal, Iterations: 1, Weighted Score: 0.29423761366229334
+Rank 32: Activation Function: Mish, Initialization: He normal, Iterations: 3, Weighted Score: 0.2947938563957843
+Rank 33: Activation Function: Sigmoid, Initialization: Glorot normal, Iterations: 1, Weighted Score: 0.2956595526828495
+Rank 34: Activation Function: Softplus, Initialization: Glorot normal, Iterations: 2, Weighted Score: 0.36666194153702447
+Rank 35: Activation Function: Mish, Initialization: He normal, Iterations: 1, Weighted Score: 0.4037587818755896
+Rank 36: Activation Function: ELU, Initialization: He normal, Iterations: 2, Weighted Score: 0.4585548591120503
+Rank 37: Activation Function: ELU, Initialization: He normal, Iterations: 3, Weighted Score: 0.4992548427365437
+Rank 38: Activation Function: Softplus, Initialization: Glorot normal, Iterations: 1, Weighted Score: 0.5822207782422458
+Rank 39: Activation Function: ELU, Initialization: He normal, Iterations: 1, Weighted Score: 0.8574076448126462
