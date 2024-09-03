@@ -1,1 +1,0 @@
-{"_wandb":{"runtime":4},"L2RE":0.5729803457063269,"_timestamp":1.7240869706761787e+09,"MSE":0.0038494109974803754,"_step":1,"activation_function":"ELU","weighted_array":[0.25,0.25,0.25,0.25],"initialization_method":"He normal","MAE":2.712501930981329e+64,"iterations":750,"max_APE":4.567317355940919e+67,"weighted_score":0.03422830949674291,"_runtime":3.5873655490000003}
