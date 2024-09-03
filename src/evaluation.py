@@ -32,3 +32,61 @@ def load_3D_data(n): # maybe this could be inserted inside utils.py
     x1, x2, t, exact = data[:, 0], data[:, 1], data[:, 2], data[:, 3]
     X = np.vstack((x1, x2, t, exact)).T
     return X
+
+
+def plot_3D_comparison(data, title, size=11, offset_time=0.25):
+    """
+        This function creates 3D plots at different timestamps
+
+        Args:
+            data(n*4 matrix): n x 4 matrix which contains the spatial and temporal coordinates (input features) along with the solution of the PDE (ground truth/prediction obtained)
+            title (str): title of the plot
+            size (int): size of the grid used (chosen according to the .txt file structure)
+            offset_time (float):
+
+        Returns:
+            None (plots are save in "{main.figures_dir}/{cfg.run}/comparison3D.png")
+    """
+    offset_data = size**2
+    unique_time = np.unique(data[:,2])
+
+    initial_time = np.min(unique_time)
+    final_time = np.max(unique_time) + offset_time
+
+    n_subplots = (int)(final_time/offset_time)
+
+    fig, axs = plt.subplots(1, n_subplots, subplot_kw={'projection': '3d'}, figsize=(18, 5))
+
+
+    idx = 0 # subplots index
+    cax = fig.add_axes([0.1, 0.05, 0.8, 0.03])
+    fig.suptitle(title)
+
+
+    for timestamp in np.arange(initial_time , final_time, offset_time):
+
+        i = np.where(unique_time == timestamp)[0][0] # index used to select the correct temporal window
+
+        t_0 = X[i*offset_data : offset_data*(i+1), :] # correct temporal window
+
+        x = t_0[:, 0].reshape(size, size)
+        y = t_0[:, 1].reshape(size, size)
+        t = t_0[:, 2].reshape(size, size)
+        c = t_0[:, 3].reshape(size, size)
+
+        surface = axs[idx].plot_surface(y, x, c, cmap='YlGnBu')
+
+        axs[idx].set_xlabel('Y')
+        axs[idx].set_ylabel('X')
+        axs[idx].set_zlabel('T [K]')
+
+        axs[idx].set_title(f'Time = {timestamp:.2f} s')
+
+        idx += 1
+
+    fig.colorbar(surface, cax=cax, orientation='horizontal', shrink=0.5, aspect=20)
+
+    # Adjust layout to prevent overlap
+    plt.subplots_adjust(left=0.1, right=0.87, top=0.85, bottom=0.2)
+
+    plt.show()
