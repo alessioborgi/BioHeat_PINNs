@@ -90,3 +90,27 @@ def plot_3D_comparison(data, title, size=11, offset_time=0.25):
     plt.subplots_adjust(left=0.1, right=0.87, top=0.85, bottom=0.2)
 
     plt.show()
+
+def plots_and_metrics(model, n_test):
+    """
+    This is the main function of this file. By calling this you are using each function inside the evalutation.py file.
+    Creates plots and computes some metrics.
+    
+    Args:
+        model (nhbo): Model defined in nhbo.py
+        n_test (int): Right now it specifies the .txt file (WithoutQ n = 0) (WithQ n = 1)
+    
+    Returns:
+        metrics (dict): Dictionary containing various performance metrics
+    """
+
+    data = load_3D_data(n_test) # whole data (X,Y,t,T)
+    
+    theta_true = data[:, 3].reshape(-1, 1)
+    theta_pred = model.predict(data[:, 0:3])
+
+    # plot_2D_comparison(data, theta_pred, "1D Comparison at Specific Time Instants")
+    # plot_3D_comparison(data, theta_pred, "Comparison 2D case")
+    
+    metrics = train.compute_metrics(theta_true, theta_pred)
+    return metrics
