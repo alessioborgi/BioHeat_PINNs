@@ -34,7 +34,8 @@ def load_3D_data(n): # maybe this could be inserted inside utils.py
     return X
 
 
-def plot_3D_comparison(data, title, size=11, offset_time=0.25):
+from scipy.interpolate import griddata
+def plot_3D_comparison(data, data_pred, title, size=11, offset_time=0.25, info='True'):
     """
         This function creates 3D plots at different timestamps
 
@@ -42,11 +43,14 @@ def plot_3D_comparison(data, title, size=11, offset_time=0.25):
             data(n*4 matrix): n x 4 matrix which contains the spatial and temporal coordinates (input features) along with the solution of the PDE (ground truth/prediction obtained)
             title (str): title of the plot
             size (int): size of the grid used (chosen according to the .txt file structure)
-            offset_time (float):
+            offset_time (float): temporal offset between each plot 
+            info (str): specifies the kind of plot : true | pred | error
 
         Returns:
-            None (plots are save in "{main.figures_dir}/{cfg.run}/comparison3D.png")
+            None (plots are save in "{main.figures_dir}/{cfg.run}/{info}3D.png")
     """
+    cfg = HydraConfigStore.get_config()
+
     offset_data = size**2
     unique_time = np.unique(data[:,2])
 
@@ -67,14 +71,36 @@ def plot_3D_comparison(data, title, size=11, offset_time=0.25):
 
         i = np.where(unique_time == timestamp)[0][0] # index used to select the correct temporal window
 
-        t_0 = X[i*offset_data : offset_data*(i+1), :] # correct temporal window
+        t_0 = data[i*offset_data : offset_data*(i+1), :] # correct temporal window
 
-        x = t_0[:, 0].reshape(size, size)
-        y = t_0[:, 1].reshape(size, size)
-        t = t_0[:, 2].reshape(size, size)
-        c = t_0[:, 3].reshape(size, size)
+        grid_resolution = 100
 
-        surface = axs[idx].plot_surface(y, x, c, cmap='YlGnBu')
+        x_g = t_0[:, 0]
+        y_g = t_0[:, 1]
+    
+        x, y = np.meshgrid(
+            np.linspace(np.min(x_g), np.max(x_g), grid_resolution),
+            np.linspace(np.min(y_g), np.max(y_g), grid_resolution)
+        )
+
+        T_g = t_0[:, 3]
+
+        T = griddata((x_g, y_g), T_g, (x, y), method='cubic')
+
+        if info == 'Pred':
+            # prediction
+            pred = data_pred[i*offset_data : offset_data*(i+1), :]
+            T = griddata((x_g, y_g), np.squeeze(pred), (x, y), method='cubic')
+        
+        elif info == 'Error':
+            # absolute error
+            pred = data_pred[i*offset_data : offset_data*(i+1), :]
+            err = np.abs(T_g - np.squeeze(pred))
+
+            T = T = griddata((x_g, y_g), np.squeeze(err), (x, y), method='cubic')
+
+
+        surface = axs[idx].plot_surface(y, x, T, cmap='YlGnBu')
 
         axs[idx].set_xlabel('Y')
         axs[idx].set_ylabel('X')
@@ -89,7 +115,9 @@ def plot_3D_comparison(data, title, size=11, offset_time=0.25):
     # Adjust layout to prevent overlap
     plt.subplots_adjust(left=0.1, right=0.87, top=0.85, bottom=0.2)
 
+    plt.savefig(f"{main.figures_dir}/{cfg.run}/{info}3D.png")
     plt.show()
+    plt.close()
 
 
 def plot_loss_components(losshistory):
@@ -176,8 +204,9 @@ def plots_and_metrics(model, n_test):
     theta_true = data[:, 3].reshape(-1, 1)
     theta_pred = model.predict(data[:, 0:3])
 
-    # plot_2D_comparison(data, theta_pred, "1D Comparison at Specific Time Instants")
-    # plot_3D_comparison(data, theta_pred, "Comparison 2D case")
+    plot_3D_comparison(data, theta_pred, "Ground Truth 3D case", info='True')
+    plot_3D_comparison(data, theta_pred, "Prediction 3D case", info='Pred')
+    plot_3D_comparison(data, theta_pred, "Error 3D case", info='Error')
     
     metrics = train.compute_metrics(theta_true, theta_pred)
     return metrics
