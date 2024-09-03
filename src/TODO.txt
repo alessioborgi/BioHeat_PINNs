@@ -1,6 +1,5 @@
-- Implement multi-Observer network.
-- Fourier Thing 
-
-
-- Ablation Study over: Activation Function, #Nodes in the network, Initialization. 
-- Make plots 
+- Check Boundary exp
+- Plot Loss
+- create directories
+- update .gitignore
+- run

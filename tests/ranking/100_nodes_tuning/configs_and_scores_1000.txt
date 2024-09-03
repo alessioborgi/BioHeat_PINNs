@@ -1,0 +1,11 @@
+Optimal configurations:
+Activation Function: SiLU, Initialization: He normal, Best Iterations: 1000
+Activation Function: Swish, Initialization: He normal, Best Iterations: 1000
+Activation Function: Mish, Initialization: He normal, Best Iterations: 1000
+
+########################
+
+Ranking of all runs based on weighted score:
+Rank 1: Activation Function: SiLU, Initialization: He normal, Iterations: 1000, Weighted Score: 0.0
+Rank 2: Activation Function: Swish, Initialization: He normal, Iterations: 1000, Weighted Score: 0.0
+Rank 3: Activation Function: Mish, Initialization: He normal, Iterations: 1000, Weighted Score: 0.9999999897571763
