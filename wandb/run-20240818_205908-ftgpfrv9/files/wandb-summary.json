@@ -1,1 +1,0 @@
-{"activation_function":"ELU","initialization_method":"He normal","iterations":200,"max_APE":3.1481938930516513e+68,"_step":0,"MSE":0.0045587963506879044,"_wandb":{"runtime":2},"L2RE":0.6235448257155232,"_timestamp":1.7240147495730293e+09,"_runtime":1.4029483360000001,"MAE":1.5189699359980508e+65}

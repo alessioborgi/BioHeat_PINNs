@@ -1,1 +1,0 @@
-{"L2RE":2.701922085117584,"_timestamp":1.7240290861861963e+09,"_runtime":1.203171097,"activation_function":"Softplus","max_APE":2.4766208119372433e+69,"initialization_method":"Glorot normal","iterations":100,"_step":0,"MSE":0.08559738060329183,"_wandb":{"runtime":1},"MAE":1.5852722230642632e+66}

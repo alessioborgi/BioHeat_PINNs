@@ -1,1 +1,0 @@
-{"initialization_method":"Glorot normal","MSE":0.029708992363625383,"MAE":2.444657559487873e+65,"_runtime":1.268685671,"_timestamp":1.7240297262696981e+09,"_wandb":{"runtime":1},"_step":0,"activation_function":"APTx","L2RE":1.5917928324392245,"max_APE":5.098143230007739e+68,"iterations":175}

@@ -1,1 +1,0 @@
-{"weighted_array":[0.25,0.25,0.25,0.25],"max_APE":1.8333842344105765e+68,"activation_function":"SiLU","MSE":0.012283171232394518,"L2RE":1.0235235432312022,"initialization_method":"He normal","_step":1,"iterations":150,"_timestamp":1.7240454121644764e+09,"MAE":8.552913393505467e+64,"weighted_score":0.08656856375905093,"_runtime":2.5429326359999997,"_wandb":{"runtime":3}}

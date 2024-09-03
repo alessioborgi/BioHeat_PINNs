@@ -1,1 +1,0 @@
-{"max_APE":5.638388982171703e+68,"_timestamp":1.7240457218782423e+09,"_runtime":2.530399876,"MSE":0.03320901646118235,"activation_function":"APTx","_wandb":{"runtime":3},"weighted_score":0.29506137738262844,"MAE":2.574945252368263e+65,"initialization_method":"Glorot normal","iterations":75,"L2RE":1.6829475861172691,"_step":1,"weighted_array":[0.25,0.25,0.25,0.25]}
