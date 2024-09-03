@@ -58,11 +58,11 @@ def train_model(name, cfg):
 
     if LBFGS:
         # Attempt to restore from a previously trained Adam model if exists
-        adam_models = sorted(glob.glob(f"{model_dir}/adam-{epochs}.pt"))
+        adam_models = sorted(glob.glob(f"{model_dir}/{name}/{optim}-{cfg.network.activation}-{cfg.network.initialization}-{iters}.pt"))
         if adam_models:
             mm.restore(adam_models[0], verbose=0)
         else:
-            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name)
+            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name, cfg)
         
         if ini_w:
             initial_losses = get_initial_loss(mm)

@@ -25,30 +25,30 @@ os.makedirs(tests_dir, exist_ok=True)
 #     'ReLu': ['He normal']
 # }
 
-# activation_functions = {
-#     'ELU': ['He normal'],
-#     'GELU': ['He normal'],
-#     'ReLu': ['He normal'],
-#     'SELU': ['Glorot normal'],
-#     'Sigmoid': ['Glorot normal'],
-#     'SiLU': ['He normal'],
-#     'sin': ['Glorot normal'],
-#     'Swish': ['He normal'],
-#     'tanh': ['Glorot normal'],
-#     'Mish': ['He normal'],
-#     'Softplus': ['Glorot normal'],
-#     'APTx': ['Glorot normal', 'He normal']
-# }
-
 activation_functions = {
-    # 'GELU': ['He normal'],
+    'ELU': ['He normal'],
+    'GELU': ['He normal'],
+    'ReLu': ['He normal'],
+    'SELU': ['Glorot normal'],
+    'Sigmoid': ['Glorot normal'],
     'SiLU': ['He normal'],
+    'sin': ['Glorot normal'],
     'Swish': ['He normal'],
-    # 'APTx': ['He normal'],
-    'Mish': ['He normal']
+    'tanh': ['Glorot normal'],
+    'Mish': ['He normal'],
+    'Softplus': ['Glorot normal'],
+    'APTx': ['Glorot normal', 'He normal']
 }
 
 # activation_functions = {
+#     # 'GELU': ['He normal'],
+#     'SiLU': ['He normal'],
+#     'Swish': ['He normal'],
+#     # 'APTx': ['He normal'],
+#     'Mish': ['He normal']
+# }
+
+# activation_functions = {
 #     'ELU': ['He normal'],
 #     'tanh': ['Glorot normal'],
 #     'SiLU': ['He normal'],
@@ -61,9 +61,9 @@ activation_functions = {
 #     'Mish': ['He normal']   
 # }
 
-# iteration_values = [25, 50, 75, 100, 125, 150, 175, 200, 250, 300, 400, 500, 750, 1000]
+iteration_values = [25, 50, 75, 100, 125, 150, 175, 200, 250, 300, 400, 500, 750, 1000]
 # iteration_values = [1, 2, 3]
-iteration_values = [1000]
+# iteration_values = [1000]
 
 # iteration_values = [250, 500, 750, 1000]   
 # iteration_values = [25, 50]   
