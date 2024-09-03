@@ -1,0 +1,9 @@
+Optimal configurations:
+Activation Function: GELU, Initialization: He normal, Best Iterations: 500
+Activation Function: APTx, Initialization: He normal, Best Iterations: 500
+
+########################
+
+Ranking of all runs based on weighted score:
+Rank 1: Activation Function: GELU, Initialization: He normal, Iterations: 500, Weighted Score: 0.0
+Rank 2: Activation Function: APTx, Initialization: He normal, Iterations: 500, Weighted Score: 0.9999999781812703
