@@ -1,9 +1,9 @@
 # PINN Configurations Static
 backend: pytorch
-LBFGS: true
+LBFGS: false
 learning_rate: 0.001
 num_dense_layers: 2
-num_dense_nodes: 50
+num_dense_nodes: 100
 output_injection_gain: 50
 resampling: true
 resampler_period: 50
@@ -15,13 +15,13 @@ initial_weights_regularizer: true
 ## ELU, GELU, ReLU, SELU, Sigmoid, SiLU, sin, Swish, tanh, Mish, Softplus, APTx
 ## Glorot normal, He normal, Orthogonal, Random normal, Random uniform, Zeros
 
-# activation: ELU     
-# iterations: 3
-# initialization: He normal
+activation: SiLU     
+iterations: 1000
+initialization: He normal
 
 
 
 # TUNING CONFIGURATIONS
-activation: "???"  # Placeholder for tuning the activation function.
-iterations: "???"  # Placeholder for tuning the number of iterations (epochs)
-initialization: "???"  # Placeholder for tuning the initialization method.
+# activation: "???"  # Placeholder for tuning the activation function.
+# iterations: "???"  # Placeholder for tuning the number of iterations (epochs)
+# initialization: "???"  # Placeholder for tuning the initialization method.
