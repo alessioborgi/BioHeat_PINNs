@@ -1,5 +1,13 @@
-- Implement multi-Observer network.
-- Fourier Thing 
+[importance] ... <assignment>
 
+[1] Double Check Q <AB,ADL,EB>
+[1] Finish evaluation.py + Delete plots.py <EB>
 
-- Ablation Study over: Activation Function, #Nodes in the network, Initialization. 
+[2] Restyle 1D (only need to check utils.py) <AB>
+
+[3] Update Report (check source.txt) <ADL>
+
+[4] Try one Run with another function (e.g t^2 instead of t for the boundary condition) ? <EB,AB>
+[4] Update ReadMe <EB>
+
+[5] Slides <ADL>

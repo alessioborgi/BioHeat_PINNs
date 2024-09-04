@@ -1,1 +1,0 @@
-{"_runtime":2.440870087,"weighted_array":[0.25,0.25,0.25,0.25],"activation_function":"Swish","initialization_method":"He normal","max_APE":1.6957804664087832e+69,"MAE":8.523666269344397e+65,"iterations":500,"MSE":0.013388784725265683,"_timestamp":1.7233040258982503e+09,"L2RE":1.0685950623375842,"weighted_score":0.08328420122121721,"_wandb":{"runtime":3},"_step":1}

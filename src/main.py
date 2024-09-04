@@ -30,7 +30,6 @@ os.makedirs(tests_dir, exist_ok=True)
 @hydra.main(version_base=None, config_path="configs", config_name="config")
 def main(cfg: DictConfig):
     # Set seed for reproducibility
-    print(cfg)
     HydraConfigStore.set_config(cfg)  # Store the configuration
     utils.seed_all(31)
     # OmegaConf.to_yaml(cfg)
@@ -52,7 +51,7 @@ def main(cfg: DictConfig):
     configurations.write_config(cfg, cfg.run)
 
     # Use a default filename instead of a timestamp-based one
-    train.single_observer(prj, cfg.run, "0", cfg)
+    train.single_observer(prj, cfg.run, "1", cfg)
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,6 @@
 # train.py
 import deepxde as dde
 import configurations
-import pde
 import plots
 import glob
 import utils
@@ -9,9 +8,10 @@ import wandb
 from omegaconf import OmegaConf
 
 import numpy as np
-import pde
+import nhbo
 import os
 import torch
+import evaluation
 
 wandb.require("core")
 # device = torch.device("cpu")
@@ -19,13 +19,6 @@ device = torch.device("cuda")
 
 model_dir = "./tests/models"
 figures_dir = "./imgs"
-
-
-properties = {
-    "L0": None, "tauf": None, "k": None, "p0": None, "d": None,
-    "rhoc": None, "cb": None, "h": None, "Tmin": None, "Tmax": None, "alpha": None,
-    "W": None, "steep": None, "tchange": None, "rhob": None, "Wb": None, "q0": None
-}
 
 
 def train_model(name, cfg):
@@ -43,7 +36,7 @@ def train_model(name, cfg):
         dict: Training metrics.
     """
     conf = configurations.read_config(name, cfg)
-    mm = pde.create_nbho(name, cfg)
+    mm = nhbo.create_nbho(name, cfg)
 
     LBFGS = conf["LBFGS"]
     epochs = conf["iterations"]
@@ -53,9 +46,10 @@ def train_model(name, cfg):
 
     optim = "lbfgs" if LBFGS else "adam"
     iters = "*" if LBFGS else epochs
+    eps = 0.000001
 
     # Check if a trained model with the exact configuration already exists
-    trained_models = sorted(glob.glob(f"{model_dir}/{name}/{optim}-{iters}.pt"))
+    trained_models = sorted(glob.glob(f"{model_dir}/{name}/{optim}-{cfg.network.activation}-{cfg.network.initialization}-{iters}.pt"))
     if trained_models:
         mm.compile("L-BFGS") if LBFGS else None
         mm.restore(trained_models[0], verbose=0)
@@ -65,24 +59,24 @@ def train_model(name, cfg):
 
     if LBFGS:
         # Attempt to restore from a previously trained Adam model if exists
-        adam_models = sorted(glob.glob(f"{model_dir}/adam-{epochs}.pt"))
+        adam_models = sorted(glob.glob(f"{model_dir}/adam/{optim}-{cfg.network.activation}-{cfg.network.initialization}-{iters}.pt"))
         if adam_models:
             mm.restore(adam_models[0], verbose=0)
         else:
-            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name)
+            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name, cfg)
         
         if ini_w:
             initial_losses = get_initial_loss(mm)
-            loss_weights = len(initial_losses) / initial_losses
+            loss_weights = len(initial_losses) / (initial_losses + eps)
             mm.compile("L-BFGS", loss_weights=loss_weights)
         else:
             mm.compile("L-BFGS")
         
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs", name)
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs", name, cfg)
     else:
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name)
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name, cfg)
 
-    plots.plot_loss_components(losshistory)
+    evaluation.plot_loss_components(losshistory)
     return mm
 
 def single_observer(name_prj, run, n_test, cfg):
@@ -105,15 +99,15 @@ def single_observer(name_prj, run, n_test, cfg):
     # Initialize wandb with the serializable dictionary
     wandb.init(project=name_prj, name=run, config=config_dict)
 
-    # Rest of the function continues as before
+    # Train and Evaluate
     mo = train_model(run, cfg)
-    metrics = plots.plot_and_metrics(mo, n_test)
+    metrics = evaluation.plots_and_metrics(mo, n_test) # right now n_test=0 (only one type of run)
 
     wandb.log(metrics)
     wandb.finish()
     return mo, metrics
 
-def train_and_save_model(model, iterations, callbacks, optimizer_name, run):
+def train_and_save_model(model, iterations, callbacks, optimizer_name, run, cfg):
     """
     Combines the training and saving process of the model.
     
@@ -132,7 +126,7 @@ def train_and_save_model(model, iterations, callbacks, optimizer_name, run):
     losshistory, train_state = model.train(
         iterations=iterations,
         callbacks=callbacks,
-        model_save_path=f"{model_dir}/{run}/{optimizer_name}",
+        model_save_path=f"{model_dir}/{run}/{optimizer_name}-{cfg.network.activation}-{cfg.network.initialization}",
         display_every=display_every
     )
     return losshistory, train_state

@@ -1,1 +1,0 @@
-{"L2RE":1.0385306661627374,"_wandb":{"runtime":1},"_timestamp":1.7233009536588314e+09,"_step":0,"iterations":150,"activation_function":"SiLU","initialization_method":"He normal","MAE":6.883587791244444e+65,"MSE":0.012646008886904684,"_runtime":1.1703230119999999,"max_APE":1.4003557631870284e+69}

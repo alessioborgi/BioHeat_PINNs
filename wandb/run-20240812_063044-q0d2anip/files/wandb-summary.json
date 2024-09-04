@@ -1,1 +1,0 @@
-{"max_APE":3.1865232695881543e+69,"iterations":150,"MAE":2.1447824673886024e+66,"L2RE":0.943651152455684,"_step":1,"_timestamp":1.7234442466873155e+09,"MSE":0.010440896286485538,"weighted_array":[0.25,0.25,0.25,0.25],"_runtime":4.93912,"weighted_score":0.570049468149996,"_wandb":{"runtime":5},"initialization_method":"Glorot normal","activation_function":"sin"}
