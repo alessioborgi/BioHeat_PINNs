@@ -49,7 +49,7 @@ def train_model(name, cfg):
     eps = 0.000001
 
     # Check if a trained model with the exact configuration already exists
-    trained_models = sorted(glob.glob(f"{model_dir}/{name}/{optim}-{iters}.pt"))
+    trained_models = sorted(glob.glob(f"{model_dir}/{name}/{optim}-{cfg.network.activation}-{cfg.network.initialization}-{iters}.pt"))
     if trained_models:
         mm.compile("L-BFGS") if LBFGS else None
         mm.restore(trained_models[0], verbose=0)
@@ -59,11 +59,11 @@ def train_model(name, cfg):
 
     if LBFGS:
         # Attempt to restore from a previously trained Adam model if exists
-        adam_models = sorted(glob.glob(f"{model_dir}/adam-{epochs}.pt"))
+        adam_models = sorted(glob.glob(f"{model_dir}/adam/{optim}-{cfg.network.activation}-{cfg.network.initialization}-{iters}.pt"))
         if adam_models:
             mm.restore(adam_models[0], verbose=0)
         else:
-            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name)
+            losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name, cfg)
         
         if ini_w:
             initial_losses = get_initial_loss(mm)
@@ -72,11 +72,11 @@ def train_model(name, cfg):
         else:
             mm.compile("L-BFGS")
         
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs", name)
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "lbfgs", name, cfg)
     else:
-        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name)
+        losshistory, train_state = train_and_save_model(mm, epochs, callbacks, "adam", name, cfg)
 
-    plots.plot_loss_components(losshistory)
+    evaluation.plot_loss_components(losshistory)
     return mm
 
 def single_observer(name_prj, run, n_test, cfg):
@@ -107,7 +107,7 @@ def single_observer(name_prj, run, n_test, cfg):
     wandb.finish()
     return mo, metrics
 
-def train_and_save_model(model, iterations, callbacks, optimizer_name, run):
+def train_and_save_model(model, iterations, callbacks, optimizer_name, run, cfg):
     """
     Combines the training and saving process of the model.
     
@@ -126,7 +126,7 @@ def train_and_save_model(model, iterations, callbacks, optimizer_name, run):
     losshistory, train_state = model.train(
         iterations=iterations,
         callbacks=callbacks,
-        model_save_path=f"{model_dir}/{run}/{optimizer_name}",
+        model_save_path=f"{model_dir}/{run}/{optimizer_name}-{cfg.network.activation}-{cfg.network.initialization}",
         display_every=display_every
     )
     return losshistory, train_state
