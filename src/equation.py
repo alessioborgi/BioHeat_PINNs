@@ -36,7 +36,7 @@ def pde(x, u):
     du_yy = dde.grad.hessian(u, x, i=0, j=1) # second derivative with respect to y coordinate
     
     # Load the parameters using the provided function
-    parameters = open_json_config("without_Q")
+    parameters = open_json_config("with_Q")
 
     # Access specific parameters
     a1 = parameters["Parameters"]["a1"]

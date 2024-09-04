@@ -15,8 +15,8 @@ initial_weights_regularizer: true
 ## ELU, GELU, ReLU, SELU, Sigmoid, SiLU, sin, Swish, tanh, Mish, Softplus, APTx
 ## Glorot normal, He normal, Orthogonal, Random normal, Random uniform, Zeros
 
-activation: SiLU     
-iterations: 1000
+activation: Mish   
+iterations: 50
 initialization: He normal
 
 

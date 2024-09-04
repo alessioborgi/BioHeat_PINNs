@@ -53,7 +53,7 @@ def create_nbho(name, cfg):
     
     # read from .json file
     # Load the parameters using the provided function
-    parameters = open_json_config("without_Q")
+    parameters = open_json_config("with_Q")
 
     # Access specific parameters
     a1 = parameters["Parameters"]["a1"]

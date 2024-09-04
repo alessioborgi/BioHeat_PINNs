@@ -51,7 +51,7 @@ def main(cfg: DictConfig):
     configurations.write_config(cfg, cfg.run)
 
     # Use a default filename instead of a timestamp-based one
-    train.single_observer(prj, cfg.run, "0", cfg)
+    train.single_observer(prj, cfg.run, "1", cfg)
 
 if __name__ == "__main__":
     main()

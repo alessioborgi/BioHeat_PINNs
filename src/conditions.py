@@ -162,7 +162,7 @@ def ic_obs(x):
     ### import utils function (.json file)
     # read from .json file
     # Load the parameters using the provided function
-    parameters = open_json_config("without_Q")
+    parameters = open_json_config("with_Q")
 
     # Access specific parameters
     q0 = parameters["Parameters"]["q0"]

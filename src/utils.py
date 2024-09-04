@@ -35,7 +35,12 @@ def open_json_config(run_type):
         Dictionary that contains all the parameters
     """
     # Construct the relative path
-    path = './mathematica/TwoDim/' + run_type + '/data_2D_0.json'
+    if run_type == 'without_Q':
+        num = 0
+    else:
+        num = 1
+
+    path = f'./mathematica/TwoDim/{run_type}/data_2D_{num}.json'
     
     # Convert to absolute path
     abs_path = os.path.abspath(path)
