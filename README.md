@@ -1,6 +1,8 @@
 # BIOHEAT_PINNs: Temperature Estimation with Bio-Heat Equation using Physics-Informed Neural Networks
 ## CONTAINER INSTRUCTIONS 
 
+This repository provides the implementation of temperature estimation using the Bio-Heat equation with Physics-Informed Neural Networks (PINNs). The focus is on improving hyperthermia treatment by controlling temperature distribution in both 1D and 2D domains. The repository contains code and data to simulate temperature profiles using PINNs for medical applications like hyperthermia treatment.
+
 #### These are the commands to run in the Terminal to build the Container and so on.
 - Open **Docker** 
 
