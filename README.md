@@ -1,4 +1,4 @@
-# BIOHEAT_PINNs: Temperature Estimation with Bio-Heat Equation using Physics-Informed Neural Networks
+# BIOHEAT PINNs: Temperature Estimation with Bio-Heat Equation using Physics-Informed Neural Networks
 
 The project focuses on the real-time estimation of temperature distribution in biological tissues using the Pennes Bio-Heat Equation, a fundamental model for heat transfer in human tissues. This research applies Physics-Informed Neural Networks (PINNs), a deep learning framework designed to solve partial differential equations (PDEs) by embedding physical laws directly into the learning process. The primary objective of the project is to enhance the control and predictability of hyperthermia treatments—a form of thermal therapy used to treat conditions such as tumors by precisely heating affected tissues.
 
